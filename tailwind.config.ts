@@ -1,32 +1,33 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      gridTemplateColumns: {
-        '13': 'repeat(13, minmax(0, 1fr))',
+      fontFamily: {
+        tartuffo: ["var(--font-tartuffo)"],
+        gustavo: ["var(--font-gustavo)"],
+        acorn: ["var(--font-acorn)"],
+        kobe11: ["var(--font-kobe11)"],
       },
       colors: {
-        blue: {
-          400: '#2589FE',
-          500: '#0070F3',
-          600: '#2F6FEB',
-        },
+        "fg-1": "#30171B",
+        "fg-2": "#5D4043",
+        "fg-3": "#816A6C",
+        "bg-2": "#FAF6F3",
+        "bg-3": "#EBE0D8",
+        "bg-blue": "#EFF1FD",
       },
-    },
-    keyframes: {
-      shimmer: {
-        '100%': {
-          transform: 'translateX(100%)',
-        },
+      fontSize: {
+        xxs: ["9px", "11.7px"],
+        base: ["15px", "18.75px"],
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [],
 };
 export default config;
