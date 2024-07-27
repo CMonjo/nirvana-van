@@ -21,6 +21,9 @@ const config: Config = {
         "bg-2": "#FAF6F3",
         "bg-3": "#EBE0D8",
         "bg-blue": "#EFF1FD",
+
+        'orange': '#F2712A',
+        'green': '#00B291',
       },
       fontSize: {
         xxs: ["9px", "11.7px"],

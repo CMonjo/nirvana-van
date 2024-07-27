@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function ButtonLink({
   href,
@@ -8,13 +9,14 @@ export default function ButtonLink({
   href: string;
   children: React.ReactNode;
   className?: string;
+  color?: "white" | "orange" | "green";
 }) {
   return (
-    <a
+    <Link
       href={href}
-      className={`bg-fg-2 button-link relative font-medium font-gustavo py-2 px-8 overflow-hidden ${className}`}
+      className={`flex items-center rounded-full bg-midnight px-5 py-2 text-sm font-medium text-tahiti transition-colors hover:bg-blue-400 md:text-base ${className}`}
     >
-      <span className="z-10 block relative text-bg-2">{children}</span>
-    </a>
+      <span className="text-bg-blue">{children}</span>
+    </Link>
   );
 }
