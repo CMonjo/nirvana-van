@@ -71,16 +71,27 @@ body {
 }
 
 // Header Section
+// .header-gradient {
+//   background: linear-gradient(
+//     180deg,
+//     rgb(250, 246, 243) -40%,
+//     rgba(255, 255, 255, 0.8) 44.964034346846844%,
+//     rgba(255, 255, 255, 0.4) 61.922860360360374%,
+//     rgba(255, 255, 255, 0) 74.11951013513516%
+//   );
+//   opacity: 1;
+// }
+
 .header-gradient {
-  background: linear-gradient(
+    background: linear-gradient(
     180deg,
-    rgb(250, 246, 243) -40%,
-    rgba(255, 255, 255, 0.8) 44.964034346846844%,
-    rgba(255, 255, 255, 0.4) 61.922860360360374%,
-    rgba(255, 255, 255, 0) 74.11951013513516%
-  );
-  opacity: 1;
-}
+rgb(250, 246, 243) -40%,
+     rgba(255, 255, 255, 1) 44.964034346846844%,
+     rgba(255, 255, 255, 1) 61.922860360360374%,
+     rgba(255, 255, 255, 0) 74.11951013513516%
+   );
+    opacity: 1;
+  }
 
 // Hero Section
 .hero-mask {

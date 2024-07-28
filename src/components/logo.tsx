@@ -1,19 +1,20 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Logo({
-  color = "black",
+  color = 'black',
 }: {
-  color?: "white" | "black";
+  color?: 'white' | 'black';
 }) {
   const width = 268;
   const height = 61;
 
   return (
     <Image
-      src={`/logo_${color}.png`}
-      width={width * 0.5}
-      height={height * 0.5}
-      alt="Picture of the author"
+      src={`/logo_${color}.svg`}
+      width={width}
+      height={height}
+      className='w-48'
+      alt='Picture of the author'
     />
   );
 }
