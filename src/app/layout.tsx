@@ -5,6 +5,26 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import './globals.scss';
 
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang={'fr'}>
+      <body
+        className={`${tartuffo.variable} ${gustavo.variable} ${kobe11.variable} ${acorn.variable} font-tartuffo antialiased`}
+      >
+        <AppRouterCacheProvider>
+          {children}
+          <Analytics />
+          <SpeedInsights />
+        </AppRouterCacheProvider>
+      </body>
+    </html>
+  );
+}
+
 export const metadata: Metadata = {
   title: 'Nirvana Van',
   description: 'Explore the nirvana',
@@ -36,23 +56,3 @@ export const metadata: Metadata = {
   authors: [{ name: 'Camille MONJO', url: 'https://cmonjo.com/' }],
   keywords: ['Nirvana Van', 'CMonjo'],
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang='en'>
-      <body
-        className={`${tartuffo.variable} ${gustavo.variable} ${kobe11.variable} ${acorn.variable} font-tartuffo antialiased`}
-      >
-        <AppRouterCacheProvider>
-          {children}
-          <Analytics />
-          <SpeedInsights />
-        </AppRouterCacheProvider>
-      </body>
-    </html>
-  );
-}
