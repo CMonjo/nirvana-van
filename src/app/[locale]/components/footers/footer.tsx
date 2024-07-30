@@ -52,7 +52,7 @@ export default function Footer() {
             </div>
             <div className='flex w-full flex-col items-center gap-4'>
               <Button
-                href='https://lndev.me'
+                // href='https://lndev.me'
                 className='w-full text-center text-[15px]'
               >
                 Ajouter au Panier

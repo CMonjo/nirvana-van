@@ -1,7 +1,6 @@
-import Footers from '@/app/components/footers';
-import Header from '@/app/components/navigation/header';
-import Main from '@/components/home';
-import Mobile from '@/app/components/mobile';
+import Footers from '@/app/[locale]/components/footers';
+import Header from '@/app/[locale]/components/navigation/header';
+import Mobile from '@/app/[locale]/components/mobile';
 
 export default function Teardrop() {
   return (
