@@ -19,8 +19,7 @@ export default function Hero() {
       </div>
       <div className='absolute bottom-14 z-50 flex w-full flex-col items-center justify-center'>
         <h3 className='my-6 max-w-[760px] px-6 text-center font-kobe11 text-3xl font-light text-white'>
-          Chez Nirvana Van, nous frabriquons des mini-cararavanes pour vous
-          évader de la ville sans sacrifice sur le confort.
+          Fabricant français artisanal de mini-caravane
         </h3>
         <Button color='white'>Découvrir notre histoire</Button>
       </div>

@@ -1,4 +1,3 @@
-import Footers from '@/app/[locale]/components/footers';
 import Header from '@/app/[locale]/components/navigation/header';
 import Hero from '@/app/[locale]/components/home/hero';
 import Bento from '@/app/[locale]/components/home/bento';
@@ -8,10 +7,10 @@ import Presentation from '@/app/[locale]/components/home/presentation';
 import Spotify from '@/app/[locale]/components/home/spotify';
 import Mynthos from '@/app/[locale]/components/home/mynthos';
 import Models from '@/app/[locale]/components/home/models';
-import Container from '@/app/[locale]/components/atoms/container';
 import PresentationVideo from '@/app/[locale]/components/home/presentationVideo';
 
 import { useTranslations } from 'next-intl';
+import Why from './components/home/why';
 
 export default function Home() {
   //   const t = useTranslations('HomePage');
@@ -25,6 +24,7 @@ export default function Home() {
         <Hero />
         <Models />
         <PresentationVideo />
+        <Why />
       </main>
       <Bento />
       <PlugNTote />
@@ -32,7 +32,6 @@ export default function Home() {
       <Presentation />
       <Spotify />
       <Mynthos />
-      <Footers />
     </div>
   );
 }

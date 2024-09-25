@@ -1,17 +1,9 @@
-import {
-  Github,
-  Instagram,
-  Linkedin,
-  Store,
-  Twitter,
-  Youtube,
-} from 'lucide-react';
 import React from 'react';
 import Button from '../atoms/button';
 
-export default function Footer() {
+export default function Basket() {
   return (
-    <footer className='relative flex w-full items-center justify-center bg-fg-1'>
+    <div className='relative flex w-full items-center justify-center bg-fg-1'>
       <div className='z-20 flex w-full max-w-screen-2xl flex-col items-center justify-center gap-40 px-10 py-14'>
         <div className='flex w-full items-center justify-end'>
           <div className='flex w-[392px] flex-col items-center justify-center gap-12'>
@@ -44,10 +36,7 @@ export default function Footer() {
               </div>
               <div className='flex w-full items-center justify-between'>
                 <span>Commandez avant 17h</span>
-                <span className='flex'>
-                  Livrer à 59000
-                  <Store size={18} className='ml-2' />
-                </span>
+                <span className='flex'>Livrer à 59000</span>
               </div>
             </div>
             <div className='flex w-full flex-col items-center gap-4'>
@@ -79,74 +68,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className='flex w-full flex-col items-start gap-2'>
-          <div className='flex items-center gap-2 text-fg-3'>
-            <a
-              href='https://github.com/ln-dev7'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <Github />
-            </a>
-            <a
-              href='http://x.com/ln_dev7'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <Twitter />
-            </a>
-            <a
-              href='http://linkedin.com/in/lndev'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <Linkedin />
-            </a>
-            <a
-              href='http://instagra.com/ln_dev7'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <Instagram />
-            </a>
-            <a
-              href='http://youtube.com/c/LNDev'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <Youtube />
-            </a>
-          </div>
-          <div className='flex w-full items-center gap-4'>
-            <h3 className='shrink-0 text-4xl text-fg-3'>
-              the french tototte &copy;
-            </h3>
-            <div className='flex w-full flex-col items-start gap-0 font-gustavo text-xs text-fg-3'>
-              <p>
-                Copyright © 2024 TheFrenchTototte. Tous droits réservés —
-                Utilisation des cookies — Mention légales.
-              </p>
-              <p>
-                Sur une idée originale d’Antoine Daniel, concept art par Tera
-                Silver, 3D par Aurélien Thomas, logo par Baloprisonnier, 3D
-                print par Lunath & Packaging par Illusion
-              </p>
-            </div>
-            <a
-              href='http://github.com/n-dev7/the-french-tototte'
-              className='text-white underline underline-offset-2'
-              target='_blank'
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
       </div>
-      <img
-        src='/icon-big.svg'
-        alt='logo'
-        className='absolute bottom-0 left-0 w-96'
-      />
-    </footer>
+    </div>
   );
 }

@@ -11,11 +11,11 @@ export default function Bento() {
               alt='bento'
               className='absolute inset-0 h-full w-full object-cover'
             />
-            <img
+            {/* <img
               src='/bento-a.png'
               alt='bento'
               className='bento-item-a-image absolute -left-40 top-40 scale-[1.6] object-cover'
-            />
+            /> */}
             <div className='z-10 flex w-full flex-col items-start gap-2 self-end'>
               <h3 className='text-3xl text-fg-1'>elegante et sophistiquee</h3>
               <p className='font-gustavo text-base text-fg-3'>
