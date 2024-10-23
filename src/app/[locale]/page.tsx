@@ -1,11 +1,5 @@
 import Header from '@/app/[locale]/components/navigation/header';
 import Hero from '@/app/[locale]/components/home/hero';
-import Bento from '@/app/[locale]/components/home/bento';
-import PlugNTote from '@/app/[locale]/components/home/plug-n-tote';
-import Flavors from '@/app/[locale]/components/home/flavors';
-import Presentation from '@/app/[locale]/components/home/presentation';
-import Spotify from '@/app/[locale]/components/home/spotify';
-import Mynthos from '@/app/[locale]/components/home/mynthos';
 import Models from '@/app/[locale]/components/home/models';
 import PresentationVideo from '@/app/[locale]/components/home/presentationVideo';
 
@@ -26,12 +20,6 @@ export default function Home() {
         <PresentationVideo />
         <Why />
       </main>
-      <Bento />
-      <PlugNTote />
-      <Flavors />
-      <Presentation />
-      <Spotify />
-      <Mynthos />
     </div>
   );
 }
