@@ -1,0 +1,41 @@
+'use client';
+import React from 'react';
+
+type TypographyProps = {
+  variant?: 'h1' | 'h2' | 'h3' | 'body1' | 'body2' | 'caption';
+  html: keyof JSX.IntrinsicElements;
+  className?: string;
+  children: ReactNode;
+};
+
+export default function Typography({
+  variant = 'body1',
+  html: Tag = 'p',
+  className = '',
+  children,
+}: TypographyProps) {
+  const getFontClass = (variant: string) => {
+    switch (variant) {
+      case 'h1':
+        return 'text-4xl font-acorn font-medium';
+      case 'h2':
+        return 'text-3xl font-medium';
+      case 'h3':
+        return 'text-2xl font-light';
+      case 'body1':
+        return '';
+      case 'body2':
+        return 'font-light';
+      case 'caption':
+        return 'text-sm font-light';
+      case 'button':
+        return 'font-acorn text-sm font-medium ';
+      default:
+        return '';
+    }
+  };
+
+  return (
+    <Tag className={`${getFontClass(variant)} ${className}`}>{children}</Tag>
+  );
+}

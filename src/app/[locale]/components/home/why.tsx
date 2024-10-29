@@ -6,6 +6,7 @@ import Section from '../atoms/section';
 
 import { motion, MotionProps } from 'framer-motion';
 import SectionTitle from '../sections/sectionTitle';
+import Typography from '../atoms/typography';
 
 type BlockProps = React.HTMLAttributes<HTMLDivElement> & {
   className: string;
@@ -37,7 +38,19 @@ const Block = ({ className, ...rest }: BlockProps) => {
       }}
       className={`rounded-lg p-6 ${className}`}
       {...rest}
-    ></motion.div>
+    />
+  );
+};
+
+const ImageContainer = ({ url }: { url: string }) => {
+  return (
+    <Image
+      fill
+      style={{ objectFit: 'cover' }}
+      src={url}
+      alt='bento'
+      className='rounded-lg'
+    />
   );
 };
 
@@ -45,6 +58,29 @@ export default function Why() {
   return (
     <Section className='bg-white'>
       <Container className='flex-col'>
+        <Typography variant='h1' html='h1' className='mb-8'>
+          H1 - Partez au Nirvana
+        </Typography>
+        <Typography variant='h2' html='h2' className='mb-8'>
+          H2 - Partez au Nirvana
+        </Typography>
+        <Typography variant='h3' html='h3' className='mb-8'>
+          H3 - Partez au Nirvana
+        </Typography>
+        <Typography variant='body1' html='p' className='mb-8'>
+          body1 - Partez au Nirvana
+        </Typography>
+        <Typography variant='body2' html='p' className='mb-8'>
+          body2 - Partez au Nirvana
+        </Typography>
+        <Typography variant='caption' html='p' className='mb-8'>
+          caption - Partez au Nirvana
+        </Typography>
+
+        <Typography variant='button' html='p' className='mb-8'>
+          button - Partez au Nirvana
+        </Typography>
+
         <SectionTitle title='Partez au Nirvana' className='mb-8' />
         <motion.div
           initial='initial'
@@ -55,61 +91,28 @@ export default function Why() {
           className='grid h-[75vh] w-full grid-cols-12 gap-2'
         >
           <Block className='col-span-3 row-span-2 '>
-            <Image
-              fill
-              style={{ objectFit: 'cover' }}
-              src='/bento-1.jpeg'
-              alt='bento'
-              className='rounded-lg'
-            />
+            <ImageContainer url='/bento-1.jpeg' />
           </Block>
           <Block className='col-span-6 row-span-1 bg-orange'>
-            Tout ce dont vous avez besoin
-          </Block>
-          <Block className='col-span-3 row-span-1 bg-green'>
-            <Image
-              fill
-              style={{ objectFit: 'cover' }}
-              src='/bento-5.jpeg'
-              alt='bento'
-              className='rounded-lg'
+            <SectionTitle
+              title='Tout ce dont vous avez besoin'
+              className='color-white mb-8 text-white'
             />
           </Block>
           <Block className='col-span-3 row-span-1 bg-green'>
-            <Image
-              fill
-              style={{ objectFit: 'cover' }}
-              src='/bento-3.jpg'
-              alt='bento'
-              className='rounded-lg'
-            />
+            <ImageContainer url='/bento-5.jpeg' />
           </Block>
           <Block className='col-span-3 row-span-1 bg-green'>
-            <Image
-              fill
-              style={{ objectFit: 'cover' }}
-              src='/bento-4.jpeg'
-              alt='bento'
-              className='rounded-lg'
-            />
+            <ImageContainer url='/bento-3.jpg' />
+          </Block>
+          <Block className='col-span-3 row-span-1 bg-green'>
+            <ImageContainer url='/bento-4.jpeg' />
           </Block>
           <Block className='col-span-3 row-span-2 bg-blue-500'>
-            <Image
-              fill
-              style={{ objectFit: 'cover' }}
-              src='/bento-6.jpg'
-              alt='bento'
-              className='rounded-lg'
-            />
+            <ImageContainer url='/bento-6.jpeg' />
           </Block>
           <Block className='col-span-6 row-span-1 bg-red-500'>
-            <Image
-              fill
-              style={{ objectFit: 'cover' }}
-              src='/bento-2.jpeg'
-              alt='bento'
-              className='rounded-lg'
-            />
+            <ImageContainer url='/bento-2.jpeg' />
           </Block>
           <Block className='col-span-3 row-span-1 bg-green'>
             Les 4 saisons

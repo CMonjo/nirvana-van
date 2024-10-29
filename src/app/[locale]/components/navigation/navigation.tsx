@@ -1,4 +1,4 @@
-import { usePathname } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -24,12 +24,18 @@ const NavigationItem = ({
   color: 'black' | 'white';
 }) => {
   const pathname = usePathname();
-  const isActive = pathname === link;
+  const params = useParams();
+
+  const [isActive, setIsActive] = useState(false);
   const [shotDot, setShowDot] = useState(false);
 
   useEffect(() => {
-    setShowDot(isActive);
-  }, [isActive]);
+    const localePrefix = params.locale ? `/${params.locale}` : '';
+    if (`${localePrefix}${link}` === pathname) {
+      setIsActive(true);
+      setShowDot(true);
+    }
+  }, [link, pathname, params.locale]);
 
   const onHover = () => {
     if (isActive) return;
