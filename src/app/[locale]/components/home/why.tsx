@@ -4,10 +4,14 @@ import Container from '../atoms/container';
 import Image from 'next/image';
 import Section from '../atoms/section';
 
-import { motion } from 'framer-motion';
+import { motion, MotionProps } from 'framer-motion';
 import SectionTitle from '../sections/sectionTitle';
 
-const Block = ({ className, ...rest }: { className: string }) => {
+type BlockProps = React.HTMLAttributes<HTMLDivElement> & {
+  className: string;
+} & MotionProps;
+
+const Block = ({ className, ...rest }: BlockProps) => {
   return (
     <motion.div
       variants={{
