@@ -1,5 +1,8 @@
 {
   "Manifest": {
     "name": "Nirvana Van"
+  },
+  "HomePage": {
+    "title": "Welcome to Nirvana Van"
   }
 }
