@@ -55,7 +55,6 @@ export default function Header() {
             fontSize='large'
             className={skipHero ? 'text-black' : 'text-white'}
           />
-          {/* <Navigation color={skipHero ? 'black' : 'white'} /> */}
         </div>
       </div>
     </header>
