@@ -96,43 +96,43 @@ export const acorn = localFont({
   ],
 });
 
-export const tartuffo = localFont({
-  src: [
-    {
-      path: './fonts/tartuffo-regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './fonts/tartuffo-bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  display: 'swap',
-  preload: true,
-  variable: '--font-tartuffo',
-});
+// export const tartuffo = localFont({
+//   src: [
+//     {
+//       path: './fonts/tartuffo-regular.woff2',
+//       weight: '400',
+//       style: 'normal',
+//     },
+//     {
+//       path: './fonts/tartuffo-bold.woff2',
+//       weight: '700',
+//       style: 'normal',
+//     },
+//   ],
+//   display: 'swap',
+//   preload: true,
+//   variable: '--font-tartuffo',
+// });
 
-export const gustavo = localFont({
-  src: [
-    {
-      path: './fonts/gustavo-regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './fonts/gustavo-medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: './fonts/gustavo-bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  display: 'swap',
-  preload: true,
-  variable: '--font-gustavo',
-});
+// export const gustavo = localFont({
+//   src: [
+//     {
+//       path: './fonts/gustavo-regular.woff2',
+//       weight: '400',
+//       style: 'normal',
+//     },
+//     {
+//       path: './fonts/gustavo-medium.woff2',
+//       weight: '500',
+//       style: 'normal',
+//     },
+//     {
+//       path: './fonts/gustavo-bold.woff2',
+//       weight: '700',
+//       style: 'normal',
+//     },
+//   ],
+//   display: 'swap',
+//   preload: true,
+//   variable: '--font-gustavo',
+// });

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { tartuffo, gustavo, acorn, kobe11 } from './fonts';
+import { acorn, kobe11 } from './fonts';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
@@ -20,7 +20,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${tartuffo.variable} ${gustavo.variable} ${kobe11.variable} ${acorn.variable} font-tartuffo antialiased`}
+        className={`${kobe11.variable} ${acorn.variable} font-kobe11 antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <AppRouterCacheProvider>
