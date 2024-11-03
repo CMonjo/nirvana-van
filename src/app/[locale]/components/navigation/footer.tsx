@@ -18,15 +18,19 @@ export default function Header() {
           <Image
             src='/logo_full_white.png'
             alt='Nirvana Van logo'
-            className='mb-8'
+            className='mb-2 md:mb-8'
             width={150}
             height={150}
           />
         </Link>
+        <Typography
+          variant='caption'
+          className='mb-8 md:hidden'
+        >{`Nirvana Van © 2022 - ${new Date().getFullYear()}`}</Typography>
         <Navigation color='white' nav='footer' />
       </div>
       <div className='relative flex w-full flex-row items-center justify-between px-6 py-4'>
-        <div className='absolute left-1/2 -translate-x-1/2 transform'>
+        <div className='absolute left-1/2 hidden -translate-x-1/2 transform md:flex'>
           <Typography variant='caption'>{`Nirvana Van © 2022 - ${new Date().getFullYear()}`}</Typography>
         </div>
         <div className='flex gap-4'>
@@ -37,7 +41,6 @@ export default function Header() {
             <Typography variant='caption'>CGU / CGV</Typography>
           </Link>
         </div>
-        {/* <div className='flex gap-12'> */}
         <div className='flex gap-4'>
           <Link href='https://www.youtube.com/@nirvanavan' target='_blank'>
             <YouTubeIcon style={{ fontSize: 28 }} />
@@ -52,8 +55,6 @@ export default function Header() {
             <InstagramIcon style={{ fontSize: 24 }} />
           </Link>
         </div>
-        {/* Français
-        </div> */}
       </div>
     </footer>
   );

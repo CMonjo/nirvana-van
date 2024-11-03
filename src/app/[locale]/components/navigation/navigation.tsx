@@ -81,7 +81,7 @@ export default function Navigation({
   const links = nav === 'header' ? headerLinks : footerLinks;
 
   return (
-    <div className='flex gap-8'>
+    <div className='flex flex-col items-center gap-4 md:flex-row md:gap-8'>
       {links.map((link) => {
         return (
           <NavigationItem

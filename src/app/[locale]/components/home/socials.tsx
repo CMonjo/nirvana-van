@@ -37,7 +37,9 @@ export default function Socials() {
             </Typography>
           </div>
           <div className='flex w-full flex-col items-center justify-between md:flex-row'>
-            <Typography variant='h2'>Partagez vos aventures</Typography>
+            <Typography variant='h2' className='text-center'>
+              Partagez vos aventures
+            </Typography>
             <div className='flex items-center gap-4'>
               <Link href='https://www.youtube.com/@nirvanavan' target='_blank'>
                 <YouTubeIcon style={{ fontSize: 46 }} />
@@ -59,10 +61,28 @@ export default function Socials() {
         </Container>
       </Section>
 
-      <div className='w-full overflow-hidden bg-orange pl-2'>
-        <div className='flex gap-8'>
+      <div className='w-full overflow-hidden pl-2'>
+        <div className='flex gap-4 md:gap-8'>
           {images.map((image, index) => (
-            <div key={index} className='relative h-80 w-56 flex-shrink-0'>
+            <div
+              key={index}
+              className='relative h-40 w-28 flex-shrink-0 md:h-80 md:w-56'
+            >
+              <Image
+                className='rounded-3xl object-cover'
+                layout='fill'
+                alt={`social-image-${index + 1}`}
+                src={image}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className='mt-4 w-full overflow-hidden pl-2 md:hidden'>
+        <div className='-ml-20 flex gap-4 '>
+          {images.reverse().map((image, index) => (
+            <div key={index} className='relative h-40 w-28 flex-shrink-0'>
               <Image
                 className='rounded-3xl object-cover'
                 layout='fill'
