@@ -110,7 +110,7 @@ export default function Why() {
             <BentoImage url='/bento-4.jpeg' />
           </BentoItem>
           <BentoItem className='col-span-2 row-span-1 bg-blue-500  lg:col-span-3 lg:row-span-2'>
-            <BentoImage url='/bento-6.jpeg' />
+            <BentoImage url='/bento-6.png' />
           </BentoItem>
           <BentoItem className='col-span-1 row-span-1 bg-red-500  lg:col-span-6 lg:row-span-1'>
             <BentoImage url='/bento-2.jpeg' />
