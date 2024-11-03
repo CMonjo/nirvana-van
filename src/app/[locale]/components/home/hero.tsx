@@ -21,9 +21,9 @@ export default function Hero() {
       <Stack
         spacing={2}
         direction={'row'}
-        className='absolute bottom-14 z-50 w-full items-center justify-center'
+        className='absolute bottom-14 z-10 w-full items-center justify-center'
       >
-        <Button color='orange'>Teadrop</Button>
+        <Button color='orange'>Teardrop</Button>
         <Button color='green'>Trotty</Button>
       </Stack>
     </div>

@@ -30,7 +30,7 @@ export default function Header() {
     >
       <div className='relative flex h-24 w-full max-w-7xl items-center justify-between px-6'>
         <div className='hidden lg:flex'>
-          <Navigation color={skipHero ? 'black' : 'white'} />
+          <Navigation color={skipHero ? 'black' : 'white'} nav='header' />
         </div>
         <Link
           href={'/'}

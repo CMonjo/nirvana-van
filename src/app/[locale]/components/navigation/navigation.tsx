@@ -3,15 +3,24 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const links = [
-  { name: 'Teadrop', href: '/teardrop', icon: null },
+const headerLinks = [
+  { name: 'Teardrop', href: '/teardrop', icon: null },
   {
     name: 'Trotty',
     href: '/trotty',
     icon: null,
   },
-  { name: 'Potty', href: '/potty', icon: null },
-  { name: 'Notre histoire', href: '/about', icon: null },
+];
+
+const footerLinks = [
+  { name: 'Teardrop', href: '/teardrop', icon: null },
+  {
+    name: 'Trotty',
+    href: '/trotty',
+    icon: null,
+  },
+  { name: 'Location', href: '/location', icon: null },
+  { name: 'Contact', href: '/contact', icon: null },
 ];
 
 const NavigationItem = ({
@@ -62,7 +71,15 @@ const NavigationItem = ({
   );
 };
 
-export default function Navigation({ color }: { color: 'black' | 'white' }) {
+export default function Navigation({
+  color,
+  nav,
+}: {
+  color: 'black' | 'white';
+  nav: 'header' | 'footer';
+}) {
+  const links = nav === 'header' ? headerLinks : footerLinks;
+
   return (
     <div className='flex gap-8'>
       {links.map((link) => {

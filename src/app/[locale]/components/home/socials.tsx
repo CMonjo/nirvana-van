@@ -4,8 +4,8 @@ import SectionTitle from '../sections/sectionTitle';
 import Section from '../atoms/section';
 import Container from '../atoms/container';
 import Typography from '../atoms/typography';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import Image from 'next/image';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Link from 'next/link';
@@ -24,13 +24,19 @@ export default function Socials() {
           <div className='flex w-full flex-row items-center justify-between'>
             <SectionTitle title={`Partagez vos aventures`} className='mb-0' />
             <Stack spacing={2} direction={'row'} className='items-center'>
-              <Link href='https://www.youtube.com' target='_blank'>
+              <Link href='https://www.youtube.com/@nirvanavan' target='_blank'>
                 <YouTubeIcon style={{ fontSize: 46 }} />
               </Link>
-              <Link href='https://www.youtube.com' target='_blank'>
+              <Link
+                href='https://www.facebook.com/people/Nirvana-van/100087201987137/'
+                target='_blank'
+              >
                 <FacebookIcon style={{ fontSize: 38 }} />
               </Link>
-              <Link href='https://www.youtube.com' target='_blank'>
+              <Link
+                href='https://www.instagram.com/nirvanavan_/'
+                target='_blank'
+              >
                 <InstagramIcon style={{ fontSize: 38 }} />
               </Link>
             </Stack>

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 type TypographyProps = {
   variant?: 'h1' | 'h2' | 'h3' | 'body1' | 'body2' | 'caption' | 'button';

@@ -1,8 +1,10 @@
 import Header from '@/app/[locale]/components/navigation/header';
+import Footer from '@/app/[locale]/components/navigation/footer';
 import Hero from '@/app/[locale]/components/home/hero';
 import Models from '@/app/[locale]/components/home/models';
 import PresentationVideo from '@/app/[locale]/components/home/presentationVideo';
 import Story from './components/home/story';
+import Rental from './components/home/rental';
 
 import { useTranslations } from 'next-intl';
 import Why from './components/home/why';
@@ -38,7 +40,9 @@ export default function Home() {
         {/* <Why /> */}
         <Story />
         <Socials />
+        <Rental />
       </main>
+      <Footer />
     </div>
   );
 }

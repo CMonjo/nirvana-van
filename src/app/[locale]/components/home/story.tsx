@@ -10,7 +10,7 @@ export default function Story() {
   return (
     <Section className='bg-white' topoBackground>
       <Container className='flex-col'>
-        <SectionTitle title={`Pour la petite histore`} />
+        <SectionTitle title={`Pour la petite histoire`} />
         <div className='max-w-3xl flex-col text-center'>
           <Typography className='mb-4'>
             Nous construisons nos caravanes dans le but de vous offrir une
