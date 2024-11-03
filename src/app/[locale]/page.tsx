@@ -37,10 +37,10 @@ export default function Home() {
         </Typography> */}
 
         <PresentationVideo />
-        {/* <Why /> */}
+        <Why />
         <Story />
-        <Socials />
         <Rental />
+        <Socials />
       </main>
       <Footer />
     </div>
