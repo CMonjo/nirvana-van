@@ -107,31 +107,41 @@ export default function Header() {
           </div>
         </div>
       </motion.header>
-      {showMenu ? (
-        <motion.div
-          initial={{ x: '100%' }}
-          animate={{ x: 0 }}
-          exit={{ x: '100%' }}
-          transition={{ duration: 0.6, ease: 'easeInOut' }}
-          className='header-gradient-left fixed right-0 z-30 flex h-full w-2/3 flex-col items-center justify-between bg-orange px-4 pb-4 pt-32'
-        >
-          <Navigation color='black' nav='footer' />
-          <div className='flex gap-4'>
-            <Link href='https://www.youtube.com/@nirvanavan' target='_blank'>
-              <YouTubeIcon style={{ fontSize: 28 }} />
-            </Link>
-            <Link
-              href='https://www.facebook.com/people/Nirvana-van/100087201987137/'
-              target='_blank'
+      {
+        <AnimatePresence>
+          {showMenu && (
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              className='header-gradient-left fixed right-0 z-30 flex h-full w-2/3 flex-col items-center justify-between bg-orange px-4 pb-4 pt-32'
             >
-              <FacebookIcon style={{ fontSize: 24 }} />
-            </Link>
-            <Link href='https://www.instagram.com/nirvanavan_/' target='_blank'>
-              <InstagramIcon style={{ fontSize: 24 }} />
-            </Link>
-          </div>
-        </motion.div>
-      ) : null}
+              <Navigation color='black' nav='footer' />
+              <div className='flex gap-4'>
+                <Link
+                  href='https://www.youtube.com/@nirvanavan'
+                  target='_blank'
+                >
+                  <YouTubeIcon style={{ fontSize: 28 }} />
+                </Link>
+                <Link
+                  href='https://www.facebook.com/people/Nirvana-van/100087201987137/'
+                  target='_blank'
+                >
+                  <FacebookIcon style={{ fontSize: 24 }} />
+                </Link>
+                <Link
+                  href='https://www.instagram.com/nirvanavan_/'
+                  target='_blank'
+                >
+                  <InstagramIcon style={{ fontSize: 24 }} />
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      }
     </>
   );
 }
