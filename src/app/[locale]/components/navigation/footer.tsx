@@ -8,7 +8,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Typography from '../atoms/typography';
 
-export default function Header() {
+export default function Footer() {
   return (
     <footer
       className={`bg-dark flex w-full flex-col items-center justify-center  text-white`}
