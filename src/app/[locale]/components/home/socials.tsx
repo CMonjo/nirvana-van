@@ -11,19 +11,34 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import Link from 'next/link';
 import { Stack } from '@mui/material';
 
+const images = [
+  '/bento-1.jpeg',
+  '/bento-2.jpeg',
+  '/bento-3.jpg',
+  '/bento-4.jpeg',
+  '/bento-5.jpeg',
+  '/bento-6.jpeg',
+  '/bento-1.jpeg',
+  '/bento-6.jpeg',
+];
+
 export default function Socials() {
   return (
-    <div className='bg-white pb-16'>
-      <Section>
-        <Container className='mb-0 flex-col pb-4'>
-          <div className='flex w-full'>
+    <div className='flex w-full flex-col items-center bg-white pb-16'>
+      <Section className='overflow-hidden'>
+        <Container
+          className='mb-0 flex-col pb-4'
+          //   justify='center'
+          //   align='start'
+        >
+          <div className='flex w-full justify-center md:justify-start'>
             <Typography variant='caption' className='text-orange'>
               #nirvanavan
             </Typography>
           </div>
-          <div className='flex w-full flex-row items-center justify-between'>
-            <SectionTitle title={`Partagez vos aventures`} className='mb-0' />
-            <Stack spacing={2} direction={'row'} className='items-center'>
+          <div className='flex w-full flex-col items-center justify-between md:flex-row'>
+            <Typography variant='h2'>Partagez vos aventures</Typography>
+            <div className='flex items-center gap-4'>
               <Link href='https://www.youtube.com/@nirvanavan' target='_blank'>
                 <YouTubeIcon style={{ fontSize: 46 }} />
               </Link>
@@ -39,80 +54,25 @@ export default function Socials() {
               >
                 <InstagramIcon style={{ fontSize: 38 }} />
               </Link>
-            </Stack>
+            </div>
           </div>
         </Container>
       </Section>
-      <Stack
-        className='flex w-full overflow-hidden'
-        pl={2}
-        spacing={2}
-        direction={'row'}
-      >
-        <Image
-          className='rounded-3xl'
-          width={235}
-          height={355}
-          alt={'social-image-1'}
-          src={'/bento-1.jpeg'}
-        />
-        <Image
-          className='rounded-3xl'
-          width={235}
-          height={355}
-          alt={'social-image-1'}
-          src={'/bento-1.jpeg'}
-        />
-        <Image
-          className='rounded-3xl'
-          width={235}
-          height={355}
-          alt={'social-image-1'}
-          src={'/bento-1.jpeg'}
-        />
-        <Image
-          className='rounded-3xl'
-          width={235}
-          height={355}
-          alt={'social-image-1'}
-          src={'/bento-1.jpeg'}
-        />
-        <Image
-          className='rounded-3xl'
-          width={235}
-          height={355}
-          alt={'social-image-1'}
-          src={'/bento-1.jpeg'}
-        />
-        <Image
-          className='rounded-3xl'
-          width={235}
-          height={355}
-          alt={'social-image-1'}
-          src={'/bento-1.jpeg'}
-        />
-        <Image
-          className='rounded-3xl'
-          width={235}
-          height={355}
-          alt={'social-image-1'}
-          src={'/bento-1.jpeg'}
-        />
-        <Image
-          className='rounded-3xl'
-          width={235}
-          height={355}
-          alt={'social-image-1'}
-          src={'/bento-1.jpeg'}
-        />
-        <Image
-          className='rounded-3xl'
-          width={235}
-          height={355}
-          alt={'social-image-1'}
-          src={'/bento-1.jpeg'}
-        />
-      </Stack>
+
+      <div className='w-full overflow-hidden bg-orange pl-2'>
+        <div className='flex gap-8'>
+          {images.map((image, index) => (
+            <div key={index} className='relative h-80 w-56 flex-shrink-0'>
+              <Image
+                className='rounded-3xl object-cover'
+                layout='fill'
+                alt={`social-image-${index + 1}`}
+                src={image}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

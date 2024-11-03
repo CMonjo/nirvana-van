@@ -3,9 +3,13 @@ import React from 'react';
 const Container = ({
   children,
   className = '',
+  //   justify,
+  //   align,
 }: {
   children: React.ReactNode;
   className?: string;
+  //   justify?: string;
+  //   align?: string;
 }) => {
   return (
     <div

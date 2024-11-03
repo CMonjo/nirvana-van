@@ -19,7 +19,7 @@ export default function Typography({
       case 'h1':
         return 'text-4xl font-acorn font-medium';
       case 'h2':
-        return 'text-3xl font-medium';
+        return 'font-kobe11 text-4xl font-medium';
       case 'h3':
         return 'text-2xl font-light';
       case 'body1':
