@@ -58,30 +58,7 @@ export default function Why() {
   return (
     <Section className='bg-white'>
       <Container className='flex-col'>
-        <Typography variant='h1' html='h1' className='mb-8'>
-          H1 - Partez au Nirvana
-        </Typography>
-        <Typography variant='h2' html='h2' className='mb-8'>
-          H2 - Partez au Nirvana
-        </Typography>
-        <Typography variant='h3' html='h3' className='mb-8'>
-          H3 - Partez au Nirvana
-        </Typography>
-        <Typography variant='body1' html='p' className='mb-8'>
-          body1 - Partez au Nirvana
-        </Typography>
-        <Typography variant='body2' html='p' className='mb-8'>
-          body2 - Partez au Nirvana
-        </Typography>
-        <Typography variant='caption' html='p' className='mb-8'>
-          caption - Partez au Nirvana
-        </Typography>
-
-        <Typography variant='button' html='p' className='mb-8'>
-          button - Partez au Nirvana
-        </Typography>
-
-        <SectionTitle title='Partez au Nirvana' className='mb-8' />
+        <SectionTitle title='Partez au Nirvana' />
         <motion.div
           initial='initial'
           animate='animate'
@@ -96,7 +73,7 @@ export default function Why() {
           <Block className='col-span-6 row-span-1 bg-orange'>
             <SectionTitle
               title='Tout ce dont vous avez besoin'
-              className='color-white mb-8 text-white'
+              className='color-white  text-white'
             />
           </Block>
           <Block className='col-span-3 row-span-1 bg-green'>

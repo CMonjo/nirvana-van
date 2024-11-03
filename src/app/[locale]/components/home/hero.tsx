@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Button from '../atoms/button';
+import { Stack } from '@mui/material';
 
 export default function Hero() {
   return (
@@ -17,12 +18,14 @@ export default function Hero() {
           <br /> de mini-caravanes
         </h1>
       </div>
-      <div className='absolute bottom-14 z-50 flex w-full flex-col items-center justify-center'>
-        <h3 className='my-6 max-w-[760px] px-6 text-center font-kobe11 text-3xl font-light text-white'>
-          Fabricant français artisanal de mini-caravane
-        </h3>
-        <Button color='white'>Découvrir notre histoire</Button>
-      </div>
+      <Stack
+        spacing={2}
+        direction={'row'}
+        className='absolute bottom-14 z-50 w-full items-center justify-center'
+      >
+        <Button color='orange'>Teadrop</Button>
+        <Button color='green'>Trotty</Button>
+      </Stack>
     </div>
   );
 }

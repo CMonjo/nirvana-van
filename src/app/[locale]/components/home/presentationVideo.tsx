@@ -17,7 +17,7 @@ export default function PresentationVideo() {
         Your browser does not support the video tag.
       </video>
       <div className='relative z-10 flex h-full flex-col items-center justify-center bg-black bg-opacity-65 p-4 text-center text-white'>
-        <SectionTitle title={'Nirvana Van en action'} className='mb-8' />
+        <SectionTitle title={'Nirvana Van en action'} />
         <Button icon={<PlayArrowIcon />}>Voir la vidéo</Button>
       </div>
     </div>

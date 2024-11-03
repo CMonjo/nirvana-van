@@ -2,8 +2,8 @@
 import React from 'react';
 
 type TypographyProps = {
-  variant?: 'h1' | 'h2' | 'h3' | 'body1' | 'body2' | 'caption';
-  html: keyof JSX.IntrinsicElements;
+  variant?: 'h1' | 'h2' | 'h3' | 'body1' | 'body2' | 'caption' | 'button';
+  html?: keyof JSX.IntrinsicElements;
   className?: string;
   children: ReactNode;
 };
@@ -23,9 +23,9 @@ export default function Typography({
       case 'h3':
         return 'text-2xl font-light';
       case 'body1':
-        return '';
+        return ' text-xl font-light';
       case 'body2':
-        return 'font-light';
+        return 'font-light text-lg';
       case 'caption':
         return 'text-sm font-light';
       case 'button':
