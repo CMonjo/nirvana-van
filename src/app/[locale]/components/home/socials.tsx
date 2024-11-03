@@ -17,20 +17,16 @@ const images = [
   '/bento-3.jpg',
   '/bento-4.jpeg',
   '/bento-5.jpeg',
-  '/bento-6.jpeg',
+  '/bento-6.png',
   '/bento-1.jpeg',
-  '/bento-6.jpeg',
+  '/bento-6.png',
 ];
 
 export default function Socials() {
   return (
     <div className='flex w-full flex-col items-center bg-white pb-16'>
       <Section className='overflow-hidden'>
-        <Container
-          className='mb-0 flex-col pb-4'
-          //   justify='center'
-          //   align='start'
-        >
+        <Container className='mb-0 flex-col pb-4'>
           <div className='flex w-full justify-center md:justify-start'>
             <Typography variant='caption' className='text-orange'>
               #nirvanavan
