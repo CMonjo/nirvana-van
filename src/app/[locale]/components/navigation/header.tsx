@@ -117,8 +117,8 @@ export default function Header() {
               transition={{ duration: 0.5, ease: 'easeInOut' }}
               className='header-gradient-left fixed right-0 z-30 flex h-full w-2/3 flex-col items-center justify-between bg-orange px-4 pb-4 pt-32'
             >
-              <Navigation color='black' nav='footer' />
-              <div className='flex gap-4'>
+              <Navigation color='white' nav='footer' />
+              <div className='flex gap-4 text-white'>
                 <Link
                   href='https://www.youtube.com/@nirvanavan'
                   target='_blank'

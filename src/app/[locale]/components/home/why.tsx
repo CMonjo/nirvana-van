@@ -8,11 +8,18 @@ import { motion, MotionProps } from 'framer-motion';
 import SectionTitle from '../sections/sectionTitle';
 import Typography from '../atoms/typography';
 
-type BlockProps = React.HTMLAttributes<HTMLDivElement> & {
+import bento1 from '../../../../../public/bento-1.jpeg';
+import bento2 from '../../../../../public/bento-2.jpeg';
+import bento3 from '../../../../../public/bento-3.jpg';
+import bento4 from '../../../../../public/bento-4.jpeg';
+import bento5 from '../../../../../public/bento-5.jpeg';
+import bento6 from '../../../../../public/bento-6.png';
+
+type BentoItemProps = React.HTMLAttributes<HTMLDivElement> & {
   className: string;
 } & MotionProps;
 
-const Block = ({ className, ...rest }: BlockProps) => {
+const BentoItem = ({ className, ...rest }: BentoItemProps) => {
   return (
     <motion.div
       variants={{
@@ -36,21 +43,38 @@ const Block = ({ className, ...rest }: BlockProps) => {
         stiffness: 400,
         damping: 50,
       }}
-      className={`rounded-lg p-6 ${className}`}
+      className={`rounded-lg ${className}`}
       {...rest}
     />
   );
 };
 
-const ImageContainer = ({ url }: { url: string }) => {
+const BentoImage = ({ url }: { url: string }) => {
   return (
-    <Image
-      fill
-      style={{ objectFit: 'cover' }}
-      src={url}
-      alt='bento'
-      className='rounded-lg'
-    />
+    <div className='relative h-full w-full items-center justify-center rounded-3xl '>
+      <Image
+        fill
+        objectFit='cover'
+        src={url}
+        alt='bento'
+        className='rounded-lg'
+      />
+    </div>
+  );
+};
+
+const BentoText = ({
+  title,
+  description,
+}: {
+  title: string;
+  description?: string;
+}) => {
+  return (
+    <div className='relative h-full w-full rounded-3xl p-6 text-white'>
+      <Typography variant='h2'>{title}</Typography>
+      {description ? <Typography>{description}</Typography> : null}
+    </div>
   );
 };
 
@@ -65,35 +89,38 @@ export default function Why() {
           transition={{
             staggerChildren: 0.05,
           }}
-          className='grid h-[75vh] w-full grid-cols-12 gap-2'
+          className='grid h-[1800px] w-full grid-cols-2 grid-rows-6 gap-2 lg:h-[75vh] lg:grid-cols-12 lg:grid-rows-3'
         >
-          <Block className='col-span-3 row-span-2 '>
-            <ImageContainer url='/bento-1.jpeg' />
-          </Block>
-          <Block className='col-span-6 row-span-1 bg-orange'>
-            <SectionTitle
-              title='Tout ce dont vous avez besoin'
-              className='color-white  text-white'
+          <BentoItem className='col-span-2 row-span-1 bg-red-500  lg:col-span-3 lg:row-span-2'>
+            <BentoImage url='/bento-1.jpeg' />
+          </BentoItem>
+          <BentoItem className='col-span-1 row-span-1 bg-orange  lg:col-span-6 lg:row-span-1'>
+            <BentoText
+              title='Les 4 saisons'
+              description={`Partez n'importe quand`}
             />
-          </Block>
-          <Block className='col-span-3 row-span-1 bg-green'>
-            <ImageContainer url='/bento-5.jpeg' />
-          </Block>
-          <Block className='col-span-3 row-span-1 bg-green'>
-            <ImageContainer url='/bento-3.jpg' />
-          </Block>
-          <Block className='col-span-3 row-span-1 bg-green'>
-            <ImageContainer url='/bento-4.jpeg' />
-          </Block>
-          <Block className='col-span-3 row-span-2 bg-blue-500'>
-            <ImageContainer url='/bento-6.jpeg' />
-          </Block>
-          <Block className='col-span-6 row-span-1 bg-red-500'>
-            <ImageContainer url='/bento-2.jpeg' />
-          </Block>
-          <Block className='col-span-3 row-span-1 bg-green'>
-            Les 4 saisons
-          </Block>
+          </BentoItem>
+          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
+            <BentoImage url='/bento-5.jpeg' />
+          </BentoItem>
+          <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
+            <BentoImage url='/bento-3.jpg' />
+          </BentoItem>
+          <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
+            <BentoImage url='/bento-4.jpeg' />
+          </BentoItem>
+          <BentoItem className='col-span-2 row-span-1 bg-blue-500  lg:col-span-3 lg:row-span-2'>
+            <BentoImage url='/bento-6.jpeg' />
+          </BentoItem>
+          <BentoItem className='col-span-1 row-span-1 bg-red-500  lg:col-span-6 lg:row-span-1'>
+            <BentoImage url='/bento-2.jpeg' />
+          </BentoItem>
+          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
+            <BentoText
+              title='Les 4 saisons'
+              description={`Partez n'importe quand`}
+            />
+          </BentoItem>
         </motion.div>
       </Container>
     </Section>
