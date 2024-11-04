@@ -13,12 +13,12 @@ export default function Hero() {
         className='absolute inset-0 object-cover'
         alt='hero'
       />
-      {/* <div className='absolute top-40 flex w-full flex-col items-center justify-center'>
+      <div className='absolute top-40 flex w-full flex-col items-center justify-center'>
         <h1 className='mx-2 my-6 max-w-5xl text-center font-acorn text-4xl text-white md:text-5xl lg:text-7xl'>
           Fabriquant artisanal français
           <br /> de mini-caravanes
         </h1>
-      </div> */}
+      </div>
       <Stack
         spacing={2}
         direction={'row'}
