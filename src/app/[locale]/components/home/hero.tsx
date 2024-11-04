@@ -13,8 +13,8 @@ export default function Hero() {
         alt='hero'
       />
       <div className='absolute top-40 flex w-full flex-col items-center justify-center'>
-        <h1 className='my-6 max-w-5xl text-center font-acorn text-4xl text-white md:text-5xl lg:text-7xl'>
-          Frabriquant artisanal français
+        <h1 className='mx-2 my-6 max-w-5xl text-center font-acorn text-4xl text-white md:text-5xl lg:text-7xl'>
+          Fabriquant artisanal français
           <br /> de mini-caravanes
         </h1>
       </div>
