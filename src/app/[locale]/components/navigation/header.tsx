@@ -9,12 +9,16 @@ import Navigation from './navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import SocialLinks from '../utils/socialLinks';
 import LinkWrapper from '../utils/LinkWrapper';
+import useIsDesktop from '@/hooks/useIsDesktop';
 
 export default function Header() {
-  const [skipHero, setSkipHero] = useState(false);
+  const isDesktop = useIsDesktop();
+  const [skipHero, setSkipHero] = useState(!isDesktop);
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
+    if (!isDesktop) return;
+
     const toggleVisibility = () => {
       if (window.scrollY + 100 >= window.innerHeight) {
         setSkipHero(true);
