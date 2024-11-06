@@ -9,7 +9,7 @@ const Container = ({
 }) => {
   return (
     <div
-      className={`flex items-center justify-center px-8 py-8 md:px-4 md:py-16 ${className}`}
+      className={`flex items-center justify-center px-8 py-8 xl:px-8 xl:py-16 ${className}`}
     >
       {children}
     </div>
