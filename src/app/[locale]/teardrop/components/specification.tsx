@@ -22,21 +22,31 @@ export default function Specification({
 }) {
   return (
     <Section className={`${background}`} topoBackground={topoBackground}>
-      <Container
-        className={`h-[550px] gap-8 ${imageRight ? 'flex-row-reverse' : 'flex-row'}`}
-      >
+      <Container>
         <div
-          className={`flex h-full flex-[4] items-center justify-center rounded-3xl bg-green`}
+          className={`flex flex-col gap-8 ${imageRight ? 'md:flex-row-reverse' : 'md:flex-row'}`}
         >
-          <Typography variant='h1' className='text-5xl font-medium text-white'>
-            {section}
-          </Typography>
-        </div>
-        <div className='bg-grey flex h-full flex-[2] flex-col rounded-3xl px-4 py-4'>
-          <Typography variant='h3' className='mb-4 text-center font-medium'>
-            {title}
-          </Typography>
-          <Typography variant='body2'>{description}</Typography>
+          <div className='relative flex min-h-[300px] flex-[3] items-center justify-center rounded-3xl bg-orange md:h-auto'>
+            <Typography
+              variant='h1'
+              className='z-10 text-5xl font-medium text-white'
+            >
+              {section}
+            </Typography>
+            <Image
+              fill
+              src={'/bento-1.jpeg'}
+              alt='bento'
+              className='rounded-lg object-cover'
+            />
+            <div className='bg-black/05 absolute inset-0 rounded-2xl' />
+          </div>
+          <div className='bg-grey flex h-full flex-[2] flex-col rounded-3xl px-4 py-4'>
+            <Typography variant='h3' className='mb-4 text-center font-medium'>
+              {title}
+            </Typography>
+            <Typography variant='body2'>{description}</Typography>
+          </div>
         </div>
       </Container>
     </Section>

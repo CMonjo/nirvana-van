@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-export default function useIsDesktop(breakpoint: number = 768): boolean {
+export default function useIsDesktop(breakpoint: number = 767): boolean {
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {

@@ -48,7 +48,23 @@ Hauteur (hors tout): 1,76 m
 Hauteur intérieure: 1,16 m
 Dimensions intérieures: 2,45 m x 1,45 m
 Hauteur (hors tout): 1,76 m
+Hauteur intéri
+Dimensions intérieures: 2,45 m x 1,45 m
+Dimensions extérieures: 3,85 m x 1,92 m
+Dimensions intérieures: 2,45 m x 1,45 m
+Hauteur (hors tout): 1,76 m
 Hauteur intérieure: 1,16 m
+Dimensions intérieures: 2,45 m x 1,45 m
+Hauteur (hors tout): 1,76 m
+Hauteur intéri
+Dimensions intérieures: 2,45 m x 1,45 m
+Dimensions extérieures: 3,85 m x 1,92 m
+Dimensions intérieures: 2,45 m x 1,45 m
+Hauteur (hors tout): 1,76 m
+Hauteur intérieure: 1,16 m
+Dimensions intérieures: 2,45 m x 1,45 m
+Hauteur (hors tout): 1,76 m
+Hauteur intéri
 Dimensions intérieures: 2,45 m x 1,45 m
 Hauteur (hors tout): 1,76 m
 Hauteur intérieure: 1,16 m'
