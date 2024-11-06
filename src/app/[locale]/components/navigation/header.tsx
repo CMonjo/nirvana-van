@@ -13,12 +13,10 @@ import useIsDesktop from '@/hooks/useIsDesktop';
 
 export default function Header() {
   const isDesktop = useIsDesktop();
-  const [skipHero, setSkipHero] = useState(!isDesktop);
+  const [skipHero, setSkipHero] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
-    if (!isDesktop) return;
-
     const toggleVisibility = () => {
       if (window.scrollY + 100 >= window.innerHeight) {
         setSkipHero(true);
@@ -30,38 +28,36 @@ export default function Header() {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
+  const headerFixed = !isDesktop || skipHero || showMenu;
+
   return (
     <>
       <motion.header
         initial={{ backgroundColor: 'rgba(255, 255, 255, 0)' }}
         animate={{
-          backgroundColor:
-            skipHero || showMenu
-              ? 'rgba(255, 255, 255, 1)'
-              : 'rgba(255, 255, 255, 0)',
+          backgroundColor: headerFixed
+            ? 'rgba(255, 255, 255, 1)'
+            : 'rgba(255, 255, 255, 0)',
         }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
         className={`fixed top-0 z-50 flex w-full items-center justify-center ${
-          skipHero || showMenu ? 'header-gradient' : 'bg-transparent'
+          headerFixed ? 'header-gradient' : 'bg-transparent'
         }`}
       >
         <div className='relative flex h-24 w-full max-w-7xl items-center justify-between px-6'>
           <div className='hidden lg:flex'>
-            <Navigation
-              color={skipHero || showMenu ? 'black' : 'white'}
-              nav='header'
-            />
+            <Navigation color={headerFixed ? 'black' : 'white'} nav='header' />
           </div>
           <LinkWrapper
             href={'/'}
             className='absolute w-48 lg:left-0 lg:right-0 lg:ml-auto lg:mr-auto'
           >
-            <Logo color={skipHero || showMenu ? 'black' : 'white'} />
+            <Logo color={headerFixed ? 'black' : 'white'} />
           </LinkWrapper>
           <div className='hidden gap-3 lg:flex'>
             <Button
-              color={skipHero || showMenu ? 'orange' : 'white'}
-              variant={skipHero || showMenu ? 'outlined' : 'filled'}
+              color={headerFixed ? 'orange' : 'white'}
+              variant={headerFixed ? 'outlined' : 'filled'}
             >
               Location
             </Button>
@@ -83,9 +79,7 @@ export default function Header() {
                 >
                   <MenuIcon
                     fontSize='large'
-                    className={
-                      skipHero || showMenu ? 'text-black' : 'text-white'
-                    }
+                    className={headerFixed ? 'text-black' : 'text-white'}
                   />
                 </motion.div>
               ) : (
@@ -99,9 +93,7 @@ export default function Header() {
                 >
                   <CloseIcon
                     fontSize='large'
-                    className={
-                      skipHero || showMenu ? 'text-black' : 'text-white'
-                    }
+                    className={headerFixed ? 'text-black' : 'text-white'}
                   />
                 </motion.div>
               )}
