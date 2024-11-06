@@ -52,13 +52,7 @@ const BentoItem = ({ className, ...rest }: BentoItemProps) => {
 const BentoImage = ({ url }: { url: string }) => {
   return (
     <div className='relative h-full w-full items-center justify-center rounded-3xl '>
-      <Image
-        fill
-        objectFit='cover'
-        src={url}
-        alt='bento'
-        className='rounded-lg'
-      />
+      <Image fill src={url} alt='bento' className='rounded-lg object-cover' />
     </div>
   );
 };

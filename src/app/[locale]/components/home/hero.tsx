@@ -8,7 +8,6 @@ export default function Hero() {
       <Image
         src={`/hero.png`}
         fill
-        priority
         className='absolute inset-0 object-cover'
         alt='hero'
       />

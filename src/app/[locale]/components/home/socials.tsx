@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import SectionTitle from '../sections/sectionTitle';
 import Section from '../atoms/section';
 import Container from '../atoms/container';
 import Typography from '../atoms/typography';
@@ -9,7 +8,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Link from 'next/link';
-import { Stack } from '@mui/material';
+import SocialLinks from '../utils/socialLinks';
 
 const images = [
   '/bento-1.jpeg',
@@ -36,23 +35,7 @@ export default function Socials() {
             <Typography variant='h2' className='text-center'>
               Partagez vos aventures
             </Typography>
-            <div className='flex items-center gap-4'>
-              <Link href='https://www.youtube.com/@nirvanavan' target='_blank'>
-                <YouTubeIcon style={{ fontSize: 46 }} />
-              </Link>
-              <Link
-                href='https://www.facebook.com/people/Nirvana-van/100087201987137/'
-                target='_blank'
-              >
-                <FacebookIcon style={{ fontSize: 38 }} />
-              </Link>
-              <Link
-                href='https://www.instagram.com/nirvanavan_/'
-                target='_blank'
-              >
-                <InstagramIcon style={{ fontSize: 38 }} />
-              </Link>
-            </div>
+            <SocialLinks />
           </div>
         </Container>
       </Section>
@@ -66,7 +49,7 @@ export default function Socials() {
             >
               <Image
                 className='rounded-3xl object-cover'
-                layout='fill'
+                fill
                 alt={`social-image-${index + 1}`}
                 src={image}
               />
@@ -81,7 +64,7 @@ export default function Socials() {
             <div key={index} className='relative h-40 w-28 flex-shrink-0'>
               <Image
                 className='rounded-3xl object-cover'
-                layout='fill'
+                fill
                 alt={`social-image-${index + 1}`}
                 src={image}
               />

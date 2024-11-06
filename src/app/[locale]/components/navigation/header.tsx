@@ -11,6 +11,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { motion, AnimatePresence } from 'framer-motion';
+import SocialLinks from '../utils/socialLinks';
 
 export default function Header() {
   const [skipHero, setSkipHero] = useState(false);
@@ -118,26 +119,7 @@ export default function Header() {
               className='header-gradient-left fixed right-0 z-30 flex h-full w-2/3 flex-col items-center justify-between bg-orange px-4 pb-4 pt-32'
             >
               <Navigation color='white' nav='footer' />
-              <div className='flex gap-4 text-white'>
-                <Link
-                  href='https://www.youtube.com/@nirvanavan'
-                  target='_blank'
-                >
-                  <YouTubeIcon style={{ fontSize: 28 }} />
-                </Link>
-                <Link
-                  href='https://www.facebook.com/people/Nirvana-van/100087201987137/'
-                  target='_blank'
-                >
-                  <FacebookIcon style={{ fontSize: 24 }} />
-                </Link>
-                <Link
-                  href='https://www.instagram.com/nirvanavan_/'
-                  target='_blank'
-                >
-                  <InstagramIcon style={{ fontSize: 24 }} />
-                </Link>
-              </div>
+              <SocialLinks color='white' />
             </motion.div>
           )}
         </AnimatePresence>

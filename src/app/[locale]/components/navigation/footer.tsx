@@ -7,13 +7,14 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Typography from '../atoms/typography';
+import SocialLinks from '../utils/socialLinks';
 
 export default function Footer() {
   return (
     <footer
-      className={`bg-dark flex w-full flex-col items-center justify-center  text-white`}
+      className={`flex w-full flex-col items-center justify-center bg-dark  text-white`}
     >
-      <div className='bg-dark-lighter flex w-full flex-col items-center justify-center px-6 py-8'>
+      <div className='flex w-full flex-col items-center justify-center bg-dark-lighter px-6 py-8'>
         <Link href='/'>
           <Image
             src='/logo_full_white.png'
@@ -41,20 +42,7 @@ export default function Footer() {
             <Typography variant='caption'>CGU / CGV</Typography>
           </Link>
         </div>
-        <div className='flex gap-4'>
-          <Link href='https://www.youtube.com/@nirvanavan' target='_blank'>
-            <YouTubeIcon style={{ fontSize: 28 }} />
-          </Link>
-          <Link
-            href='https://www.facebook.com/people/Nirvana-van/100087201987137/'
-            target='_blank'
-          >
-            <FacebookIcon style={{ fontSize: 24 }} />
-          </Link>
-          <Link href='https://www.instagram.com/nirvanavan_/' target='_blank'>
-            <InstagramIcon style={{ fontSize: 24 }} />
-          </Link>
-        </div>
+        <SocialLinks />
       </div>
     </footer>
   );

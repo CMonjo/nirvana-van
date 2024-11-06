@@ -47,8 +47,10 @@ const Model = ({
       <Image
         src={image}
         alt={title}
-        layout='fill'
-        objectFit='cover'
+        fill
+        style={{ objectFit: 'cover' }}
+        // layout='fill'
+        // objectFit='cover'
         className='rounded-3xl'
       />
     </Link>

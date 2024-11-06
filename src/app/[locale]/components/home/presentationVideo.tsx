@@ -1,25 +1,29 @@
-'use client';
 import React from 'react';
-import Button from '../atoms/button';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SectionTitle from '../sections/sectionTitle';
+import Section from '../atoms/section';
+import Container from '../atoms/container';
+import Typography from '../atoms/typography';
 
 export default function PresentationVideo() {
   return (
-    <div className='relative h-[552px] w-full overflow-hidden'>
-      <video
-        autoPlay
-        loop
-        muted
-        className='absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transform object-cover'
-      >
-        <source src='/videos/background.webm' type='video/webm' />
-        Your browser does not support the video tag.
-      </video>
-      <div className='relative z-10 flex h-full flex-col items-center justify-center bg-black bg-opacity-65 p-4 text-center text-white'>
-        <SectionTitle title={'Nirvana Van en action'} />
-        <Button icon={<PlayArrowIcon />}>Voir la vidéo</Button>
-      </div>
-    </div>
+    <Section className='bg-dark text-white'>
+      <Container className='relative flex flex-col'>
+        <SectionTitle title={'Nirvana Van en action'} className='lg:hidden' />
+        <div className='h-[200px] w-full overflow-hidden sm:h-[460px]'>
+          <video autoPlay loop muted className='h-[200px] w-full sm:h-[460px]'>
+            <source src='/videos/home.mp4' type='video/mp4' />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div className='absolute z-10 hidden w-full items-center justify-between px-4 py-16 lg:flex'>
+          <Typography variant='h2' className={'text-6xl'}>
+            Nirvana Van
+          </Typography>
+          <Typography variant='h2' className={'text-6xl'}>
+            En action!
+          </Typography>
+        </div>
+      </Container>
+    </Section>
   );
 }
