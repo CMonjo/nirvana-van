@@ -6,6 +6,7 @@ import Container from '../../../components/atoms/container';
 import Typography from '../../../components/atoms/typography';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import Image from 'next/image';
+import useIsDesktop from '@/hooks/useIsDesktop';
 
 export default function Video({
   source,
@@ -22,7 +23,7 @@ export default function Video({
   descriptionRight?: string;
   showSocials?: boolean;
 }) {
-  const isDesktop = window.innerWidth > 1024;
+  const isDesktop = useIsDesktop();
   const videoRef = useRef(null);
   const [showVideo, setShowVideo] = useState(false);
 

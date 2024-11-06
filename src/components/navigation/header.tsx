@@ -12,7 +12,7 @@ import LinkWrapper from '../utils/LinkWrapper';
 import useIsDesktop from '@/hooks/useIsDesktop';
 
 export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
-  const isDesktop = window.innerWidth > 1024;
+  const isDesktop = useIsDesktop();
   const [skipHero, setSkipHero] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
