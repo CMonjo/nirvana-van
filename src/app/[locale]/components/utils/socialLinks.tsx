@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useState } from 'react';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
