@@ -54,7 +54,7 @@ const NavigationItem = ({
   return (
     <Link
       href={link}
-      className='group relative cursor-pointer '
+      className='group relative'
       onMouseEnter={onHover}
       onMouseLeave={onHover}
     >

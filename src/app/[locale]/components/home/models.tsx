@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import Container from '../atoms/container';
 import Image, { StaticImageData } from 'next/image';
@@ -11,7 +10,6 @@ import SectionTitle from '../sections/sectionTitle';
 import modelTd from '../../../../../public/model_td.png';
 import modelKv from '../../../../../public/model_kv.png';
 import Typography from '../atoms/typography';
-
 const Model = ({
   title,
   description,

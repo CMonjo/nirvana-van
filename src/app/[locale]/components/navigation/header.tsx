@@ -1,17 +1,13 @@
-'use client';
 import React, { useState, useEffect } from 'react';
 import Button from '../atoms/button';
 import Logo from '../logo';
-import Link from 'next/link';
 import LanguageIcon from '@mui/icons-material/Language';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Navigation from './navigation';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import { motion, AnimatePresence } from 'framer-motion';
 import SocialLinks from '../utils/socialLinks';
+import LinkWrapper from '../utils/LinkWrapper';
 
 export default function Header() {
   const [skipHero, setSkipHero] = useState(false);
@@ -51,12 +47,12 @@ export default function Header() {
               nav='header'
             />
           </div>
-          <Link
+          <LinkWrapper
             href={'/'}
             className='absolute w-48 lg:left-0 lg:right-0 lg:ml-auto lg:mr-auto'
           >
             <Logo color={skipHero || showMenu ? 'black' : 'white'} />
-          </Link>
+          </LinkWrapper>
           <div className='hidden gap-3 lg:flex'>
             <Button
               color={skipHero || showMenu ? 'orange' : 'white'}

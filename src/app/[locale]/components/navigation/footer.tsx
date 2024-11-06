@@ -1,13 +1,9 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import Navigation from './navigation';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import Typography from '../atoms/typography';
 import SocialLinks from '../utils/socialLinks';
+import LinkWrapper from '../utils/LinkWrapper';
 
 export default function Footer() {
   return (
@@ -15,7 +11,7 @@ export default function Footer() {
       className={`flex w-full flex-col items-center justify-center bg-dark  text-white`}
     >
       <div className='flex w-full flex-col items-center justify-center bg-dark-lighter px-6 py-8'>
-        <Link href='/'>
+        <LinkWrapper href='/'>
           <Image
             src='/logo_full_white.png'
             alt='Nirvana Van logo'
@@ -23,7 +19,7 @@ export default function Footer() {
             width={150}
             height={150}
           />
-        </Link>
+        </LinkWrapper>
         <Typography
           variant='caption'
           className='mb-8 md:hidden'
@@ -35,14 +31,14 @@ export default function Footer() {
           <Typography variant='caption'>{`Nirvana Van © 2022 - ${new Date().getFullYear()}`}</Typography>
         </div>
         <div className='flex gap-4'>
-          <Link href='/'>
+          <LinkWrapper href='/'>
             <Typography variant='caption'>Mentions légales</Typography>
-          </Link>
-          <Link href='/'>
+          </LinkWrapper>
+          <LinkWrapper href='/'>
             <Typography variant='caption'>CGU / CGV</Typography>
-          </Link>
+          </LinkWrapper>
         </div>
-        <SocialLinks />
+        <SocialLinks color='white' />
       </div>
     </footer>
   );
