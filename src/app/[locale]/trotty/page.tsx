@@ -1,4 +1,4 @@
-import Header from '@/app/[locale]/components/navigation/header';
+import Header from '@/components/navigation/header';
 
 export default function Teardrop() {
   return (

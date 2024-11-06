@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { acorn, kobe11 } from './fonts';
+import { acorn, kobe11 } from '../../fonts';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import './globals.scss';
+import '../../globals.scss';
 
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';

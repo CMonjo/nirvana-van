@@ -1,15 +1,15 @@
 import React from 'react';
-import Container from '../atoms/container';
+import Container from '../../../components/atoms/container';
 import Image, { StaticImageData } from 'next/image';
-import Button from '../atoms/button';
+import Button from '../../../components/atoms/button';
 import Link from 'next/link';
-import Transition from '../atoms/transition';
-import Section from '../atoms/section';
-import SectionTitle from '../sections/sectionTitle';
+import Transition from '../../../components/atoms/transition';
+import Section from '../../../components/atoms/section';
+import SectionTitle from '../../../components/sections/sectionTitle';
 
-import modelTd from '../../../../../public/model_td.png';
-import modelKv from '../../../../../public/model_kv.png';
-import Typography from '../atoms/typography';
+import modelTd from '../../../../public/model_td.png';
+import modelKv from '../../../../public/model_kv.png';
+import Typography from '../../../components/atoms/typography';
 const Model = ({
   title,
   description,

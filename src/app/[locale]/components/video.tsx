@@ -1,15 +1,28 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import SectionTitle from '../sections/sectionTitle';
-import Section from '../atoms/section';
-import Container from '../atoms/container';
-import Typography from '../atoms/typography';
-import useIsDesktop from '@/hooks/useIsDesktop';
+import SectionTitle from '../../../components/sections/sectionTitle';
+import Section from '../../../components/atoms/section';
+import Container from '../../../components/atoms/container';
+import Typography from '../../../components/atoms/typography';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import Image from 'next/image';
 
-export default function PresentationVideo() {
-  const isDesktop = useIsDesktop(1024);
+export default function Video({
+  source,
+  thumbnail,
+  title,
+  descriptionLeft,
+  descriptionRight,
+  showSocials = false,
+}: {
+  source: string;
+  thumbnail: string;
+  title?: string;
+  descriptionLeft?: string;
+  descriptionRight?: string;
+  showSocials?: boolean;
+}) {
+  const isDesktop = window.innerWidth > 1024;
   const videoRef = useRef(null);
   const [showVideo, setShowVideo] = useState(false);
 
@@ -36,42 +49,46 @@ export default function PresentationVideo() {
                 muted
                 className='h-[460px] w-full rounded-3xl'
               >
-                <source
-                  src='/videos/home.mp4'
-                  type='video/mp4'
-                  className='rounded-3xl'
-                />
+                <source src={source} type='video/mp4' className='rounded-3xl' />
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className='absolute z-10 flex w-full items-center justify-between px-4 py-16'>
-              <Typography variant='h2' className={'text-6xl'}>
-                Nirvana Van
-              </Typography>
-              <Typography variant='h2' className={'text-6xl'}>
-                En action!
-              </Typography>
-            </div>
+            {descriptionLeft && descriptionRight ? (
+              <div className='absolute z-10 flex w-full items-center justify-between px-4 py-16'>
+                <Typography variant='h2' className={'text-6xl'}>
+                  {descriptionLeft}
+                </Typography>
+                <Typography variant='h2' className={'text-6xl'}>
+                  {descriptionRight}
+                </Typography>
+              </div>
+            ) : null}
           </>
         ) : (
           <>
-            <SectionTitle title={'Nirvana Van en action'} />
-            <div className='relative flex h-96 w-full flex-col items-center justify-center rounded-3xl bg-slate-200 px-4 py-8 text-center text-white'>
+            {title ? <SectionTitle title={title} /> : null}
+            <div className='relative flex h-96 w-full cursor-pointer items-center justify-center rounded-3xl'>
               <div className='z-10'>
                 {!showVideo ? (
                   <div onClick={handlePlayClick}>
-                    <PlayCircleIcon style={{ fontSize: 56 }} />
+                    <PlayCircleIcon
+                      style={{ fontSize: 56 }}
+                      className='cursor-pointer'
+                    />
                   </div>
                 ) : null}
               </div>
               <Image
-                src={'/bento-1.jpeg'}
+                src={thumbnail}
                 alt={'Video thumbnail'}
                 fill
                 style={{ objectFit: 'cover' }}
                 className='rounded-3xl'
               />
-              <div className='absolute inset-0 rounded-3xl bg-black opacity-70' />
+              <div
+                className='absolute inset-0 rounded-3xl bg-black opacity-70'
+                onClick={handlePlayClick}
+              />
             </div>
           </>
         )}
@@ -83,7 +100,7 @@ export default function PresentationVideo() {
               className='h-full w-full'
               onClick={() => setShowVideo(false)}
             >
-              <source src='/videos/home.mp4' type='video/mp4' />
+              <source src={source} type='video/mp4' />
               Your browser does not support the video tag.
             </video>
           </div>

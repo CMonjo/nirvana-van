@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import SectionTitle from '../sections/sectionTitle';
-import Section from '../atoms/section';
-import Container from '../atoms/container';
-import Typography from '../atoms/typography';
+import SectionTitle from '../../../components/sections/sectionTitle';
+import Section from '../../../components/atoms/section';
+import Container from '../../../components/atoms/container';
+import Typography from '../../../components/atoms/typography';
 
 export default function Story() {
   return (

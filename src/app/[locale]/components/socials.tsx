@@ -1,14 +1,14 @@
 'use client';
 import React from 'react';
-import Section from '../atoms/section';
-import Container from '../atoms/container';
-import Typography from '../atoms/typography';
+import Section from '../../../components/atoms/section';
+import Container from '../../../components/atoms/container';
+import Typography from '../../../components/atoms/typography';
 import Image from 'next/image';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Link from 'next/link';
-import SocialLinks from '../utils/socialLinks';
+import SocialLinks from '../../../components/utils/socialLinks';
 
 const images = [
   '/bento-1.jpeg',

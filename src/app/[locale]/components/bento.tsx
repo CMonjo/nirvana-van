@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
-import Container from '../atoms/container';
+import Container from '../../../components/atoms/container';
 import Image from 'next/image';
-import Section from '../atoms/section';
+import Section from '../../../components/atoms/section';
 
 import { motion, MotionProps } from 'framer-motion';
-import SectionTitle from '../sections/sectionTitle';
-import Typography from '../atoms/typography';
+import SectionTitle from '../../../components/sections/sectionTitle';
+import Typography from '../../../components/atoms/typography';
 
 import bento1 from '../../../../../public/bento-1.jpeg';
 import bento2 from '../../../../../public/bento-2.jpeg';
@@ -72,7 +72,7 @@ const BentoText = ({
   );
 };
 
-export default function Why() {
+export default function Bento() {
   return (
     <Section className='bg-white'>
       <Container className='flex-col'>

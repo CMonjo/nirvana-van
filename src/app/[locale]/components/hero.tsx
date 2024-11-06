@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Button from '../atoms/button';
+import Button from '../../../components/atoms/button';
 
 export default function Hero() {
   return (

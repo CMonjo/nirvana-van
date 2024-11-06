@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import SectionTitle from '../sections/sectionTitle';
-import Section from '../atoms/section';
-import Container from '../atoms/container';
+import SectionTitle from '../../../components/sections/sectionTitle';
+import Section from '../../../components/atoms/section';
+import Container from '../../../components/atoms/container';
 
 export default function Rental() {
   return (

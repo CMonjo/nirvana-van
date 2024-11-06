@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../atoms/button';
+import Button from '../../../../components/atoms/button';
 
 export default function Basket() {
   return (
@@ -13,7 +13,7 @@ export default function Basket() {
                 Récapitulatif de votre commande
               </p>
             </div>
-            <div className='flex w-full flex-col items-center justify-center gap-4 font-gustavo text-base text-white'>
+            <div className='font-gustavo flex w-full flex-col items-center justify-center gap-4 text-base text-white'>
               <div className='flex w-full items-center justify-between'>
                 <span>1 x thefrenchtototte</span>
                 <span>99,00 €</span>
@@ -46,7 +46,7 @@ export default function Basket() {
               >
                 Ajouter au Panier
               </Button>
-              <p className='text-justify font-gustavo text-xxs text-fg-3'>
+              <p className='font-gustavo text-justify text-xxs text-fg-3'>
                 The French Tototte est couverte par une garantie limitée contre
                 les défauts de fabrication pour une période de 2 mois à compter
                 de la date d&apos;achat. Cette garantie ne couvre pas les

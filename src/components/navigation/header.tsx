@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Button from '../atoms/button';
-import Logo from '../logo';
+import Logo from '../utils/logo';
 import LanguageIcon from '@mui/icons-material/Language';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -11,8 +11,8 @@ import SocialLinks from '../utils/socialLinks';
 import LinkWrapper from '../utils/LinkWrapper';
 import useIsDesktop from '@/hooks/useIsDesktop';
 
-export default function Header() {
-  const isDesktop = useIsDesktop();
+export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
+  const isDesktop = window.innerWidth > 1024;
   const [skipHero, setSkipHero] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
@@ -28,7 +28,7 @@ export default function Header() {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  const headerFixed = !isDesktop || skipHero || showMenu;
+  const headerFixed = !isDesktop || fixedMenu || skipHero || showMenu;
 
   return (
     <>

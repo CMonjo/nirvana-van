@@ -1,6 +1,6 @@
-import Header from '@/app/[locale]/components/navigation/header';
-import Configurator from '../components/configurator/configurator';
-import Basket from '../components/configurator/basket';
+import Header from '@/components/navigation/header';
+import Configurator from './components/configurator';
+import Basket from './components/basket';
 
 export default function Teardrop() {
   return (
