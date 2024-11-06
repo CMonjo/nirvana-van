@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SocialLinks from '../utils/socialLinks';
 import LinkWrapper from '../utils/LinkWrapper';
 import useIsDesktop from '@/hooks/useIsDesktop';
+import Link from 'next/link';
 
 export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
   const isDesktop = useIsDesktop();
@@ -55,13 +56,17 @@ export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
             <Logo color={headerFixed ? 'black' : 'white'} />
           </LinkWrapper>
           <div className='hidden gap-3 lg:flex'>
-            <Button
-              color={headerFixed ? 'orange' : 'white'}
-              variant={headerFixed ? 'outlined' : 'filled'}
-            >
-              Location
-            </Button>
-            <Button>Contact</Button>
+            <Link href='/location'>
+              <Button
+                color={headerFixed ? 'orange' : 'white'}
+                variant={headerFixed ? 'outlined' : 'filled'}
+              >
+                Location
+              </Button>
+            </Link>
+            <Link href='/contact'>
+              <Button>Contact</Button>
+            </Link>
             <Button icon={<LanguageIcon fontSize='small' />} variant='outlined'>
               Français
             </Button>

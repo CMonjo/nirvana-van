@@ -5,6 +5,7 @@ import SectionTitle from '../../../../components/sections/title';
 import Section from '../../../../components/atoms/section';
 import Container from '../../../../components/atoms/container';
 import Typography from '../../../../components/atoms/typography';
+import Button from '@/components/atoms/button';
 
 export default function Story() {
   return (
@@ -29,6 +30,12 @@ export default function Story() {
             vans, ... Qu’est ce qu’une TD, lister tous les avantages de la TD
             comparé aux vans, ...
           </Typography>
+        </div>
+        <div className='flex gap-4'>
+          <Button color='orange'>Configurer ma teardrop</Button>
+          <Button variant='outlined' color='orange'>
+            Je veux la louer
+          </Button>
         </div>
       </Container>
     </Section>

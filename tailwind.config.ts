@@ -26,6 +26,7 @@ const config: Config = {
         green: '#00B291',
         dark: '#1A1A1A',
         'dark-lighter': '#212121',
+        grey: '#F5F5F5',
       },
       fontSize: {
         xxs: ['9px', '11.7px'],
