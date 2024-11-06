@@ -1,6 +1,5 @@
 import Header from '@/app/[locale]/components/navigation/header';
 import Footer from '@/app/[locale]/components/navigation/footer';
-import Mobile from '@/app/[locale]/components/mobile';
 import Button from '../components/atoms/button';
 import Hero from '../components/home/hero';
 import Models from '../components/home/models';

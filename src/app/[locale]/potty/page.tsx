@@ -1,5 +1,4 @@
 import Header from '@/app/[locale]/components/navigation/header';
-import Mobile from '@/app/[locale]/components/mobile';
 
 export default function Teardrop() {
   return (
