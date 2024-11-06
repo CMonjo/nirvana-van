@@ -38,7 +38,7 @@ export default function Footer() {
             <Typography variant='caption'>CGU / CGV</Typography>
           </LinkWrapper>
         </div>
-        <SocialLinks color='white' />
+        <SocialLinks className='text-white' />
       </div>
     </footer>
   );

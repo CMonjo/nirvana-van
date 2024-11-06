@@ -112,7 +112,7 @@ export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
               className='header-gradient-left fixed right-0 z-30 flex h-full w-2/3 flex-col items-center justify-between bg-orange px-4 pb-4 pt-32'
             >
               <Navigation color='white' nav='footer' />
-              <SocialLinks color='white' />
+              <SocialLinks className='text-white' />
             </motion.div>
           )}
         </AnimatePresence>

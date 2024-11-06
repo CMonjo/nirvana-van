@@ -2,7 +2,7 @@ import Header from '@/components/navigation/header';
 import Footer from '@/components/navigation/footer';
 import Hero from '@/app/[locale]/components/hero';
 import Models from '@/app/[locale]/components/models';
-import Video from '@/app/[locale]/components/video';
+import Video from '@/components/sections/video';
 import Story from './components/story';
 import Rental from './components/rental';
 import { useTranslations } from 'next-intl';
@@ -26,7 +26,7 @@ export default function Home() {
           thumbnail='/bento-1.jpeg'
           title='Nirvana Van en action'
           descriptionLeft='Nirvana Van'
-          descriptionRight='En actions!'
+          descriptionRight='En action!'
         />
         <Bento />
         <Story />

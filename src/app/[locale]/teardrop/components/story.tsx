@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import SectionTitle from '../../../../components/sections/sectionTitle';
+import SectionTitle from '../../../../components/sections/title';
 import Section from '../../../../components/atoms/section';
 import Container from '../../../../components/atoms/container';
 import Typography from '../../../../components/atoms/typography';

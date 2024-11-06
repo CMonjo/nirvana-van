@@ -23,10 +23,10 @@ const sizes = [
 
 export default function SocialLinks({
   size = 'small',
-  color = 'black',
+  className,
 }: {
   size?: 'small' | 'medium';
-  color?: string;
+  className?: string;
 }) {
   const [fontSize, setFontSize] = useState<any>(sizes[0]);
 
@@ -36,7 +36,9 @@ export default function SocialLinks({
   }, [size]);
 
   return (
-    <div className={`flex items-center justify-center gap-4 text-${color}`}>
+    <div
+      className={`flex items-center justify-center gap-4 text-black ${className}`}
+    >
       <LinkWrapper href='https://www.youtube.com/@nirvanavan' target='_blank'>
         <YouTubeIcon style={{ fontSize: fontSize.youtube }} />
       </LinkWrapper>

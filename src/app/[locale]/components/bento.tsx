@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Section from '../../../components/atoms/section';
 
 import { motion, MotionProps } from 'framer-motion';
-import SectionTitle from '../../../components/sections/sectionTitle';
+import SectionTitle from '../../../components/sections/title';
 import Typography from '../../../components/atoms/typography';
 
 import bento1 from '../../../../../public/bento-1.jpeg';

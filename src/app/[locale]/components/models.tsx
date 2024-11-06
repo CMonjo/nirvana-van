@@ -5,7 +5,7 @@ import Button from '../../../components/atoms/button';
 import Link from 'next/link';
 import Transition from '../../../components/atoms/transition';
 import Section from '../../../components/atoms/section';
-import SectionTitle from '../../../components/sections/sectionTitle';
+import SectionTitle from '../../../components/sections/title';
 
 import modelTd from '../../../../public/model_td.png';
 import modelKv from '../../../../public/model_kv.png';
