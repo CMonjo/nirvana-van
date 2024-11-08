@@ -72,7 +72,6 @@ export default function Select({
   });
 
   const selectedLabel = options.find((opt) => opt.value === value)?.label;
-  console.log('select', selectedLabel);
   return (
     <div
       className={clsx(

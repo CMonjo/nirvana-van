@@ -11,10 +11,6 @@ import Typography from '../../components/atoms/typography';
 import Socials from './components/socials';
 
 export default function Home() {
-  //   const t = useTranslations('HomePage');
-
-  //   console.log(t('title'));
-
   return (
     <div className='bg-bg-2'>
       <Header />
