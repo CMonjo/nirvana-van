@@ -44,14 +44,9 @@ export default function Video({
       <Container className='relative flex flex-col'>
         {isDesktop ? (
           <>
-            <div className='h-[460px] w-full overflow-hidden rounded-3xl'>
-              <video
-                ref={videoRef}
-                loop
-                muted
-                className='h-[460px] w-full rounded-3xl'
-              >
-                <source src={source} type='video/mp4' className='rounded-3xl' />
+            <div className='h-[460px] w-full overflow-hidden'>
+              <video ref={videoRef} loop muted className='h-[460px] w-full '>
+                <source src={source} type='video/mp4' />
                 Your browser does not support the video tag.
               </video>
             </div>

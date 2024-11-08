@@ -23,6 +23,7 @@ const config: Config = {
         'bg-blue': '#EFF1FD',
 
         orange: '#F2712A',
+        greyDark: '#D9D9D9',
         green: '#00B291',
         dark: '#1A1A1A',
         'dark-lighter': '#212121',

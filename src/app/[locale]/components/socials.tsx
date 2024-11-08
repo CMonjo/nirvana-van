@@ -21,7 +21,7 @@ export default function Socials() {
   return (
     <div className='flex w-full flex-col items-center bg-white pb-16'>
       <Section className='overflow-hidden'>
-        <Container className='mb-0 flex-col pb-4'>
+        <Container className='mb-0 flex-col' noGap>
           <div className='flex w-full justify-center md:justify-start'>
             <Typography variant='caption' className='text-orange'>
               #nirvanavan

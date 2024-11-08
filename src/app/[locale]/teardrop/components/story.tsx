@@ -6,6 +6,7 @@ import Section from '../../../../components/atoms/section';
 import Container from '../../../../components/atoms/container';
 import Typography from '../../../../components/atoms/typography';
 import Button from '@/components/atoms/button';
+import { Link } from '@/i18n/routing';
 
 export default function Story() {
   return (
@@ -32,10 +33,24 @@ export default function Story() {
           </Typography>
         </div>
         <div className='flex gap-4'>
-          <Button color='orange'>Configurer ma teardrop</Button>
-          <Button variant='outlined' color='orange'>
-            Je veux la louer
-          </Button>
+          <Link
+            href={{
+              pathname: '/configurator',
+              query: { product: 'teardrop' },
+            }}
+          >
+            <Button color='orange'>Configurer ma teardrop</Button>
+          </Link>
+          <Link
+            href={{
+              pathname: '/contact',
+              query: { product: 'teardrop' },
+            }}
+          >
+            <Button variant='outlined' color='orange'>
+              Je veux la louer
+            </Button>
+          </Link>
         </div>
       </Container>
     </Section>

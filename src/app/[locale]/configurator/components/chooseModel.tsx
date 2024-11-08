@@ -1,43 +1,43 @@
 'use client';
 import React from 'react';
-import Container from '@/components/atoms/container';
-import Button from '@/components/atoms/button';
-import { useRouter } from '@/i18n/routing';
-import Section from '@/components/atoms/section';
-import { ProductType } from '@/constants/products';
+import SectionTitle from '../../../../components/sections/title';
+import Section from '../../../../components/atoms/section';
 import Model from '@/components/sections/model';
-import SectionTitle from '@/components/sections/title';
+import Container from '../../../../components/atoms/container';
+import Button from '@/components/atoms/button';
+import { ProductType } from '@/constants/products';
+import { useRouter } from '@/i18n/routing';
 
-export default function Models() {
+export default function ChooseModel() {
   const router = useRouter();
 
   const handleClick = (productKey: ProductType) => {
     router.push({
-      pathname: `/${productKey}`,
+      pathname: '/configurator',
+      query: { product: productKey },
     });
   };
 
   return (
-    <Section className='bg-white'>
+    <Section className='bg-white' topoBackground>
       <Container className='flex-col'>
-        <SectionTitle title={`Pour quel type d'aventure ?`} />
+        <SectionTitle title={`Configurateur`} />
         <div className='flex w-full flex-col gap-4 lg:flex-row'>
           <Model
             productKey='teardrop'
             onClick={handleClick}
             button={
               <Button color={'orange'} size='small'>
-                Découvrir
+                Configurer
               </Button>
             }
           />
-
           <Model
             productKey='trotty'
             onClick={handleClick}
             button={
               <Button color={'green'} size='small'>
-                Découvrir
+                Configurer
               </Button>
             }
           />

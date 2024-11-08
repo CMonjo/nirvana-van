@@ -5,6 +5,7 @@ type TypographyProps = {
   variant?: 'h1' | 'h2' | 'h3' | 'body1' | 'body2' | 'caption' | 'button';
   html?: keyof JSX.IntrinsicElements;
   className?: string;
+  style?: React.CSSProperties;
   children: ReactNode;
 };
 
@@ -12,6 +13,7 @@ export default function Typography({
   variant = 'body1',
   html: Tag = 'p',
   className = '',
+  style,
   children,
 }: TypographyProps) {
   const getFontClass = (variant: string) => {
@@ -36,6 +38,8 @@ export default function Typography({
   };
 
   return (
-    <Tag className={`${getFontClass(variant)} ${className}`}>{children}</Tag>
+    <Tag className={`${getFontClass(variant)} ${className}`} style={style}>
+      {children}
+    </Tag>
   );
 }

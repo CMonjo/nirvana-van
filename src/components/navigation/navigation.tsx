@@ -11,6 +11,7 @@ const headerLinks = [
     href: '/trotty',
     icon: null,
   },
+  { name: 'Configurateur', href: '/configurator', icon: null },
 ];
 
 const footerLinks = [

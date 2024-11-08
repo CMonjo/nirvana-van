@@ -11,15 +11,14 @@ export default function Story() {
     <Section className='bg-white' topoBackground>
       <Container className='flex-col'>
         <SectionTitle title={`Pour la petite histoire`} />
-        <div className='max-w-3xl flex-col text-center'>
-          <Typography className='mb-4'>
+        <div className='max-w-3xl flex-col gap-4 text-center'>
+          <Typography>
             Nous construisons nos caravanes dans le but de vous offrir une
             expérience de voyage unique, avec tous le confort necessaire, en
             choisissant des matériaux nobles que nous assemblons dans notre
             atelier à Montpellier.
           </Typography>
-          <Typography className='mb-8'>
-            {' '}
+          <Typography className='mb-4'>
             Que ce soit en voiture ou en vélo, les caravanes sont prête à vous
             accompagner dans votre aventure qu’importe la saison.
           </Typography>

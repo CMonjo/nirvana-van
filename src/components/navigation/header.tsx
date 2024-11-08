@@ -13,7 +13,13 @@ import useIsDesktop from '@/hooks/useIsDesktop';
 import { Link } from '@/i18n/routing';
 import LocaleSwitcher from './localeSwitcher';
 
-export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
+export default function Header({
+  fixedMenu = false,
+  fixedMenuBackground,
+}: {
+  fixedMenu?: boolean;
+  fixedMenuBackground?: string;
+}) {
   const isDesktop = useIsDesktop();
   const [skipHero, setSkipHero] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -46,13 +52,13 @@ export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
           headerFixed ? 'header-gradient' : 'bg-transparent'
         }`}
       >
-        <div className='relative flex h-24 w-full max-w-7xl items-center justify-between px-6'>
+        <div className='relative flex h-20 w-full max-w-7xl items-center justify-between px-6'>
           <div className='hidden lg:flex'>
             <Navigation color={headerFixed ? 'black' : 'white'} nav='header' />
           </div>
           <LinkWrapper
             href={'/'}
-            className='absolute w-48 lg:left-0 lg:right-0 lg:ml-auto lg:mr-auto'
+            className='absolute w-40 lg:left-0 lg:right-0 lg:ml-auto lg:mr-auto'
           >
             <Logo color={headerFixed ? 'black' : 'white'} />
           </LinkWrapper>
@@ -110,7 +116,7 @@ export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
           {showMenu ? (
             <>
               <div
-                className='absolute z-20 h-full w-full bg-transparent'
+                className='fixed z-20 h-full w-full'
                 onClick={() => setShowMenu(false)}
               />
               <motion.div
@@ -130,6 +136,9 @@ export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
           ) : null}
         </AnimatePresence>
       }
+      {headerFixed ? (
+        <div className={`flex h-20 ${fixedMenuBackground || ''}`} />
+      ) : null}
     </>
   );
 }

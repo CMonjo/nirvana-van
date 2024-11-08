@@ -1,14 +1,12 @@
 import Header from '@/components/navigation/header';
 import Footer from '@/components/navigation/footer';
 import Hero from '@/app/[locale]/components/hero';
-import Models from '@/app/[locale]/components/models';
 import Video from '@/components/sections/video';
 import Story from './components/story';
 import Rental from './components/rental';
-import { useTranslations } from 'next-intl';
 import Bento from './components/bento';
-import Typography from '../../components/atoms/typography';
 import Socials from './components/socials';
+import Models from './components/models';
 
 export default function Home() {
   return (

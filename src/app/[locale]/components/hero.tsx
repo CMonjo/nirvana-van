@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Button from '../../../components/atoms/button';
 
 import { useTranslations } from 'next-intl';
+import LinkWrapper from '@/components/utils/LinkWrapper';
 
 export default function Hero() {
   const t = useTranslations('HomePage');
@@ -20,8 +21,12 @@ export default function Hero() {
         </h1>
       </div>
       <div className='absolute bottom-14 z-10 flex w-full items-center justify-center gap-4'>
-        <Button color='orange'>Teardrop</Button>
-        <Button color='green'>Trotty</Button>
+        <LinkWrapper href={'/teardrop'}>
+          <Button color='orange'>Teardrop</Button>
+        </LinkWrapper>
+        <LinkWrapper href={'/trotty'}>
+          <Button color='green'>Trotty</Button>
+        </LinkWrapper>
       </div>
     </div>
   );
