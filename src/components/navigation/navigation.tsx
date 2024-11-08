@@ -1,6 +1,6 @@
 'use client';
 import { useParams, usePathname } from 'next/navigation';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 

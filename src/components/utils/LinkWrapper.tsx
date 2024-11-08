@@ -1,5 +1,5 @@
 import React, { ReactNode, ComponentPropsWithoutRef } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 
 interface LinkWrapperProps extends ComponentPropsWithoutRef<typeof Link> {
   children: ReactNode;

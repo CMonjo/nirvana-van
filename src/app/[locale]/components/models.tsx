@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '../../../components/atoms/container';
 import Image, { StaticImageData } from 'next/image';
 import Button from '../../../components/atoms/button';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import Transition from '../../../components/atoms/transition';
 import Section from '../../../components/atoms/section';
 import SectionTitle from '../../../components/sections/title';

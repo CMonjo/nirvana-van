@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import Link from 'next/link';
 import LinkWrapper from './LinkWrapper';
 
 const sizes = [
