@@ -1,8 +1,17 @@
 'use client';
+import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 
 type TypographyProps = {
-  variant?: 'h1' | 'h2' | 'h3' | 'body1' | 'body2' | 'caption' | 'button';
+  variant?:
+    | 'h1'
+    | 'h2'
+    | 'h2-acorn'
+    | 'h3'
+    | 'body1'
+    | 'body2'
+    | 'caption'
+    | 'button';
   html?: keyof JSX.IntrinsicElements;
   className?: string;
   style?: React.CSSProperties;
@@ -22,6 +31,8 @@ export default function Typography({
         return 'text-4xl font-acorn font-medium';
       case 'h2':
         return 'font-kobe11 text-4xl font-medium';
+      case 'h2-acorn':
+        return 'font-acorn text-3xl font-medium';
       case 'h3':
         return 'text-2xl font-light';
       case 'body1':

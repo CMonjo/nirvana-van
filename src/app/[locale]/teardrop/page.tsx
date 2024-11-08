@@ -4,6 +4,7 @@ import Story from './components/story';
 import Video from '@/components/sections/video';
 import Hero from './components/hero';
 import Specification from './components/specification';
+import Bento from './components/bento';
 
 export default function Teardrop() {
   return (
@@ -84,6 +85,7 @@ Dimensions intérieures: 2,45 m x 1,45 m
 Hauteur (hors tout): 1,76 m
 Hauteur intérieure: 1,16 m'
         />
+        <Bento />
       </main>
       <Footer />
     </div>
