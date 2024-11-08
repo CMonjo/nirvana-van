@@ -107,18 +107,27 @@ export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
       </motion.header>
       {
         <AnimatePresence>
-          {showMenu && (
-            <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
-              className='header-gradient-left fixed right-0 z-30 flex h-full w-2/3 flex-col items-center justify-between bg-orange px-4 pb-4 pt-32'
-            >
-              <Navigation color='white' nav='footer' />
-              <SocialLinks className='text-white' />
-            </motion.div>
-          )}
+          {showMenu ? (
+            <>
+              <div
+                className='absolute z-20 h-full w-full bg-transparent'
+                onClick={() => setShowMenu(false)}
+              />
+              <motion.div
+                initial={{ x: '100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: '100%' }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                className='header-gradient-left fixed right-0 z-30 flex h-full w-2/3 flex-col items-center justify-between bg-orange px-4 pb-4 pt-32'
+              >
+                <Navigation color='white' nav='footer' />
+                <div className='flex flex-col gap-4'>
+                  <LocaleSwitcher color='white' size='small' />
+                  <SocialLinks className='text-white' />
+                </div>
+              </motion.div>
+            </>
+          ) : null}
         </AnimatePresence>
       }
     </>
