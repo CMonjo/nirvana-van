@@ -7,6 +7,8 @@ import '../../globals.scss';
 
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 
 export default async function RootLayout({
   children,
@@ -15,7 +17,16 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
   const messages = await getMessages();
+
+  console.log(messages);
 
   return (
     <html lang={locale}>

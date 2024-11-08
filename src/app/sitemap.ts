@@ -1,24 +1,30 @@
-import { MetadataRoute } from 'next';
-import { locales, pathnames, defaultLocale, host } from '@/config';
-import { getPathname } from '@/navigation';
+// // TODO https://next-intl-docs.vercel.app/docs/environments/actions-metadata-route-handlers
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const keys = Object.keys(pathnames) as Array<keyof typeof pathnames>;
+// import { MetadataRoute } from 'next';
+// import { routing, getPathname } from '@/i18n/routing';
 
-  function getUrl(
-    key: keyof typeof pathnames,
-    locale: (typeof locales)[number]
-  ) {
-    const pathname = getPathname({ locale, href: key });
-    return `${host}/${locale}${pathname === '/' ? '' : pathname}`;
-  }
+// // Adapt this as necessary
+// const host = 'https://acme.com';
 
-  return keys.map((key) => ({
-    url: getUrl(key, defaultLocale),
-    alternates: {
-      languages: Object.fromEntries(
-        locales.map((locale) => [locale, getUrl(key, locale)])
-      ),
-    },
-  }));
-}
+// export default function sitemap(): MetadataRoute.Sitemap {
+//   // Adapt this as necessary
+//   return [getEntry('/'), getEntry('/users')];
+// }
+
+// type Href = Parameters<typeof getPathname>[0]['href'];
+
+// function getEntry(href: Href) {
+//   return {
+//     url: getUrl(href, routing.defaultLocale),
+//     alternates: {
+//       languages: Object.fromEntries(
+//         routing.locales.map((locale) => [locale, getUrl(href, locale)])
+//       ),
+//     },
+//   };
+// }
+
+// function getUrl(href: Href, locale: (typeof routing.locales)[number]) {
+//   const pathname = getPathname({ locale, href });
+//   return host + pathname;
+// }

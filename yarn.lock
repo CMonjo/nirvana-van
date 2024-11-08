@@ -288,12 +288,12 @@
   dependencies:
     tslib "^2.4.0"
 
-"@formatjs/intl-localematcher@^0.2.32":
-  version "0.2.32"
-  resolved "https://registry.npmjs.org/@formatjs/intl-localematcher/-/intl-localematcher-0.2.32.tgz#00d4d307cd7d514b298e15a11a369b86c8933ec1"
-  integrity sha512-k/MEBstff4sttohyEpXxCmC3MqbUn9VvHGlZ8fauLzkbwXmVrEeyzS+4uhrvAk9DWU9/7otYWxyDox4nT/KVLQ==
+"@formatjs/intl-localematcher@^0.5.4":
+  version "0.5.7"
+  resolved "https://registry.npmjs.org/@formatjs/intl-localematcher/-/intl-localematcher-0.5.7.tgz#f889d076881b785d11ff993b966f527d199436d0"
+  integrity sha512-GGFtfHGQVFe/niOZp24Kal5b2i36eE2bNL0xi9Sg/yd0TR8aLjcteApZdHmismP5QQax1cMnZM9yWySUUjJteA==
   dependencies:
-    tslib "^2.4.0"
+    tslib "2"
 
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"
@@ -2451,19 +2451,19 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-negotiator@^0.6.3:
-  version "0.6.3"
-  resolved "https://registry.npmjs.org/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
-  integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
+negotiator@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/negotiator/-/negotiator-1.0.0.tgz#b6c91bb47172d69f93cfd7c357bbb529019b5f6a"
+  integrity sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==
 
-next-intl@^3.17.2:
-  version "3.17.2"
-  resolved "https://registry.npmjs.org/next-intl/-/next-intl-3.17.2.tgz#4f56a6c54bd4355254c5ae35dfef89561492abbb"
-  integrity sha512-X2ly23e1lC5vdWHaJFBDZi/0iornEdFQQtqJmmPOb7WD+LDssm9vAnx+hJshYGjddaP3rUmyWaPgePCQqaxm1g==
+next-intl@^3.0.0:
+  version "3.25.0"
+  resolved "https://registry.npmjs.org/next-intl/-/next-intl-3.25.0.tgz#17147021fc6918fefcc28d18578f05be31fae9ff"
+  integrity sha512-xjHNqYyW6LS2Mwmld4Q7tBhyv6g2zO7BtclOAQXe6Fgl5hEsWCv8KNZc0jumud1qnNr8erzmYz8KepJZtXPA4Q==
   dependencies:
-    "@formatjs/intl-localematcher" "^0.2.32"
-    negotiator "^0.6.3"
-    use-intl "^3.17.2"
+    "@formatjs/intl-localematcher" "^0.5.4"
+    negotiator "^1.0.0"
+    use-intl "^3.25.0"
 
 next@14.2.3:
   version "14.2.3"
@@ -3296,6 +3296,11 @@ tsconfig-paths@^3.15.0:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
+tslib@2:
+  version "2.8.1"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz#612efe4ed235d567e8aba5f2a5fab70280ade83f"
+  integrity sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==
+
 tslib@^2.4.0:
   version "2.6.2"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
@@ -3384,10 +3389,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-use-intl@^3.17.2:
-  version "3.17.2"
-  resolved "https://registry.npmjs.org/use-intl/-/use-intl-3.17.2.tgz#0dc9a630cf7631e7fb2802b9591847ec6135fcd0"
-  integrity sha512-9lPgt41nS8x4AYCLfIC9VKCmamnVxzPM2nze7lpp/I1uaSSQvIz5MQpYUFikv08cMUsCwAWahU0e+arHInpdcw==
+use-intl@^3.25.0:
+  version "3.25.0"
+  resolved "https://registry.npmjs.org/use-intl/-/use-intl-3.25.0.tgz#f73356c651fbf1057b38ff1a3ebc8ef8fb4a9278"
+  integrity sha512-e9nfJm18rM+naT14oZZYR3FNWd2mRDmNFQJC4R9qh4vhfabDwl0Kd/B6PodYst7U/0oT3qeKKjlz7qG3BvXAaQ==
   dependencies:
     "@formatjs/fast-memoize" "^2.2.0"
     intl-messageformat "^10.5.14"

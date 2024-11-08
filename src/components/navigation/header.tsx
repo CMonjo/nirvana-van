@@ -11,6 +11,7 @@ import SocialLinks from '../utils/socialLinks';
 import LinkWrapper from '../utils/LinkWrapper';
 import useIsDesktop from '@/hooks/useIsDesktop';
 import Link from 'next/link';
+import LocaleSwitcher from './localSwitcher';
 
 export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
   const isDesktop = useIsDesktop();
@@ -67,6 +68,7 @@ export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
             <Link href='/contact'>
               <Button>Contact</Button>
             </Link>
+            <LocaleSwitcher />
             <Button icon={<LanguageIcon fontSize='small' />} variant='outlined'>
               Français
             </Button>
