@@ -28,11 +28,11 @@ export default function Footer() {
         >{`Nirvana Van © 2022 - ${new Date().getFullYear()}`}</Typography>
         <Navigation color='white' nav='footer' />
       </div>
-      <div className='relative flex w-full flex-row items-center justify-between px-6 py-4'>
+      <div className='relative flex w-full flex-col-reverse items-center justify-between px-6 py-4 md:flex-row'>
         <div className='absolute left-1/2 hidden -translate-x-1/2 transform md:flex'>
           <Typography variant='caption'>{`Nirvana Van © 2022 - ${new Date().getFullYear()}`}</Typography>
         </div>
-        <div className='flex gap-4'>
+        <div className='mt-4 flex gap-4 md:mt-0'>
           <LinkWrapper href='/'>
             <Typography variant='caption'>Mentions légales</Typography>
           </LinkWrapper>
@@ -40,7 +40,7 @@ export default function Footer() {
             <Typography variant='caption'>CGU / CGV</Typography>
           </LinkWrapper>
         </div>
-        <div className='flex gap-4'>
+        <div className='flex flex-col gap-4 md:flex-row'>
           <LocaleSwitcher color='white' size='small' />
           <SocialLinks className='text-white' />
         </div>
