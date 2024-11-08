@@ -24,9 +24,9 @@ export default function Specification({
     <Section className={`${background}`} topoBackground={topoBackground}>
       <Container>
         <div
-          className={`flex flex-col gap-8 ${imageRight ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+          className={`flex w-full flex-col items-stretch gap-4 md:gap-8 ${imageRight ? 'md:flex-row-reverse' : 'md:flex-row'}`}
         >
-          <div className='relative flex min-h-[300px] flex-[3] items-center justify-center rounded-3xl bg-orange md:h-auto'>
+          <div className='relative flex min-h-[350px] w-full flex-[3] items-center justify-center rounded-3xl bg-orange md:min-h-[400px]'>
             <Typography
               variant='h1'
               className='z-10 text-5xl font-medium text-white'
@@ -37,11 +37,12 @@ export default function Specification({
               fill
               src={'/bento-1.jpeg'}
               alt='bento'
-              className='rounded-lg object-cover'
+              className='rounded-3xl object-cover'
             />
-            <div className='bg-black/05 absolute inset-0 rounded-2xl' />
+            <div className='absolute inset-0 rounded-3xl bg-black/15' />
           </div>
-          <div className='bg-grey flex h-full flex-[2] flex-col rounded-3xl px-4 py-4'>
+
+          <div className='flex flex-[2] flex-col rounded-3xl bg-grey px-4 py-4'>
             <Typography variant='h3' className='mb-4 text-center font-medium'>
               {title}
             </Typography>

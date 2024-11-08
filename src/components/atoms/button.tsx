@@ -47,7 +47,7 @@ export default function Button({
     'hover:bg-green': color === 'green' && variant === 'outlined',
     'hover:bg-white': color === 'white' && variant === 'outlined',
     'hover:bg-orange': color === 'orange' && variant === 'outlined',
-    'hover:opacity-80': variant === 'filled',
+    'hover:opacity-90': variant === 'filled',
   });
 
   const hoverTextClass = clsx({

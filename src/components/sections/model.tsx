@@ -46,7 +46,7 @@ const Model = ({
 
       <Image
         src={customImage || product.image}
-        alt={t('name')}
+        alt={product.name}
         fill
         style={{ objectFit: 'cover' }}
         className='rounded-3xl'
