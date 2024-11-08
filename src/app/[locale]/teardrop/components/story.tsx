@@ -26,13 +26,13 @@ export default function Story() {
             Qu’est ce qu’une TD, lister tous les avantages de la TD comparé aux
             vans, ...
           </Typography>
-          <Typography className='mb-8'>
+          <Typography className='mb-4'>
             Qu’est ce qu’une TD, lister tous les avantages de la TD comparé aux
             vans, ... Qu’est ce qu’une TD, lister tous les avantages de la TD
             comparé aux vans, ...
           </Typography>
         </div>
-        <div className='flex gap-4'>
+        <div className='flex flex-col items-center gap-4 md:flex-row'>
           <Link
             href={{
               pathname: '/configurator',
