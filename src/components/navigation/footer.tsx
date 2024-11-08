@@ -4,6 +4,8 @@ import Navigation from './navigation';
 import Typography from '../atoms/typography';
 import SocialLinks from '../utils/socialLinks';
 import LinkWrapper from '../utils/LinkWrapper';
+import LocaleSwitcher from './localeSwitcher';
+import Button from '../atoms/button';
 
 export default function Footer() {
   return (
@@ -38,7 +40,10 @@ export default function Footer() {
             <Typography variant='caption'>CGU / CGV</Typography>
           </LinkWrapper>
         </div>
-        <SocialLinks className='text-white' />
+        <div className='flex gap-4'>
+          <LocaleSwitcher color='white' size='small' />
+          <SocialLinks className='text-white' />
+        </div>
       </div>
     </footer>
   );

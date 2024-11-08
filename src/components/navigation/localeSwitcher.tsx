@@ -4,7 +4,9 @@ import clsx from 'clsx';
 import { usePathname, useRouter } from '@/i18n/routing';
 import { ChangeEvent, ReactNode, useTransition } from 'react';
 import { useLocale } from 'next-intl';
-import { routing, localesName, Locale } from '@/i18n/routing';
+import { localesName, Locale } from '@/i18n/routing';
+import Select from '../atoms/select';
+import LanguageIcon from '@mui/icons-material/Language';
 
 type Props = {
   children: ReactNode;
@@ -45,20 +47,35 @@ function LocaleSwitcherSelect({ children, defaultValue, label }: Props) {
     </label>
   );
 }
-export default function LocaleSwitcher() {
+
+export default function LocaleSwitcher({
+  color = 'orange',
+  size = 'medium',
+}: {
+  color?: 'orange' | 'green' | 'white';
+  size?: 'small' | 'medium';
+}) {
   const currentLocale = useLocale();
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+  const pathname = usePathname();
+
+  function onSelectChange(nextLocale: string) {
+    console.log('nextLocale', nextLocale as Locale);
+    startTransition(() => {
+      router.replace(pathname, { locale: nextLocale as Locale });
+    });
+  }
 
   return (
-    <LocaleSwitcherSelect
-      defaultValue={currentLocale}
-      //   @ts-ignore
-      label={localesName[currentLocale]}
-    >
-      {routing.locales.map((cur) => (
-        <option key={cur} value={cur}>
-          {localesName[cur]}
-        </option>
-      ))}
-    </LocaleSwitcherSelect>
+    <Select
+      options={localesName}
+      value={currentLocale}
+      onChange={onSelectChange}
+      color={color}
+      variant='outlined'
+      size={size}
+      icon={<LanguageIcon sx={{ fontSize: size === 'small' ? 10 : 20 }} />}
+    />
   );
 }

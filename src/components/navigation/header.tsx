@@ -11,7 +11,7 @@ import SocialLinks from '../utils/socialLinks';
 import LinkWrapper from '../utils/LinkWrapper';
 import useIsDesktop from '@/hooks/useIsDesktop';
 import { Link } from '@/i18n/routing';
-import LocaleSwitcher from './localSwitcher';
+import LocaleSwitcher from './localeSwitcher';
 
 export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
   const isDesktop = useIsDesktop();
@@ -69,9 +69,6 @@ export default function Header({ fixedMenu = false }: { fixedMenu?: boolean }) {
               <Button>Contact</Button>
             </Link>
             <LocaleSwitcher />
-            <Button icon={<LanguageIcon fontSize='small' />} variant='outlined'>
-              Français
-            </Button>
           </div>
           <div className='flex w-full justify-end lg:hidden'>
             <AnimatePresence mode='wait' initial={false}>

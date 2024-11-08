@@ -51,11 +51,10 @@ export default function Button({
   });
 
   const hoverTextClass = clsx({
-    'hover:text-white': variant === 'outlined',
+    'hover:text-white': variant === 'outlined' && color !== 'white',
+    'hover:text-dark': variant === 'outlined' && color === 'white',
   });
 
-  //size small == font-xs px-3 py-1
-  //size medium == font-sm px-5 py-2
   const sizeClass = clsx({
     'text-xs px-3 py-1': size === 'small',
     'text-sm px-5 py-2': size === 'medium',
