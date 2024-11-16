@@ -5,6 +5,8 @@ import Video from '@/components/sections/video';
 import Hero from './components/hero';
 import Specification from './components/specification';
 import Bento from './components/bento';
+import FAQ from '@/components/sections/faq';
+import { teardropFAQ } from '@/constants/faq';
 
 export default function Teardrop() {
   return (
@@ -86,6 +88,7 @@ Hauteur (hors tout): 1,76 m
 Hauteur intérieure: 1,16 m'
         />
         <Bento />
+        <FAQ list={teardropFAQ} color='orange' />
       </main>
       <Footer />
     </div>

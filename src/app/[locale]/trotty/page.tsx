@@ -1,12 +1,25 @@
 import Header from '@/components/navigation/header';
+import Footer from '@/components/navigation/footer';
+import Video from '@/components/sections/video';
+import FAQ from '@/components/sections/faq';
+import { trottyFAQ } from '@/constants/faq';
 
 export default function Teardrop() {
   return (
-    <div className='min-h-screen bg-green'>
+    <div className='bg-bg-2'>
       <Header />
-      Trotty page
-      {/* <Main /> */}
-      {/* <Footers /> */}
+      <main className='flex w-full flex-col items-center'>
+        <Video
+          source='/teardrop/video.mp4'
+          thumbnail='/bento-2.jpeg'
+          title='La Teardrop en action !'
+          descriptionLeft='La Teardrop'
+          descriptionRight='En action!'
+          showSocials
+        />
+        <FAQ list={trottyFAQ} color='green' />
+      </main>
+      <Footer />
     </div>
   );
 }

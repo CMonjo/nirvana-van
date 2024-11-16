@@ -32,5 +32,23 @@
     "grey": "Gris",
     "brown": "Marron",
     "blackAndWhite": "Blanc / Noir"
+  },
+  "faq": {
+    "teardrop": {
+      "whatIsTeardrop": "Qu'est-ce qu'une caravane teardrop ?",
+      "whatIsTeardropAnswer": "La caravane teardrop est une petite caravane compacte, légère et aérodynamique. Elle est idéale pour les voyageurs qui aiment",
+      "whatIsTeardrop2": "l'aventure et qui veulent voyager léger.",
+      "whatIsTeardropAnswer2": "Elle est équipée d'un lit double, d'une cuisine extérieure et d'un espace de rangement.",
+      "whatIsTeardrop3": "Quelle est la taille de la caravane teardrop ?",
+      "whatIsTeardropAnswer3": "La caravane teardrop mesure 3 mètres de long, 1,5 mètre de large et 1,5 mètre de haut."
+    },
+    "trotty": {
+      "whatIsTrotty": "Qu'est-ce qu'une caravane teardrop ?",
+      "whatIsTrottyAnswer": "La caravane teardrop est une petite caravane compacte, légère et aérodynamique. Elle est idéale pour les voyageurs qui aiment",
+      "whatIsTrotty2": "l'aventure et qui veulent voyager léger.",
+      "whatIsTrottyAnswer2": "Elle est équipée d'un lit double, d'une cuisine extérieure et d'un espace de rangement.",
+      "whatIsTrotty3": "Quelle est la taille de la caravane teardrop ?",
+      "whatIsTrottyAnswer3": "La caravane teardrop mesure 3 mètres de long, 1,5 mètre de large et 1,5 mètre de haut."
+    }
   }
 }
