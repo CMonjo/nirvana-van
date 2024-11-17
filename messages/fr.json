@@ -15,7 +15,15 @@
   "product": {
     "teardrop": {
       "description": "Pour les voyageurs qui aiment l'aventure",
-      "packs": {}
+      "packs": {},
+      "specifications": {
+        "externalHeight": "Hauteur extérieure",
+        "externalHeightValue": "174 cm",
+        "externalLenght": "Longueur extérieure",
+        "externalLenghtValue": "174 cm",
+        "mattress": "Matelas",
+        "mattressValue": "132 x 190 cm"
+      }
     },
     "trotty": {
       "description": "Pour les fans de vélo qui aiment le confort",
@@ -36,7 +44,7 @@
   "faq": {
     "teardrop": {
       "whatIsTeardrop": "Qu'est-ce qu'une caravane teardrop ?",
-      "whatIsTeardropAnswer": "La caravane teardrop est une petite caravane compacte, légère et aérodynamique. Elle est idéale pour les voyageurs qui aiment",
+      "whatIsTeardropAnswer": "La caravane teardrop est une petite caravane compacte, légère et aérodynamique. Elle est idéale pour les voyageurs qui aiment. La caravane teardrop est une petite caravane compacte, légère et aérodynamique. Elle est idéale pour les voyageurs qui aiment.",
       "whatIsTeardrop2": "l'aventure et qui veulent voyager léger.",
       "whatIsTeardropAnswer2": "Elle est équipée d'un lit double, d'une cuisine extérieure et d'un espace de rangement.",
       "whatIsTeardrop3": "Quelle est la taille de la caravane teardrop ?",

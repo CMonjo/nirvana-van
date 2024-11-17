@@ -3,10 +3,12 @@ import Footer from '@/components/navigation/footer';
 import Story from './components/story';
 import Video from '@/components/sections/video';
 import Hero from './components/hero';
-import Specification from './components/specification';
+import ImageText from '../../../components/imageText';
 import Bento from './components/bento';
 import FAQ from '@/components/sections/faq';
-import { teardropFAQ } from '@/constants/faq';
+import Specification from '../../../components/sections/specification';
+
+const specifications = ['externalHeight', 'externalLenght', 'mattress'];
 
 export default function Teardrop() {
   return (
@@ -23,7 +25,7 @@ export default function Teardrop() {
           descriptionRight='En action!'
           showSocials
         />
-        <Specification
+        <ImageText
           section='Cuisine'
           title='Designée pour partir plusieurs jours en toute autonomie'
           description='Nombre de places: 2+1 (enfant de 0 à 5 ans)
@@ -38,7 +40,7 @@ Dimensions intérieures: 2,45 m x 1,45 m
 Hauteur (hors tout): 1,76 m
 Hauteur intérieure: 1,16 m'
         />
-        <Specification
+        <ImageText
           topoBackground={false}
           imageRight
           background='bg-orange/10'
@@ -72,7 +74,7 @@ Dimensions intérieures: 2,45 m x 1,45 m
 Hauteur (hors tout): 1,76 m
 Hauteur intérieure: 1,16 m'
         />
-        <Specification
+        <ImageText
           section='Intérieur'
           title='Designée pour partir plusieurs jours en toute autonomie'
           description='Nombre de places: 2+1 (enfant de 0 à 5 ans)
@@ -88,7 +90,8 @@ Hauteur (hors tout): 1,76 m
 Hauteur intérieure: 1,16 m'
         />
         <Bento />
-        <FAQ list={teardropFAQ} color='orange' />
+        <Specification productKey='teardrop' specs={specifications} />
+        <FAQ productKey={'teardrop'} color='orange' />
       </main>
       <Footer />
     </div>

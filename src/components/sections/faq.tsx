@@ -8,6 +8,39 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import Button from '../atoms/button';
+import { Link } from '@/i18n/routing';
+import { ProductType } from '@/constants/products';
+
+const teardropFAQ = [
+  {
+    question: 'whatIsTeardrop',
+    answer: 'whatIsTeardropAnswer',
+  },
+  {
+    question: 'whatIsTeardrop2',
+    answer: 'whatIsTeardropAnswer2',
+  },
+  {
+    question: 'whatIsTeardrop3',
+    answer: 'whatIsTeardropAnswer3',
+  },
+];
+
+const trottyFAQ = [
+  {
+    question: 'whatIsTrotty',
+    answer: 'whatIsTrottyAnswer',
+  },
+  {
+    question: 'whatIsTrotty2',
+    answer: 'whatIsTrottyAnswer2',
+  },
+  {
+    question: 'whatIsTrotty3',
+    answer: 'whatIsTrottyAnswer3',
+  },
+];
 
 const FAQItem = ({
   question,
@@ -58,15 +91,22 @@ const FAQItem = ({
   );
 };
 
-const FAQ = ({ list, color }: { list: any; color: string }) => {
-  const t = useTranslations(`faq.${list.translationKey}`);
+const FAQ = ({
+  productKey,
+  color,
+}: {
+  productKey: ProductType;
+  color: 'green' | 'orange';
+}) => {
+  const t = useTranslations(`faq.${productKey}`);
+  const list = productKey === 'teardrop' ? teardropFAQ : trottyFAQ;
 
   return (
     <Section className='bg-white'>
       <Container className='flex-col'>
         <SectionTitle title={`F.A.Q`} />
         <div className='flex w-full flex-col gap-4'>
-          {list?.list.map((item: any, index: number) => (
+          {list?.map((item: any, index: number) => (
             <div className='mb-2' key={index}>
               <FAQItem
                 color={color}
@@ -76,6 +116,9 @@ const FAQ = ({ list, color }: { list: any; color: string }) => {
             </div>
           ))}
         </div>
+        <Link href='/contact'>
+          <Button color={color}>Nous contacter</Button>
+        </Link>
       </Container>
     </Section>
   );

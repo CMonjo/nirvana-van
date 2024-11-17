@@ -2,7 +2,6 @@ import Header from '@/components/navigation/header';
 import Footer from '@/components/navigation/footer';
 import Video from '@/components/sections/video';
 import FAQ from '@/components/sections/faq';
-import { trottyFAQ } from '@/constants/faq';
 
 export default function Teardrop() {
   return (
@@ -17,7 +16,7 @@ export default function Teardrop() {
           descriptionRight='En action!'
           showSocials
         />
-        <FAQ list={trottyFAQ} color='green' />
+        <FAQ productKey={'trotty'} color='green' />
       </main>
       <Footer />
     </div>
