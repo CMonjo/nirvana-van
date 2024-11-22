@@ -3,7 +3,7 @@
 // Déclinaisons
 
 // Packs
-// Électricité                 +1500€
+// Électricité      // Installation elec, batterie, ampoule           +1500€
 // Cuisine                + 750€
 // Convertible                 + 230€
 
