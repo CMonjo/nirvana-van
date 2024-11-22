@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
 
-export default function Input({
+export default function Textarea({
   label,
   className,
   color = 'orange',
@@ -13,7 +13,7 @@ export default function Input({
   label?: string;
   color?: 'orange' | 'green';
   required?: boolean;
-} & React.InputHTMLAttributes<HTMLInputElement>) {
+} & React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
   const [isFocused, setIsFocused] = useState(false);
 
   const borderClass = clsx({
@@ -35,7 +35,7 @@ export default function Input({
           }}
           style={{
             transformOrigin: 'left top',
-            top: isFocused || !!props.value ? 0 : '50%',
+            top: isFocused || !!props.value ? 0 : 30,
             translateY: isFocused || !!props.value ? 0 : '-50%',
           }}
           transition={{ duration: 0.2, ease: 'easeInOut' }}
@@ -48,10 +48,10 @@ export default function Input({
           )}
         </motion.label>
       )}
-      <input
+      <textarea
         {...props}
         className={clsx(
-          'w-full rounded-3xl border-2 border-grey px-3 py-2 transition-colors duration-300 ease-in-out focus:outline-none focus:ring-0',
+          'w-full resize-none rounded-3xl border-2 border-grey px-3 py-2 transition-colors duration-300 ease-in-out focus:outline-none focus:ring-0',
           borderClass
         )}
         onFocus={() => setIsFocused(true)}

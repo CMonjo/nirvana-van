@@ -3,14 +3,14 @@ const brevo = require('@getbrevo/brevo');
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, message } = await request.json();
+    const { firstname, lastname, phone, email, message } = await request.json();
 
     let apiInstance = new brevo.TransactionalEmailsApi();
     let apiKey = apiInstance.authentications['apiKey'];
     apiKey.apiKey = process.env.BREVO_API_KEY;
     let sendSmtpEmail = new brevo.SendSmtpEmail();
 
-    if (!name || !email || !message) {
+    if (!firstname || !lastname || !email || !message) {
       return NextResponse.json(
         { error: 'Tous les champs sont requis.' },
         { status: 400 }

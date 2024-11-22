@@ -9,6 +9,7 @@ export default function Button({
   icon,
   variant = 'filled',
   size = 'medium',
+  disabled,
 }: {
   onClick?: () => void;
   children: React.ReactNode;
@@ -17,6 +18,8 @@ export default function Button({
   color?: 'white' | 'orange' | 'green';
   variant?: 'filled' | 'outlined';
   size?: 'small' | 'medium';
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }) {
   const bgClass = clsx({
     'bg-green': color === 'green' && variant === 'filled',
@@ -60,9 +63,14 @@ export default function Button({
     'text-sm px-5 py-2': size === 'medium',
   });
 
+  const disabledClass = clsx({
+    'cursor-not-allowed': disabled,
+  });
+
   return (
     <button
       onClick={onClick}
+      disabled
       className={clsx(
         bgClass,
         borderClass,
@@ -70,6 +78,7 @@ export default function Button({
         textClass,
         hoverTextClass,
         sizeClass,
+        disabledClass,
         'border-3 flex items-center rounded-full border font-acorn text-sm font-medium transition-all duration-300',
         className
       )}

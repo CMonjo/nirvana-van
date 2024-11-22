@@ -1,6 +1,8 @@
 'use client';
 
+import Button from '@/components/atoms/button';
 import Input from '@/components/atoms/input';
+import Textarea from '@/components/atoms/textarea';
 import { useState } from 'react';
 
 type FormData = {
@@ -59,7 +61,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
+    <form onSubmit={handleSubmit} className='flex w-full flex-col gap-4'>
       <div className='flex gap-4'>
         <Input
           value={formData.firstname}
@@ -84,32 +86,33 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           name='email'
+          type='email'
           color='orange'
           label='Email'
         />
         <Input
           value={formData.phone}
           onChange={handleChange}
-          required
           name='phone'
           color='orange'
-          label='Téléphone portable ou domicile fix'
+          type='number'
+          label='Téléphone'
         />
       </div>
-      <textarea
+      <Textarea
+        id='message'
         name='message'
         value={formData.message}
         onChange={handleChange}
-        placeholder='Votre message'
+        label='Écrivez votre message'
         required
-        className='w-full border p-2'
+        rows={6}
       />
-      <button
-        type='submit'
-        className='rounded bg-blue-500 p-2 text-white hover:bg-blue-600'
-      >
-        Envoyer
-      </button>
+      <div className='flex w-full justify-end'>
+        <Button type='submit' color='orange' disabled>
+          Envoyer
+        </Button>
+      </div>
       {status && <p>{status}</p>}
     </form>
   );
