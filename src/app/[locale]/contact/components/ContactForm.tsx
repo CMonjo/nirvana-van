@@ -62,7 +62,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className='flex w-full flex-col gap-4'>
-      <div className='flex gap-4'>
+      <div className='flex flex-col gap-4 md:flex-row'>
         <Input
           value={formData.firstname}
           onChange={handleChange}
@@ -80,7 +80,7 @@ export default function ContactForm() {
           label='Nom'
         />
       </div>
-      <div className='flex gap-4'>
+      <div className='flex flex-col gap-4 md:flex-row'>
         <Input
           value={formData.email}
           onChange={handleChange}

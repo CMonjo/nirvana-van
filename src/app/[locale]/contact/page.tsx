@@ -7,15 +7,13 @@ import SectionTitle from '@/components/sections/title';
 
 export default function Teardrop() {
   return (
-    <div className='h-[100vh] bg-white'>
+    <div className='bg-bg-2'>
       <Header fixedMenu />
       <Section className='bg-white'>
         <Container className='flex-col'>
-          <div className='flex w-full max-w-3xl flex-col items-center justify-center gap-4 rounded-3xl bg-grey p-16'>
+          <div className='flex w-full max-w-3xl flex-col items-center justify-center gap-4 rounded-3xl bg-grey px-4 py-8 md:p-16'>
             <SectionTitle title={`Contactez-nous`} />
-            <div className='flex h-full w-full flex-col'>
-              <ContactForm />
-            </div>
+            <ContactForm />
           </div>
         </Container>
       </Section>
