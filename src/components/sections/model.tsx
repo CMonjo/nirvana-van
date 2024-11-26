@@ -2,8 +2,8 @@ import React, { useMemo } from 'react';
 import Image from 'next/image';
 import Transition from '../atoms/transition';
 import Typography from '../atoms/typography';
-import { ProductType } from '@/constants/products';
-import { products } from '@/constants/products';
+import { ProductType } from '@/products/types';
+import { products } from '@/products/products';
 import { useTranslations } from 'next-intl';
 
 const Model = ({

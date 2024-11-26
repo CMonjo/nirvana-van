@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../atoms/button';
 import Logo from '../utils/logo';
-import LanguageIcon from '@mui/icons-material/Language';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Navigation from './navigation';

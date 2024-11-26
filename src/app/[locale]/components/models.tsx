@@ -4,7 +4,7 @@ import Container from '@/components/atoms/container';
 import Button from '@/components/atoms/button';
 import { useRouter } from '@/i18n/routing';
 import Section from '@/components/atoms/section';
-import { ProductType } from '@/constants/products';
+import { ProductType } from '@/products/types';
 import Model from '@/components/sections/model';
 import SectionTitle from '@/components/sections/title';
 

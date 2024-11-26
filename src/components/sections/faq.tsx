@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Button from '../atoms/button';
 import { Link } from '@/i18n/routing';
-import { ProductType } from '@/constants/products';
+import { ProductType } from '@/products/types';
 
 const teardropFAQ = [
   {

@@ -6,7 +6,7 @@ import Container from '@/components/atoms/container';
 import Typography from '@/components/atoms/typography';
 import SectionTitle from '@/components/sections/title';
 import { useTranslations } from 'next-intl';
-import { ProductType } from '@/constants/products';
+import { ProductType } from '@/products/types';
 
 export default function Specification({
   productKey,

@@ -9,7 +9,7 @@ export default function Button({
   icon,
   variant = 'filled',
   size = 'medium',
-  disabled,
+  disabled = false,
 }: {
   onClick?: () => void;
   children: React.ReactNode;
@@ -70,7 +70,7 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      disabled
+      disabled={disabled}
       className={clsx(
         bgClass,
         borderClass,

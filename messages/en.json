@@ -2,8 +2,15 @@
   "manifest": {
     "name": "Nirvana Van"
   },
-  "homepage": {
-    "heroTitle": "French artisanal manufacturer of mini-caravans"
+  "pages": {
+    "home": {
+      "heroTitle": "Fabricant artisanal français de mini-caravanes"
+    },
+    "configurator": {
+      "title": "Configurateur",
+      "configure": "Configurez votre",
+      "subtitle": "Choissiez sa couleur, ses options, créer la caravane de vos rêves!"
+    }
   },
   "product": {
     "teardrop": {
@@ -16,14 +23,14 @@
     }
   },
   "ralColors": {
-    "yellow": "Jaune",
+    "yellow": "Yellow",
     "orange": "Orange",
-    "red": "Rouge",
-    "purple": "Violet",
-    "blue": "Bleu",
-    "green": "Vert",
-    "grey": "Gris",
-    "brown": "Marron",
-    "blackAndWhite": "Blanc / Noir"
+    "red": "Red",
+    "purple": "Purple",
+    "blue": "Blue",
+    "green": "Green",
+    "grey": "Grey",
+    "brown": "Brown",
+    "blackAndWhite": "Black / White"
   }
 }
