@@ -1,5 +1,5 @@
 import { ralColors } from './ralColors';
-import { IProduct, IProductConfig, Option } from './types';
+import { IProduct, IProductConfig, Option, SelectedOption } from './types';
 
 export const products: IProduct[] = [
   {
@@ -12,10 +12,12 @@ export const products: IProduct[] = [
       {
         name: 'main_color',
         type: 'radio',
+        required: true,
       },
       {
         name: 'shade_color',
         type: 'radio',
+        required: true,
       },
       {
         name: 'axle',
@@ -23,6 +25,7 @@ export const products: IProduct[] = [
         options: [
           {
             key: 'classic_axle_500kg',
+            included: true,
             price: 0,
           },
           {
@@ -42,6 +45,8 @@ export const products: IProduct[] = [
           {
             key: 'stabilizer_legs',
             price: 0,
+            included: true,
+            disabled: true,
           },
           { key: 'rounded_fenders', price: 140 },
           { key: 'spare_wheel', price: 190 },
@@ -69,49 +74,52 @@ export const products: IProduct[] = [
         ],
       },
       {
-        name: 'storage',
+        name: 'exterior',
+        type: 'checkbox',
+        options: [
+          { key: 'rear_awning', price: 1000 },
+          { key: 'side_awning', price: 600 },
+          { key: 'cover', price: 390 },
+        ],
+      },
+      {
+        name: 'equipments',
+        type: 'checkbox',
+        options: [
+          { key: 'roof_bars', price: 490 },
+          { key: 'arrow_chest', price: 100 },
+          { key: 'bike_rack', price: 220 },
+          { key: 'roof_tent', price: 2000, comingSoon: true },
+        ],
+      },
+      {
+        name: 'built-in',
         type: 'radio',
         options: [
           {
             key: 'front_and_rear_closets',
             price: 0,
+            included: true,
           },
-          { key: 'vtfe', price: 69 },
           { key: 'no_closets', price: -900 },
         ],
       },
       {
-        name: 'doors',
-        type: 'radio',
+        name: 'opening',
+        type: 'checkbox',
         options: [
           {
             key: 'two_side_doors',
             price: 0,
+            included: true,
+            disabled: true,
           },
           {
             key: 'one_side_door',
             price: -300,
           },
           { key: 'no_rear_door', price: -700 },
-        ],
-      },
-      {
-        name: 'awnings',
-        type: 'checkbox',
-        options: [
-          { key: 'rear_awning', price: null },
-          { key: 'side_awning', price: null },
-          { key: 'cover', price: 390 },
-        ],
-      },
-      {
-        name: 'accessories',
-        type: 'checkbox',
-        options: [
-          { key: 'roof_bars', price: 490 },
-          { key: 'tongue_box', price: null },
-          { key: 'bike_rack', price: 220 },
-          { key: 'roof_tent', price: 2000, comingSoon: true },
+          { key: 'test', price: 0 },
         ],
       },
     ],
@@ -126,12 +134,42 @@ export const products: IProduct[] = [
 ];
 
 export function getProductConfiguration(product: IProduct): IProductConfig {
+  let selectedOptions: SelectedOption[] = [];
+  if (product.categories) {
+    selectedOptions = product.categories
+      .filter((category) => category.options)
+      .flatMap((category) => {
+        const option = category.options?.find((opt) => opt.included);
+        return option ? { category: category.name, key: option.key } : [];
+      });
+  }
+
   return {
     productKey: product.key,
-    selectedOptions: [],
+    selectedOptions: selectedOptions,
     totalPrice: product.basePrice,
   };
 }
+
+const getConfigurationPrice = (
+  selectedOptions: SelectedOption[],
+  product: IProduct
+): number => {
+  let price = product.basePrice;
+  selectedOptions.forEach((selected) => {
+    const category = product.categories?.find(
+      (cat) => cat.name === selected.category
+    );
+    if (category) {
+      const option = category.options?.find((opt) => opt.key === selected.key);
+      if (option) {
+        price += option?.price || 0;
+      }
+    }
+  });
+
+  return price;
+};
 
 export function updateProductConfiguration(
   config: IProductConfig,
@@ -140,7 +178,6 @@ export function updateProductConfiguration(
   optionValue: string
 ): IProductConfig {
   const selectedOptions = [...config.selectedOptions];
-  let updatedPrice = product.basePrice;
 
   if (!product.categories)
     throw new Error(`Product "${product.key}" has no categories.`);
@@ -148,65 +185,31 @@ export function updateProductConfiguration(
   const category = product.categories.find(
     (cat) => cat.name === optionCategory
   );
-  const dynamicOptions = category?.options || getDynamicOptions(optionCategory);
 
-  if (!category) {
-    throw new Error(
-      `Category "${optionCategory}" not found in product "${product.key}".`
-    );
-  }
-
-  if (category.type === 'radio') {
-    const index = selectedOptions.findIndex(
-      (opt) => opt.category === optionCategory
-    );
-    if (index !== -1) {
-      selectedOptions.splice(index, 1);
-    }
-    selectedOptions.push({ category: optionCategory, key: optionValue });
-  } else if (category.type === 'checkbox') {
-    const index = selectedOptions.findIndex(
-      (opt) => opt.category === optionCategory && opt.key === optionValue
-    );
-    if (index !== -1) {
-      selectedOptions.splice(index, 1);
-    } else {
+  if (category) {
+    if (category.type === 'radio') {
+      const index = selectedOptions.findIndex(
+        (opt) => opt.category === optionCategory
+      );
+      if (index !== -1) {
+        selectedOptions.splice(index, 1);
+      }
       selectedOptions.push({ category: optionCategory, key: optionValue });
+    } else if (category.type === 'checkbox') {
+      const index = selectedOptions.findIndex(
+        (opt) => opt.category === optionCategory && opt.key === optionValue
+      );
+      if (index !== -1) {
+        selectedOptions.splice(index, 1);
+      } else {
+        selectedOptions.push({ category: optionCategory, key: optionValue });
+      }
     }
   }
-
-  selectedOptions.forEach((selected) => {
-    const option = dynamicOptions.find((opt) => opt.key === selected.key);
-    if (option && option.price !== null) {
-      updatedPrice += option.price;
-    }
-  });
 
   return {
     ...config,
     selectedOptions,
-    totalPrice: updatedPrice,
+    totalPrice: getConfigurationPrice(selectedOptions, product),
   };
-}
-
-export function getDynamicOptions(category: string): Option[] {
-  if (category === 'main_color') {
-    return ralColors.map((color) => ({
-      key: color.color,
-      name: color.color,
-      price: 0,
-    }));
-  }
-
-  if (category === 'shade_color') {
-    return ralColors.flatMap((color) =>
-      color.shades.map((shade) => ({
-        key: shade.code,
-        name: shade.code,
-        price: 0,
-      }))
-    );
-  }
-
-  return [];
 }

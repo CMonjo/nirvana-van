@@ -1,7 +1,22 @@
 import Typography from '@/components/atoms/typography';
+import clsx from 'clsx';
 
-const ConfiguratorCard = ({ children }: { children: React.ReactNode }) => (
-  <div className='flex flex-col gap-4 rounded-3xl bg-grey p-4'>{children}</div>
+const ConfiguratorCard = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => (
+  <div
+    className={clsx(
+      'flex flex-col rounded-3xl bg-grey p-6',
+      !className?.includes('gap-') && 'gap-4',
+      className
+    )}
+  >
+    {children}
+  </div>
 );
 
 export const ConfiguratorCardTitle = ({ title }: { title: string }) => (

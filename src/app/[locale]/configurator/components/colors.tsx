@@ -7,17 +7,21 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 import { useTranslations } from 'next-intl';
 import ConfiguratorCard, { ConfiguratorCardTitle } from './configuratorCard';
 import Tooltip from '@/components/atoms/tooltip';
+import { IProduct, ProductType } from '@/products/types';
 
 export default function Colors({
+  product,
   mainColor,
   shadeColor,
   onChange,
 }: {
+  product: IProduct;
   mainColor: string | undefined;
   shadeColor: string | undefined;
   onChange: (category: string, value: string) => void;
 }) {
   const tColors = useTranslations('ralColors');
+  const tProduct = useTranslations(`products.${product.key}.options`);
 
   const shades = useMemo(
     () => ralColors.find((c) => c.color === mainColor)?.shades,
@@ -26,7 +30,7 @@ export default function Colors({
 
   return (
     <ConfiguratorCard>
-      <ConfiguratorCardTitle title='Couleur' />
+      <ConfiguratorCardTitle title={tProduct('main_color.name')} />
       <div className='flex flex-wrap gap-2'>
         {ralColors.map((color, index) => (
           <Tooltip content={tColors(color.color)} position='top' key={index}>
@@ -36,7 +40,7 @@ export default function Colors({
             >
               {color.color === mainColor && (
                 <span className='absolute right-[-4px] top-[-6px]'>
-                  <VerifiedIcon className={`text-${mainColor}`} />
+                  <VerifiedIcon className={`text-${product.color}`} />
                 </span>
               )}
               <div
@@ -52,7 +56,7 @@ export default function Colors({
           </Tooltip>
         ))}
       </div>
-      {shades && <ConfiguratorCardTitle title='Teinte' />}
+      {shades && <ConfiguratorCardTitle title={tProduct('shade_color.name')} />}
       {shades ? (
         <div className='flex h-[400px] flex-col gap-4 overflow-auto'>
           {shades.map((color, index) => (
@@ -69,7 +73,7 @@ export default function Colors({
                 <Typography>{color.code}</Typography>
               </div>
               {color.code === shadeColor && (
-                <VerifiedIcon className={`text-${shadeColor}`} />
+                <VerifiedIcon className={`text-${product.color}`} />
               )}
             </div>
           ))}

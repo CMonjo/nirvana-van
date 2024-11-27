@@ -20,10 +20,7 @@ import { useTranslations } from 'next-intl';
 import Colors from './components/colors';
 import Basket from './components/basket';
 import { AnimatePresence, motion } from 'framer-motion';
-
-const Title = ({ title }: { title: string }) => (
-  <Typography className='font-medium'>{title}</Typography>
-);
+import OptionPicker from './components/optionPicker';
 
 export default function Configurator() {
   //State
@@ -70,10 +67,6 @@ export default function Configurator() {
     };
   }, []);
 
-  const tColors = useTranslations('ralColors');
-  //   const tProduct = useTranslations(
-  //     productConfig ? `products.${productConfig.key}` : null
-  //   );
   const tPage = useTranslations('pages.configurator');
 
   const onProductChange = (category: string, option: string) => {
@@ -99,9 +92,8 @@ export default function Configurator() {
           <Container className='flex-col'>
             <SectionTitle title={`Configurez votre ${product.key}`} />
             <Typography variant='h3'>{tPage('subtitle')}</Typography>
-
-            <div className='flex w-full '>
-              <div className='flex flex-[4] flex-col gap-2 p-4'>
+            <div className='flex w-full'>
+              <div className='flex flex-[4] flex-col gap-4 p-4'>
                 <div
                   ref={mainImageRef}
                   className='relative flex min-h-[350px] w-full flex-[3] items-center justify-center rounded-3xl md:min-h-[400px]'
@@ -114,55 +106,37 @@ export default function Configurator() {
                   />
                 </div>
                 {product.categories ? (
-                  <div>
+                  <>
                     {product.categories.map((category) => (
                       <div key={category.name}>
                         {category.name === 'main_color' ? (
-                          <>
-                            <Title title='Choississez votre couleur principale' />
-                            <Colors
-                              mainColor={
-                                productConfiguration?.selectedOptions.find(
-                                  (opt) => opt.category === 'main_color'
-                                )?.key
-                              }
-                              shadeColor={
-                                productConfiguration?.selectedOptions.find(
-                                  (opt) => opt.category === 'shade_color'
-                                )?.key
-                              }
-                              onChange={onProductChange}
-                            />
-                          </>
+                          <Colors
+                            product={product}
+                            mainColor={
+                              productConfiguration?.selectedOptions.find(
+                                (opt) => opt.category === 'main_color'
+                              )?.key
+                            }
+                            shadeColor={
+                              productConfiguration?.selectedOptions.find(
+                                (opt) => opt.category === 'shade_color'
+                              )?.key
+                            }
+                            onChange={onProductChange}
+                          />
                         ) : category.name === 'shade_color' ? null : (
-                          <>
-                            <Title title={category.name} />
-                            <div className='flex flex-wrap gap-2'>
-                              {category.options?.map((option) => (
-                                <button
-                                  key={option.key}
-                                  onClick={() =>
-                                    onProductChange(category.name, option.key)
-                                  }
-                                  className={`rounded-full bg-gray-200 px-4 py-2 ${
-                                    productConfiguration?.selectedOptions.find(
-                                      (opt) =>
-                                        opt.category === category.name &&
-                                        opt.key === option.key
-                                    )
-                                      ? 'bg-blue-500 text-white'
-                                      : ''
-                                  }`}
-                                >
-                                  {option.key}
-                                </button>
-                              ))}
-                            </div>
-                          </>
+                          <OptionPicker
+                            product={product}
+                            category={category}
+                            onChange={onProductChange}
+                            selectedOption={productConfiguration?.selectedOptions
+                              .filter((opt) => opt.category === category.name)
+                              .map((opt) => opt.key)}
+                          />
                         )}
                       </div>
                     ))}
-                  </div>
+                  </>
                 ) : null}
               </div>
               <div className='flex-[2]'>

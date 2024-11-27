@@ -4,6 +4,7 @@ export interface OptionCategory {
   name: string;
   type: 'radio' | 'checkbox';
   options?: Option[];
+  required?: boolean;
 }
 
 export interface Option {
@@ -13,6 +14,8 @@ export interface Option {
   description?: string;
   comingSoon?: boolean;
   soldOut?: boolean;
+  included?: boolean;
+  disabled?: boolean;
 }
 
 export interface IProduct {

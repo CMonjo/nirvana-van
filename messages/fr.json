@@ -12,10 +12,81 @@
       "subtitle": "Choissiez sa couleur, ses options, créer la caravane de vos rêves!"
     }
   },
-  "product": {
+  "products": {
     "teardrop": {
       "description": "Pour les voyageurs qui aiment l'aventure",
-      "packs": {},
+      "options": {
+        "main_color": {
+          "name": "Couleur"
+        },
+        "shade_color": {
+          "name": "Teinte"
+        },
+        "axle": {
+          "name": "Essieu",
+          "options": {
+            "classic_axle_500kg": "Essieu classique 500kg",
+            "classic_axle_600_750kg": "Essieu classique 600/750 kg  ",
+            "braked_axle_750kg": "Essieu freiné 750 kg"
+          }
+        },
+        "chassis": {
+          "name": "Châssis",
+          "options": {
+            "stabilizer_legs": "Béquilles stabilisatrices",
+            "rounded_fenders": "Gardes boue arrondis",
+            "spare_wheel": "Roue de secours"
+          }
+        },
+        "electricity": {
+          "name": "Electricité",
+          "options": {
+            "electric_installation": "Installation électrique",
+            "solar_panel": "Panneau solaire",
+            "big_battery": "Grosse batterie"
+          }
+        },
+        "kitchen": {
+          "name": "Cuisine",
+          "options": {
+            "water_point": "Point d'eau",
+            "electric_cooler": "Glacière électrique",
+            "stove": "Réchaud"
+          }
+        },
+        "exterior": {
+          "name": "Extérieur",
+          "options": {
+            "rear_awning": "Auvent arrière",
+            "side_awning": "Auvent latéral",
+            "cover": "Bache"
+          }
+        },
+        "equipments": {
+          "name": "Équipements",
+          "options": {
+            "roof_bars": "Barres de toit",
+            "arrow_chest": "Coffre de flèche",
+            "bike_rack": "Porte vélo",
+            "roof_tent": "Tente de toit"
+          }
+        },
+        "built-in": {
+          "name": "Aménagement",
+          "options": {
+            "front_and_rear_closets": "Placards avant et arrière",
+            "no_closets": "Pas de placards"
+          }
+        },
+        "opening": {
+          "name": "Ouverture",
+          "options": {
+            "two_side_doors": "Deux portes latérale et une arrière",
+            "one_side_door": "Une seule porte latérale",
+            "no_rear_door": "Pas de porte arrière"
+          }
+        }
+      },
       "specifications": {
         "externalHeight": "Hauteur extérieure",
         "externalHeightValue": "174 cm",

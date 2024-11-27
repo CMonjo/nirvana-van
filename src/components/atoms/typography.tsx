@@ -11,7 +11,9 @@ type TypographyProps = {
     | 'body1'
     | 'body2'
     | 'caption'
-    | 'button';
+    | 'caption2'
+    | 'button'
+    | 'none';
   html?: keyof JSX.IntrinsicElements;
   className?: string;
   style?: React.CSSProperties;
@@ -41,6 +43,8 @@ export default function Typography({
         return 'font-light text-lg';
       case 'caption':
         return 'text-sm font-light';
+      case 'caption2':
+        return 'text-sm font-medium';
       case 'button':
         return 'font-acorn text-sm font-medium ';
       default:
