@@ -7,7 +7,7 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 import { useTranslations } from 'next-intl';
 import ConfiguratorCard, { ConfiguratorCardTitle } from './configuratorCard';
 import Tooltip from '@/components/atoms/tooltip';
-import { IProduct, ProductType } from '@/products/types';
+import { IProduct } from '@/products/types';
 
 export default function Colors({
   product,

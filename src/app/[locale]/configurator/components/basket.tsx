@@ -17,6 +17,8 @@ export default function Basket({
   productConfiguration: IProductConfig;
 }) {
   const selectedOptions = productConfiguration.selectedOptions;
+  const tColors = useTranslations('ralColors');
+  const tProduct = useTranslations(`products.${product.key}.options`);
 
   return (
     <ConfiguratorCard className='gap-2 p-4'>
@@ -51,13 +53,12 @@ export default function Basket({
           if (!selectedOption) return null;
           return (
             <>
-              <Divider />
               <div
                 key={category.name}
                 className='flex items-center justify-between'
               >
                 <Typography variant='caption' className='font-medium'>
-                  {selectedOption.key}{' '}
+                  {tColors(selectedOption.key)}{' '}
                   {shadeColor ? ` - ${shadeColor.key}` : ''}
                 </Typography>
                 <Typography variant='caption'>Inclus</Typography>
@@ -70,16 +71,21 @@ export default function Basket({
           <>
             <Divider />
             <div key={category.name} className='flex flex-col '>
-              <Typography className='text-xxs'>{category.name}</Typography>
+              <Typography className='text-xxs'>
+                {tProduct(`${category.name}.name`)}
+              </Typography>
               {options?.map((option) => {
                 return (
-                  <div className='flex items-center justify-between'>
+                  <div
+                    className='flex items-center justify-between'
+                    key={option.key}
+                  >
                     <Typography
                       variant='caption'
                       className='font-medium'
                       key={option.key}
                     >
-                      {option.key}
+                      {tProduct(`${category.name}.options.${option.key}`)}
                     </Typography>
                     <Typography variant='caption'>
                       {option.included ? (
@@ -95,13 +101,6 @@ export default function Basket({
           </>
         );
       })}
-
-      {/* {product.mainColor ? (
-        <div className='flex items-center justify-between'>
-          <Typography variant='body2'>{`${tColors(product.mainColor)} ${product.shadeColors ? ` - ${product.shadeColors}` : ''}`}</Typography>
-          <Typography variant='caption'>Inclus</Typography>
-        </div>
-      ) : null} */}
 
       <div className='flex flex-col items-end justify-between'>
         <div className='flex w-full justify-between'>
@@ -121,8 +120,9 @@ export default function Basket({
         </Typography>
       </div>
 
-      <Button color={product.color}>Être recontacté</Button>
-      <Button color={product.color}>Recevoir mon devis</Button>
+      <Button className='justify-center' color={product.color}>
+        Recevoir mon devis
+      </Button>
     </ConfiguratorCard>
   );
 }

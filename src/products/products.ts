@@ -177,7 +177,7 @@ export function updateProductConfiguration(
   optionCategory: string,
   optionValue: string
 ): IProductConfig {
-  const selectedOptions = [...config.selectedOptions];
+  let selectedOptions = [...config.selectedOptions];
 
   if (!product.categories)
     throw new Error(`Product "${product.key}" has no categories.`);
@@ -205,6 +205,12 @@ export function updateProductConfiguration(
         selectedOptions.push({ category: optionCategory, key: optionValue });
       }
     }
+  }
+
+  if (optionCategory === 'main_color') {
+    selectedOptions = selectedOptions.filter(
+      (opt) => opt.category !== 'shade_color'
+    );
   }
 
   return {

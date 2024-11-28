@@ -53,6 +53,7 @@ export default function Configurator() {
       {
         root: null,
         threshold: 0,
+        rootMargin: '0px 0px -50px 0px',
       }
     );
 
@@ -71,14 +72,13 @@ export default function Configurator() {
 
   const onProductChange = (category: string, option: string) => {
     if (!productConfiguration || !product) return;
-    setProductConfiguration(
-      updateProductConfiguration(
-        productConfiguration,
-        product,
-        category,
-        option
-      )
+    const updatedConfig = updateProductConfiguration(
+      productConfiguration,
+      product,
+      category,
+      option
     );
+    setProductConfiguration(updatedConfig);
   };
 
   return (
@@ -88,90 +88,97 @@ export default function Configurator() {
       {!product ? (
         <ChooseModel />
       ) : (
-        <Section className=' bg-white'>
-          <Container className='flex-col'>
-            <SectionTitle title={`Configurez votre ${product.key}`} />
-            <Typography variant='h3'>{tPage('subtitle')}</Typography>
-            <div className='flex w-full'>
-              <div className='flex flex-[4] flex-col gap-4 p-4'>
-                <div
-                  ref={mainImageRef}
-                  className='relative flex min-h-[350px] w-full flex-[3] items-center justify-center rounded-3xl md:min-h-[400px]'
-                >
-                  <Image
-                    fill
-                    src={`${product.image}`}
-                    alt={product.name}
-                    className='rounded-3xl object-cover'
-                  />
-                </div>
-                {product.categories ? (
-                  <>
-                    {product.categories.map((category) => (
-                      <div key={category.name}>
-                        {category.name === 'main_color' ? (
-                          <Colors
+        <>
+          <Section className='bg-white'>
+            <Container className='flex-col'>
+              <SectionTitle title={`Configurez votre ${product.key}`} />
+              <Typography variant='h3'>{tPage('subtitle')}</Typography>
+              <div className='relative block h-auto w-full'>
+                <div className='mx-auto flex w-full justify-between gap-x-6'>
+                  <div className='flex w-full flex-col gap-4'>
+                    <div
+                      ref={mainImageRef}
+                      className='relative flex min-h-[350px] w-full flex-[3] items-center justify-center rounded-3xl md:min-h-[400px]'
+                    >
+                      <Image
+                        fill
+                        src={`${product.image}`}
+                        alt={product.name}
+                        className='rounded-3xl object-cover'
+                      />
+                    </div>
+                    {product.categories ? (
+                      <>
+                        {product.categories.map((category) => (
+                          <div key={category.name}>
+                            {category.name === 'main_color' ? (
+                              <Colors
+                                product={product}
+                                mainColor={
+                                  productConfiguration?.selectedOptions.find(
+                                    (opt) => opt.category === 'main_color'
+                                  )?.key
+                                }
+                                shadeColor={
+                                  productConfiguration?.selectedOptions.find(
+                                    (opt) => opt.category === 'shade_color'
+                                  )?.key
+                                }
+                                onChange={onProductChange}
+                              />
+                            ) : category.name === 'shade_color' ? null : (
+                              <OptionPicker
+                                product={product}
+                                category={category}
+                                onChange={onProductChange}
+                                // @ts-ignore
+                                selectedOption={productConfiguration?.selectedOptions
+                                  .filter(
+                                    (opt) => opt.category === category.name
+                                  )
+                                  .map((opt) => opt.key)}
+                              />
+                            )}
+                          </div>
+                        ))}
+                      </>
+                    ) : null}
+                  </div>
+                  <div className='relative flex min-w-[20rem] flex-col items-start '>
+                    <div className='sticky top-[7rem] flex w-full flex-col items-start gap-y-6'>
+                      <div className='flex w-full flex-col gap-4'>
+                        <AnimatePresence mode='wait'>
+                          {isStickyImageVisible && (
+                            <motion.div
+                              initial={{ opacity: 0, y: -10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: -10 }}
+                              transition={{ duration: 0.3 }}
+                              className='relative flex h-[150px] w-full rounded-3xl'
+                            >
+                              <Image
+                                fill
+                                src={`${product.image}`}
+                                alt={product.name}
+                                className='rounded-3xl object-cover'
+                              />
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                        {productConfiguration && (
+                          <Basket
                             product={product}
-                            mainColor={
-                              productConfiguration?.selectedOptions.find(
-                                (opt) => opt.category === 'main_color'
-                              )?.key
-                            }
-                            shadeColor={
-                              productConfiguration?.selectedOptions.find(
-                                (opt) => opt.category === 'shade_color'
-                              )?.key
-                            }
-                            onChange={onProductChange}
-                          />
-                        ) : category.name === 'shade_color' ? null : (
-                          <OptionPicker
-                            product={product}
-                            category={category}
-                            onChange={onProductChange}
-                            selectedOption={productConfiguration?.selectedOptions
-                              .filter((opt) => opt.category === category.name)
-                              .map((opt) => opt.key)}
+                            productConfiguration={productConfiguration}
                           />
                         )}
                       </div>
-                    ))}
-                  </>
-                ) : null}
-              </div>
-              <div className='flex-[2]'>
-                <div className='sticky top-[100px] w-full'>
-                  <div className='flex w-full flex-col gap-4 p-4'>
-                    <AnimatePresence mode='wait'>
-                      {isStickyImageVisible && (
-                        <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.3 }}
-                          className='relative flex h-[200px] w-full rounded-3xl bg-red-400'
-                        >
-                          <Image
-                            fill
-                            src={`${product.image}`}
-                            alt={product.name}
-                            className='rounded-3xl object-cover'
-                          />
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                    {productConfiguration && (
-                      <Basket
-                        product={product}
-                        productConfiguration={productConfiguration}
-                      />
-                    )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Container>
-        </Section>
+            </Container>
+          </Section>
+        </>
       )}
       <Footer />
     </div>

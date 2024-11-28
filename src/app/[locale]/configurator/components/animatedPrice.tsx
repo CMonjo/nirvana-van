@@ -16,7 +16,7 @@ export default function IncrementalPrice({ price }: { price: number }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 10 }}
       transition={{
-        duration: 1,
+        duration: 0.8,
         ease: [0.4, 0, 0.2, 1],
       }}
       style={{ display: 'inline-block' }}
