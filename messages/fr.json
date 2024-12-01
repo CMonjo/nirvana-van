@@ -10,7 +10,18 @@
       "title": "Configurateur",
       "configure": "Configurez votre",
       "subtitle": "Choissiez sa couleur, ses options, créer la caravane de vos rêves!"
+    },
+    "teardrop": {
+      "story": {
+        "title": "Tout le nécessaire, à tracter derrière sa voiture",
+        "description": "Découvrez tout le charme d’un voyage en Teardrop : tout le nécessaire pour un séjour confortable, avec un design qui ne manque pas d'attirer les souris. Sans frais de mécanique et avec un entretien minimal, profitez pleinement de chaque destination en sachant que votre cocon vous suit partout, attaché à votre voiture"
+      }
     }
+  },
+  "actions": {
+    "contactUs": "Nous contacter",
+    "configureMy": "Configurer ma",
+    "iWantRent": "Je veux la louer"
   },
   "products": {
     "teardrop": {
@@ -113,21 +124,21 @@
     "blackAndWhite": "Blanc / Noir"
   },
   "faq": {
+    "otherQuestions": "Si vous avez d’autres questions, n’hésitez pas à nous contacter, nous serons heureux de vous répondre !",
     "teardrop": {
-      "whatIsTeardrop": "Qu'est-ce qu'une caravane teardrop ?",
-      "whatIsTeardropAnswer": "La caravane teardrop est une petite caravane compacte, légère et aérodynamique. Elle est idéale pour les voyageurs qui aiment. La caravane teardrop est une petite caravane compacte, légère et aérodynamique. Elle est idéale pour les voyageurs qui aiment.",
-      "whatIsTeardrop2": "l'aventure et qui veulent voyager léger.",
-      "whatIsTeardropAnswer2": "Elle est équipée d'un lit double, d'une cuisine extérieure et d'un espace de rangement.",
-      "whatIsTeardrop3": "Quelle est la taille de la caravane teardrop ?",
-      "whatIsTeardropAnswer3": "La caravane teardrop mesure 3 mètres de long, 1,5 mètre de large et 1,5 mètre de haut."
+      "question1": "Faut-il un permis spécial pour conduire une Teardrop ?",
+      "answer1": "Non, aucun permis supplémentaire n’est nécessaire pour tracter une Teardrop dont le PTAC se situe entre 500 et 750 kg. Cependant, veillez à ce que le PTAC combiné de la caravane et du véhicule tracteur ne dépasse pas 3 500 kg, sans quoi une formation spécifique (B96) sera requise.",
+      "question2": "La Teardrop peut-elle être tractée par n’importe quel véhicule ?",
+      "answer2": "Grâce à son faible poids, la Teardrop peut être tractée par la plupart des voitures. Pour en être certain, référez-vous aux données constructeur de votre véhicule ou vérifiez votre carte grise : soustrayez la ligne F2 à la ligne F3, le résultat doit être supérieur ou égal à 500 kg.",
+      "question3": " Proposez-vous un service après-vente ?",
+      "answer3": "Oui, nos caravanes sont garanties 2 ans. Nous offrons également un suivi personnalisé pour toute réparation, modification ou question technique après l’achat.",
+      "question4": "Peut-on visiter votre atelier ?",
+      "answer4": "Bien sûr ! Nous serons ravis de vous accueillir. Prenez rendez-vous via notre formulaire de contact pour organiser votre visite.",
+      "question5": "Quel est le délai de fabrication ?",
+      "answer5": "Le délai de fabrication est de deux mois en moyenne, mais il peut être prolongé en fonction des commandes en cours.",
+      "question6": "Les mini-caravanes sont-elles adaptées à toutes les saisons ?",
+      "answer6": "La Teardrop est conçue pour offrir un confort optimal en toutes saisons. Bien que sa cuisine extérieure soit plus agréable à utiliser par beau temps, son isolation garantit des nuits confortables, même en hiver."
     },
-    "trotty": {
-      "whatIsTrotty": "Qu'est-ce qu'une caravane teardrop ?",
-      "whatIsTrottyAnswer": "La caravane teardrop est une petite caravane compacte, légère et aérodynamique. Elle est idéale pour les voyageurs qui aiment",
-      "whatIsTrotty2": "l'aventure et qui veulent voyager léger.",
-      "whatIsTrottyAnswer2": "Elle est équipée d'un lit double, d'une cuisine extérieure et d'un espace de rangement.",
-      "whatIsTrotty3": "Quelle est la taille de la caravane teardrop ?",
-      "whatIsTrottyAnswer3": "La caravane teardrop mesure 3 mètres de long, 1,5 mètre de large et 1,5 mètre de haut."
-    }
+    "trotty": {}
   }
 }

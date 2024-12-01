@@ -7,30 +7,24 @@ import Container from '../../../../components/atoms/container';
 import Typography from '../../../../components/atoms/typography';
 import Button from '@/components/atoms/button';
 import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 
 export default function Story() {
+  const tPage = useTranslations('pages.teardrop.story');
+  const tAction = useTranslations('actions');
+
   return (
     <Section className='bg-white' topoBackground>
       <Container className='flex-col'>
-        <SectionTitle
-          title={`Tout le nécessaire, à tracter derrière sa voiture`}
-        />
+        <SectionTitle title={tPage('title')} />
         <div className='max-w-3xl flex-col text-center'>
           <Image
             src='/teardrop/story.png'
             alt='story'
             width={1155}
-            height={680}
+            height={600}
           />
-          <Typography className='mb-4 mt-8'>
-            Qu’est ce qu’une TD, lister tous les avantages de la TD comparé aux
-            vans, ...
-          </Typography>
-          <Typography className='mb-4'>
-            Qu’est ce qu’une TD, lister tous les avantages de la TD comparé aux
-            vans, ... Qu’est ce qu’une TD, lister tous les avantages de la TD
-            comparé aux vans, ...
-          </Typography>
+          <Typography className='mb-4 mt-8'>{tPage('description')}</Typography>
         </div>
         <div className='flex flex-col items-center gap-4 md:flex-row'>
           <Link
@@ -39,7 +33,7 @@ export default function Story() {
               query: { product: 'teardrop' },
             }}
           >
-            <Button color='orange'>Configurer ma teardrop</Button>
+            <Button color='orange'>{tAction('configureMy')} teardrop</Button>
           </Link>
           <Link
             href={{
@@ -48,7 +42,7 @@ export default function Story() {
             }}
           >
             <Button variant='outlined' color='orange'>
-              Je veux la louer
+              {tAction('iWantRent')}
             </Button>
           </Link>
         </div>

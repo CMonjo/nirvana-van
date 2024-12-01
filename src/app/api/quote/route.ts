@@ -3,13 +3,14 @@ const brevo = require('@getbrevo/brevo');
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, message } = await request.json();
+    const { firstname, lastname, phone, email, message, getInTouch } =
+      await request.json();
 
     let apiInstance = new brevo.TransactionalEmailsApi();
     let apiKey = apiInstance.authentications['apiKey'];
     apiKey.apiKey = process.env.BREVO_API_KEY;
 
-    if (!name || !email || !message) {
+    if (!firstname || !lastname || !email) {
       return NextResponse.json(
         { error: 'Tous les champs sont requis.' },
         { status: 400 }
@@ -17,10 +18,10 @@ export async function POST(request: NextRequest) {
     }
 
     const data = await apiInstance.sendTransacEmail({
-      to: [{ email, name }],
+      to: [{ email, firstname: `${firstname} ${lastname}` }],
       templateId: 2,
       params: {
-        name,
+        firstname: `${firstname} ${lastname}`,
       },
     });
     console.log('API called successfully');

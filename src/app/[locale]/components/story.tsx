@@ -11,16 +11,20 @@ export default function Story() {
     <Section className='bg-white' topoBackground>
       <Container className='flex-col'>
         <SectionTitle title={`Pour la petite histoire`} />
-        <div className='max-w-3xl flex-col gap-4 text-center'>
+        <div className='max-w-2xl flex-col gap-4 text-center'>
           <Typography>
-            Nous construisons nos caravanes dans le but de vous offrir une
-            expérience de voyage unique, avec tous le confort necessaire, en
-            choisissant des matériaux nobles que nous assemblons dans notre
-            atelier à Montpellier.
+            C’est dans mon atelier à Montpellier que je conçois et fabrique,
+            depuis deux ans, des mini-caravanes uniques.
+          </Typography>
+          <Typography>
+            Pensées pour offrir un cocon à la fois confortable, pratique et
+            esthétique, elles incarnent le compromis idéal entre simplicité et
+            confort d’utilisation, tout en étant faciles à emmener derrière une
+            voiture ou un vélo.
           </Typography>
           <Typography className='mb-4'>
-            Que ce soit en voiture ou en vélo, les caravanes sont prête à vous
-            accompagner dans votre aventure qu’importe la saison.
+            Si vous souhaitez discuter d’un projet ou découvrir de près le
+            processus de fabrication, je serai ravi de vous accueillir !
           </Typography>
           <Image src='/story.png' alt='story' width={1155} height={680} />
         </div>

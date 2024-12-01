@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 const brevo = require('@getbrevo/brevo');
+import * as config from '@/config';
 
 export async function POST(request: NextRequest) {
   try {
@@ -17,23 +18,25 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    sendSmtpEmail.subject = `Nouveau message de ${name} (${email})`;
+    sendSmtpEmail.subject = `Nouveau message de ${firstname} ${lastname} (${email})`;
     sendSmtpEmail.htmlContent = `
-        <p>Vous avez reçu un nouveau message de contact :</p>
-        <p><strong>Nom :</strong> ${name}</p>
+        <p>Vous avez reçu un nouveau message de contact.</p>
+        <p><strong>Contact :</strong> ${firstname} ${lastname}</p>
+        <p><strong>Téléphone :</strong> ${phone ? phone : 'Non renseigné'}</p>
         <p><strong>Email :</strong> ${email}</p>
         <p><strong>Message :</strong> ${message}</p>
       `;
     sendSmtpEmail.sender = {
-      name: name,
-      email: 'contact@nirvana-van.com',
+      name: firstname + ' ' + lastname,
+      email: config.mailContact,
     };
-    sendSmtpEmail.to = [
-      { email: 'contact@nirvana-van.com', name: 'Nirvana Van' },
+    sendSmtpEmail.to = [{ email: config.mailContact, name: 'Nirvana Van' }];
+    sendSmtpEmail.bcc = [
+      { email: 'monjocamille@gmail.com', name: 'Camille MONJO' },
     ];
     sendSmtpEmail.replyTo = {
       email: email,
-      name: name,
+      name: firstname + ' ' + lastname,
     };
 
     await apiInstance.sendTransacEmail(sendSmtpEmail);

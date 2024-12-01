@@ -21,12 +21,18 @@ import Colors from './components/colors';
 import Basket from './components/basket';
 import { AnimatePresence, motion } from 'framer-motion';
 import OptionPicker from './components/optionPicker';
+import Modal from '@/components/utils/modal';
+import ConfigurationForm from '../contact/components/ConfigurationForm';
+import SocialLinks from '@/components/utils/socialLinks';
+import * as config from '@/config';
 
 export default function Configurator() {
   //State
   const [productConfiguration, setProductConfiguration] =
     useState<IProductConfig | null>(null);
   const [isStickyImageVisible, setIsStickyImageVisible] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [configurationSent, setConfigurationSent] = useState(false);
 
   //Hooks
   const searchParams = useSearchParams();
@@ -79,6 +85,28 @@ export default function Configurator() {
       option
     );
     setProductConfiguration(updatedConfig);
+  };
+
+  const generateEmailConfiguration = () => {
+    if (!productConfiguration || !product) return;
+    const emailConfig = productConfiguration.selectedOptions.map((opt) => {
+      const category = product.categories?.find(
+        (cat) => cat.name === opt.category
+      );
+      if (category) {
+        const option = category.options?.find((o) => o.key === opt.key);
+        if (option) {
+          return {
+            category: category.name,
+            option: option.key,
+          };
+        }
+      }
+    });
+
+    console.log(emailConfig);
+
+    setIsModalOpen(true);
   };
 
   return (
@@ -169,6 +197,7 @@ export default function Configurator() {
                           <Basket
                             product={product}
                             productConfiguration={productConfiguration}
+                            onSend={generateEmailConfiguration}
                           />
                         )}
                       </div>
@@ -181,6 +210,33 @@ export default function Configurator() {
         </>
       )}
       <Footer />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setConfigurationSent(false);
+        }}
+        title={
+          configurationSent
+            ? 'Votre configuration a bien été envoyée !'
+            : 'Recevez votre configuration par email !'
+        }
+      >
+        {configurationSent ? (
+          <div className='flex flex-col justify-center gap-4'>
+            <Typography variant='body1' className='text-center'>
+              {`N'hésitez pas à nous contacter sur ${config.mailContact} si vous
+              avez la moindre question.`}
+            </Typography>
+            <SocialLinks />
+          </div>
+        ) : (
+          <ConfigurationForm
+            color={product?.color || 'orange'}
+            onSuccess={() => setConfigurationSent(true)}
+          />
+        )}
+      </Modal>
     </div>
   );
 }

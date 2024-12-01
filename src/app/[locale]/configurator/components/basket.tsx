@@ -12,9 +12,11 @@ import Price from './price';
 export default function Basket({
   product,
   productConfiguration,
+  onSend,
 }: {
   product: IProduct;
   productConfiguration: IProductConfig;
+  onSend: () => void;
 }) {
   const selectedOptions = productConfiguration.selectedOptions;
   const tColors = useTranslations('ralColors');
@@ -120,7 +122,7 @@ export default function Basket({
         </Typography>
       </div>
 
-      <Button className='justify-center' color={product.color}>
+      <Button className='justify-center' color={product.color} onClick={onSend}>
         Recevoir mon devis
       </Button>
     </ConfiguratorCard>

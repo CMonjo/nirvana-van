@@ -1,5 +1,4 @@
-import { ralColors } from './ralColors';
-import { IProduct, IProductConfig, Option, SelectedOption } from './types';
+import { IProduct, IProductConfig, SelectedOption } from './types';
 
 export const products: IProduct[] = [
   {

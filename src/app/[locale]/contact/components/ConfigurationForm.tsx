@@ -1,6 +1,7 @@
 'use client';
 
 import Button from '@/components/atoms/button';
+import Checkbox from '@/components/atoms/checkbox';
 import Input from '@/components/atoms/input';
 import Textarea from '@/components/atoms/textarea';
 import Typography from '@/components/atoms/typography';
@@ -15,7 +16,13 @@ type FormData = {
   message: string;
 };
 
-export default function ContactForm() {
+export default function ConfigurationForm({
+  color,
+  onSuccess,
+}: {
+  color: 'orange' | 'green';
+  onSuccess: () => void;
+}) {
   const [formData, setFormData] = useState<FormData>({
     firstname: '',
     lastname: '',
@@ -27,11 +34,13 @@ export default function ContactForm() {
     text: string;
     type: 'success' | 'error';
   } | null>(null);
+  const [getInTouch, setGetInTouch] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+    console.log(name, value);
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -40,17 +49,17 @@ export default function ContactForm() {
     setStatus(null);
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api/quote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          getInTouch,
+        }),
       });
 
       if (response.ok) {
-        setStatus({
-          type: 'success',
-          text: 'Message envoyé avec succès ! Nous vous recontacterons au plus vite.',
-        });
+        onSuccess();
         setFormData({
           firstname: '',
           lastname: '',
@@ -58,6 +67,10 @@ export default function ContactForm() {
           email: '',
           message: '',
         });
+        // setStatus({
+        //   type: 'success',
+        //   text: 'Message envoyé avec succès !',
+        // });
       } else {
         const data = await response.json();
         setStatus({
@@ -81,7 +94,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           name='firstname'
-          color='orange'
+          color={color}
           label='Prénom'
         />
         <Input
@@ -89,25 +102,25 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           name='lastname'
-          color='orange'
+          color={color}
           label='Nom'
         />
       </div>
+      <Input
+        value={formData.email}
+        onChange={handleChange}
+        required
+        name='email'
+        type='email'
+        color={color}
+        label='Email'
+      />
       <div className='flex flex-col gap-4 md:flex-row'>
-        <Input
-          value={formData.email}
-          onChange={handleChange}
-          required
-          name='email'
-          type='email'
-          color='orange'
-          label='Email'
-        />
         <Input
           value={formData.phone}
           onChange={handleChange}
           name='phone'
-          color='orange'
+          color={color}
           type='number'
           label='Téléphone'
         />
@@ -117,11 +130,18 @@ export default function ContactForm() {
         name='message'
         value={formData.message}
         onChange={handleChange}
-        label='Écrivez votre message'
-        required
-        rows={6}
+        label='Une message à nous faire passer ?'
+        rows={2}
       />
-      <div className='flex items-center gap-8'>
+      <div className='flex flex-col gap-4 md:flex-row'>
+        <Checkbox
+          color={color}
+          label='Je souhaite être recontacté'
+          checked={getInTouch}
+          onChange={() => setGetInTouch(!getInTouch)}
+        />
+      </div>
+      <div className='flex w-full items-center justify-end gap-8'>
         {status && (
           <Typography
             variant='caption'
@@ -130,7 +150,7 @@ export default function ContactForm() {
             {status.text}
           </Typography>
         )}
-        <div className='flex justify-end'>
+        <div className='flex justify-end self-end'>
           <Button type='submit' color='orange'>
             Envoyer
           </Button>

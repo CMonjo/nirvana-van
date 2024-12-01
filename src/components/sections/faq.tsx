@@ -12,36 +12,6 @@ import Button from '../atoms/button';
 import { Link } from '@/i18n/routing';
 import { ProductType } from '@/products/types';
 
-const teardropFAQ = [
-  {
-    question: 'whatIsTeardrop',
-    answer: 'whatIsTeardropAnswer',
-  },
-  {
-    question: 'whatIsTeardrop2',
-    answer: 'whatIsTeardropAnswer2',
-  },
-  {
-    question: 'whatIsTeardrop3',
-    answer: 'whatIsTeardropAnswer3',
-  },
-];
-
-const trottyFAQ = [
-  {
-    question: 'whatIsTrotty',
-    answer: 'whatIsTrottyAnswer',
-  },
-  {
-    question: 'whatIsTrotty2',
-    answer: 'whatIsTrottyAnswer2',
-  },
-  {
-    question: 'whatIsTrotty3',
-    answer: 'whatIsTrottyAnswer3',
-  },
-];
-
 const FAQItem = ({
   question,
   answer,
@@ -98,26 +68,30 @@ const FAQ = ({
   productKey: ProductType;
   color: 'green' | 'orange';
 }) => {
-  const t = useTranslations(`faq.${productKey}`);
-  const list = productKey === 'teardrop' ? teardropFAQ : trottyFAQ;
+  const tProduct = useTranslations(`faq`);
+  const tActions = useTranslations(`actions`);
+  const totalQuestions = productKey === 'teardrop' ? 6 : 0;
 
   return (
     <Section className='bg-white'>
       <Container className='flex-col'>
         <SectionTitle title={`F.A.Q`} />
         <div className='flex w-full flex-col gap-4'>
-          {list?.map((item: any, index: number) => (
-            <div className='mb-2' key={index}>
-              <FAQItem
-                color={color}
-                question={t(item.question)}
-                answer={t(item.answer)}
-              />
-            </div>
-          ))}
+          {Array.from({ length: totalQuestions }, (_, index) => index).map(
+            (index: number) => (
+              <div className='mb-2' key={index}>
+                <FAQItem
+                  color={color}
+                  question={tProduct(`${productKey}.question${index + 1}`)}
+                  answer={tProduct(`${productKey}.answer${index + 1}`)}
+                />
+              </div>
+            )
+          )}
         </div>
+        <Typography>{tProduct('otherQuestions')}</Typography>
         <Link href='/contact'>
-          <Button color={color}>Nous contacter</Button>
+          <Button color={color}>{tActions('contactUs')}</Button>
         </Link>
       </Container>
     </Section>

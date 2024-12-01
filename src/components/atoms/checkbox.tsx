@@ -41,7 +41,7 @@ export default function Checkbox({
 
   return (
     <div
-      className='flex items-center gap-1'
+      className='flex cursor-pointer items-center gap-1'
       onClick={() => {
         if (!disabled && onChange) onChange(!checked);
       }}
