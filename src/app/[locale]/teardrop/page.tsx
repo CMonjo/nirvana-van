@@ -7,10 +7,19 @@ import ImageText from '../../../components/imageText';
 import Bento from './components/bento';
 import FAQ from '@/components/sections/faq';
 import Specification from '../../../components/sections/specification';
+import { useTranslations } from 'next-intl';
 
 const specifications = ['externalHeight', 'externalLenght', 'mattress'];
 
 export default function Teardrop() {
+  const tPage = useTranslations('pages.teardrop');
+
+  const productDescriptions = [
+    '/bento-1.jpeg',
+    '/bento-1.jpeg',
+    '/bento-1.jpeg',
+  ];
+
   return (
     <div className='bg-bg-2'>
       <Header />
@@ -25,70 +34,19 @@ export default function Teardrop() {
           descriptionRight='En action!'
           showSocials
         />
-        <ImageText
-          section='Cuisine'
-          title='Designée pour partir plusieurs jours en toute autonomie'
-          description='Nombre de places: 2+1 (enfant de 0 à 5 ans)
-Dimensions extérieures: 3,85 m x 1,92 m
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intérieure: 1,16 m
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intérieure: 1,16 m
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intérieure: 1,16 m'
-        />
-        <ImageText
-          topoBackground={false}
-          imageRight
-          background='bg-orange/10'
-          section='Extérieur'
-          title='Designée pour partir plusieurs jours en toute autonomie'
-          description='Nombre de places: 2+1 (enfant de 0 à 5 ans)
-Dimensions extérieures: 3,85 m x 1,92 m
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intérieure: 1,16 m
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intéri
-Dimensions intérieures: 2,45 m x 1,45 m
-Dimensions extérieures: 3,85 m x 1,92 m
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intérieure: 1,16 m
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intéri
-Dimensions intérieures: 2,45 m x 1,45 m
-Dimensions extérieures: 3,85 m x 1,92 m
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intérieure: 1,16 m
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intéri
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intérieure: 1,16 m'
-        />
-        <ImageText
-          section='Intérieur'
-          title='Designée pour partir plusieurs jours en toute autonomie'
-          description='Nombre de places: 2+1 (enfant de 0 à 5 ans)
-Dimensions extérieures: 3,85 m x 1,92 m
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intérieure: 1,16 m
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intérieure: 1,16 m
-Dimensions intérieures: 2,45 m x 1,45 m
-Hauteur (hors tout): 1,76 m
-Hauteur intérieure: 1,16 m'
-        />
+        {productDescriptions.map((el: string, index: number) => (
+          <div key={index}>
+            <ImageText
+              section={tPage(`productDescription.${index + 1}.title`)}
+              title={tPage(`productDescription.${index + 1}.subtitle`)}
+              description={tPage(`productDescription.${index + 1}.content`)}
+              imageSource={el}
+              topoBackground={index % 2 === 0}
+              imageRight={index % 2 === 1}
+              background={index % 2 === 1 ? 'bg-orange/10' : ''}
+            />
+          </div>
+        ))}
         <Bento />
         <Specification productKey='teardrop' specs={specifications} />
         <FAQ productKey={'teardrop'} color='orange' />
