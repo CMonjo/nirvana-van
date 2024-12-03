@@ -39,8 +39,8 @@
     "configurator": {
       "title": "Configurateur",
       "configure": "Configurez votre",
-      "include": "Inclus?",
-      "selected": "Sélectionné?",
+      "include": "Inclus",
+      "selected": "Sélectionné",
       "subtitle": "Choissiez sa couleur, ses options, créer la caravane de vos rêves!",
       "receiveEmailQuote": "Recevez votre configuration par email !",
       "quoteSent": "Votre configuration a bien été envoyée !",
@@ -50,6 +50,10 @@
         "receiveQuote": "Recevoir ma configuration par email",
         "total": "TOTAL",
         "vat": "de TVA (20%)"
+      },
+      "mail": {
+        "subject": "Votre configuration est prête !",
+        "message": "Voici la configuration que vous avez réalisée sur notre site. N'hésitez pas à nous contacter si vous avez la moindre question ou si vous souhaitez passer commande. À bientôt !"
       }
     },
     "contact": {

@@ -8,6 +8,8 @@ import ConfiguratorCard, { ConfiguratorCardTitle } from './configuratorCard';
 import { IProduct, OptionCategory, Option } from '@/products/types';
 import Checkbox from '@/components/atoms/checkbox';
 import Radio from '@/components/atoms/radio';
+import Price from './price';
+import { getPrice } from '@/utils/price';
 
 export default function OptionPicker({
   product,
@@ -85,7 +87,9 @@ export default function OptionPicker({
                   />
                 )}
                 <Typography variant='none' className='text-md font-light'>
-                  {option.included ? tPage('include') : `${option.price} €`}
+                  {option.included
+                    ? tPage('include')
+                    : getPrice(option.price || 0)}
                 </Typography>
               </div>
             </div>

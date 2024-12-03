@@ -24,7 +24,8 @@ import OptionPicker from './components/optionPicker';
 import Modal from '@/components/utils/modal';
 import ConfigurationForm from '../contact/components/ConfigurationForm';
 import SocialLinks from '@/components/utils/socialLinks';
-import * as config from '@/config';
+import * as envConfig from '@/config';
+import useConfig from './hook/useConfig';
 
 export default function Configurator() {
   //State
@@ -38,8 +39,8 @@ export default function Configurator() {
   const searchParams = useSearchParams();
   const productQuery = searchParams.get('product');
 
-  const product: IProduct | undefined = useMemo(() => {
-    return products.find((p) => p.key === productQuery);
+  const product: IProduct | null = useMemo(() => {
+    return products.find((p) => p.key === productQuery) || null;
   }, [productQuery]);
 
   useEffect(() => {
@@ -47,6 +48,11 @@ export default function Configurator() {
       setProductConfiguration(getProductConfiguration(product));
     }
   }, [product]);
+
+  const config = useConfig(productConfiguration, product);
+
+  //Translation
+  const tPage = useTranslations('pages.configurator');
 
   //Image
   const mainImageRef = useRef<HTMLDivElement>(null);
@@ -74,8 +80,6 @@ export default function Configurator() {
     };
   }, []);
 
-  const tPage = useTranslations('pages.configurator');
-
   const onProductChange = (category: string, option: string) => {
     if (!productConfiguration || !product) return;
     const updatedConfig = updateProductConfiguration(
@@ -85,25 +89,6 @@ export default function Configurator() {
       option
     );
     setProductConfiguration(updatedConfig);
-  };
-
-  const generateEmailConfiguration = () => {
-    if (!productConfiguration || !product) return;
-    const emailConfig = productConfiguration.selectedOptions.map((opt) => {
-      const category = product.categories?.find(
-        (cat) => cat.name === opt.category
-      );
-      if (category) {
-        const option = category.options?.find((o) => o.key === opt.key);
-        if (option) {
-          return {
-            category: category.name,
-            option: option.key,
-          };
-        }
-      }
-    });
-    setIsModalOpen(true);
   };
 
   return (
@@ -193,8 +178,9 @@ export default function Configurator() {
                         {productConfiguration && (
                           <Basket
                             product={product}
+                            config={config}
                             productConfiguration={productConfiguration}
-                            onSend={generateEmailConfiguration}
+                            onSend={() => setIsModalOpen(true)}
                           />
                         )}
                       </div>
@@ -220,7 +206,7 @@ export default function Configurator() {
         {configurationSent ? (
           <div className='flex flex-col justify-center gap-4'>
             <Typography variant='body1' className='text-center'>
-              {`${tPage('quoteSentDescription')} ${config.mailContact} `}
+              {`${tPage('quoteSentDescription')} ${envConfig.mailContact} `}
             </Typography>
             <SocialLinks />
           </div>
@@ -228,6 +214,8 @@ export default function Configurator() {
           <ConfigurationForm
             color={product?.color || 'orange'}
             onSuccess={() => setConfigurationSent(true)}
+            product={product}
+            productConfiguration={productConfiguration}
           />
         )}
       </Modal>

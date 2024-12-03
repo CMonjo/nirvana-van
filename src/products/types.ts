@@ -37,3 +37,8 @@ export interface IProductConfig {
   selectedOptions: SelectedOption[];
   totalPrice: number;
 }
+
+export interface IBasketConfig {
+  name: string | null;
+  options: { key: string; price: number | string }[];
+}

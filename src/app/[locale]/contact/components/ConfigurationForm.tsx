@@ -5,9 +5,12 @@ import Checkbox from '@/components/atoms/checkbox';
 import Input from '@/components/atoms/input';
 import Textarea from '@/components/atoms/textarea';
 import Typography from '@/components/atoms/typography';
-import { useState } from 'react';
-import * as config from '@/config';
+import { use, useState } from 'react';
+import * as envConfig from '@/config';
 import { useTranslations } from 'next-intl';
+import { IBasketConfig, IProduct, IProductConfig } from '@/products/types';
+import useConfig from '../../configurator/hook/useConfig';
+import { getPrice } from '@/utils/price';
 
 type FormData = {
   firstname: string;
@@ -20,18 +23,25 @@ type FormData = {
 export default function ConfigurationForm({
   color,
   onSuccess,
+  product,
+  productConfiguration,
 }: {
   color: 'orange' | 'green';
   onSuccess: () => void;
+  product: IProduct | null;
+  productConfiguration: IProductConfig | null;
 }) {
   const tContactForm = useTranslations('forms.contactForm');
   const tStatus = useTranslations('forms.status');
+  const tMail = useTranslations('pages.configurator.mail');
+
+  const config = useConfig(productConfiguration, product);
 
   const [formData, setFormData] = useState<FormData>({
-    firstname: '',
-    lastname: '',
+    firstname: 'Camille',
+    lastname: 'MONJO',
     phone: '',
-    email: '',
+    email: 'monjocamille@gmail.com',
     message: '',
   });
   const [status, setStatus] = useState<{
@@ -44,7 +54,6 @@ export default function ConfigurationForm({
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    console.log(name, value);
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -52,7 +61,7 @@ export default function ConfigurationForm({
     e.preventDefault();
     setStatus(null);
 
-    let messageError = `${tStatus('error')} ${config.mailContact}`;
+    let messageError = `${tStatus('error')} ${envConfig.mailContact}`;
 
     try {
       const response = await fetch('/api/quote', {
@@ -61,16 +70,21 @@ export default function ConfigurationForm({
         body: JSON.stringify({
           ...formData,
           getInTouch,
+          config,
+          product: product?.name,
+          total: getPrice(productConfiguration?.totalPrice || 0),
+          mailSubject: tMail('subject'),
+          mailMessage: tMail('message'),
         }),
       });
 
       if (response.ok) {
         onSuccess();
         setFormData({
-          firstname: '',
-          lastname: '',
+          firstname: 'Camille',
+          lastname: 'MONJO',
           phone: '',
-          email: '',
+          email: 'monjocamille@gmail.com',
           message: '',
         });
       } else {
