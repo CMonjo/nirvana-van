@@ -8,7 +8,6 @@ import ConfiguratorCard, { ConfiguratorCardTitle } from './configuratorCard';
 import { IProduct, OptionCategory, Option } from '@/products/types';
 import Checkbox from '@/components/atoms/checkbox';
 import Radio from '@/components/atoms/radio';
-import Price from './price';
 import { getPrice } from '@/utils/price';
 
 export default function OptionPicker({
