@@ -1,10 +1,8 @@
-import { getPrice } from '@/utils/price';
 import { NextRequest, NextResponse } from 'next/server';
 const brevo = require('@getbrevo/brevo');
+import * as envConfig from '@/config';
 
-function generateHTML(data: any[]): string {
-  return `
-      <style>
+const style = `<style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
         body {
           font-family: 'Montserrat', sans-serif;
@@ -32,7 +30,31 @@ function generateHTML(data: any[]): string {
         .price {
           font-weight: 400;
         }
-      </style>
+      </style>`;
+
+function generateCustomerHTML(
+  product: string,
+  firstname: string,
+  lastname: string,
+  email: string,
+  getInTouch: boolean,
+  phone?: string,
+  message?: string
+): string {
+  return `
+        ${style}
+        <p>Nouvelle configuration pour ${product} générée.</p>
+        <p><strong>Contact :</strong> ${firstname} ${lastname}</p>
+        <p><strong>Téléphone :</strong> ${phone ? phone : 'Non renseigné'}</p>
+        <p><strong>Email :</strong> ${email}</p>
+        <p><strong>Message :</strong> ${message ? message : 'Aucun message spécifique'}</p>
+        <p><strong>Souhaite être recontacté :</strong> ${getInTouch ? 'Oui' : 'Non'}</p
+      `;
+}
+
+function generateConfigHTML(data: any[]): string {
+  return `
+      ${style}
       ${data
         .map((item) => {
           const optionsContent = item.options
@@ -57,6 +79,7 @@ function generateHTML(data: any[]): string {
         .join('')}
     `;
 }
+
 export async function POST(request: NextRequest) {
   try {
     const {
@@ -81,6 +104,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'missingFields' }, { status: 400 });
     }
 
+    //For customer
     await apiInstance.sendTransacEmail({
       to: [{ email, firstname: `${firstname} ${lastname}` }],
       templateId: 2,
@@ -89,7 +113,33 @@ export async function POST(request: NextRequest) {
         mailMessage,
         product,
         total,
-        html: generateHTML(config),
+        html: generateConfigHTML(config),
+      },
+    });
+
+    //For us
+    apiInstance.sendTransacEmail({
+      //   to: [{ email: envConfig.mailContact, name: 'Nirvana Van' }],
+      to: [{ email: 'monjocamille@gmail.com', name: 'Camille MONJO' }],
+      bcc: [{ email: 'monjocamille@gmail.com', name: 'Camille MONJO' }],
+      templateId: 2,
+      subject: 'Nouvelle configuration générée pour ' + product,
+      params: {
+        internal: true,
+        subject: mailSubject,
+        mailMessage,
+        product,
+        total,
+        customer: generateCustomerHTML(
+          product,
+          firstname,
+          lastname,
+          email,
+          getInTouch,
+          phone,
+          message
+        ),
+        html: generateConfigHTML(config),
       },
     });
 
