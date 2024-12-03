@@ -81,6 +81,7 @@ function generateConfigHTML(data: any[]): string {
 }
 
 export async function POST(request: NextRequest) {
+  console.log('POSTING REQUEST FOR CONFIGURATION');
   try {
     const {
       firstname,
