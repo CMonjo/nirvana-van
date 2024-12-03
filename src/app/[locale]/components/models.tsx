@@ -7,9 +7,12 @@ import Section from '@/components/atoms/section';
 import { ProductType } from '@/products/types';
 import Model from '@/components/sections/model';
 import SectionTitle from '@/components/sections/title';
+import { useTranslations } from 'next-intl';
 
 export default function Models() {
   const router = useRouter();
+  const t = useTranslations('pages.home.models');
+  const tAction = useTranslations('actions');
 
   const handleClick = (productKey: ProductType) => {
     router.push({
@@ -20,14 +23,14 @@ export default function Models() {
   return (
     <Section className='bg-white'>
       <Container className='flex-col'>
-        <SectionTitle title={`Pour quel type d'aventure ?`} />
+        <SectionTitle title={t('title')} />
         <div className='flex w-full flex-col gap-4 lg:flex-row'>
           <Model
             productKey='teardrop'
             onClick={handleClick}
             button={
               <Button color={'orange'} size='small'>
-                Découvrir
+                {tAction('discover')}
               </Button>
             }
           />
@@ -37,7 +40,7 @@ export default function Models() {
             onClick={handleClick}
             button={
               <Button color={'green'} size='small'>
-                Découvrir
+                {tAction('discover')}
               </Button>
             }
           />

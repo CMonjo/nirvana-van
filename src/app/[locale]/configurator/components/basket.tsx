@@ -21,10 +21,12 @@ export default function Basket({
   const selectedOptions = productConfiguration.selectedOptions;
   const tColors = useTranslations('ralColors');
   const tProduct = useTranslations(`products.${product.key}.options`);
+  const tPage = useTranslations('pages.configurator');
+  const t = useTranslations('pages.configurator.basket');
 
   return (
     <ConfiguratorCard className='gap-2 p-4'>
-      <Typography className='font-medium'>Votre configuration</Typography>
+      <Typography className='font-medium'>{t('yourConfiguration')}</Typography>
       <div className='flex items-center justify-between'>
         <Typography
           variant='caption'
@@ -33,7 +35,7 @@ export default function Basket({
         <Typography variant='caption'>{product.basePrice}€</Typography>
       </div>
 
-      {product.categories?.map((category) => {
+      {product.categories?.map((category, i) => {
         const isCategorySelected = selectedOptions.some(
           (o) => o.category === category.name
         );
@@ -55,22 +57,19 @@ export default function Basket({
           if (!selectedOption) return null;
           return (
             <>
-              <div
-                key={category.name}
-                className='flex items-center justify-between'
-              >
+              <div key={i} className='flex items-center justify-between'>
                 <Typography variant='caption' className='font-medium'>
                   {tColors(selectedOption.key)}{' '}
                   {shadeColor ? ` - ${shadeColor.key}` : ''}
                 </Typography>
-                <Typography variant='caption'>Inclus</Typography>
+                <Typography variant='caption'>{tPage('include')}</Typography>
               </div>
             </>
           );
         }
 
         return (
-          <>
+          <div className='flex flex-col gap-2' key={category.name + '-' + i}>
             <Divider />
             <div key={category.name} className='flex flex-col '>
               <Typography className='text-xxs'>
@@ -91,7 +90,7 @@ export default function Basket({
                     </Typography>
                     <Typography variant='caption'>
                       {option.included ? (
-                        'Inclus'
+                        tPage('include')
                       ) : (
                         <Price price={option.price || 0} />
                       )}
@@ -100,13 +99,13 @@ export default function Basket({
                 );
               })}
             </div>
-          </>
+          </div>
         );
       })}
 
       <div className='flex flex-col items-end justify-between'>
         <div className='flex w-full justify-between'>
-          <Typography className='font-medium'>TOTAL</Typography>
+          <Typography className='font-medium'>{t('total')}</Typography>
           <Typography
             variant='body1'
             className={`font-acorn font-medium text-${product.color}`}
@@ -116,14 +115,15 @@ export default function Basket({
           </Typography>
         </div>
         <Typography variant='caption'>
-          {`inclus `}
+          {tPage('include')}{' '}
           <AnimatedPrice price={productConfiguration.totalPrice * 0.2} />
-          {` de TVA (20%)`}
+          {` `}
+          {t('vat')}{' '}
         </Typography>
       </div>
 
       <Button className='justify-center' color={product.color} onClick={onSend}>
-        Recevoir mon devis
+        {t('receiveQuote')}
       </Button>
     </ConfiguratorCard>
   );

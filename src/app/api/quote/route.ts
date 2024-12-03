@@ -11,10 +11,7 @@ export async function POST(request: NextRequest) {
     apiKey.apiKey = process.env.BREVO_API_KEY;
 
     if (!firstname || !lastname || !email) {
-      return NextResponse.json(
-        { error: 'Tous les champs sont requis.' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'missingFields' }, { status: 400 });
     }
 
     const data = await apiInstance.sendTransacEmail({
@@ -24,17 +21,9 @@ export async function POST(request: NextRequest) {
         firstname: `${firstname} ${lastname}`,
       },
     });
-    console.log('API called successfully');
 
-    return NextResponse.json(
-      { message: 'Email envoyé avec succès.' },
-      { status: 200 }
-    );
+    return NextResponse.json({ message: 'success' }, { status: 200 });
   } catch (error) {
-    console.error("Erreur lors de l'envoi de l'email:", error);
-    return NextResponse.json(
-      { error: "Une erreur est survenue lors de l'envoi de l'email." },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: null }, { status: 500 });
   }
 }

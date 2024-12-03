@@ -118,7 +118,6 @@ export const products: IProduct[] = [
             price: -300,
           },
           { key: 'no_rear_door', price: -700 },
-          { key: 'test', price: 0 },
         ],
       },
     ],

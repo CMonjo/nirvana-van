@@ -23,6 +23,7 @@ export default function OptionPicker({
   const tProduct = useTranslations(
     `products.${product.key}.options.${category.name}`
   );
+  const tPage = useTranslations('pages.configurator');
 
   const isSelected = (optionKey: string) =>
     Array.isArray(selectedOption)
@@ -69,7 +70,7 @@ export default function OptionPicker({
                   <Radio
                     checked={isSelected(option.key)}
                     color={product.color}
-                    label={isSelected(option.key) ? 'Sélectionné' : ''}
+                    label={isSelected(option.key) ? tPage('selected') : ''}
                     onChange={() => onChange(category.name, option.key)}
                   />
                 ) : (
@@ -79,12 +80,12 @@ export default function OptionPicker({
                     disabled={
                       option.comingSoon || option.disabled || option.soldOut
                     }
-                    label={isSelected(option.key) ? 'Sélectionné' : ''}
+                    label={isSelected(option.key) ? tPage('selected') : ''}
                     onChange={() => onChange(category.name, option.key)}
                   />
                 )}
                 <Typography variant='none' className='text-md font-light'>
-                  {option.included ? 'Inclus' : `${option.price} €`}
+                  {option.included ? tPage('include') : `${option.price} €`}
                 </Typography>
               </div>
             </div>

@@ -5,6 +5,7 @@ import Container from '../../../components/atoms/container';
 import Typography from '../../../components/atoms/typography';
 import Image from 'next/image';
 import SocialLinks from '../../../components/utils/socialLinks';
+import { useTranslations } from 'next-intl';
 
 const images = [
   '/bento-1.jpeg',
@@ -18,6 +19,8 @@ const images = [
 ];
 
 export default function Socials() {
+  const t = useTranslations('pages.home.socials');
+
   return (
     <div className='flex w-full flex-col items-center bg-white pb-16'>
       <Section className='overflow-hidden'>
@@ -29,7 +32,7 @@ export default function Socials() {
           </div>
           <div className='flex w-full flex-col items-center justify-between md:flex-row'>
             <Typography variant='h2' className='text-center'>
-              Partagez vos aventures
+              {t('title')}
             </Typography>
             <SocialLinks />
           </div>

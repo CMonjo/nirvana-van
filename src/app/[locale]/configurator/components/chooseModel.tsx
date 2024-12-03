@@ -7,9 +7,12 @@ import Container from '../../../../components/atoms/container';
 import Button from '@/components/atoms/button';
 import { ProductType } from '@/products/types';
 import { useRouter } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 
 export default function ChooseModel() {
   const router = useRouter();
+  const tPage = useTranslations('pages.configurator');
+  const tActions = useTranslations('actions');
 
   const handleClick = (productKey: ProductType) => {
     router.push({
@@ -21,14 +24,14 @@ export default function ChooseModel() {
   return (
     <Section className='bg-white' topoBackground>
       <Container className='flex-col'>
-        <SectionTitle title={`Configurateur`} />
+        <SectionTitle title={tPage('title')} />
         <div className='flex w-full flex-col gap-4 lg:flex-row'>
           <Model
             productKey='teardrop'
             onClick={handleClick}
             button={
               <Button color={'orange'} size='small'>
-                Configurer
+                {tActions('configure')}
               </Button>
             }
           />
@@ -37,7 +40,7 @@ export default function ChooseModel() {
             onClick={handleClick}
             button={
               <Button color={'green'} size='small'>
-                Configurer
+                {tActions('configure')}
               </Button>
             }
           />

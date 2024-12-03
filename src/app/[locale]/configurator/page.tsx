@@ -103,9 +103,6 @@ export default function Configurator() {
         }
       }
     });
-
-    console.log(emailConfig);
-
     setIsModalOpen(true);
   };
 
@@ -119,7 +116,7 @@ export default function Configurator() {
         <>
           <Section className='bg-white'>
             <Container className='flex-col'>
-              <SectionTitle title={`Configurez votre ${product.key}`} />
+              <SectionTitle title={`${tPage('configure')} ${product.key}`} />
               <Typography variant='h3'>{tPage('subtitle')}</Typography>
               <div className='relative block h-auto w-full'>
                 <div className='mx-auto flex w-full justify-between gap-x-6'>
@@ -217,16 +214,13 @@ export default function Configurator() {
           setConfigurationSent(false);
         }}
         title={
-          configurationSent
-            ? 'Votre configuration a bien été envoyée !'
-            : 'Recevez votre configuration par email !'
+          configurationSent ? tPage('quoteSent') : tPage('receiveEmailQuote')
         }
       >
         {configurationSent ? (
           <div className='flex flex-col justify-center gap-4'>
             <Typography variant='body1' className='text-center'>
-              {`N'hésitez pas à nous contacter sur ${config.mailContact} si vous
-              avez la moindre question.`}
+              {`${tPage('quoteSentDescription')} ${config.mailContact} `}
             </Typography>
             <SocialLinks />
           </div>

@@ -6,6 +6,7 @@ import Textarea from '@/components/atoms/textarea';
 import Typography from '@/components/atoms/typography';
 import { useState } from 'react';
 import * as config from '@/config';
+import { useTranslations } from 'next-intl';
 
 type FormData = {
   firstname: string;
@@ -16,6 +17,9 @@ type FormData = {
 };
 
 export default function ContactForm() {
+  const tContactForm = useTranslations('forms.contactForm');
+  const tStatus = useTranslations('forms.status');
+
   const [formData, setFormData] = useState<FormData>({
     firstname: '',
     lastname: '',
@@ -39,6 +43,8 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus(null);
 
+    let messageError = `${tStatus('error')} ${config.mailContact}`;
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -49,7 +55,7 @@ export default function ContactForm() {
       if (response.ok) {
         setStatus({
           type: 'success',
-          text: 'Message envoyé avec succès ! Nous vous recontacterons au plus vite.',
+          text: tStatus('success'),
         });
         setFormData({
           firstname: '',
@@ -60,15 +66,20 @@ export default function ContactForm() {
         });
       } else {
         const data = await response.json();
+
+        if (data.error) {
+          messageError = tStatus(data.error);
+        }
+
         setStatus({
           type: 'error',
-          text: `${data?.error ? data.error : 'Une erreur est survenue.'} Veuillez réessayer ou nous contacter à ${config.mailContact}`,
+          text: messageError,
         });
       }
     } catch (error) {
       setStatus({
         type: 'error',
-        text: `Une erreur est survenue. Veuillez réessayer ou nous contacter à ${config.mailContact}`,
+        text: messageError,
       });
     }
   };
@@ -82,7 +93,7 @@ export default function ContactForm() {
           required
           name='firstname'
           color='orange'
-          label='Prénom'
+          label={tContactForm('firstname')}
         />
         <Input
           value={formData.lastname}
@@ -90,7 +101,7 @@ export default function ContactForm() {
           required
           name='lastname'
           color='orange'
-          label='Nom'
+          label={tContactForm('lastname')}
         />
       </div>
       <div className='flex flex-col gap-4 md:flex-row'>
@@ -101,7 +112,7 @@ export default function ContactForm() {
           name='email'
           type='email'
           color='orange'
-          label='Email'
+          label={tContactForm('email')}
         />
         <Input
           value={formData.phone}
@@ -109,7 +120,7 @@ export default function ContactForm() {
           name='phone'
           color='orange'
           type='number'
-          label='Téléphone'
+          label={tContactForm('phone')}
         />
       </div>
       <Textarea
@@ -117,22 +128,24 @@ export default function ContactForm() {
         name='message'
         value={formData.message}
         onChange={handleChange}
-        label='Écrivez votre message'
+        label={tContactForm('message')}
         required
         rows={6}
       />
       <div className='flex items-center gap-8'>
-        {status && (
+        {status ? (
           <Typography
             variant='caption'
             className={`${status.type === 'error' ? 'text-red-500' : 'text-dark'} w-full`}
           >
             {status.text}
           </Typography>
+        ) : (
+          <div className='flex w-full' />
         )}
         <div className='flex justify-end'>
           <Button type='submit' color='orange'>
-            Envoyer
+            {tContactForm('send')}
           </Button>
         </div>
       </div>

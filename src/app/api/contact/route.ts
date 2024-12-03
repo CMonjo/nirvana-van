@@ -12,10 +12,7 @@ export async function POST(request: NextRequest) {
     let sendSmtpEmail = new brevo.SendSmtpEmail();
 
     if (!firstname || !lastname || !email || !message) {
-      return NextResponse.json(
-        { error: 'Tous les champs sont requis.' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'missingFields' }, { status: 400 });
     }
 
     sendSmtpEmail.subject = `Nouveau message de ${firstname} ${lastname} (${email})`;
@@ -40,15 +37,8 @@ export async function POST(request: NextRequest) {
     };
 
     await apiInstance.sendTransacEmail(sendSmtpEmail);
-    return NextResponse.json(
-      { message: 'Email envoyé avec succès.' },
-      { status: 200 }
-    );
+    return NextResponse.json({ message: 'success' }, { status: 200 });
   } catch (error) {
-    console.error("Erreur lors de l'envoi de l'email:", error);
-    return NextResponse.json(
-      { error: "Une erreur est survenue lors de l'envoi de l'email." },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: null }, { status: 500 });
   }
 }

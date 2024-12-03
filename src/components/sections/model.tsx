@@ -17,7 +17,7 @@ const Model = ({
   customImage?: string;
   button: React.ReactNode;
 }) => {
-  const t = useTranslations(`product.${productKey}`);
+  const t = useTranslations(`products.${productKey}`);
 
   const product: any = useMemo(() => {
     return products.find((p: any) => p.key === productKey);

@@ -2,26 +2,6 @@
   "manifest": {
     "name": "Nirvana Van"
   },
-  "pages": {
-    "home": {
-      "heroTitle": "Fabricant artisanal français de mini-caravanes"
-    },
-    "configurator": {
-      "title": "Configurateur",
-      "configure": "Configurez votre",
-      "subtitle": "Choissiez sa couleur, ses options, créer la caravane de vos rêves!"
-    }
-  },
-  "product": {
-    "teardrop": {
-      "description": "For travelers who love adventure",
-      "packs": {}
-    },
-    "trotty": {
-      "description": "For bike fans who love comfort",
-      "packs": {}
-    }
-  },
   "ralColors": {
     "yellow": "Yellow",
     "orange": "Orange",
