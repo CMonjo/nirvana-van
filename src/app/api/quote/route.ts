@@ -119,8 +119,7 @@ export async function POST(request: NextRequest) {
 
     //For us
     apiInstance.sendTransacEmail({
-      //   to: [{ email: envConfig.mailContact, name: 'Nirvana Van' }],
-      to: [{ email: 'monjocamille@gmail.com', name: 'Camille MONJO' }],
+      to: [{ email: envConfig.mailContact, name: 'Nirvana Van' }],
       bcc: [{ email: 'monjocamille@gmail.com', name: 'Camille MONJO' }],
       templateId: 2,
       subject: 'Nouvelle configuration générée pour ' + product,
