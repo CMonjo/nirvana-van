@@ -123,7 +123,6 @@ export async function POST(request: NextRequest) {
       to: [{ email: envConfig.mailContact, name: 'Nirvana Van' }],
       bcc: [{ email: 'monjocamille@gmail.com', name: 'Camille MONJO' }],
       templateId: 2,
-      subject: 'Nouvelle configuration générée pour ' + product,
       params: {
         internal: true,
         subject: mailSubject,
