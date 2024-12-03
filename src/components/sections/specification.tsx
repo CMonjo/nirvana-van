@@ -13,14 +13,14 @@ export default function Specification({
   specs,
 }: {
   productKey: ProductType;
-  specs: string[];
+  specs: number;
 }) {
-  const t = useTranslations(`product.${productKey}.specifications`);
+  const t = useTranslations(`pages.${productKey}.productSpecification`);
 
   return (
     <Section className={`bg-white`}>
       <Container className='flex-col'>
-        <SectionTitle title='Spécification' />
+        <SectionTitle title={t('title')} />
         <div
           className={`flex w-full flex-col items-stretch gap-4 md:flex-row md:gap-8`}
         >
@@ -35,12 +35,18 @@ export default function Specification({
           </div>
 
           <div className='flex flex-[1] flex-col gap-2 rounded-3xl bg-grey px-4 py-4'>
-            {specs.map((spec) => (
-              <div key={`${productKey}-${spec}`}>
-                <Typography className='font-medium'>{t(spec)}</Typography>
-                <Typography variant='body2'>{t(spec + 'Value')}</Typography>
-              </div>
-            ))}
+            {Array.from({ length: specs }, (_, index) => index).map(
+              (e, index) => (
+                <div key={`${index}`}>
+                  <Typography className='font-medium'>
+                    {t(`${index + 1}.title`)}
+                  </Typography>
+                  <Typography variant='body2'>
+                    {t(`${index + 1}.value`)}
+                  </Typography>
+                </div>
+              )
+            )}
           </div>
         </div>
       </Container>

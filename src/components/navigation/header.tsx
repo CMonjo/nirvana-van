@@ -11,6 +11,7 @@ import LinkWrapper from '../utils/LinkWrapper';
 import useIsDesktop from '@/hooks/useIsDesktop';
 import { Link } from '@/i18n/routing';
 import LocaleSwitcher from './localeSwitcher';
+import { useTranslations } from 'next-intl';
 
 export default function Header({
   fixedMenu = false,
@@ -19,9 +20,13 @@ export default function Header({
   fixedMenu?: boolean;
   fixedMenuBackground?: string;
 }) {
-  const isDesktop = useIsDesktop();
+  //State
   const [skipHero, setSkipHero] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+
+  //Hooks
+  const t = useTranslations('navigation');
+  const isDesktop = useIsDesktop();
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -67,11 +72,11 @@ export default function Header({
                 color={headerFixed ? 'orange' : 'white'}
                 variant={headerFixed ? 'outlined' : 'filled'}
               >
-                Location
+                {t('rental')}
               </Button>
             </Link>
             <Link href='/contact'>
-              <Button>Contact</Button>
+              <Button>{t('contact')}</Button>
             </Link>
             <LocaleSwitcher />
           </div>

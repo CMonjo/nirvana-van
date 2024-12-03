@@ -3,26 +3,27 @@ import { useParams, usePathname } from 'next/navigation';
 import { Link } from '@/i18n/routing';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const headerLinks = [
-  { name: 'Teardrop', href: '/teardrop', icon: null },
+  { name: 'teardrop', href: '/teardrop', icon: null },
   {
-    name: 'Trotty',
+    name: 'trotty',
     href: '/trotty',
     icon: null,
   },
-  { name: 'Configurateur', href: '/configurator', icon: null },
+  { name: 'configurator', href: '/configurator', icon: null },
 ];
 
 const footerLinks = [
-  { name: 'Teardrop', href: '/teardrop', icon: null },
+  { name: 'teardrop', href: '/teardrop', icon: null },
   {
-    name: 'Trotty',
+    name: 'trotty',
     href: '/trotty',
     icon: null,
   },
-  { name: 'Location', href: '/location', icon: null },
-  { name: 'Contact', href: '/contact', icon: null },
+  { name: 'rental', href: '/rental', icon: null },
+  { name: 'contact', href: '/contact', icon: null },
 ];
 
 const NavigationItem = ({
@@ -80,6 +81,8 @@ export default function Navigation({
   color: 'black' | 'white';
   nav: 'header' | 'footer';
 }) {
+  const t = useTranslations('navigation');
+
   const links = nav === 'header' ? headerLinks : footerLinks;
 
   return (
@@ -89,7 +92,7 @@ export default function Navigation({
           <NavigationItem
             key={link.href}
             link={link.href}
-            name={link.name}
+            name={t(link.name)}
             color={color}
           />
         );

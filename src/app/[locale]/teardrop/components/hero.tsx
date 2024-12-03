@@ -1,11 +1,15 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import Button from '../../../../components/atoms/button';
 import { motion } from 'framer-motion';
 import Typography from '@/components/atoms/typography';
+import { useTranslations } from 'next-intl';
+import { products } from '@/products/products';
 
 export default function Hero() {
+  const t = useTranslations('pages.teardrop.hero');
+  const product = products.find((product) => product.key === 'teardrop');
+
   return (
     <div className='relative min-h-screen w-full'>
       <Image
@@ -26,7 +30,7 @@ export default function Hero() {
       </div>
       <div className='absolute bottom-14 z-10 flex w-full items-center justify-center gap-4'>
         <Typography variant='h3' className='text-white'>
-          À partir de 12 000€
+          {`${t('price')} ${product?.basePrice}€`}
         </Typography>
       </div>
     </div>

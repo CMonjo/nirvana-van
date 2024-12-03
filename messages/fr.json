@@ -12,9 +12,18 @@
       "subtitle": "Choissiez sa couleur, ses options, créer la caravane de vos rêves!"
     },
     "teardrop": {
+      "hero": {
+        "title": "Teardrop",
+        "price": "À partir de"
+      },
       "story": {
         "title": "Tout le nécessaire, à tracter derrière sa voiture",
         "description": "Découvrez tout le charme d’un voyage en Teardrop : tout le nécessaire pour un séjour confortable, avec un design qui ne manque pas d'attirer les souris. Sans frais de mécanique et avec un entretien minimal, profitez pleinement de chaque destination en sachant que votre cocon vous suit partout, attaché à votre voiture"
+      },
+      "video": {
+        "title": "La Teardrop en action!",
+        "left": "La Teardrop",
+        "right": "En action!"
       },
       "productDescription": {
         "1": {
@@ -32,8 +41,52 @@
           "subtitle": "Blabla",
           "content": "Châssis acier galvanisé\nFaisceau 7 broches\nPoids à vide 400kg\nPTAC 500, 600 ou 750kg\nDimensions :3m55 x 1m83\nHauteur : 1m74\nEssieu freiné sur option\nPrise 220v extérieur"
         }
+      },
+      "productSpecification": {
+        "title": "Spécifications",
+        "1": {
+          "title": "Vitesse maximale",
+          "value": "100 km/h"
+        },
+        "2": {
+          "title": "Poids à vide",
+          "value": "400 kg"
+        },
+        "3": {
+          "title": "Hauteur extérieure",
+          "value": "174 cm"
+        },
+        "4": {
+          "title": "Dimensions extérieures",
+          "value": "354 x 183 cm"
+        },
+        "5": {
+          "title": "Pas de permis nécessaire",
+          "value": ""
+        }
+      },
+      "bento": {
+        "title": "Les équipements",
+        "crutches": "Béquilles",
+        "solarPanel": "Panneau solaire",
+        "ecoflowLighting": "Ecoflow / éclairage LED",
+        "materials": "Matériaux",
+        "openings": "Ouvertures",
+        "insulation": "Isolation",
+        "aluminum": "Alu thermo laqué",
+        "awnings": "Auvents"
       }
     }
+  },
+  "navigation": {
+    "home": "Accueil",
+    "teardrop": "Teardrop",
+    "trotty": "Trotty",
+    "configurator": "Configurateur",
+    "rental": "Location",
+    "contact": "Contact",
+    "legalNotice": "Mentions légales",
+    "t&cs": "CGU / CGV"
   },
   "actions": {
     "contactUs": "Nous contacter",

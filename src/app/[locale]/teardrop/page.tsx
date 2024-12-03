@@ -9,8 +9,6 @@ import FAQ from '@/components/sections/faq';
 import Specification from '../../../components/sections/specification';
 import { useTranslations } from 'next-intl';
 
-const specifications = ['externalHeight', 'externalLenght', 'mattress'];
-
 export default function Teardrop() {
   const tPage = useTranslations('pages.teardrop');
 
@@ -19,6 +17,8 @@ export default function Teardrop() {
     '/bento-1.jpeg',
     '/bento-1.jpeg',
   ];
+
+  const productSpecificationsTotal = 5;
 
   return (
     <div className='bg-bg-2'>
@@ -29,9 +29,9 @@ export default function Teardrop() {
         <Video
           source='/teardrop/video.mp4'
           thumbnail='/bento-2.jpeg'
-          title='La Teardrop en action !'
-          descriptionLeft='La Teardrop'
-          descriptionRight='En action!'
+          title={tPage('video.title')}
+          descriptionLeft={tPage('video.left')}
+          descriptionRight={tPage('video.right')}
           showSocials
         />
         {productDescriptions.map((el: string, index: number) => (
@@ -48,7 +48,10 @@ export default function Teardrop() {
           </div>
         ))}
         <Bento />
-        <Specification productKey='teardrop' specs={specifications} />
+        <Specification
+          productKey='teardrop'
+          specs={productSpecificationsTotal}
+        />
         <FAQ productKey={'teardrop'} color='orange' />
       </main>
       <Footer />

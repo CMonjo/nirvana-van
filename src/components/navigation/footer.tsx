@@ -6,8 +6,11 @@ import SocialLinks from '../utils/socialLinks';
 import LinkWrapper from '../utils/LinkWrapper';
 import LocaleSwitcher from './localeSwitcher';
 import Button from '../atoms/button';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations('navigation');
+
   return (
     <footer
       className={`flex w-full flex-col items-center justify-center bg-dark  text-white`}
@@ -34,10 +37,10 @@ export default function Footer() {
         </div>
         <div className='mt-4 flex gap-4 md:mt-0'>
           <LinkWrapper href='/'>
-            <Typography variant='caption'>Mentions légales</Typography>
+            <Typography variant='caption'>{t('legalNotice')}</Typography>
           </LinkWrapper>
           <LinkWrapper href='/'>
-            <Typography variant='caption'>CGU / CGV</Typography>
+            <Typography variant='caption'>{t('t&cs')}</Typography>
           </LinkWrapper>
         </div>
         <div className='flex flex-col gap-4 md:flex-row'>
