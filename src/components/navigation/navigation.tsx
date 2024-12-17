@@ -22,6 +22,7 @@ const footerLinks = [
     href: '/trotty',
     icon: null,
   },
+  { name: 'configurator', href: '/configurator', icon: null },
   { name: 'rental', href: '/rental', icon: null },
   { name: 'contact', href: '/contact', icon: null },
 ];
