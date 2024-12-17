@@ -1,14 +1,23 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import Button from '../../../components/atoms/button';
-
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import clsx from 'clsx';
+import useIsDesktop from '@/hooks/useIsDesktop';
 
 export default function Hero() {
   const t = useTranslations('pages.home');
+  const isDesktop = useIsDesktop();
+
   return (
-    <div className='relative min-h-screen w-full'>
+    <div
+      className={clsx('relative w-full')}
+      style={{
+        minHeight: isDesktop ? '100vh' : 'calc(100vh - 5rem)',
+      }}
+    >
       <Image
         src={`/hero.png`}
         fill
