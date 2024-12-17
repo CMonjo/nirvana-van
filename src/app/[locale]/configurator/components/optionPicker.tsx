@@ -39,7 +39,7 @@ export default function OptionPicker({
   return (
     <ConfiguratorCard>
       <ConfiguratorCardTitle title={tProduct(`name`)} />
-      <div className='grid grid-cols-3 gap-3'>
+      <div className='grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-3'>
         {category?.options?.map((option, index) => (
           <div
             key={index}
