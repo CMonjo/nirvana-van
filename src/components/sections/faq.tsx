@@ -29,18 +29,20 @@ const FAQItem = ({
         className='flex w-full cursor-pointer items-center gap-4'
         onClick={() => setIsOpen(!isOpen)}
       >
-        <motion.div
-          className={`flex items-center justify-center rounded-3xl bg-${color} h-8 w-8`}
-          initial={{ rotate: 0 }}
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          {isOpen ? (
-            <RemoveIcon sx={{ color: '#FFF' }} />
-          ) : (
-            <AddIcon sx={{ color: '#FFF' }} />
-          )}
-        </motion.div>
+        <div>
+          <motion.div
+            className={`flex items-center justify-center rounded-3xl bg-${color} h-8 w-8`}
+            initial={{ rotate: 0 }}
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            {isOpen ? (
+              <RemoveIcon sx={{ color: '#FFF' }} />
+            ) : (
+              <AddIcon sx={{ color: '#FFF' }} />
+            )}
+          </motion.div>
+        </div>
         <Typography variant='h3'>{question}</Typography>
         <span className='h-1 flex-1 bg-black' />
       </div>
