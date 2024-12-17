@@ -47,7 +47,7 @@ function generateCustomerHTML(
         <p><strong>Contact :</strong> ${firstname} ${lastname}</p>
         <p><strong>Téléphone :</strong> ${phone ? phone : 'Non renseigné'}</p>
         <p><strong>Email :</strong> ${email}</p>
-        <p><strong>Message :</strong> ${message ? message : 'Aucun message spécifique'}</p>
+        <p><strong>Message :</strong> ${message ? message : 'Aucun message renseigné'}</p>
         <p><strong>Souhaite être recontacté :</strong> ${getInTouch ? 'Oui' : 'Non'}</p
       `;
 }
@@ -81,7 +81,6 @@ function generateConfigHTML(data: any[]): string {
 }
 
 export async function POST(request: NextRequest) {
-  console.log('POSTING REQUEST FOR CONFIGURATION');
   try {
     const {
       firstname,

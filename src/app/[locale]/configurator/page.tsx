@@ -191,44 +191,48 @@ export default function Configurator() {
                 </div>
               </div>
             </Container>
-            <div className='p sticky bottom-0 flex h-20 w-full items-center justify-between border-t-2 border-bg-2 bg-white px-4 py-2 md:hidden'>
-              <div className='flex flex-col'>
-                <Typography className='font-medium' variant='body2'>
-                  {tBasket('yourConfiguration')}
-                </Typography>
-                <Typography
-                  variant='body1'
-                  className={`font-acorn font-medium text-${product.color}`}
-                >
-                  <AnimatedPrice price={productConfiguration?.totalPrice} />
-                  {` TTC`}
-                </Typography>
-              </div>
-              <div>
-                <Button
-                  onClick={() => {
-                    console.log('click');
-                    const basketElement =
-                      document.getElementById('mobile-basket');
-                    console.log(basketElement);
-                    if (basketElement) {
-                      const offset = 5 * 16;
-                      const elementPosition =
-                        basketElement.getBoundingClientRect().top +
-                        window.scrollY;
+            {productConfiguration ? (
+              <>
+                <div className='p sticky bottom-0 flex h-20 w-full items-center justify-between border-t-2 border-bg-2 bg-white px-4 py-2 md:hidden'>
+                  <div className='flex flex-col'>
+                    <Typography className='font-medium' variant='body2'>
+                      {tBasket('yourConfiguration')}
+                    </Typography>
+                    <Typography
+                      variant='body1'
+                      className={`font-acorn font-medium text-${product.color}`}
+                    >
+                      <AnimatedPrice price={productConfiguration.totalPrice} />
+                      {` TTC`}
+                    </Typography>
+                  </div>
+                  <div>
+                    <Button
+                      onClick={() => {
+                        console.log('click');
+                        const basketElement =
+                          document.getElementById('mobile-basket');
+                        console.log(basketElement);
+                        if (basketElement) {
+                          const offset = 5 * 16;
+                          const elementPosition =
+                            basketElement.getBoundingClientRect().top +
+                            window.scrollY;
 
-                      window.scrollTo({
-                        top: elementPosition - offset,
-                        behavior: 'smooth',
-                      });
-                    }
-                  }}
-                  color={product.color}
-                >
-                  Détails
-                </Button>
-              </div>
-            </div>
+                          window.scrollTo({
+                            top: elementPosition - offset,
+                            behavior: 'smooth',
+                          });
+                        }
+                      }}
+                      color={product.color}
+                    >
+                      Détails
+                    </Button>
+                  </div>
+                </div>
+              </>
+            ) : null}
           </Section>
         </>
       )}
