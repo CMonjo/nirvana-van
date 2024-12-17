@@ -44,7 +44,7 @@ const FAQItem = ({
           </motion.div>
         </div>
         <Typography variant='h3'>{question}</Typography>
-        <span className='h-1 flex-1 bg-black' />
+        <span className='hidden h-1 flex-1 bg-black md:flex' />
       </div>
       {isOpen && (
         <motion.div
