@@ -10,7 +10,7 @@ export default function IncrementalPrice({ price }: { price: number }) {
   }).format(price);
 
   return (
-    <motion.div
+    <motion.span
       key={price}
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
@@ -22,6 +22,6 @@ export default function IncrementalPrice({ price }: { price: number }) {
       style={{ display: 'inline-block' }}
     >
       {formattedPrice}
-    </motion.div>
+    </motion.span>
   );
 }

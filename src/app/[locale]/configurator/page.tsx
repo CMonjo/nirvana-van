@@ -26,6 +26,8 @@ import ConfigurationForm from '../contact/components/ConfigurationForm';
 import SocialLinks from '@/components/utils/socialLinks';
 import * as envConfig from '@/config';
 import useConfig from './hook/useConfig';
+import AnimatedPrice from './components/animatedPrice';
+import Button from '@/components/atoms/button';
 
 export default function Configurator() {
   //State
@@ -53,6 +55,7 @@ export default function Configurator() {
 
   //Translation
   const tPage = useTranslations('pages.configurator');
+  const tBasket = useTranslations('pages.configurator.basket');
 
   //Image
   const mainImageRef = useRef<HTMLDivElement>(null);
@@ -94,7 +97,6 @@ export default function Configurator() {
   return (
     <div className='min-h-screen bg-bg-2'>
       <Header fixedMenu />
-
       {!product ? (
         <ChooseModel />
       ) : (
@@ -154,7 +156,7 @@ export default function Configurator() {
                       </>
                     ) : null}
                   </div>
-                  <div className='relative flex min-w-[20rem] flex-col items-start '>
+                  <div className='relative hidden min-w-[20rem] flex-col items-start md:flex'>
                     <div className='sticky top-[7rem] flex w-full flex-col items-start gap-y-6'>
                       <div className='flex w-full flex-col gap-4'>
                         <AnimatePresence mode='wait'>
@@ -189,9 +191,57 @@ export default function Configurator() {
                 </div>
               </div>
             </Container>
+            <div className='p sticky bottom-0 flex h-20 w-full items-center justify-between border-t-2 border-bg-2 bg-white px-4 py-2 md:hidden'>
+              <div className='flex flex-col'>
+                <Typography className='font-medium' variant='body2'>
+                  {tBasket('yourConfiguration')}
+                </Typography>
+                <Typography
+                  variant='body1'
+                  className={`font-acorn font-medium text-${product.color}`}
+                >
+                  <AnimatedPrice price={productConfiguration?.totalPrice} />
+                  {` TTC`}
+                </Typography>
+              </div>
+              <div>
+                <Button
+                  onClick={() => {
+                    console.log('click');
+                    const basketElement =
+                      document.getElementById('mobile-basket');
+                    console.log(basketElement);
+                    if (basketElement) {
+                      const offset = 5 * 16;
+                      const elementPosition =
+                        basketElement.getBoundingClientRect().top +
+                        window.scrollY;
+
+                      window.scrollTo({
+                        top: elementPosition - offset,
+                        behavior: 'smooth',
+                      });
+                    }
+                  }}
+                  color={product.color}
+                >
+                  Détails
+                </Button>
+              </div>
+            </div>
           </Section>
         </>
       )}
+      {product && productConfiguration ? (
+        <div id={'mobile-basket'} className='md:hidden'>
+          <Basket
+            product={product}
+            config={config}
+            productConfiguration={productConfiguration}
+            onSend={() => setIsModalOpen(true)}
+          />
+        </div>
+      ) : null}
       <Footer />
       <Modal
         isOpen={isModalOpen}
