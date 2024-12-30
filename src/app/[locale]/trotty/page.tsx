@@ -11,8 +11,8 @@ export default function Teardrop() {
         <Video
           source='/teardrop/video.mp4'
           thumbnail='/bento-2.jpeg'
-          title='La Teardrop en action !'
-          descriptionLeft='La Teardrop'
+          title='La Trotty en action !'
+          descriptionLeft='La Trotty'
           descriptionRight='En action!'
           showSocials
         />
