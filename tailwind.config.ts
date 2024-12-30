@@ -17,8 +17,6 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        // tartuffo: ['var(--font-tartuffo)'],
-        // gustavo: ['var(--font-gustavo)'],
         acorn: ['var(--font-acorn)'],
         kobe11: ['var(--font-kobe11)'],
       },
