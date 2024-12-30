@@ -12,7 +12,7 @@ export default function Bento() {
 
   const items = [
     {
-      image: '/teardrop/bento/todo_alu.jpeg',
+      image: '/teardrop/bento/alu.png',
       title: t('aluminum'),
     },
     {

@@ -4,7 +4,8 @@ import * as config from '@/config';
 
 export async function POST(request: NextRequest) {
   try {
-    const { firstname, lastname, phone, email, message } = await request.json();
+    const { firstname, lastname, phone, email, message, locale } =
+      await request.json();
 
     let apiInstance = new brevo.TransactionalEmailsApi();
     let apiKey = apiInstance.authentications['apiKey'];
@@ -22,6 +23,7 @@ export async function POST(request: NextRequest) {
         <p><strong>Téléphone :</strong> ${phone ? phone : 'Non renseigné'}</p>
         <p><strong>Email :</strong> ${email}</p>
         <p><strong>Message :</strong> ${message}</p>
+        <p><strong>Langue de l'utilisateur:</strong> ${locale}</p>
       `;
     sendSmtpEmail.sender = {
       name: firstname + ' ' + lastname,

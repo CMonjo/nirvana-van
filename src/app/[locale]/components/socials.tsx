@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Section from '../../../components/atoms/section';
 import Container from '../../../components/atoms/container';
 import Typography from '../../../components/atoms/typography';
@@ -8,16 +8,19 @@ import SocialLinks from '../../../components/utils/socialLinks';
 import { useTranslations } from 'next-intl';
 
 const images = [
-  '/bento-1.jpeg',
-  '/test1.JPG',
-  '/test2.JPG',
-  '/bento-2.jpeg',
-  '/bento-3.jpg',
-  '/bento-4.jpeg',
-  '/bento-5.jpeg',
-  '/bento-6.png',
-  '/bento-1.jpeg',
-  '/bento-6.png',
+  '/home/social/1.JPG',
+  '/home/social/2.jpeg',
+  '/home/social/3.jpeg',
+  '/home/social/4.png',
+  '/home/social/5.jpeg',
+  '/home/social/6.jpeg',
+  '/home/social/7.JPG',
+  '/home/social/8.JPG',
+  '/home/social/9.JPG',
+  '/home/social/10.JPG',
+  '/home/social/11.JPG',
+  '/home/social/12.JPG',
+  '/home/social/13.jpeg',
 ];
 
 export default function Socials() {

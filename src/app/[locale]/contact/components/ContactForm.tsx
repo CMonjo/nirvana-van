@@ -6,7 +6,7 @@ import Textarea from '@/components/atoms/textarea';
 import Typography from '@/components/atoms/typography';
 import { useState } from 'react';
 import * as config from '@/config';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 type FormData = {
   firstname: string;
@@ -19,6 +19,7 @@ type FormData = {
 export default function ContactForm() {
   const tContactForm = useTranslations('forms.contactForm');
   const tStatus = useTranslations('forms.status');
+  const currentLocale = useLocale();
 
   const [formData, setFormData] = useState<FormData>({
     firstname: '',
@@ -49,7 +50,10 @@ export default function ContactForm() {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          locale: currentLocale,
+        }),
       });
 
       if (response.ok) {

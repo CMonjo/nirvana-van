@@ -7,7 +7,7 @@ import Textarea from '@/components/atoms/textarea';
 import Typography from '@/components/atoms/typography';
 import { use, useState } from 'react';
 import * as envConfig from '@/config';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { IBasketConfig, IProduct, IProductConfig } from '@/products/types';
 import useConfig from '../../configurator/hook/useConfig';
 import { getPrice } from '@/utils/price';
@@ -50,6 +50,9 @@ export default function ConfigurationForm({
   } | null>(null);
   const [getInTouch, setGetInTouch] = useState(false);
 
+  //Hooks
+  const currentLocale = useLocale();
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -75,6 +78,7 @@ export default function ConfigurationForm({
           total: getPrice(productConfiguration?.totalPrice || 0),
           mailSubject: tMail('subject'),
           mailMessage: tMail('message'),
+          locale: currentLocale,
         }),
       });
 

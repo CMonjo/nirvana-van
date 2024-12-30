@@ -39,7 +39,8 @@ function generateCustomerHTML(
   email: string,
   getInTouch: boolean,
   phone?: string,
-  message?: string
+  message?: string,
+  locale?: string
 ): string {
   return `
         ${style}
@@ -49,6 +50,7 @@ function generateCustomerHTML(
         <p><strong>Email :</strong> ${email}</p>
         <p><strong>Message :</strong> ${message ? message : 'Aucun message renseigné'}</p>
         <p><strong>Souhaite être recontacté :</strong> ${getInTouch ? 'Oui' : 'Non'}</p
+        <p><strong>Langue de l'utilisateur:</strong> ${locale}</p>
       `;
 }
 
@@ -94,6 +96,7 @@ export async function POST(request: NextRequest) {
       product,
       mailSubject,
       mailMessage,
+      locale,
     } = await request.json();
 
     let apiInstance = new brevo.TransactionalEmailsApi();
@@ -135,7 +138,8 @@ export async function POST(request: NextRequest) {
           email,
           getInTouch,
           phone,
-          message
+          message,
+          locale
         ),
         html: generateConfigHTML(config),
       },
