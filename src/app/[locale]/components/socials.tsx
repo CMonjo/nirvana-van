@@ -9,6 +9,8 @@ import { useTranslations } from 'next-intl';
 
 const images = [
   '/bento-1.jpeg',
+  '/test1.JPG',
+  '/test2.JPG',
   '/bento-2.jpeg',
   '/bento-3.jpg',
   '/bento-4.jpeg',

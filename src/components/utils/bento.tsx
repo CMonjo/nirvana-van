@@ -46,7 +46,7 @@ const BentoImage = ({ url, text }: { url: string; text?: string }) => {
           <Typography variant='h2-acorn'>{text}</Typography>
         </div>
       ) : null}
-      <Image fill src={url} alt='bento' className='rounded-lg object-cover' />
+      <Image fill src={url} alt={url} className='rounded-lg object-cover' />
     </div>
   );
 };

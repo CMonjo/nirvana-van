@@ -14,7 +14,7 @@ export default function Story() {
     <Section className='bg-white' topoBackground>
       <Container className='flex-col'>
         <SectionTitle title={t('title')} />
-        <div className='flex flex-col gap-4 text-center'>
+        <div className='flex flex-col gap-2 text-center md:gap-4'>
           <Typography variant='h3'>{t('text1')}</Typography>
           <Typography variant='h3'>{t('text2')}</Typography>
           <Typography variant='h3'>{t('text3')}</Typography>

@@ -12,36 +12,36 @@ export default function Bento() {
 
   const items = [
     {
-      image: '/bento-1.jpeg',
-      title: t('crutches'),
-    },
-    {
-      image: '/bento-1.jpeg',
-      title: t('solarPanel'),
-    },
-    {
-      image: '/bento-1.jpeg',
-      title: t('ecoflowLighting'),
-    },
-    {
-      image: '/bento-1.jpeg',
-      title: t('materials'),
-    },
-    {
-      image: '/bento-1.jpeg',
-      title: t('openings'),
-    },
-    {
-      image: '/bento-1.jpeg',
-      title: t('insulation'),
-    },
-    {
-      image: '/bento-1.jpeg',
+      image: '/teardrop/bento/todo_alu.jpeg',
       title: t('aluminum'),
     },
     {
-      image: '/bento-1.jpeg',
+      image: '/teardrop/bento/solar.png',
+      title: t('solarPanel'),
+    },
+    {
+      image: '/teardrop/bento/crutches.png',
+      title: t('crutches'),
+    },
+    {
+      image: '/teardrop/bento/materials.jpeg',
+      title: t('materials'),
+    },
+    {
+      image: '/teardrop/bento/openings.JPG',
+      title: t('openings'),
+    },
+    {
+      image: '/teardrop/bento/isolation.jpeg',
       title: t('awnings'),
+    },
+    {
+      image: '/teardrop/bento/ecoflow.png',
+      title: t('ecoflowLighting'),
+    },
+    {
+      image: '/teardrop/bento/insulation.png',
+      title: t('insulation'),
     },
   ];
 
