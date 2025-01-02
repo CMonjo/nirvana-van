@@ -7,6 +7,7 @@ export default function Select({
   value,
   className,
   icon,
+  placeholder = 'Select an option',
   color = 'orange',
   variant = 'filled',
   size = 'medium',
@@ -14,6 +15,7 @@ export default function Select({
   options: { label: string; value: string }[];
   onChange?: (value: string) => void;
   value?: string;
+  placeholder?: string;
   className?: string;
   icon?: React.ReactNode;
   color?: 'white' | 'orange' | 'green';
@@ -87,7 +89,11 @@ export default function Select({
       onClick={handleClick}
     >
       {icon && <span className='mr-2 flex items-center'>{icon}</span>}
-      <span>{selectedLabel}</span>
+      {selectedLabel ? (
+        <span>{selectedLabel}</span>
+      ) : (
+        <span>{placeholder}</span>
+      )}
       <span className='absolute right-1.5 flex items-center'>
         <svg
           className='h-4 w-4'

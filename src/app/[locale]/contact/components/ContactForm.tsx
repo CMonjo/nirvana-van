@@ -4,15 +4,17 @@ import Button from '@/components/atoms/button';
 import Input from '@/components/atoms/input';
 import Textarea from '@/components/atoms/textarea';
 import Typography from '@/components/atoms/typography';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as config from '@/config';
 import { useLocale, useTranslations } from 'next-intl';
+import Select from '@/components/atoms/select';
 
 type FormData = {
   firstname: string;
   lastname: string;
   email: string;
   phone: string;
+  subject: string;
   message: string;
 };
 
@@ -26,18 +28,36 @@ export default function ContactForm() {
     lastname: '',
     phone: '',
     email: '',
+    subject: '',
     message: '',
   });
+  const [rental, setRental] = useState(false);
   const [status, setStatus] = useState<{
     text: string;
     type: 'success' | 'error';
   } | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.location.hash) {
+      if (window.location.hash === '#rental') {
+        setRental(true);
+        setFormData((prev) => ({
+          ...prev,
+          subject: window.location.hash.replace('#', ''),
+        }));
+      }
+    }
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubjectChange = (value: string) => {
+    setFormData((prev) => ({ ...prev, subject: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -66,6 +86,7 @@ export default function ContactForm() {
           lastname: '',
           phone: '',
           email: '',
+          subject: '',
           message: '',
         });
       } else {
@@ -127,6 +148,17 @@ export default function ContactForm() {
           label={tContactForm('phone')}
         />
       </div>
+      <Select
+        options={[
+          { label: 'Location', value: 'rental' },
+          { label: 'Support', value: 'help' },
+        ]}
+        value={formData.subject}
+        onChange={handleSubjectChange}
+        variant='filled'
+        size='medium'
+        color='white'
+      />
       <Textarea
         id='message'
         name='message'

@@ -10,6 +10,10 @@ const nextConfig = {
                 source: '/:locale/api/:path*',
                 destination: '/api/:path*',
             },
+            {
+                source: '/:locale/:path*.pdf',
+                destination: '/:path*.pdf',
+            },
         ];
     },
 };

@@ -57,7 +57,8 @@
       }
     },
     "contact": {
-      "title": "Contactez-nous"
+      "title": "Contactez-nous",
+      "rentalTitle": "Demande de location"
     },
     "teardrop": {
       "hero": {
@@ -134,7 +135,8 @@
     "rental": "Location",
     "contact": "Contact",
     "legalNotice": "Mentions légales",
-    "t&cs": "CGU / CGV"
+    "cgv": "CGV",
+    "policy": "Confidentialité"
   },
   "actions": {
     "contactUs": "Nous contacter",
