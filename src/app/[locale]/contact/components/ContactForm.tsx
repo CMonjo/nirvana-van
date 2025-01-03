@@ -156,6 +156,7 @@ export default function ContactForm() {
         value={formData.subject}
         onChange={handleSubjectChange}
         variant='filled'
+        placeholder={tContactForm('option')}
         size='medium'
         color='white'
       />

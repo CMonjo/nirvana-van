@@ -272,7 +272,8 @@
       "message": "Écrivez votre message",
       "addMessage": "Une message à nous faire passer ?",
       "getInTouch": "Je souhaite être recontacté",
-      "send": "Envoyer"
+      "send": "Envoyer",
+      "option": "Sélectionnez une options"
     },
     "status": {
       "missingFields": "Des champs obligatoires n'ont pas été remplis.",

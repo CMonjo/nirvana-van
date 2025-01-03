@@ -41,18 +41,13 @@ export default function Modal({
         ref={modalRef}
         className='relative flex w-full max-w-xl flex-col gap-4 rounded-lg bg-white p-6 shadow-lg'
       >
-        <div className='relative flex w-full items-center justify-center'>
+        <div className='absolute right-5 z-50 cursor-pointer transition-all duration-300 hover:opacity-70'>
+          <CancelIcon className='text-black' onClick={onClose} />
+        </div>
+        <div className='relative  flex w-full items-center justify-center px-5 md:px-0'>
           <Typography variant='h3' className='text-center font-medium'>
             {title}
           </Typography>
-          <CancelIcon
-            className='absolute right-0 cursor-pointer text-greyDark hover:text-dark'
-            onClick={onClose}
-          />
-          <CancelIcon
-            className='absolute right-0 cursor-pointer text-greyDark transition-colors duration-200 hover:text-dark'
-            onClick={onClose}
-          />
         </div>
         <div>{children}</div>
       </div>
