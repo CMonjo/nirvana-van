@@ -121,38 +121,41 @@ export default function Configurator() {
                     </div>
                     {product.categories ? (
                       <>
-                        {product.categories.map((category) => (
-                          <div key={category.name}>
-                            {category.name === 'main_color' ? (
-                              <Colors
-                                product={product}
-                                mainColor={
-                                  productConfiguration?.selectedOptions.find(
-                                    (opt) => opt.category === 'main_color'
-                                  )?.key
-                                }
-                                shadeColor={
-                                  productConfiguration?.selectedOptions.find(
-                                    (opt) => opt.category === 'shade_color'
-                                  )?.key
-                                }
-                                onChange={onProductChange}
-                              />
-                            ) : category.name === 'shade_color' ? null : (
-                              <OptionPicker
-                                product={product}
-                                category={category}
-                                onChange={onProductChange}
-                                // @ts-ignore
-                                selectedOption={productConfiguration?.selectedOptions
-                                  .filter(
-                                    (opt) => opt.category === category.name
-                                  )
-                                  .map((opt) => opt.key)}
-                              />
-                            )}
-                          </div>
-                        ))}
+                        {product.categories.map((category) => {
+                          if (category.name === 'shade_color') return null;
+                          return (
+                            <div key={category.name}>
+                              {category.name === 'main_color' ? (
+                                <Colors
+                                  product={product}
+                                  mainColor={
+                                    productConfiguration?.selectedOptions.find(
+                                      (opt) => opt.category === 'main_color'
+                                    )?.key
+                                  }
+                                  shadeColor={
+                                    productConfiguration?.selectedOptions.find(
+                                      (opt) => opt.category === 'shade_color'
+                                    )?.key
+                                  }
+                                  onChange={onProductChange}
+                                />
+                              ) : (
+                                <OptionPicker
+                                  product={product}
+                                  category={category}
+                                  onChange={onProductChange}
+                                  // @ts-ignore
+                                  selectedOption={productConfiguration?.selectedOptions
+                                    .filter(
+                                      (opt) => opt.category === category.name
+                                    )
+                                    .map((opt) => opt.key)}
+                                />
+                              )}
+                            </div>
+                          );
+                        })}
                       </>
                     ) : null}
                   </div>
