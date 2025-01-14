@@ -32,8 +32,8 @@ export default function Bento() {
       title: t('openings'),
     },
     {
-      image: '/teardrop/bento/isolation.jpeg',
-      title: t('awnings'),
+      image: '/teardrop/bento/storage.JPG',
+      title: t('storage'),
     },
     {
       image: '/teardrop/bento/ecoflow.png',

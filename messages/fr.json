@@ -18,12 +18,12 @@
       "bento": {
         "title": "TOUT DOUX Partez au Nirvana",
         "1": {
-          "title": "Les 4 saisons",
-          "description": "Partez n'importe quand"
+          "title": "Teadroooop",
+          "description": "Coucou mon petit lapin ce texte est pour te présenter la teardrop graouuuuuh"
         },
         "2": {
-          "title": "Confort",
-          "description": "Dormez comme un bébé"
+          "title": "Trotty",
+          "description": "Bla bla blaBla bla blaBla bla blaBla bla blaBla bla bla"
         }
       },
       "story": {
@@ -66,8 +66,8 @@
         "price": "À partir de"
       },
       "story": {
-        "title": "TODO Tout le nécessaire, à tracter derrière sa voiture",
-        "description": "Découvrez tout le charme d’un voyage en Teardrop : tout le nécessaire pour un séjour confortable, avec un design qui ne manque pas d'attirer les souris. Sans frais de mécanique et avec un entretien minimal, profitez pleinement de chaque destination en sachant que votre cocon vous suit partout, attaché à votre voiture"
+        "title": "Tout le nécessaire, à tracter derrière sa voiture",
+        "description": "Découvrez tout le charme d'un voyage en Teardrop : tout le nécessaire pour un séjour confortable, avec un design qui ne manque pas d'attirer les sourires. Sans frais de mécanique et avec un entretien minimal, profitez pleinement de chaque destination en sachant que votre cocon vous suit partout, attaché à votre voiture"
       },
       "video": {
         "title": "La Teardrop en action!",
@@ -111,7 +111,7 @@
         },
         "5": {
           "title": "Pas de permis nécessaire",
-          "value": ""
+          "value": "PTAC <= 750 kg"
         }
       },
       "bento": {
@@ -122,8 +122,8 @@
         "materials": "Matériaux",
         "openings": "Ouvertures",
         "insulation": "Isolation",
-        "aluminum": "Alu thermo laqué",
-        "awnings": "Auvents"
+        "aluminum": "Parrois aluminium",
+        "storage": "Rangements"
       }
     }
   },
@@ -257,9 +257,9 @@
       "question4": "Peut-on visiter votre atelier ?",
       "answer4": "Bien sûr ! Nous serons ravis de vous accueillir. Prenez rendez-vous via notre formulaire de contact pour organiser votre visite.",
       "question5": "Quel est le délai de fabrication ?",
-      "answer5": "Le délai de fabrication est de deux mois en moyenne, mais il peut être prolongé en fonction des commandes en cours.",
+      "answer5": "Le délai de fabrication est de deux mois en moyenne, mais il peut être allongé en fonction des commandes en cours.",
       "question6": "Les mini-caravanes sont-elles adaptées à toutes les saisons ?",
-      "answer6": "La Teardrop est conçue pour offrir un confort optimal en toutes saisons. Bien que sa cuisine extérieure soit plus agréable à utiliser par beau temps, son isolation garantit des nuits confortables, même en hiver."
+      "answer6": "La Teardrop est conçue pour offrir un confort optimal en toutes saisons. Bien que sa cuisine extérieure soit plus agréable à utiliser par beau temps, son isolation garantit des nuits confortables."
     },
     "trotty": {}
   },

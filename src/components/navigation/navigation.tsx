@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
 const headerLinks = [
+  { name: 'home', href: '/', icon: null },
   { name: 'teardrop', href: '/teardrop', icon: null },
   {
     name: 'trotty',
@@ -16,6 +17,7 @@ const headerLinks = [
 ];
 
 const footerLinks = [
+  { name: 'home', href: '/', icon: null },
   { name: 'teardrop', href: '/teardrop', icon: null },
   {
     name: 'trotty',
@@ -40,7 +42,7 @@ const NavigationItem = ({
   const params = useParams();
 
   const [isActive, setIsActive] = useState(false);
-  const [shotDot, setShowDot] = useState(false);
+  const [showDot, setShowDot] = useState(false);
 
   useEffect(() => {
     const localePrefix = params.locale ? `/${params.locale}` : '';
@@ -52,7 +54,7 @@ const NavigationItem = ({
 
   const onHover = () => {
     if (isActive) return;
-    setShowDot(!shotDot);
+    setShowDot(!showDot);
   };
 
   return (
@@ -68,7 +70,7 @@ const NavigationItem = ({
       <motion.div
         className={`absolute left-1/2 mt-1 h-[6px] w-[6px] -translate-x-1/2 transform rounded-full bg-${color}`}
         initial={{ opacity: 0, y: -5 }}
-        animate={shotDot ? { opacity: 1, y: 0 } : { opacity: 0, y: -5 }}
+        animate={showDot ? { opacity: 1, y: 0 } : { opacity: 0, y: -5 }}
         transition={{ duration: 0.3 }}
       />
     </Link>
@@ -83,12 +85,28 @@ export default function Navigation({
   nav: 'header' | 'footer';
 }) {
   const t = useTranslations('navigation');
+  const pathname = usePathname();
+  const params = useParams();
+  const [hideHome, setHideHome] = useState(false);
+
+  useEffect(() => {
+    const localePrefix = params.locale ? `/${params.locale}` : '';
+    if (`${localePrefix}` === pathname) {
+      setHideHome(true);
+    } else {
+      setHideHome(false);
+    }
+  }, [pathname, params.locale]);
 
   const links = nav === 'header' ? headerLinks : footerLinks;
 
   return (
     <div className={`flex flex-col items-center gap-4 md:flex-row md:gap-8`}>
       {links.map((link) => {
+        if (hideHome && link.href === '/') {
+          return null;
+        }
+
         return (
           <NavigationItem
             key={link.href}

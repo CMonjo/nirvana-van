@@ -91,7 +91,7 @@ const FAQ = ({
             )
           )}
         </div>
-        <Typography>{tProduct('otherQuestions')}</Typography>
+        <Typography className='mt-2'>{tProduct('otherQuestions')}</Typography>
         <Link href='/contact'>
           <Button color={color}>{tActions('contactUs')}</Button>
         </Link>

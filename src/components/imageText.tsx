@@ -33,7 +33,7 @@ export default function ImageText({
         <div
           className={`flex w-full flex-col items-stretch gap-4 md:gap-8 ${imageRight ? 'md:flex-row-reverse' : 'md:flex-row'}`}
         >
-          <div className='relative flex min-h-[300px] w-full flex-[3] items-center justify-center rounded-3xl bg-orange md:min-h-[350px]'>
+          <div className='relative flex min-h-[300px] w-full flex-[3] items-center justify-center rounded-3xl bg-orange md:min-h-[450px]'>
             <Typography
               variant='h1'
               className='z-10 text-5xl font-medium text-white'

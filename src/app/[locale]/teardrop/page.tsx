@@ -13,9 +13,9 @@ export default function Teardrop() {
   const tPage = useTranslations('pages.teardrop');
 
   const productDescriptions = [
-    '/bento-1.jpeg',
-    '/bento-1.jpeg',
-    '/bento-1.jpeg',
+    '/teardrop/kitchen.JPG',
+    '/teardrop/interior.jpeg',
+    '/teardrop/exterior.JPG',
   ];
 
   const productSpecificationsTotal = 5;
