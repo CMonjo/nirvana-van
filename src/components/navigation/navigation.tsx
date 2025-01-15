@@ -38,11 +38,10 @@ const NavigationItem = ({
   link: string;
   color: 'black' | 'white';
 }) => {
-  const pathname = usePathname();
-  const params = useParams();
-
   const [isActive, setIsActive] = useState(false);
   const [showDot, setShowDot] = useState(false);
+  const pathname = usePathname();
+  const params = useParams();
 
   useEffect(() => {
     const localePrefix = params.locale ? `/${params.locale}` : '';
@@ -52,17 +51,17 @@ const NavigationItem = ({
     }
   }, [link, pathname, params.locale]);
 
-  const onHover = () => {
+  const onHover = (status: 'enter' | 'leave') => {
     if (isActive) return;
-    setShowDot(!showDot);
+    setShowDot(status === 'enter');
   };
 
   return (
     <Link
       href={link}
       className='group relative'
-      onMouseEnter={onHover}
-      onMouseLeave={onHover}
+      onMouseEnter={() => onHover('enter')}
+      onMouseLeave={() => onHover('leave')}
     >
       <h3 className={`font-kobe11 text-xl font-normal text-${color}`}>
         {name}
@@ -104,16 +103,17 @@ export default function Navigation({
     <div className={`flex flex-col items-center gap-4 md:flex-row md:gap-8`}>
       {links.map((link) => {
         if (hideHome && link.href === '/') {
-          return null;
+          return <div className='hidden' key={link.name.toLocaleLowerCase()} />;
         }
 
         return (
-          <NavigationItem
-            key={link.href}
-            link={link.href}
-            name={t(link.name)}
-            color={color}
-          />
+          <div key={link.name.toLocaleLowerCase()}>
+            <NavigationItem
+              link={link.href}
+              name={t(link.name)}
+              color={color}
+            />
+          </div>
         );
       })}
     </div>
