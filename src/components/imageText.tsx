@@ -13,7 +13,7 @@ export default function ImageText({
   background = 'bg-white',
   topoBackground = true,
   imageSource,
-}: {
+}: Readonly<{
   section: string;
   title: string;
   description: string;
@@ -21,12 +21,12 @@ export default function ImageText({
   background?: string;
   topoBackground?: boolean;
   imageSource: string;
-}) {
+}>) {
   const bulletPoints = description.split('\n');
 
   return (
     <Section
-      className={`${background ? background : 'bg-white'}`}
+      className={`${background || 'bg-white'}`}
       topoBackground={topoBackground}
     >
       <Container>

@@ -4,7 +4,7 @@ export const products: IProduct[] = [
   {
     key: 'teardrop',
     name: 'Teardrop',
-    image: '/model_td.png',
+    image: '/model_td.jpeg',
     color: 'orange',
     basePrice: 10500,
     categories: [
@@ -125,7 +125,7 @@ export const products: IProduct[] = [
   {
     key: 'trotty',
     name: 'Trotty',
-    image: '/model_kv.png',
+    image: '/karavel.jpeg',
     color: 'green',
     basePrice: 5000,
   },

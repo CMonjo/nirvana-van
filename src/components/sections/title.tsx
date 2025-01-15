@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Transition from '../atoms/transition';
 
 export default function SectionTitle({
   title,
@@ -9,10 +10,12 @@ export default function SectionTitle({
   className?: string;
 }) {
   return (
-    <h1
-      className={`mb-4 text-center font-kobe11 text-4xl font-medium ${className}`}
-    >
-      {title}
-    </h1>
+    <Transition>
+      <h1
+        className={`mb-4 text-center font-kobe11 text-4xl font-medium ${className}`}
+      >
+        {title}
+      </h1>
+    </Transition>
   );
 }

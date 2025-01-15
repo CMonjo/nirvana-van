@@ -30,11 +30,14 @@ const Model = ({
   return (
     <div
       onClick={handleClick}
-      className={`relative flex h-96 w-full flex-col items-center justify-between rounded-3xl bg-slate-200 px-4 py-8 text-center text-white ${onClick ? 'cursor-pointer' : ''}`}
+      className={`relative flex h-[450px] w-full flex-col items-center justify-between rounded-3xl px-4 py-8 text-center text-white ${onClick ? 'cursor-pointer' : ''}`}
     >
       <div className='z-10'>
         <Transition>
-          <Typography variant='h3' className='font-acorn font-medium'>
+          <Typography
+            variant='h2-acorn'
+            className='font-acorn !text-4xl font-medium'
+          >
             {product.name}
           </Typography>
         </Transition>

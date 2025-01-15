@@ -7,9 +7,8 @@ import {
   products,
   updateProductConfiguration,
 } from '@/products/products';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import ChooseModel from './components/chooseModel';
-import React from 'react';
 import Image from 'next/image';
 import SectionTitle from '../../../components/sections/title';
 import Section from '../../../components/atoms/section';

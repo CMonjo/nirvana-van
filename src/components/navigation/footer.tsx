@@ -5,7 +5,6 @@ import Typography from '../atoms/typography';
 import SocialLinks from '../utils/socialLinks';
 import LinkWrapper from '../utils/LinkWrapper';
 import LocaleSwitcher from './localeSwitcher';
-import Button from '../atoms/button';
 import { useTranslations } from 'next-intl';
 
 export default function Footer() {

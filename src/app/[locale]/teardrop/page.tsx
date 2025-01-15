@@ -8,6 +8,9 @@ import Bento from './components/bento';
 import FAQ from '@/components/sections/faq';
 import Specification from '../../../components/sections/specification';
 import { useTranslations } from 'next-intl';
+import Section from '@/components/atoms/section';
+import Container from '@/components/atoms/container';
+import SplitImageText from '@/components/SplitImageText';
 
 export default function Teardrop() {
   const tPage = useTranslations('pages.teardrop');
@@ -34,6 +37,18 @@ export default function Teardrop() {
           descriptionRight={tPage('video.right')}
           showSocials
         />
+        {/* {productDescriptions.map((el: string, index: number) => (
+          <div key={index}>
+            <SplitImageText
+              section={tPage(`productDescription.${index + 1}.title`)}
+              title={tPage(`productDescription.${index + 1}.subtitle`)}
+              description={tPage(`productDescription.${index + 1}.content`)}
+              imageSource={el}
+              imageRight={index % 2 === 0}
+            />
+          </div>
+        ))} */}
+
         {productDescriptions.map((el: string, index: number) => (
           <div key={index}>
             <ImageText
@@ -41,9 +56,7 @@ export default function Teardrop() {
               title={tPage(`productDescription.${index + 1}.subtitle`)}
               description={tPage(`productDescription.${index + 1}.content`)}
               imageSource={el}
-              topoBackground={index % 2 === 0}
-              imageRight={index % 2 === 1}
-              background={index % 2 === 1 ? 'bg-orange/10' : ''}
+              imageRight={index % 2 === 0}
             />
           </div>
         ))}

@@ -1,11 +1,13 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Section from '../../../components/atoms/section';
 import Container from '../../../components/atoms/container';
 import Typography from '../../../components/atoms/typography';
 import Image from 'next/image';
 import SocialLinks from '../../../components/utils/socialLinks';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
+import Transition from '@/components/atoms/transition';
 
 const images = [
   '/home/social/1.JPG',
@@ -36,20 +38,24 @@ export default function Socials() {
             </Typography>
           </div>
           <div className='flex w-full flex-col items-center justify-between md:flex-row'>
-            <Typography variant='h2' className='text-center'>
-              {t('title')}
-            </Typography>
+            <Transition>
+              <Typography variant='h2' className='text-center'>
+                {t('title')}
+              </Typography>
+            </Transition>
             <SocialLinks />
           </div>
         </Container>
       </Section>
 
-      <div className='w-full overflow-hidden pl-2'>
+      <div className='w-full pl-2'>
         <div className='flex gap-4 md:gap-8'>
           {images.map((image, index) => (
-            <div
+            <motion.div
               key={index}
               className='relative h-40 w-28 flex-shrink-0 md:h-80 md:w-56'
+              whileHover={{ y: -20 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             >
               <Image
                 className='rounded-3xl object-cover'
@@ -57,25 +63,56 @@ export default function Socials() {
                 alt={`social-image-${index + 1}`}
                 src={image}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
-      <div className='mt-4 w-full overflow-hidden pl-2 md:hidden'>
+      <div className='mt-4 w-full pl-2 md:hidden'>
         <div className='-ml-20 flex gap-4 '>
           {images.reverse().map((image, index) => (
-            <div key={index} className='relative h-40 w-28 flex-shrink-0'>
+            <motion.div
+              key={index}
+              className='relative h-40 w-28 flex-shrink-0'
+              whileHover={{ y: -10 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            >
               <Image
                 className='rounded-3xl object-cover'
                 fill
                 alt={`social-image-${index + 1}`}
                 src={image}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
     </div>
   );
 }
+
+// <motion.div
+//   variants={{
+//     initial: {
+//       scale: 0.5,
+//       y: 50,
+//       opacity: 0,
+//     },
+//     animate: {
+//       scale: 1,
+//       y: 0,
+//       opacity: 1,
+//     },
+//   }}
+//   whileHover={{
+//     rotate: '1.5deg',
+//   }}
+//   transition={{
+//     type: 'spring',
+//     mass: 3,
+//     stiffness: 400,
+//     damping: 50,
+//   }}
+//   key={index}
+//   className='relative h-40 w-28 flex-shrink-0'
+// ></motion.div>;
