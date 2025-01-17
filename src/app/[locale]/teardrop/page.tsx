@@ -47,7 +47,7 @@ export default function Teardrop() {
           </div>
         ))}
 
-        {/* {productDescriptions.map((el: string, index: number) => (
+        {productDescriptions.map((el: string, index: number) => (
           <div key={index}>
             <ImageText
               section={tPage(`productDescription.${index + 1}.title`)}
@@ -57,7 +57,7 @@ export default function Teardrop() {
               imageRight={index % 2 === 0}
             />
           </div>
-        ))} */}
+        ))}
         <Bento />
         <Specification
           productKey='teardrop'
