@@ -22,7 +22,7 @@ export default function SplitImageText({
 
   return (
     <HeroContainer
-      className={`flex flex-col ${imageRight ? 'md:flex-row-reverse' : 'md:flex-row'} !md:min-h-[80vh] !min-h-[1vh] bg-white`}
+      className={`flex flex-col ${imageRight ? 'md:flex-row-reverse' : 'md:flex-row'} !md:min-h-[80vh] !min-h-[80vh]  bg-white`}
       headerSticky
     >
       {/* Desktop version */}
