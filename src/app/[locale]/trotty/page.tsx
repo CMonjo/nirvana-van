@@ -24,7 +24,7 @@ export default function Page() {
           descriptionLeft={tPage('video.left')}
           descriptionRight={tPage('video.right')}
         />
-        <PreOrder />
+        {/* <PreOrder /> */}
         <Typography>"Specifications" (comme TD)</Typography>
         <Typography>Formulaire de contact pour en savoir plus</Typography>
         <FAQ productKey={'trotty'} color='green' />
