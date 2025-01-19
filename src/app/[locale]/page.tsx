@@ -8,6 +8,7 @@ import Bento from './components/bento';
 import Socials from './components/socials';
 import Models from './components/models';
 import { useTranslations } from 'next-intl';
+import Partners from './components/partners';
 
 export default function Home() {
   const tPage = useTranslations('pages.home');
@@ -25,10 +26,11 @@ export default function Home() {
           descriptionLeft={tPage('video.left')}
           descriptionRight={tPage('video.right')}
         />
-        <Models />
         <Story />
+        <Partners />
         {/* <Rental /> */}
         <Socials />
+        <Models />
       </main>
       <Footer />
     </div>

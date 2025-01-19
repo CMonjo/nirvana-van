@@ -17,11 +17,6 @@ export default function Page() {
       <main className='flex w-full flex-col items-center'>
         <Hero />
         <Story />
-        <Typography>HERO (comme TD)</Typography>
-        <Typography>Section "Text" pour expliquer le projet</Typography>
-        <Typography>Video</Typography>
-        <Typography>"Specifications" (comme TD)</Typography>
-        <Typography>Formulaire de contact pour en savoir plus</Typography>
         <Video
           source='/home/video.mp4'
           thumbnail='/bento-1.jpeg'
@@ -29,6 +24,9 @@ export default function Page() {
           descriptionLeft={tPage('video.left')}
           descriptionRight={tPage('video.right')}
         />
+        <PreOrder />
+        <Typography>"Specifications" (comme TD)</Typography>
+        <Typography>Formulaire de contact pour en savoir plus</Typography>
         <FAQ productKey={'trotty'} color='green' />
       </main>
       <Footer />

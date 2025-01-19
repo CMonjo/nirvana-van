@@ -30,20 +30,10 @@ export default function Story() {
           <Link
             href={{
               pathname: '/configurator',
-              query: { product: 'teardrop' },
+              query: { product: 'trotty' },
             }}
           >
-            <Button color='orange'>{tAction('configureMy')} teardrop</Button>
-          </Link>
-          <Link
-            href={{
-              pathname: '/contact',
-              query: { product: 'teardrop' },
-            }}
-          >
-            <Button variant='outlined' color='orange'>
-              {tAction('iWantRent')}
-            </Button>
+            <Button color='green'>{tAction('configureMy')} trotty</Button>
           </Link>
         </div>
       </Container>
