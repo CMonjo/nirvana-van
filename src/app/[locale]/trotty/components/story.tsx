@@ -10,7 +10,7 @@ import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 
 export default function Story() {
-  const tPage = useTranslations('pages.teardrop.story');
+  const tPage = useTranslations('pages.trotty.story');
   const tAction = useTranslations('actions');
 
   return (

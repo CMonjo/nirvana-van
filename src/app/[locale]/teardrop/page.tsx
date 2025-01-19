@@ -10,7 +10,7 @@ import Specification from '../../../components/sections/specification';
 import { useTranslations } from 'next-intl';
 import SplitImageText from '@/components/SplitImageText';
 
-export default function Teardrop() {
+export default function Page() {
   const tPage = useTranslations('pages.teardrop');
 
   const productDescriptions = [

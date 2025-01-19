@@ -8,7 +8,7 @@
         "title": "Fabricant artisanal français de mini-caravanes"
       },
       "models": {
-        "title": "Pour quel type d'aventure ?"
+        "title": "TODO"
       },
       "video": {
         "title": "Nirvana Van en action!",
@@ -16,7 +16,7 @@
         "right": "En action!"
       },
       "bento": {
-        "title": "TOUT DOUX Partez au Nirvana",
+        "title": "Pour quel type d'aventure ?",
         "1": {
           "title": "Teadroooop",
           "description": "Coucou mon petit lapin ce texte est pour te présenter la teardrop graouuuuuh"
@@ -63,6 +63,72 @@
     "teardrop": {
       "hero": {
         "title": "Teardrop",
+        "price": "À partir de"
+      },
+      "story": {
+        "title": "Tout le nécessaire, à tracter derrière sa voiture",
+        "description": "Découvrez tout le charme d'un voyage en Teardrop : tout le nécessaire pour un séjour confortable, avec un design qui ne manque pas d'attirer les sourires. Sans frais de mécanique et avec un entretien minimal, profitez pleinement de chaque destination en sachant que votre cocon vous suit partout, attaché à votre voiture"
+      },
+      "video": {
+        "title": "La Teardrop en action!",
+        "left": "La Teardrop",
+        "right": "En action!"
+      },
+      "productDescription": {
+        "1": {
+          "title": "Cuisine",
+          "subtitle": "Designée pour partir plusieurs jours en toute autonomie",
+          "content": "Plan de travail de 135cm\nPoint d’eau\nRéchaud\nGlacière Dometic 21l\nRangements\nÉclairage LED"
+        },
+        "2": {
+          "title": "Couchage",
+          "subtitle": "Blabla",
+          "content": "Lit de 132 x 190\nPrises 220v et USB\nÉclairage LED\nFenêtres latérales ouvrantes de 40 x 40 avec rideau occultant\nLanterneau 40 x 40 avec moustiquaire et store occultant\nRangements\nTablette rétractable sur option"
+        },
+        "3": {
+          "title": "Extérieur",
+          "subtitle": "Blabla",
+          "content": "Châssis acier galvanisé\nFaisceau 7 broches\nPoids à vide 400kg\nPTAC 500, 600 ou 750kg\nDimensions :3m55 x 1m83\nHauteur : 1m74\nEssieu freiné sur option\nPrise 220v extérieur"
+        }
+      },
+      "productSpecification": {
+        "title": "Spécifications",
+        "1": {
+          "title": "Vitesse maximale",
+          "value": "100 km/h"
+        },
+        "2": {
+          "title": "Poids à vide",
+          "value": "400 kg"
+        },
+        "3": {
+          "title": "Hauteur extérieure",
+          "value": "174 cm"
+        },
+        "4": {
+          "title": "Dimensions extérieures",
+          "value": "354 x 183 cm"
+        },
+        "5": {
+          "title": "Pas de permis nécessaire",
+          "value": "PTAC <= 750 kg"
+        }
+      },
+      "bento": {
+        "title": "Les équipements",
+        "crutches": "Béquilles",
+        "solarPanel": "Panneau solaire",
+        "ecoflowLighting": "Ecoflow / éclairage LED",
+        "materials": "Matériaux",
+        "openings": "Ouvertures",
+        "insulation": "Isolation",
+        "aluminum": "Parrois aluminium",
+        "storage": "Rangements"
+      }
+    },
+    "trotty": {
+      "hero": {
+        "title": "Trotty",
         "price": "À partir de"
       },
       "story": {

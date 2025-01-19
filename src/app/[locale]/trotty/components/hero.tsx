@@ -17,7 +17,7 @@ export default function Hero() {
       }}
     >
       <Image
-        src={`/teardrop/hero.JPG`}
+        src={`/trotty/hero.jpg`}
         fill
         className='absolute inset-0 object-cover'
         alt='hero'
@@ -30,7 +30,7 @@ export default function Hero() {
           animate={{ rotate: 2, scale: 1.2 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
-          Teardrop
+          Trotty
         </motion.h1>
       </div>
     </div>
