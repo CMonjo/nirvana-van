@@ -67,7 +67,7 @@ export default function Header({
             <Logo color={headerFixed ? 'black' : 'white'} />
           </LinkWrapper>
           <div className='hidden gap-3 lg:flex'>
-            <Link href='/contact#rental'>
+            <Link href='/rental'>
               <Button
                 color={headerFixed ? 'orange' : 'white'}
                 variant={headerFixed ? 'outlined' : 'filled'}

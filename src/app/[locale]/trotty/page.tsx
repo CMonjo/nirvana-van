@@ -5,7 +5,6 @@ import FAQ from '@/components/sections/faq';
 import Typography from '@/components/atoms/typography';
 import Hero from './components/hero';
 import Story from './components/story';
-import Socials from '../components/socials';
 import { useTranslations } from 'next-intl';
 
 export default function Page() {

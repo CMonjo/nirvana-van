@@ -5,11 +5,11 @@ import Checkbox from '@/components/atoms/checkbox';
 import Input from '@/components/atoms/input';
 import Textarea from '@/components/atoms/textarea';
 import Typography from '@/components/atoms/typography';
-import { use, useState } from 'react';
+import { useState } from 'react';
 import * as envConfig from '@/config';
 import { useLocale, useTranslations } from 'next-intl';
-import { IBasketConfig, IProduct, IProductConfig } from '@/products/types';
-import useConfig from '../../configurator/hook/useConfig';
+import { IProduct, IProductConfig } from '@/products/types';
+import useConfig from '../hook/useConfig';
 import { getPrice } from '@/utils/price';
 
 type FormData = {
@@ -38,10 +38,10 @@ export default function ConfigurationForm({
   const config = useConfig(productConfiguration, product);
 
   const [formData, setFormData] = useState<FormData>({
-    firstname: 'Camille',
-    lastname: 'MONJO',
+    firstname: '',
+    lastname: '',
     phone: '',
-    email: 'monjocamille@gmail.com',
+    email: '',
     message: '',
   });
   const [status, setStatus] = useState<{

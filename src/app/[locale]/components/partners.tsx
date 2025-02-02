@@ -2,6 +2,8 @@ import Container from '@/components/atoms/container';
 import Image from 'next/image';
 import Section from '@/components/atoms/section';
 import LinkWrapper from '@/components/utils/LinkWrapper';
+import Typography from '@/components/atoms/typography';
+import { useTranslations } from 'next-intl';
 
 const partners = [
   {
@@ -38,9 +40,14 @@ const partners = [
 ];
 
 function Partners() {
+  const tPage = useTranslations('pages.home.partners');
+
   return (
     <Section className='bg-white'>
-      <Container className='!py-0'>
+      <Container className='flex flex-col items-center justify-center !py-0'>
+        <Typography className='text-center text-dark-lighter'>
+          {tPage('title')}
+        </Typography>
         <div className='flex flex-wrap items-center justify-center gap-4 md:gap-8'>
           {partners.map((partner) => (
             <LinkWrapper key={partner.name} href={partner.link} target='_blank'>

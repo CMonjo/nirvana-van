@@ -21,7 +21,7 @@ import Basket from './components/basket';
 import { AnimatePresence, motion } from 'framer-motion';
 import OptionPicker from './components/optionPicker';
 import Modal from '@/components/utils/modal';
-import ConfigurationForm from '../contact/components/ConfigurationForm';
+import ConfigurationForm from './components/ConfigurationForm';
 import SocialLinks from '@/components/utils/socialLinks';
 import * as envConfig from '@/config';
 import useConfig from './hook/useConfig';

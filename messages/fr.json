@@ -10,6 +10,9 @@
       "models": {
         "title": "TODO"
       },
+      "partners": {
+        "title": "Ils parlent de nous"
+      },
       "video": {
         "title": "Nirvana Van en action!",
         "left": "Nirvana Van",
@@ -57,8 +60,10 @@
       }
     },
     "contact": {
-      "title": "Contactez-nous",
-      "rentalTitle": "Demande de location"
+      "title": "Contactez-nous"
+    },
+    "rental": {
+      "title": "Demande de location"
     },
     "teardrop": {
       "hero": {
@@ -133,7 +138,7 @@
       },
       "story": {
         "title": "Une nouvelle façon de voyager à vélo",
-        "description": "Texte pour expliquer le projet"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       },
       "video": {
         "title": "La Trotty en action!",
@@ -311,7 +316,9 @@
       "addMessage": "Une message à nous faire passer ?",
       "getInTouch": "Je souhaite être recontacté",
       "send": "Envoyer",
-      "option": "Sélectionnez une options"
+      "option": "Sélectionnez une options",
+      "startDate": "Date de départ",
+      "endDate": "Date de retour"
     },
     "status": {
       "missingFields": "Des champs obligatoires n'ont pas été remplis.",

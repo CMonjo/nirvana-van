@@ -18,23 +18,33 @@ export default function Story() {
       <Container className='flex-col'>
         <SectionTitle title={tPage('title')} />
         <div className='max-w-3xl flex-col text-center'>
-          <Image
-            src='/teardrop/story.png'
-            alt='story'
-            width={1155}
-            height={600}
-          />
-          <Typography className='mb-4 mt-8'>{tPage('description')}</Typography>
+          <Typography>{tPage('description')}</Typography>
         </div>
-        <div className='flex flex-col items-center gap-4 md:flex-row'>
-          <Link
-            href={{
-              pathname: '/configurator',
-              query: { product: 'trotty' },
-            }}
-          >
-            <Button color='green'>{tAction('configureMy')} trotty</Button>
-          </Link>
+        <Link
+          href={{
+            pathname: '/configurator',
+            query: { product: 'trotty' },
+          }}
+        >
+          <Button color='green'>{tAction('configureMy')} trotty</Button>
+        </Link>
+        <div className='flex flex-row items-center gap-4'>
+          <div className='relative'>
+            <Image
+              src='/trotty/story.png'
+              alt='story'
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
+          <div className='relative'>
+            <Image
+              src='/trotty/story.png'
+              alt='story'
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
         </div>
       </Container>
     </Section>

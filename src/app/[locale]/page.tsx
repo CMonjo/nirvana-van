@@ -28,9 +28,8 @@ export default function Home() {
         />
         <Story />
         <Partners />
-        {/* <Rental /> */}
-        <Socials />
         <Models />
+        <Socials />
       </main>
       <Footer />
     </div>

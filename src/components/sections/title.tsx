@@ -12,7 +12,7 @@ export default function SectionTitle({
   return (
     <Transition>
       <h1
-        className={`mb-4 text-center font-kobe11 text-4xl font-medium ${className}`}
+        className={`text-center font-kobe11 text-4xl font-medium ${className}`}
       >
         {title}
       </h1>
