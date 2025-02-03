@@ -8,6 +8,7 @@ import { ProductType } from '@/products/types';
 import Model from '@/components/sections/model';
 import SectionTitle from '@/components/sections/title';
 import { useTranslations } from 'next-intl';
+import Typography from '@/components/atoms/typography';
 
 export default function Models() {
   const router = useRouter();
@@ -23,8 +24,13 @@ export default function Models() {
   return (
     <Section className='bg-white'>
       <Container className='flex-col'>
-        <SectionTitle title={t('title')} />
-        <div className='flex w-full flex-col gap-4 lg:flex-row'>
+        <SectionTitle title={/*t('title')*/ 'Découvre nos modèles'} />
+        <Typography variant='h3' className='mb-4 text-center'>
+          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum
+          dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+          amet. Lorem amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor.
+        </Typography>
+        <div className='flex w-full flex-col gap-8 lg:flex-row'>
           <Model
             productKey='teardrop'
             onClick={handleClick}

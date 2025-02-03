@@ -19,13 +19,13 @@
         "right": "En action!"
       },
       "bento": {
-        "title": "Pour quel type d'aventure ?",
+        "title": "La philosophie de Nirvana Van",
         "1": {
-          "title": "Teadroooop",
+          "title": "Made in France",
           "description": "Coucou mon petit lapin ce texte est pour te présenter la teardrop graouuuuuh"
         },
         "2": {
-          "title": "Trotty",
+          "title": "Voyage libre",
           "description": "Bla bla blaBla bla blaBla bla blaBla bla blaBla bla bla"
         }
       },

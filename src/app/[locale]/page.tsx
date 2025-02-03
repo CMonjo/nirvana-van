@@ -18,7 +18,7 @@ export default function Home() {
       <Header />
       <main className='flex w-full flex-col items-center'>
         <Hero />
-        <Bento />
+        <Models />
         <Video
           source='/home/video.mp4'
           thumbnail='/bento-1.jpeg'
@@ -26,9 +26,9 @@ export default function Home() {
           descriptionLeft={tPage('video.left')}
           descriptionRight={tPage('video.right')}
         />
+        <Bento />
         <Story />
         <Partners />
-        <Models />
         <Socials />
       </main>
       <Footer />
