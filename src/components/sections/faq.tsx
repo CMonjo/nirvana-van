@@ -72,7 +72,7 @@ const FAQ = ({
 }) => {
   const tProduct = useTranslations(`faq`);
   const tActions = useTranslations(`actions`);
-  const totalQuestions = productKey === 'teardrop' ? 6 : 0;
+  const totalQuestions = productKey === 'teardrop' ? 6 : 5;
 
   return (
     <Section className='bg-white'>

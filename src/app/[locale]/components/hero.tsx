@@ -50,8 +50,8 @@ export default function Hero() {
         {/* <Link href={'/teardrop'}>
           <Button color='orange'>Teardrop</Button>
         </Link>
-        <Link href={'/trotty'}>
-          <Button color='green'>Trotty</Button>
+        <Link href={'/bike'}>
+          <Button color='green'>Bike</Button>
         </Link> */}
       </div>
     </HeroContainer>

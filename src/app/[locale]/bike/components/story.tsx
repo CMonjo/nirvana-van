@@ -10,7 +10,7 @@ import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 
 export default function Story() {
-  const tPage = useTranslations('pages.trotty.story');
+  const tPage = useTranslations('pages.bike.story');
   const tAction = useTranslations('actions');
 
   return (
@@ -23,15 +23,15 @@ export default function Story() {
         <Link
           href={{
             pathname: '/configurator',
-            query: { product: 'trotty' },
+            query: { product: 'bike' },
           }}
         >
-          <Button color='green'>{tAction('configureMy')} trotty</Button>
+          <Button color='green'>{tAction('configureMy')} bike</Button>
         </Link>
-        <div className='flex flex-row items-center gap-4'>
+        <div className='gap- flex flex-row items-center'>
           <div className='relative'>
             <Image
-              src='/trotty/story.png'
+              src='/bike/story.png'
               alt='story'
               fill
               style={{ objectFit: 'cover' }}
@@ -39,7 +39,7 @@ export default function Story() {
           </div>
           <div className='relative'>
             <Image
-              src='/trotty/story.png'
+              src='/bike/story.png'
               alt='story'
               fill
               style={{ objectFit: 'cover' }}

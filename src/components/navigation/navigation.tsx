@@ -9,8 +9,8 @@ const headerLinks = [
   { name: 'home', href: '/', icon: null },
   { name: 'teardrop', href: '/teardrop', icon: null },
   {
-    name: 'trotty',
-    href: '/trotty',
+    name: 'bike',
+    href: '/bike',
     icon: null,
   },
   { name: 'configurator', href: '/configurator', icon: null },
@@ -20,8 +20,8 @@ const footerLinks = [
   { name: 'home', href: '/', icon: null },
   { name: 'teardrop', href: '/teardrop', icon: null },
   {
-    name: 'trotty',
-    href: '/trotty',
+    name: 'bike',
+    href: '/bike',
     icon: null,
   },
   { name: 'configurator', href: '/configurator', icon: null },

@@ -35,7 +35,7 @@ export default function Page() {
           descriptionRight={tPage('video.right')}
           showSocials
         />
-        {productDescriptions.map((el: string, index: number) => (
+        {/* {productDescriptions.map((el: string, index: number) => (
           <div key={index}>
             <SplitImageText
               section={tPage(`productDescription.${index + 1}.title`)}
@@ -45,7 +45,7 @@ export default function Page() {
               imageRight={index % 2 === 0}
             />
           </div>
-        ))}
+        ))} */}
 
         {productDescriptions.map((el: string, index: number) => (
           <div key={index}>

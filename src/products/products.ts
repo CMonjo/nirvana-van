@@ -123,8 +123,8 @@ export const products: IProduct[] = [
     ],
   },
   {
-    key: 'trotty',
-    name: 'Trotty',
+    key: 'bike',
+    name: 'Bike',
     image: '/karavel.jpeg',
     color: 'green',
     basePrice: 5000,

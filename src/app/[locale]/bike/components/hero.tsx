@@ -17,7 +17,7 @@ export default function Hero() {
       }}
     >
       <Image
-        src={`/trotty/hero.jpg`}
+        src={`/bike/hero.jpg`}
         fill
         className='absolute inset-0 object-cover'
         alt='hero'
@@ -30,7 +30,7 @@ export default function Hero() {
           animate={{ rotate: 2, scale: 1.2 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
-          Trotty
+          Bike
         </motion.h1>
       </div>
     </div>

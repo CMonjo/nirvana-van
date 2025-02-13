@@ -32,7 +32,7 @@
       "story": {
         "title": "Bienvenue dans mon atelier !",
         "text1": "C'est dans mon atelier à Montpellier que je conçois et fabrique, depuis deux ans, des mini-caravanes uniques.",
-        "text2": "Pensées pour offrir un cocon à la fois confortable, pratique et esthétique, elles incarnent le compromis idéal entre simplicité et confort d’utilisation, tout en étant faciles à emmener derrière une voiture ou un vélo.",
+        "text2": "Pensées pour offrir un cocon à la fois confortable, pratique et esthétique, elles incarnent le compromis idéal entre simplicité et confort d'utilisation, tout en étant faciles à emmener derrière une voiture ou un vélo.",
         "text3": "Si vous souhaitez discuter d'un projet ou découvrir de près le processus de fabrication, je serai ravi de vous accueillir !"
       },
       "socials": {
@@ -83,7 +83,7 @@
         "1": {
           "title": "Cuisine",
           "subtitle": "Designée pour partir plusieurs jours en toute autonomie",
-          "content": "Plan de travail de 135cm\nPoint d’eau\nRéchaud\nGlacière Dometic 21l\nRangements\nÉclairage LED"
+          "content": "Plan de travail de 135cm\nPoint d'eau\nRéchaud\nGlacière Dometic 21l\nRangements\nÉclairage LED"
         },
         "2": {
           "title": "Couchage",
@@ -131,9 +131,9 @@
         "storage": "Rangements"
       }
     },
-    "trotty": {
+    "bike": {
       "hero": {
-        "title": "Trotty",
+        "title": "Bike",
         "price": "À partir de"
       },
       "story": {
@@ -141,8 +141,8 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       },
       "video": {
-        "title": "La Trotty en action!",
-        "left": "La Trotty",
+        "title": "La Bike en action!",
+        "left": "La Bike",
         "right": "En action!"
       },
       "productSpecification": {
@@ -167,13 +167,24 @@
           "title": "Pas de permis nécessaire",
           "value": "PTAC <= 750 kg"
         }
+      },
+      "bento": {
+        "title": "Pour une expérience inoubliable",
+        "1": {
+          "title": "Tout confort",
+          "description": "Le roadtrip a vélo comme vous l'avez jamais fait"
+        },
+        "2": {
+          "title": "Libre comme l'air",
+          "description": "Bla bla blaBla bla blaBla bla blaBla bla blaBla bla bla"
+        }
       }
     }
   },
   "navigation": {
     "home": "Accueil",
     "teardrop": "Teardrop",
-    "trotty": "Trotty",
+    "bike": "Bike",
     "configurator": "Configurateur",
     "rental": "Location",
     "contact": "Contact",
@@ -272,7 +283,7 @@
         "mattressValue": "132 x 190 cm"
       }
     },
-    "trotty": {
+    "bike": {
       "description": "Pour les fans de vélo qui aiment le confort",
       "packs": {}
     }
@@ -289,22 +300,35 @@
     "blackAndWhite": "Blanc / Noir"
   },
   "faq": {
-    "otherQuestions": "Si vous avez d’autres questions, n’hésitez pas à nous contacter, nous serons heureux de vous répondre !",
+    "otherQuestions": "Si vous avez d'autres questions, n'hésitez pas à nous contacter, nous serons heureux de vous répondre !",
     "teardrop": {
       "question1": "Faut-il un permis spécial pour conduire une Teardrop ?",
-      "answer1": "Non, aucun permis supplémentaire n’est nécessaire pour tracter une Teardrop dont le PTAC se situe entre 500 et 750 kg. Cependant, veillez à ce que le PTAC combiné de la caravane et du véhicule tracteur ne dépasse pas 3 500 kg, sans quoi une formation spécifique (B96) sera requise.",
-      "question2": "La Teardrop peut-elle être tractée par n’importe quel véhicule ?",
+      "answer1": "Non, aucun permis supplémentaire n'est nécessaire pour tracter une Teardrop dont le PTAC se situe entre 500 et 750 kg. Cependant, veillez à ce que le PTAC combiné de la caravane et du véhicule tracteur ne dépasse pas 3 500 kg, sans quoi une formation spécifique (B96) sera requise.",
+      "question2": "La Teardrop peut-elle être tractée par n'importe quel véhicule ?",
       "answer2": "Grâce à son faible poids, la Teardrop peut être tractée par la plupart des voitures. Pour en être certain, référez-vous aux données constructeur de votre véhicule ou vérifiez votre carte grise : soustrayez la ligne F2 à la ligne F3, le résultat doit être supérieur ou égal à 500 kg.",
       "question3": " Proposez-vous un service après-vente ?",
-      "answer3": "Oui, nos caravanes sont garanties 2 ans. Nous offrons également un suivi personnalisé pour toute réparation, modification ou question technique après l’achat.",
+      "answer3": "Oui, nos caravanes sont garanties 2 ans. Nous offrons également un suivi personnalisé pour toute réparation, modification ou question technique après l'achat.",
       "question4": "Peut-on visiter votre atelier ?",
       "answer4": "Bien sûr ! Nous serons ravis de vous accueillir. Prenez rendez-vous via notre formulaire de contact pour organiser votre visite.",
       "question5": "Quel est le délai de fabrication ?",
       "answer5": "Le délai de fabrication est de deux mois en moyenne, mais il peut être allongé en fonction des commandes en cours.",
       "question6": "Les mini-caravanes sont-elles adaptées à toutes les saisons ?",
-      "answer6": "La Teardrop est conçue pour offrir un confort optimal en toutes saisons. Bien que sa cuisine extérieure soit plus agréable à utiliser par beau temps, son isolation garantit des nuits confortables."
+      "answer6": "La Teardrop est conçue pour offrir un confort optimal en toutes saisons. Bien que sa cuisine extérieure soit plus agréable à utiliser par beau temps, son isolation garantit des nuits confortables.",
+      "question7": "Est-il possible d'essayer une teardrop avant l'achat ?",
+      "answer7": "Oui, nous proposons des visites et des essais à notre atelier à Montpellier. Contactez-nous pour organiser un rendez-vous !"
     },
-    "trotty": {}
+    "bike": {
+      "question1": "Est-ce que la Bike s’accroche à tous les vélos ?",
+      "answer1": "Quasi, si votre vélo est chelou, vous pouvez nous contacter pour une fixation sur mesure.",
+      "question2": "Est-ce que je peux me la faire livrer ?",
+      "answer2": "On va faire en sorte, challah Où est-ce possible de dormir avec ? Règle du bivouac je crois, allez où vous voulez Proposez-vous un service après-vente ? Oui, garantie 2 ans Quel est le délai de fabrication ? Ca dep quoi.",
+      "question3": "Est-il possible d’utiliser cette caravane avec un vélo non électrique ?",
+      "answer3": "Oui, la caravane est conçue pour être tractée par un vélo classique. Cependant, sur des terrains vallonnés ou pour de longues distances, un vélo électrique peut offrir plus de confort.",
+      "question4": "Les mini-caravanes sont-elles adaptées à toutes les saisons ?",
+      "answer4": "Oui, la caravane est équipée d’une isolation en Armaflex pour offrir un confort thermique, que ce soit par temps chaud ou froid.",
+      "question5": "Est-il possible de l’essayer avant de l’acheter ?",
+      "answer5": "Nous proposons des démonstrations et des essais sur rendez-vous à notre atelier à Montpellier. Contactez-nous pour organiser une visite !"
+    }
   },
   "forms": {
     "contactForm": {
