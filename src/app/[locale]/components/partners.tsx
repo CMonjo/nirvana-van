@@ -45,7 +45,7 @@ function Partners() {
   return (
     <Section className='bg-white'>
       <Container className='flex flex-col items-center justify-center !py-0'>
-        <Typography className='text-center text-dark-lighter'>
+        <Typography className='text-center text-dark-lighter' variant='h3'>
           {tPage('title')}
         </Typography>
         <div className='flex flex-wrap items-center justify-center gap-4 md:gap-8'>

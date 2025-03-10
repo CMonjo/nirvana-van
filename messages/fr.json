@@ -25,8 +25,8 @@
           "description": "Coucou mon petit lapin ce texte est pour te présenter la teardrop graouuuuuh"
         },
         "2": {
-          "title": "Voyage libre",
-          "description": "Bla bla blaBla bla blaBla bla blaBla bla blaBla bla bla"
+          "title": "Qualité",
+          "description": "Designée pour partir plusieurs jours en toute autonomie / Solidité / Robustesse / Durabilité / Conçu pour durer"
         }
       },
       "story": {
@@ -82,12 +82,12 @@
       "productDescription": {
         "1": {
           "title": "Cuisine",
-          "subtitle": "Designée pour partir plusieurs jours en toute autonomie",
+          "subtitle": "Kitchenette tout équipée",
           "content": "Plan de travail de 135cm\nPoint d'eau\nRéchaud\nGlacière Dometic 21l\nRangements\nÉclairage LED"
         },
         "2": {
           "title": "Couchage",
-          "subtitle": "Blabla",
+          "subtitle": "Intérieur cosy",
           "content": "Lit de 132 x 190\nPrises 220v et USB\nÉclairage LED\nFenêtres latérales ouvrantes de 40 x 40 avec rideau occultant\nLanterneau 40 x 40 avec moustiquaire et store occultant\nRangements\nTablette rétractable sur option"
         },
         "3": {

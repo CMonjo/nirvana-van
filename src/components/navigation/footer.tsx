@@ -29,6 +29,9 @@ export default function Footer() {
           className='mb-8 md:hidden'
         >{`Nirvana Van © 2022 - ${new Date().getFullYear()}`}</Typography>
         <Navigation color='white' nav='footer' />
+        <Typography variant='caption' className='mt-8'>
+          Marseille - contact@nirvana-van.com - +33 6 22 22 22 22
+        </Typography>
       </div>
       <div className='relative flex w-full flex-col-reverse items-center justify-between px-6 py-4 md:flex-row'>
         <div className='absolute left-1/2 hidden -translate-x-1/2 transform md:flex'>

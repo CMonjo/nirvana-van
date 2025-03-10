@@ -24,11 +24,14 @@ export default function Models() {
   return (
     <Section className='bg-white'>
       <Container className='flex-col'>
-        <SectionTitle title={/*t('title')*/ 'Découvre nos modèles'} />
+        <SectionTitle
+          title={/*t('title')*/ "L'alliance entre confort et simplicité"}
+        />
         <Typography variant='h3' className='mb-4 text-center'>
-          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum
-          dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-          amet. Lorem amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor.
+          Découvrez une nouvelle façon de voyager où le confort rencontre la
+          simplicité. Nos mini-caravanes incarnent l'équilibre parfait entre
+          fonctionnalité et bien-être, vous offrant tout le nécessaire pour une
+          expérience nomade authentique.
         </Typography>
         <div className='flex w-full flex-col gap-8 lg:flex-row'>
           <Model

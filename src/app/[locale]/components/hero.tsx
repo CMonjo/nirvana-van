@@ -22,14 +22,14 @@ export default function Hero() {
         alt='hero'
       />
 
-      <div className='absolute top-20 flex w-full flex-col items-center justify-center md:top-[200px] '>
+      <div className='absolute top-0 flex w-full flex-col items-center justify-center md:top-[200px] '>
         <motion.h1
           className='text-center font-acorn text-5xl text-white md:text-7xl lg:text-8xl'
           initial={{ rotate: 0, scale: 1 }}
-          animate={{ rotate: -2, scale: 1.2 }}
+          animate={{ rotate: 2, scale: 1.2 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
-          Teardrop Maker
+          Créateur d'aventures
           {/* {t('hero.title')} */}
         </motion.h1>
       </div>
