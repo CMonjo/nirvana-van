@@ -17,12 +17,12 @@ const HeroContainer = ({
 
   return (
     <div
-      className={clsx('relative w-screen', className)}
+      className={clsx(
+        'relative min-h-[60vh] w-screen md:min-h-screen',
+        className
+      )}
       style={{
-        minHeight:
-          isDesktop && !headerSticky
-            ? '100vh'
-            : `calc(100vh - ${headerHeight})`,
+        minHeight: headerSticky ? `calc(100vh - ${headerHeight})` : undefined,
       }}
     >
       {children}

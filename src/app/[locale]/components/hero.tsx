@@ -14,7 +14,6 @@ export default function Hero() {
 
   return (
     <HeroContainer>
-      {/* <div className='absolute inset-0 z-10 bg-black bg-opacity-15' /> */}
       <Image
         src={`/hero.JPG`}
         fill
@@ -22,9 +21,9 @@ export default function Hero() {
         alt='hero'
       />
 
-      <div className='absolute top-0 flex w-full flex-col items-center justify-center md:top-[200px] '>
+      <div className='absolute top-32 flex w-full flex-col items-center justify-center md:top-[200px] '>
         <motion.h1
-          className='text-center font-acorn text-5xl text-white md:text-7xl lg:text-8xl'
+          className='text-center font-acorn text-3xl text-white md:text-7xl lg:text-8xl'
           initial={{ rotate: 0, scale: 1 }}
           animate={{ rotate: 2, scale: 1.2 }}
           transition={{ duration: 1, ease: 'easeOut' }}
@@ -38,8 +37,8 @@ export default function Hero() {
         {/* <h2 className='font-kobe11 text-4xl font-light text-white'>
           {t('hero.title')}
         </h2> */}
-        <Typography variant='h3' className='text-white'>
-          Frabrication artisanale de mini-caravane
+        <Typography variant='h3' className='text-center text-white'>
+          Fabrication artisanale de mini-caravane
         </Typography>
         <Image
           src={`/home/french_flag.png`}
