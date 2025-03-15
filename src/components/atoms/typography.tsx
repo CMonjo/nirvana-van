@@ -36,7 +36,7 @@ export default function Typography({
       case 'h2-acorn':
         return 'font-acorn text-2xl font-medium md:text-3xl';
       case 'h3':
-        return 'text-2xl font-light';
+        return 'text-xl md:text-2xl font-light';
       case 'body1':
         return ' text-xl font-light';
       case 'body2':

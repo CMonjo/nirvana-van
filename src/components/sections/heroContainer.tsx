@@ -18,7 +18,7 @@ const HeroContainer = ({
   return (
     <div
       className={clsx(
-        'relative min-h-[60vh] w-screen md:min-h-screen',
+        'relative min-h-[60vh] w-screen lg:min-h-screen',
         className
       )}
       style={{

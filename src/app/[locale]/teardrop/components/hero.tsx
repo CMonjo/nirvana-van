@@ -2,20 +2,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import useIsDesktop from '@/hooks/useIsDesktop';
-import clsx from 'clsx';
-import { headerHeight } from '@/utils/dimensions';
+import HeroContainer from '@/components/sections/heroContainer';
 
 export default function Hero() {
-  const isDesktop = useIsDesktop();
-
   return (
-    <div
-      className={clsx('relative w-full')}
-      style={{
-        minHeight: isDesktop ? '100vh' : `calc(100vh - ${headerHeight})`,
-      }}
-    >
+    <HeroContainer>
       <Image
         src={`/teardrop/hero.png`}
         fill
@@ -23,9 +14,9 @@ export default function Hero() {
         alt='hero'
       />
 
-      <div className='absolute top-20 flex w-full flex-col items-center justify-center md:top-[200px] '>
+      <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-32 lg:top-[200px]'>
         <motion.h1
-          className='text-center font-acorn text-5xl text-white md:text-7xl lg:text-8xl'
+          className='max-xs:text-[1.25rem] text-center font-acorn text-2xl text-white sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl'
           initial={{ rotate: 0, scale: 1 }}
           animate={{ rotate: 2, scale: 1.2 }}
           transition={{ duration: 1, ease: 'easeOut' }}
@@ -33,6 +24,6 @@ export default function Hero() {
           Teardrop
         </motion.h1>
       </div>
-    </div>
+    </HeroContainer>
   );
 }

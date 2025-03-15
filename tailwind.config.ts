@@ -16,6 +16,11 @@ const config: Config = {
       '8': '8px',
     },
     extend: {
+      screens: {
+        xs: '320px',
+        'max-xs': { max: '320px' },
+        'min-xs': { min: '320px' },
+      },
       fontFamily: {
         acorn: ['var(--font-acorn)'],
         kobe11: ['var(--font-kobe11)'],
