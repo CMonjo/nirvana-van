@@ -35,8 +35,8 @@ export default function Hero() {
         </Typography>
         <Image
           src={`/home/french_flag.png`}
-          width={30}
-          height={15}
+          width={40}
+          height={20}
           alt='logo'
         />
       </div>

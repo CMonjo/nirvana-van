@@ -26,9 +26,9 @@ export default function Home() {
           descriptionLeft={tPage('video.left')}
           descriptionRight={tPage('video.right')}
         />
+        <Partners />
         <Bento />
         <Story />
-        <Partners />
         <Socials />
       </main>
       <Footer />
