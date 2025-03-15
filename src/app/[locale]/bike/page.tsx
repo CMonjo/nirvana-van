@@ -7,6 +7,8 @@ import Hero from './components/hero';
 import Story from './components/story';
 import { useTranslations } from 'next-intl';
 import Bento from './components/bento';
+import History from './components/history';
+import Specification from '@/components/sections/specification';
 
 export default function Page() {
   const tPage = useTranslations('pages.bike');
@@ -17,7 +19,6 @@ export default function Page() {
       <main className='flex w-full flex-col items-center'>
         <Hero />
         <Story />
-        <Bento />
         <Video
           source='/home/video.mp4'
           thumbnail='/bento-1.jpeg'
@@ -25,8 +26,10 @@ export default function Page() {
           descriptionLeft={tPage('video.left')}
           descriptionRight={tPage('video.right')}
         />
+        <Bento />
+        <History />
         {/* <PreOrder /> */}
-        <Typography>"Specifications" (comme TD)</Typography>
+        <Specification productKey='bike' specs={5} />
         <Typography>Formulaire de contact pour en savoir plus</Typography>
         <FAQ productKey={'bike'} color='green' />
       </main>

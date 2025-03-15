@@ -1,5 +1,5 @@
 'use client';
-import React, { use } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Section from '@/components/atoms/section';
 import Container from '@/components/atoms/container';
@@ -7,6 +7,7 @@ import Typography from '@/components/atoms/typography';
 import SectionTitle from '@/components/sections/title';
 import { useTranslations } from 'next-intl';
 import { ProductType } from '@/products/types';
+import { products } from '@/products/products';
 
 export default function Specification({
   productKey,
@@ -16,6 +17,7 @@ export default function Specification({
   specs: number;
 }) {
   const t = useTranslations(`pages.${productKey}.productSpecification`);
+  const product = products.find((p) => p.key === productKey);
 
   return (
     <Section className={`bg-white`}>
@@ -24,7 +26,9 @@ export default function Specification({
         <div
           className={`flex w-full flex-col items-stretch gap-4 md:flex-row md:gap-8`}
         >
-          <div className='relative flex min-h-[350px] w-full flex-[3] items-center justify-center rounded-3xl bg-orange md:min-h-[400px]'>
+          <div
+            className={`relative flex min-h-[350px] w-full flex-[3] items-center justify-center rounded-3xl bg-${product?.color} md:min-h-[400px]`}
+          >
             <Image
               fill
               src={`/${productKey}/specifications.png`}

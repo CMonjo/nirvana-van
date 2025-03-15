@@ -59,10 +59,7 @@ export default function Page() {
           </div>
         ))}
         <Bento />
-        <Specification
-          productKey='teardrop'
-          specs={productSpecificationsTotal}
-        />
+        <Specification productKey='teardrop' specs={5} />
         <FAQ productKey={'teardrop'} color='orange' />
       </main>
       <Footer />
