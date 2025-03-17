@@ -24,7 +24,7 @@ const BentoItem = ({ className, ...rest }: BentoItemProps) => {
         },
       }}
       whileHover={{
-        rotate: '1.5deg',
+        rotate: '0.5deg',
       }}
       transition={{
         type: 'spring',
