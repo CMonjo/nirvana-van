@@ -178,7 +178,7 @@ export default function ConfigurationForm({
           <div className='flex w-full' />
         )}
         <div className='flex justify-end self-end'>
-          <Button type='submit' color='orange'>
+          <Button type='submit' color={color}>
             {tContactForm('send')}
           </Button>
         </div>

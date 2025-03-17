@@ -38,7 +38,7 @@ export default function Models() {
             productKey='teardrop'
             onClick={handleClick}
             button={
-              <Button color={'orange'} size='small'>
+              <Button color={'orange'} size='medium'>
                 {tAction('discover')}
               </Button>
             }
@@ -48,7 +48,7 @@ export default function Models() {
             productKey='bike'
             onClick={handleClick}
             button={
-              <Button color={'green'} size='small'>
+              <Button color={'green'} size='medium'>
                 {tAction('discover')}
               </Button>
             }

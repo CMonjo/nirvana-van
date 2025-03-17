@@ -26,9 +26,10 @@ export default function Page() {
           descriptionLeft={tPage('video.left')}
           descriptionRight={tPage('video.right')}
         />
-        <Bento />
+        Block "produit spec"
         <History />
         {/* <PreOrder /> */}
+        <Bento />
         <Specification productKey='bike' specs={5} />
         <Typography>Formulaire de contact pour en savoir plus</Typography>
         <FAQ productKey={'bike'} color='green' />

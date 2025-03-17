@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <HeroContainer>
       <Image
-        src={`/bike/hero.jpg`}
+        src={`/bike/hero.jpeg`}
         fill
         className='absolute inset-0 object-cover'
         alt='hero'
@@ -16,12 +16,12 @@ export default function Hero() {
 
       <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-32 lg:top-[200px]'>
         <motion.h1
-          className='max-xs:text-[1.25rem] text-center font-acorn text-2xl text-white sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl'
+          className='text-center font-acorn text-2xl text-white sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl max-xs:text-[1.25rem]'
           initial={{ rotate: 0, scale: 1 }}
           animate={{ rotate: 2, scale: 1.2 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
-          Bike
+          Caravane Vélo
         </motion.h1>
       </div>
     </HeroContainer>

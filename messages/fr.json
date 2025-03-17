@@ -21,18 +21,18 @@
       "bento": {
         "title": "La philosophie de Nirvana Van",
         "1": {
-          "title": "Made in France",
-          "description": "Coucou mon petit lapin ce texte est pour te présenter la teardrop graouuuuuh"
+          "title": "Qualité",
+          "description": "Nos teardrops sont conçus pour offrir une robustesse et un confort exceptionnels. Chaque produit est fabriqué à partir de matériaux de haute qualité, assurant une longévité maximale, même dans des conditions d'utilisation extrêmes."
         },
         "2": {
-          "title": "Qualité",
-          "description": "Designée pour partir plusieurs jours en toute autonomie / Solidité / Robustesse / Durabilité / Conçu pour durer"
+          "title": "Made in France",
+          "description": "Fiers de notre fabrication artisanale, nous mettons un point d'honneur à concevoir et fabriquer nos teardrops en France. En choisissant nos produits Made in France, vous soutenez la production locale tout en profitant de produits durables et haut de gamme 🌱"
         }
       },
       "story": {
         "title": "Bienvenue dans mon atelier !",
-        "text1": "C'est dans mon atelier à Montpellier que je conçois et fabrique, depuis deux ans, des mini-caravanes uniques.",
-        "text2": "Pensées pour offrir un cocon à la fois confortable, pratique et esthétique, elles incarnent le compromis idéal entre simplicité et confort d'utilisation, tout en étant faciles à emmener derrière une voiture ou un vélo.",
+        "text1": "C'est dans mon atelier dans le sud de la France que je conçois et fabrique, depuis plus deux ans, des mini-caravanes uniques.",
+        "text2": "Mon approche artisanale me tient à cœur: de la première esquisse aux derniers ajustements, chaque détail est réalisé à la main et continuellement affiné pour offrir une mini-caravane 100 % fait maison.",
         "text3": "Si vous souhaitez discuter d'un projet ou découvrir de près le processus de fabrication, je serai ravi de vous accueillir !"
       },
       "socials": {
@@ -72,7 +72,7 @@
       },
       "story": {
         "title": "Tout le nécessaire, à tracter derrière sa voiture",
-        "description": "Découvrez tout le charme d'un voyage en Teardrop : tout le nécessaire pour un séjour confortable, avec un design qui ne manque pas d'attirer les sourires. Sans frais de mécanique et avec un entretien minimal, profitez pleinement de chaque destination en sachant que votre cocon vous suit partout, attaché à votre voiture"
+        "description": "Optez pour une Teardrop : la caravane compacte et facile à tracter, offrant un confort optimal pour vos séjours. Avec son design élégant, son entretien minimal et l'absence de frais mécaniques, vous profitez de chaque aventure en toute simplicité. Votre cocon vous accompagne partout, prêt à partir à tout moment."
       },
       "video": {
         "title": "La Teardrop en action!",
@@ -83,12 +83,12 @@
         "1": {
           "title": "Cuisine",
           "subtitle": "Kitchenette tout équipée",
-          "content": "Plan de travail de 135cm\nPoint d'eau\nRéchaud\nGlacière Dometic 21l\nRangements\nÉclairage LED"
+          "content": "Grand plan de travail\nPoint d'eau\nDouchette\nRéchaud\nGlacière Dometic 21l\nRangements\nÉclairage LED"
         },
         "2": {
           "title": "Couchage",
           "subtitle": "Intérieur cosy",
-          "content": "Lit de 132 x 190\nPrises 220v et USB\nÉclairage LED\nFenêtres latérales ouvrantes de 40 x 40 avec rideau occultant\nLanterneau 40 x 40 avec moustiquaire et store occultant\nRangements\nTablette rétractable sur option"
+          "content": "Lit de 132 x 190cm\nPrises 220v et USB\nÉclairage LED\nLanterneau et fenêtres\nRideaux occultants\nRangements\nTablette rétractable"
         },
         "3": {
           "title": "Extérieur",
@@ -133,7 +133,7 @@
     },
     "bike": {
       "hero": {
-        "title": "Bike",
+        "title": "Caravane Vélo",
         "price": "À partir de"
       },
       "story": {
@@ -141,8 +141,8 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       },
       "video": {
-        "title": "La Bike en action!",
-        "left": "La Bike",
+        "title": "La Caravane Vélo en action!",
+        "left": "La Caravane Vélo",
         "right": "En action!"
       },
       "productSpecification": {
@@ -184,7 +184,7 @@
   "navigation": {
     "home": "Accueil",
     "teardrop": "Teardrop",
-    "bike": "Bike",
+    "bike": "Caravane Vélo",
     "configurator": "Configurateur",
     "rental": "Location",
     "contact": "Contact",
@@ -201,7 +201,7 @@
   },
   "products": {
     "teardrop": {
-      "description": "Pour les voyageurs qui aiment l'aventure",
+      "description": "Tout ce dont vous avez besoin, même le confort !",
       "options": {
         "main_color": {
           "name": "Couleur"
@@ -238,7 +238,8 @@
           "options": {
             "water_point": "Point d'eau",
             "electric_cooler": "Glacière électrique",
-            "stove": "Réchaud"
+            "stove": "Réchaud",
+            "shower": "Douchette"
           }
         },
         "exterior": {
@@ -284,7 +285,7 @@
       }
     },
     "bike": {
-      "description": "Pour les fans de vélo qui aiment le confort",
+      "description": "Tout en légèreté, sans oublier la praticité !",
       "packs": {}
     }
   },
@@ -318,7 +319,7 @@
       "answer7": "Oui, nous proposons des visites et des essais à notre atelier à Montpellier. Contactez-nous pour organiser un rendez-vous !"
     },
     "bike": {
-      "question1": "Est-ce que la Bike s’accroche à tous les vélos ?",
+      "question1": "Est-ce que la Caravane vélo s’accroche à tous les vélos ?",
       "answer1": "Quasi, si votre vélo est chelou, vous pouvez nous contacter pour une fixation sur mesure.",
       "question2": "Est-ce que je peux me la faire livrer ?",
       "answer2": "On va faire en sorte, challah Où est-ce possible de dormir avec ? Règle du bivouac je crois, allez où vous voulez Proposez-vous un service après-vente ? Oui, garantie 2 ans Quel est le délai de fabrication ? Ca dep quoi.",

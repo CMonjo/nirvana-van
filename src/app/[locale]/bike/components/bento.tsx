@@ -25,27 +25,12 @@ export default function Bento() {
           <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-6 lg:row-span-6'>
             <BentoImage url='/bento-1.jpeg' />
           </BentoItem>
-          <BentoItem className='col-span-1 row-span-1 bg-orange  lg:col-span-6 lg:row-span-6'>
-            <BentoText title={t('1.title')} description={t('1.description')} />
+          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-6 lg:row-span-6'>
+            <BentoImage url='/bento-1.jpeg' />
           </BentoItem>
           <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-12 lg:row-span-12'>
             <BentoImage url='/bento-5.jpeg' />
           </BentoItem>
-          {/* <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-4 lg:row-span-4'>
-            <BentoImage url='/bento-3.jpg' />
-          </BentoItem>
-          <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-4 lg:row-span-4'>
-            <BentoImage url='/bento-4.jpeg' />
-          </BentoItem>
-          <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-4 lg:row-span-4'>
-            <BentoImage url='/bento-6.png' />
-          </BentoItem>
-          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-6 lg:row-span-1'>
-            <BentoImage url='/bento-2.jpeg' />
-          </BentoItem>
-          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
-            <BentoText title={t('2.title')} description={t('2.description')} />
-          </BentoItem> */}
         </motion.div>
       </Container>
     </Section>

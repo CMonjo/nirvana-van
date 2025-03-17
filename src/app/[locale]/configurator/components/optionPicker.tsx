@@ -49,8 +49,12 @@ export default function OptionPicker({
             <div className='relative flex h-[150px] w-full rounded-2xl'>
               <Image
                 fill
-                src={option.picture ? option.picture : '/default_option.png'}
-                alt={product.name}
+                src={
+                  option.picture
+                    ? `/${product.key}/configurator/${option.picture}`
+                    : '/default_option.png'
+                }
+                alt={tProduct(`options.${option.key}`)}
                 className='rounded-2xl rounded-b-none object-cover'
               />
             </div>

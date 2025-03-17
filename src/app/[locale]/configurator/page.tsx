@@ -102,7 +102,7 @@ export default function Configurator() {
         <>
           <Section className='bg-white'>
             <Container className='flex-col'>
-              <SectionTitle title={`${tPage('configure')} ${product.key}`} />
+              <SectionTitle title={`${tPage('configure')} ${product.name}`} />
               <Typography variant='h3'>{tPage('subtitle')}</Typography>
               <div className='relative block h-auto w-full'>
                 <div className='mx-auto flex w-full justify-between gap-x-6'>

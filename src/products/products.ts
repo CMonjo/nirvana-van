@@ -46,6 +46,7 @@ export const products: IProduct[] = [
             price: 0,
             included: true,
             disabled: true,
+            picture: 'stabilizer_legs.JPG',
           },
           { key: 'rounded_fenders', price: 140 },
           { key: 'spare_wheel', price: 190 },
@@ -67,9 +68,14 @@ export const products: IProduct[] = [
         name: 'kitchen',
         type: 'checkbox',
         options: [
-          { key: 'water_point', price: 350 },
-          { key: 'electric_cooler', price: 400 },
-          { key: 'stove', price: 50 },
+          { key: 'water_point', price: 350, picture: 'water_point.JPG' },
+          {
+            key: 'electric_cooler',
+            price: 400,
+            picture: 'electric_cooler.JPG',
+          },
+          { key: 'stove', price: 50, picture: 'stove.JPG' },
+          { key: 'shower', price: 200, picture: 'shower.JPG' },
         ],
       },
       {
@@ -85,7 +91,7 @@ export const products: IProduct[] = [
         name: 'equipments',
         type: 'checkbox',
         options: [
-          { key: 'roof_bars', price: 490 },
+          { key: 'roof_bars', price: 490, picture: 'roof_bars.JPG' },
           { key: 'arrow_chest', price: 100 },
           { key: 'bike_rack', price: 220 },
           { key: 'roof_tent', price: 2000, comingSoon: true },
@@ -124,7 +130,7 @@ export const products: IProduct[] = [
   },
   {
     key: 'bike',
-    name: 'Bike',
+    name: 'Caravane Vélo',
     image: '/karavel.jpeg',
     color: 'green',
     basePrice: 5000,

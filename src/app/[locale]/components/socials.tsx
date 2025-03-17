@@ -8,6 +8,7 @@ import SocialLinks from '../../../components/utils/socialLinks';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Transition from '@/components/atoms/transition';
+import SectionTitle from '@/components/sections/title';
 
 const images = [
   '/home/social/1.JPG',
@@ -38,11 +39,7 @@ export default function Socials() {
             </Typography>
           </div>
           <div className='flex w-full flex-col items-center justify-between md:flex-row'>
-            <Transition>
-              <Typography variant='h2' className='text-center'>
-                {t('title')}
-              </Typography>
-            </Transition>
+            <SectionTitle title={t('title')} />
             <SocialLinks />
           </div>
         </Container>

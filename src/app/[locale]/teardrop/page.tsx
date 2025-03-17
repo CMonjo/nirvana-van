@@ -9,7 +9,6 @@ import FAQ from '@/components/sections/faq';
 import Specification from '../../../components/sections/specification';
 import { useTranslations } from 'next-intl';
 import SplitImageText from '@/components/SplitImageText';
-
 export default function Page() {
   const tPage = useTranslations('pages.teardrop');
 
@@ -27,6 +26,7 @@ export default function Page() {
       <main className='flex w-full flex-col items-center'>
         <Hero />
         <Story />
+        Block avantages
         <Video
           source='/teardrop/video.mp4'
           thumbnail='/bento-2.jpeg'
@@ -46,7 +46,6 @@ export default function Page() {
             />
           </div>
         ))} */}
-
         {productDescriptions.map((el: string, index: number) => (
           <div key={index}>
             <ImageText
@@ -60,8 +59,11 @@ export default function Page() {
         ))}
         <Bento />
         <Specification productKey='teardrop' specs={5} />
+        {/* TODO */}
+        Block configurator
         <FAQ productKey={'teardrop'} color='orange' />
       </main>
+
       <Footer />
     </div>
   );

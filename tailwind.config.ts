@@ -17,9 +17,9 @@ const config: Config = {
     },
     extend: {
       screens: {
-        xs: '320px',
-        'max-xs': { max: '320px' },
-        'min-xs': { min: '320px' },
+        xs: '340px',
+        'max-xs': { max: '340px' },
+        'min-xs': { min: '340px' },
       },
       fontFamily: {
         acorn: ['var(--font-acorn)'],

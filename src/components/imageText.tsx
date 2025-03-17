@@ -53,13 +53,22 @@ export default function ImageText({
             <Typography variant='h3' className='mb-4 font-medium'>
               {title}
             </Typography>
-            <ul className='list-disc pl-4'>
+            <div className='flex flex-col gap-2'>
+              {bulletPoints.map((point, index) => (
+                <div key={index}>
+                  <hr className='my-2' />
+                  <Typography variant='body1'>{point}</Typography>
+                </div>
+              ))}
+              <hr className='my-2' />
+            </div>
+            {/* <ul className='list-disc pl-4'>
               {bulletPoints.map((point, index) => (
                 <li key={index}>
                   <Typography variant='body1'>{point}</Typography>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
         </div>
       </Container>

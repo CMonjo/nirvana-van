@@ -37,13 +37,13 @@ export default function Bento() {
           <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
             <BentoImage url='/bento-4.jpeg' />
           </BentoItem>
-          <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-3 lg:row-span-2'>
+          <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
             <BentoImage url='/bento-6.png' />
           </BentoItem>
           <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-6 lg:row-span-1'>
             <BentoImage url='/bento-2.jpeg' />
           </BentoItem>
-          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
+          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-6 lg:row-span-1'>
             <BentoText title={t('2.title')} description={t('2.description')} />
           </BentoItem>
         </motion.div>
