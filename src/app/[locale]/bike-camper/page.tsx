@@ -31,6 +31,7 @@ export default function Page() {
         {/* <PreOrder /> */}
         <Bento />
         <Specification productKey='bike' specs={5} />
+        {/* Ne pas avoir le bloc spec mais mettre uniquement les keywords au niveau de  "Une nouvelle façon de voyager à vélo" */}
         <Typography>Formulaire de contact pour en savoir plus</Typography>
         <FAQ productKey={'bike'} color='green' />
       </main>

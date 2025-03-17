@@ -27,13 +27,15 @@ export default function History() {
           <div className='flex w-full flex-col items-center md:w-1/3 md:items-start'>
             <SectionTitle
               //   title={tPage('title')}
-              title={"De l'envie de changer la façon de voyager à vélo"}
+              title={
+                "De l'envie de changer la façon de voyager à vélo (on veut développer le cyclotourisme)"
+              }
               className='mb-4 md:text-left'
             />
             <Typography className='text-center md:mb-8 md:text-left'>
               {/* {tPage('description')} */}
               {
-                "Parler de commence on a voulu faire une KV à aujourd'hui un produit fini"
+                'On est passioné, on a voulu amener notre savoir faire des teardrop sur le voyage vélo, on a créer plusieurs prototypes pour réaliser une version commercialisble pour le printemps 2025.'
               }
             </Typography>
           </div>

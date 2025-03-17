@@ -10,7 +10,7 @@ const headerLinks = [
   { name: 'teardrop', href: '/teardrop', icon: null },
   {
     name: 'bike',
-    href: '/bike',
+    href: '/bike-camper',
     icon: null,
   },
   { name: 'configurator', href: '/configurator', icon: null },
@@ -21,7 +21,7 @@ const footerLinks = [
   { name: 'teardrop', href: '/teardrop', icon: null },
   {
     name: 'bike',
-    href: '/bike',
+    href: '/bike-camper',
     icon: null,
   },
   { name: 'configurator', href: '/configurator', icon: null },
