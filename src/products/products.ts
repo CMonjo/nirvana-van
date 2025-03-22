@@ -49,7 +49,7 @@ export const products: IProduct[] = [
             picture: 'stabilizer_legs.JPG',
           },
           { key: 'rounded_fenders', price: 140 },
-          { key: 'spare_wheel', price: 190 },
+          { key: 'spare_wheel', price: 190, picture: 'spare_wheel.JPG' },
         ],
       },
       {
@@ -59,9 +59,15 @@ export const products: IProduct[] = [
           {
             key: 'electric_installation',
             price: 1500,
+            picture: 'electric_installation.JPG',
           },
-          { key: 'solar_panel', price: 270, soldOut: true },
-          { key: 'big_battery', price: 200 },
+          {
+            key: 'solar_panel',
+            price: 270,
+            soldOut: false,
+            picture: 'solar_panel.JPG',
+          },
+          { key: 'big_battery', price: 200, picture: 'big_battery.JPG' },
         ],
       },
       {
@@ -92,8 +98,8 @@ export const products: IProduct[] = [
         type: 'checkbox',
         options: [
           { key: 'roof_bars', price: 490, picture: 'roof_bars.JPG' },
-          { key: 'arrow_chest', price: 100 },
-          { key: 'bike_rack', price: 220 },
+          { key: 'arrow_chest', price: 100, picture: 'arrow_chest.jpeg' },
+          { key: 'bike_rack', price: 220, picture: 'bike_rack.JPG' },
           { key: 'roof_tent', price: 2000, comingSoon: true },
         ],
       },
@@ -105,6 +111,7 @@ export const products: IProduct[] = [
             key: 'front_and_rear_closets',
             price: 0,
             included: true,
+            picture: 'front_and_rear_closets.JPG',
           },
           { key: 'no_closets', price: -900 },
         ],
