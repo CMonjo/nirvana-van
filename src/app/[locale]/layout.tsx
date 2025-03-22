@@ -4,11 +4,11 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import '../../globals.scss';
-
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 export default async function RootLayout({
   children,
@@ -39,6 +39,7 @@ export default async function RootLayout({
           </AppRouterCacheProvider>
         </NextIntlClientProvider>
       </body>
+      <GoogleTagManager gtmId='GTM-MNNRXJVX' />
     </html>
   );
 }
