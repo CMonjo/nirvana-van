@@ -3,8 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import Typography from '@/components/atoms/typography';
-import { motion } from 'framer-motion';
-import HeroContainer from '@/components/sections/heroContainer';
+import HeroContainer, { HeroTitle } from '@/components/sections/heroContainer';
 
 export default function Hero() {
   const t = useTranslations('pages.home');
@@ -19,14 +18,7 @@ export default function Hero() {
       />
 
       <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-32 lg:top-[150px]'>
-        <motion.h1
-          className='text-center font-acorn text-3xl text-white sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl max-xs:text-[1.25rem]'
-          initial={{ rotate: 0, scale: 0.8 }}
-          animate={{ rotate: 0, scale: 1 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-        >
-          Créateur d'aventures
-        </motion.h1>
+        <HeroTitle>Créateur d'aventures</HeroTitle>
         <Typography variant='h2' className='mt-4 text-center text-white'>
           Des teardrops confortables, esthétiques et bien pensés
         </Typography>
