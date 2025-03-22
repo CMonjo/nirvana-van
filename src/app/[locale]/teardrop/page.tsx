@@ -35,22 +35,10 @@ export default function Page() {
           descriptionRight={tPage('video.right')}
           showSocials
         />
-        {/* {productDescriptions.map((el: string, index: number) => (
-          <div key={index}>
-            <SplitImageText
-              section={tPage(`productDescription.${index + 1}.title`)}
-              title={tPage(`productDescription.${index + 1}.subtitle`)}
-              description={tPage(`productDescription.${index + 1}.content`)}
-              imageSource={el}
-              imageRight={index % 2 === 0}
-            />
-          </div>
-        ))} */}
         {productDescriptions.map((el: string, index: number) => (
           <div key={index}>
             <ImageText
-              section={tPage(`productDescription.${index + 1}.title`)}
-              title={tPage(`productDescription.${index + 1}.subtitle`)}
+              title={tPage(`productDescription.${index + 1}.title`)}
               description={tPage(`productDescription.${index + 1}.content`)}
               imageSource={el}
               imageRight={index % 2 === 0}

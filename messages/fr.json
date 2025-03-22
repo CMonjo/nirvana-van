@@ -81,18 +81,15 @@
       },
       "productDescription": {
         "1": {
-          "title": "Cuisine",
-          "subtitle": "Kitchenette tout équipée",
+          "title": "Kitchenette tout équipée",
           "content": "Grand plan de travail\nPoint d'eau\nDouchette\nRéchaud\nGlacière Dometic 21l\nRangements\nÉclairage LED"
         },
         "2": {
-          "title": "Couchage",
-          "subtitle": "Intérieur cosy",
+          "title": "Intérieur cosy",
           "content": "Lit de 132 x 190cm\nPrises 220v et USB\nÉclairage LED\nLanterneau et fenêtres\nRideaux occultants\nRangements\nTablette rétractable"
         },
         "3": {
-          "title": "Extérieur",
-          "subtitle": "Blabla",
+          "title": "Blabla",
           "content": "Châssis acier galvanisé\nFaisceau 7 broches\nPoids à vide 400kg\nPTAC 500, 600 ou 750kg\nDimensions :3m55 x 1m83\nHauteur : 1m74\nEssieu freiné sur option\nPrise 220v extérieur"
         }
       },
@@ -339,7 +336,6 @@
       "phone": "Téléphone",
       "message": "Écrivez votre message",
       "addMessage": "Une message à nous faire passer ?",
-      "getInTouch": "Je souhaite être recontacté",
       "send": "Envoyer",
       "option": "Sélectionnez une options",
       "startDate": "Date de départ",

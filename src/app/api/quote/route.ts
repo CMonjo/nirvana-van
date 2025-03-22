@@ -37,7 +37,6 @@ function generateCustomerHTML(
   firstname: string,
   lastname: string,
   email: string,
-  getInTouch: boolean,
   phone?: string,
   message?: string,
   locale?: string
@@ -49,7 +48,6 @@ function generateCustomerHTML(
         <p><strong>Téléphone :</strong> ${phone ? phone : 'Non renseigné'}</p>
         <p><strong>Email :</strong> ${email}</p>
         <p><strong>Message :</strong> ${message ? message : 'Aucun message renseigné'}</p>
-        <p><strong>Souhaite être recontacté :</strong> ${getInTouch ? 'Oui' : 'Non'}</p
         <p><strong>Langue de l'utilisateur:</strong> ${locale}</p>
       `;
 }
@@ -90,7 +88,6 @@ export async function POST(request: NextRequest) {
       phone,
       email,
       message,
-      getInTouch,
       config,
       total,
       product,
@@ -136,7 +133,6 @@ export async function POST(request: NextRequest) {
           firstname,
           lastname,
           email,
-          getInTouch,
           phone,
           message,
           locale

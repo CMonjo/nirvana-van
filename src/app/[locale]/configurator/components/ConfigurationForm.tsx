@@ -48,7 +48,6 @@ export default function ConfigurationForm({
     text: string;
     type: 'success' | 'error';
   } | null>(null);
-  const [getInTouch, setGetInTouch] = useState(false);
 
   //Hooks
   const currentLocale = useLocale();
@@ -72,7 +71,6 @@ export default function ConfigurationForm({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          getInTouch,
           config,
           product: product?.name,
           total: getPrice(productConfiguration?.totalPrice || 0),
@@ -158,14 +156,6 @@ export default function ConfigurationForm({
         label={tContactForm('addMessage')}
         rows={2}
       />
-      <div className='flex flex-col gap-4 md:flex-row'>
-        <Checkbox
-          color={color}
-          label={tContactForm('getInTouch')}
-          checked={getInTouch}
-          onChange={() => setGetInTouch(!getInTouch)}
-        />
-      </div>
       <div className='flex w-full items-center justify-end gap-8'>
         {status ? (
           <Typography
