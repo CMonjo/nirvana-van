@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Container from './atoms/container';
 import Typography from './atoms/typography';
 import HeroContainer from './sections/heroContainer';
-
+import Button from './atoms/button';
 export default function SplitImageText({
   section,
   title,
@@ -18,7 +18,7 @@ export default function SplitImageText({
   imageRight?: boolean;
   imageSource: string;
 }>) {
-  const bulletPoints = description.split('\n');
+  //   const bulletPoints = description.split('\n');
 
   return (
     <HeroContainer
@@ -31,7 +31,10 @@ export default function SplitImageText({
         <Typography variant='h3' className='mb-4 font-medium'>
           {title}
         </Typography>
-        <ul className='list-disc pl-4'>
+        <Button size='large' color='orange'>
+          Configurer
+        </Button>
+        {/* <ul className='list-disc pl-4'>
           {bulletPoints.map((point, index) => (
             <li key={index}>
               <Typography variant='body1' className='text-left'>
@@ -39,7 +42,7 @@ export default function SplitImageText({
               </Typography>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </Container>
       <Container className='relative hidden flex-[2]  !px-0 md:flex'>
         <div className='relative flex h-full w-full flex-1 rounded-2xl !px-0'>
@@ -61,11 +64,11 @@ export default function SplitImageText({
         >
           {title}
         </Typography>
-        {bulletPoints.map((point, index) => (
+        {/* {bulletPoints.map((point, index) => (
           <Typography variant='body1' key={index} className='text-center'>
             {point}
           </Typography>
-        ))}
+        ))} */}
       </Container>
       <div className='relative h-[450px] w-full md:hidden'>
         <Image fill src={imageSource} alt={title} className='object-cover' />

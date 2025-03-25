@@ -79,6 +79,29 @@
         "left": "La Teardrop",
         "right": "En action!"
       },
+      "productAdvantages": {
+        "title": "Pourquoi choisir une teardrop pour voyager ?",
+        "1": {
+          "title": "Personnalisation",
+          "description": "Créez une caravane unique qui vous ressemble, adaptée à vos besoins et à votre style."
+        },
+        "2": {
+          "title": "Design unique",
+          "description": "Un format discret qui attire les regards et facilite le stationnement."
+        },
+        "3": {
+          "title": "Frais réduits",
+          "description": "Aucun surcoût au péage, pas d'entretien mécanique."
+        },
+        "4": {
+          "title": "Rapidité d'utilisation",
+          "description": "Attachez-la à votre voiture et partez en un instant, de 2 à 4 personnes, sans avoir à monter une tente ou déplier un lit comme dans un van."
+        },
+        "5": {
+          "title": "Confort et autonomie",
+          "description": "Offrez-vous un voyage confortable et original, tout en bénéficiant d'une autonomie accrue."
+        }
+      },
       "productDescription": {
         "1": {
           "title": "Kitchenette tout équipée",

@@ -19,7 +19,9 @@ const Buttons = () => {
           query: { product: 'teardrop' },
         }}
       >
-        <Button color='orange'>{tAction('configureMy')} teardrop</Button>
+        <Button size='large' color='orange'>
+          {tAction('configureMy')} teardrop
+        </Button>
       </Link>
       <Link
         href={{
@@ -27,7 +29,7 @@ const Buttons = () => {
           query: { product: 'teardrop' },
         }}
       >
-        <Button variant='outlined' color='orange'>
+        <Button variant='outlined' size='large' color='orange'>
           {tAction('iWantRent')}
         </Button>
       </Link>

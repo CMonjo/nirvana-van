@@ -17,7 +17,7 @@ export default function Button({
   icon?: React.ReactNode;
   color?: 'white' | 'orange' | 'green';
   variant?: 'filled' | 'outlined';
-  size?: 'small' | 'medium';
+  size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
 }) {
@@ -61,6 +61,7 @@ export default function Button({
   const sizeClass = clsx({
     'text-xs px-3 py-1': size === 'small',
     'text-sm px-5 py-2': size === 'medium',
+    'text-base px-6 py-3': size === 'large',
   });
 
   const disabledClass = clsx({

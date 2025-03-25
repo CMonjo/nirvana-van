@@ -26,10 +26,7 @@ export default function History() {
           </div>
           <div className='flex w-full flex-col items-center md:w-1/3 md:items-start'>
             <SectionTitle
-              //   title={tPage('title')}
-              title={
-                "De l'envie de changer la façon de voyager à vélo (on veut développer le cyclotourisme)"
-              }
+              title={'Une innovation pour les aventuriers à vélo'}
               className='mb-4 md:text-left'
             />
             <Typography className='text-center md:mb-8 md:text-left'>
