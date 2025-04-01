@@ -63,15 +63,17 @@ const NavigationItem = ({
       onMouseEnter={() => onHover('enter')}
       onMouseLeave={() => onHover('leave')}
     >
-      <h3 className={`font-kobe11 text-xl font-normal text-${color}`}>
-        {name}
-      </h3>
-      <motion.div
-        className={`absolute left-1/2 mt-1 h-[6px] w-[6px] -translate-x-1/2 transform rounded-full bg-${color}`}
-        initial={{ opacity: 0, y: -5 }}
-        animate={showDot ? { opacity: 1, y: 0 } : { opacity: 0, y: -5 }}
-        transition={{ duration: 0.3 }}
-      />
+      <div>
+        <h3 className={`font-kobe11 text-xl font-normal text-${color}`}>
+          {name}
+        </h3>
+        <motion.div
+          className={`absolute left-1/2 mt-1 h-[6px] w-[6px] -translate-x-1/2 transform rounded-full bg-${color}`}
+          initial={{ opacity: 0, y: -5 }}
+          animate={showDot ? { opacity: 1, y: 0 } : { opacity: 0, y: -5 }}
+          transition={{ duration: 0.3 }}
+        />
+      </div>
     </Link>
   );
 };

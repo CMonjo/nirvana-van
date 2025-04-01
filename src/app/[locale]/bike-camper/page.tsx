@@ -64,7 +64,6 @@ export default function Page() {
           descriptionRight={tPage('video.right')}
         />
         <History />
-        {/* <PreOrder /> */}
         <Bento />
         <CTAConfig productKey='bike' />
         <FAQ productKey={'bike'} color={product?.color as 'orange' | 'green'} />
