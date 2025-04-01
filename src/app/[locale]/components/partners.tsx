@@ -51,7 +51,7 @@ function Partners() {
         <div className='flex flex-wrap items-center justify-center gap-4 md:gap-8'>
           {partners.map((partner) => (
             <LinkWrapper key={partner.name} href={partner.link} target='_blank'>
-              <div className='relative opacity-50 grayscale filter transition-all duration-300 hover:opacity-100 hover:grayscale-0'>
+              <div className='relative transition-all duration-300 hover:opacity-100'>
                 <Image
                   src={partner.logo}
                   alt={partner.name}
