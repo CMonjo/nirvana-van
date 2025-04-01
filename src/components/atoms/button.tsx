@@ -10,12 +10,14 @@ export default function Button({
   variant = 'filled',
   size = 'medium',
   disabled = false,
+  textColor,
 }: {
   onClick?: () => void;
   children: React.ReactNode;
   className?: string;
   icon?: React.ReactNode;
   color?: 'white' | 'orange' | 'green';
+  textColor?: 'white' | 'orange' | 'green';
   variant?: 'filled' | 'outlined';
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
@@ -38,12 +40,18 @@ export default function Button({
 
   const textClass = clsx({
     'text-orange':
-      (color === 'white' && variant === 'filled') ||
-      (color === 'orange' && variant === 'outlined'),
+      textColor === 'orange' ||
+      (!textColor &&
+        ((color === 'white' && variant === 'filled') ||
+          (color === 'orange' && variant === 'outlined'))),
     'text-white':
-      ((color === 'green' || color === 'orange') && variant === 'filled') ||
-      (color === 'white' && variant === 'outlined'),
-    'text-green': color === 'green' && variant === 'outlined',
+      textColor === 'white' ||
+      (!textColor &&
+        (((color === 'green' || color === 'orange') && variant === 'filled') ||
+          (color === 'white' && variant === 'outlined'))),
+    'text-green':
+      textColor === 'green' ||
+      (!textColor && color === 'green' && variant === 'outlined'),
   });
 
   const hoverBgClass = clsx({

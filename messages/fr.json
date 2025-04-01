@@ -165,6 +165,31 @@
         "left": "La Caravane Vélo",
         "right": "En action!"
       },
+      "history": {
+        "title": "Une innovation pour les aventuriers à vélo",
+        "description": "Après avoir révolutionné le voyage en voiture avec nos Teardrops, nous avons lancé la caravane vélo au printemps 2025 pour offrir la même liberté aux cyclotouristes. Après plusieurs prototypes et tests sur le terrain, nous avons conçu une mini-caravane légère, robuste et ergonomique, adaptée aux longues distances.",
+        "missionTitle": "Notre mission ?",
+        "mission": "Rendre le cyclotourisme plus accessible et confortable que jamais, sans compromis sur la simplicité et le plaisir du voyage."
+      },
+      "productAdvantages": {
+        "title": "Pourquoi choisir une caravane vélo ?",
+        "1": {
+          "title": "Ultra-légère",
+          "description": "Se tracte facilement, même avec un vélo non électrique."
+        },
+        "2": {
+          "title": "Pratique",
+          "description": "Aucune installation nécessaire, prête à l'emploi en quelques secondes."
+        },
+        "3": {
+          "title": "Confortable",
+          "description": "Un vrai lit, un espace optimisé et une protection contre les intempéries."
+        },
+        "4": {
+          "title": "Autonome",
+          "description": "Un design pensé pour le voyage longue distance et l'itinérance."
+        }
+      },
       "productSpecification": {
         "title": "Spécifications",
         "1": {
@@ -189,7 +214,7 @@
         }
       },
       "bento": {
-        "title": "Pour une expérience inoubliable",
+        "title": "Pour une expérience unique et inoubliable",
         "1": {
           "title": "Tout confort",
           "description": "Le roadtrip a vélo comme vous l'avez jamais fait"

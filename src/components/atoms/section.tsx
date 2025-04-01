@@ -4,20 +4,16 @@ const Section = ({
   children,
   className = '',
   topoBackground = false,
-  backgroundImage = '/bg_topo.png',
 }: {
   children: React.ReactNode;
   className?: string;
   topoBackground?: boolean;
-  backgroundImage?: string;
 }) => {
-  console.log(backgroundImage);
-
   return (
     <section
       className={`flex w-screen justify-center ${className}`}
       style={{
-        backgroundImage: topoBackground ? `url(/bento-6.png)` : 'none',
+        backgroundImage: topoBackground ? `url(/bg_topo.png)` : 'none',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

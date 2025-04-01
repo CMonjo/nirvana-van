@@ -8,8 +8,7 @@ import Typography from '../../../../components/atoms/typography';
 import { useTranslations } from 'next-intl';
 
 export default function History() {
-  const tPage = useTranslations('pages.teardrop.story');
-  const tAction = useTranslations('actions');
+  const tPage = useTranslations('pages.bike.history');
 
   return (
     <Section className='bg-white' topoBackground>
@@ -26,15 +25,20 @@ export default function History() {
           </div>
           <div className='flex w-full flex-col items-center md:w-1/3 md:items-start'>
             <SectionTitle
-              title={'Une innovation pour les aventuriers à vélo'}
+              title={tPage('title')}
               className='mb-4 md:text-left'
             />
-            <Typography className='text-center md:mb-8 md:text-left'>
-              {/* {tPage('description')} */}
-              {
-                'On est passioné, on a voulu amener notre savoir faire des teardrop sur le voyage vélo, on a créer plusieurs prototypes pour réaliser une version commercialisble pour le printemps 2025.'
-              }
+            <Typography className='mb-4 text-center md:text-left'>
+              {tPage('description')}
             </Typography>
+            <div className='flex flex-col'>
+              <Typography className='text-center md:text-left' variant='h4'>
+                {tPage('missionTitle')}
+              </Typography>
+              <Typography className='text-center md:text-left'>
+                {tPage('mission')}
+              </Typography>
+            </div>
           </div>
         </div>
       </Container>

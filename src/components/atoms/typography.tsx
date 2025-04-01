@@ -8,6 +8,7 @@ type TypographyProps = {
     | 'h2'
     | 'h2-acorn'
     | 'h3'
+    | 'h4'
     | 'body1'
     | 'body2'
     | 'caption'
@@ -37,6 +38,8 @@ export default function Typography({
         return 'font-acorn text-2xl font-medium md:text-3xl';
       case 'h3':
         return 'text-xl md:text-2xl font-light';
+      case 'h4':
+        return 'text-lg md:text-xl font-medium';
       case 'body1':
         return ' text-xl font-light';
       case 'body2':

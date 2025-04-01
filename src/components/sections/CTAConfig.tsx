@@ -16,14 +16,10 @@ export default function CTAConfig({ productKey }: CTAConfigProps) {
   const product = products.find((product) => product.key === productKey);
 
   return (
-    <Section
-      className={`bg-${product?.color}`}
-      backgroundImage={`_DSC0126 Large.jpeg`}
-      topoBackground={true}
-    >
+    <Section className={`bg-${product?.color} py-16`} topoBackground={false}>
       <Container className='flex flex-col items-center'>
         <SectionTitle title={product?.name as string} className='text-white' />
-        <Button size='large' color='white'>
+        <Button size='large' color='white' textColor={product?.color}>
           Configurer ma caravane
         </Button>
       </Container>

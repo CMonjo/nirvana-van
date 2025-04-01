@@ -9,9 +9,41 @@ import { useTranslations } from 'next-intl';
 import Bento from './components/bento';
 import History from './components/history';
 import Specification from '@/components/sections/specification';
+import CTAConfig from '@/components/sections/CTAConfig';
+import ScaleIcon from '@mui/icons-material/Scale';
+import LuggageIcon from '@mui/icons-material/Luggage';
+import AutorenewIcon from '@mui/icons-material/Autorenew';
+import WeekendIcon from '@mui/icons-material/Weekend';
+import Advantages from '@/components/sections/Advantages';
+import { products } from '@/products/products';
+
+const product = products.find((product) => product.key === 'bike');
 
 export default function Page() {
   const tPage = useTranslations('pages.bike');
+
+  const advantages = [
+    {
+      icon: <ScaleIcon sx={{ fontSize: 'inherit' }} />,
+      title: tPage('productAdvantages.1.title'),
+      description: tPage('productAdvantages.1.description'),
+    },
+    {
+      icon: <LuggageIcon sx={{ fontSize: 'inherit' }} />,
+      title: tPage('productAdvantages.2.title'),
+      description: tPage('productAdvantages.2.description'),
+    },
+    {
+      icon: <AutorenewIcon sx={{ fontSize: 'inherit' }} />,
+      title: tPage('productAdvantages.3.title'),
+      description: tPage('productAdvantages.3.description'),
+    },
+    {
+      icon: <WeekendIcon sx={{ fontSize: 'inherit' }} />,
+      title: tPage('productAdvantages.4.title'),
+      description: tPage('productAdvantages.4.description'),
+    },
+  ];
 
   return (
     <div className='bg-bg-2'>
@@ -19,6 +51,11 @@ export default function Page() {
       <main className='flex w-full flex-col items-center'>
         <Hero />
         <Story />
+        <Advantages
+          title={tPage('productAdvantages.title')}
+          color={product?.color}
+          advantages={advantages}
+        />
         <Video
           source='/home/video.mp4'
           thumbnail='/bento-1.jpeg'
@@ -29,8 +66,8 @@ export default function Page() {
         <History />
         {/* <PreOrder /> */}
         <Bento />
-        <Typography>Formulaire de contact pour en savoir plus</Typography>
-        <FAQ productKey={'bike'} color='green' />
+        <CTAConfig productKey='bike' />
+        <FAQ productKey={'bike'} color={product?.color as 'orange' | 'green'} />
       </main>
       <Footer />
     </div>
