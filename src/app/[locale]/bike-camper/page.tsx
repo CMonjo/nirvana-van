@@ -62,6 +62,7 @@ export default function Page() {
           title={tPage('video.title')}
           descriptionLeft={tPage('video.left')}
           descriptionRight={tPage('video.right')}
+          showSocials
         />
         <History />
         <Bento />

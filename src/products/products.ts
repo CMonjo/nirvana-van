@@ -84,15 +84,15 @@ export const products: IProduct[] = [
           { key: 'shower', price: 200, picture: 'shower.JPG' },
         ],
       },
-      {
-        name: 'exterior',
-        type: 'checkbox',
-        options: [
-          { key: 'rear_awning', price: 1000 },
-          { key: 'side_awning', price: 600 },
-          { key: 'cover', price: 390 },
-        ],
-      },
+      //   {
+      //     name: 'exterior',
+      //     type: 'checkbox',
+      //     options: [
+      //       { key: 'rear_awning', price: 1000 },
+      //       { key: 'side_awning', price: 600 },
+      //       { key: 'cover', price: 390 },
+      //     ],
+      //   },
       {
         name: 'equipments',
         type: 'checkbox',
@@ -103,36 +103,36 @@ export const products: IProduct[] = [
           { key: 'roof_tent', price: 2000, comingSoon: true },
         ],
       },
-      {
-        name: 'built-in',
-        type: 'radio',
-        options: [
-          {
-            key: 'front_and_rear_closets',
-            price: 0,
-            included: true,
-            picture: 'front_and_rear_closets.JPG',
-          },
-          { key: 'no_closets', price: -900 },
-        ],
-      },
-      {
-        name: 'opening',
-        type: 'checkbox',
-        options: [
-          {
-            key: 'two_side_doors',
-            price: 0,
-            included: true,
-            disabled: true,
-          },
-          {
-            key: 'one_side_door',
-            price: -300,
-          },
-          { key: 'no_rear_door', price: -700 },
-        ],
-      },
+      //   {
+      //     name: 'built-in',
+      //     type: 'radio',
+      //     options: [
+      //       {
+      //         key: 'front_and_rear_closets',
+      //         price: 0,
+      //         included: true,
+      //         picture: 'front_and_rear_closets.JPG',
+      //       },
+      //       { key: 'no_closets', price: -900 },
+      //     ],
+      //   },
+      //   {
+      //     name: 'opening',
+      //     type: 'checkbox',
+      //     options: [
+      //       {
+      //         key: 'two_side_doors',
+      //         price: 0,
+      //         included: true,
+      //         disabled: true,
+      //       },
+      //       {
+      //         key: 'one_side_door',
+      //         price: -300,
+      //       },
+      //       { key: 'no_rear_door', price: -700 },
+      //     ],
+      //   },
     ],
   },
   {

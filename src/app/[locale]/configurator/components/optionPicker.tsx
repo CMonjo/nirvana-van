@@ -9,6 +9,7 @@ import { IProduct, OptionCategory, Option } from '@/products/types';
 import Checkbox from '@/components/atoms/checkbox';
 import Radio from '@/components/atoms/radio';
 import { getPrice } from '@/utils/price';
+import clsx from 'clsx';
 
 export default function OptionPicker({
   product,
@@ -52,10 +53,22 @@ export default function OptionPicker({
                 src={
                   option.picture
                     ? `/${product.key}/configurator/${option.picture}`
-                    : '/default_option.png'
+                    : '/full_black.png'
                 }
                 alt={tProduct(`options.${option.key}`)}
-                className='rounded-2xl rounded-b-none object-cover'
+                className={clsx('rounded-2xl rounded-b-none', {
+                  'object-contain': !option.picture,
+                  'object-cover': option.picture,
+                  'opacity-30': !option.picture,
+                })}
+                style={
+                  !option.picture
+                    ? {
+                        padding: '1rem',
+                        paddingTop: '2rem',
+                      }
+                    : undefined
+                }
               />
             </div>
 

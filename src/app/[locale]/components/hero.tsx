@@ -17,9 +17,12 @@ export default function Hero() {
         alt='hero'
       />
 
-      <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-32 lg:top-[150px]'>
+      <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-32 lg:top-[120px]'>
         <HeroTitle>Créateur d'aventures</HeroTitle>
-        <Typography variant='h2' className='mt-4 text-center text-white'>
+        <Typography
+          variant='h3'
+          className='mt-4 max-w-96 text-center text-white'
+        >
           Des teardrops confortables, esthétiques et bien pensés
         </Typography>
       </div>
