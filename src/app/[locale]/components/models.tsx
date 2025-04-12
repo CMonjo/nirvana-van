@@ -45,7 +45,7 @@ export default function Models() {
           />
 
           <Model
-            productKey='bike'
+            productKey='bike-camper'
             onClick={handleClick}
             button={
               <Button color={'green'} size='medium'>

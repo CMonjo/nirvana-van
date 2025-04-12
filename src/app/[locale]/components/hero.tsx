@@ -28,15 +28,15 @@ export default function Hero() {
       </div>
 
       <div className='absolute bottom-8 z-10 flex w-full flex-col items-center justify-center gap-2 px-2'>
-        <Typography variant='h3' className='text-center text-white'>
-          Fabrication artisanale de mini-caravane
-        </Typography>
         <Image
           src={`/home/french_flag.png`}
           width={40}
           height={20}
           alt='logo'
         />
+        <Typography variant='h3' className='text-center text-white'>
+          Fabrication artisanale de mini-caravane
+        </Typography>
       </div>
     </HeroContainer>
   );

@@ -1,4 +1,4 @@
-export type ProductType = 'teardrop' | 'bike';
+export type ProductType = 'teardrop' | 'bike-camper';
 
 export interface OptionCategory {
   name: string;

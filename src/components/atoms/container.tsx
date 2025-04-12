@@ -11,7 +11,7 @@ const Container = ({
 }) => {
   return (
     <div
-      className={`flex items-center justify-center ${noGap ? '' : 'gap-4'} px-8 py-8 xl:py-16 ${className}`}
+      className={`flex items-center justify-center ${noGap ? '' : 'gap-4'} px-8 py-8 xl:py-12 ${className}`}
     >
       {children}
     </div>

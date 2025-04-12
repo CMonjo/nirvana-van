@@ -136,7 +136,7 @@ export const products: IProduct[] = [
     ],
   },
   {
-    key: 'bike',
+    key: 'bike-camper',
     name: 'Caravane Vélo',
     image: '/karavel.jpeg',
     color: 'green',

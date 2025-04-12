@@ -59,10 +59,12 @@ const BentoText = ({
   description?: string;
 }) => {
   return (
-    <div className='relative h-full w-full rounded-3xl p-6 text-white'>
+    <div className='relative flex h-full w-full flex-col items-center justify-center gap-2 rounded-3xl p-6 text-white'>
       <Typography variant='h2-acorn'>{title}</Typography>
       {description ? (
-        <Typography variant='body2'>{description}</Typography>
+        <Typography variant='body1' className='text-center'>
+          {description}
+        </Typography>
       ) : null}
     </div>
   );

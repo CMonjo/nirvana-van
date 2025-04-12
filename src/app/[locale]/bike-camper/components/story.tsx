@@ -10,8 +10,8 @@ import { useTranslations } from 'next-intl';
 import CardList from '@/components/utils/CardList';
 
 export default function Story() {
-  const tPage = useTranslations('pages.bike.story');
-  const tSpec = useTranslations('pages.bike.productSpecification');
+  const tPage = useTranslations('pages.bike-camper.story');
+  const tSpec = useTranslations('pages.bike-camper.productSpecification');
   const tAction = useTranslations('actions');
 
   return (
@@ -27,7 +27,7 @@ export default function Story() {
               <Link
                 href={{
                   pathname: '/configurator',
-                  query: { product: 'bike' },
+                  query: { product: 'bike-camper' },
                 }}
               >
                 <Button color='green'>{tAction('configureMy')} bike</Button>

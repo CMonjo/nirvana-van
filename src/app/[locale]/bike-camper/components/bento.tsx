@@ -20,7 +20,7 @@ export default function Bento() {
           transition={{
             staggerChildren: 0.05,
           }}
-          className='grid h-[1800px] w-full grid-cols-2 grid-rows-6 gap-2 lg:h-[75vh] lg:grid-cols-12 lg:grid-rows-12'
+          className='grid h-[1800px] w-full grid-cols-2 grid-rows-6 gap-4 lg:h-[80vh] lg:grid-cols-12 lg:grid-rows-12'
         >
           <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-6 lg:row-span-6'>
             <BentoImage url='/bento-1.jpeg' />

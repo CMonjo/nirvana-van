@@ -151,7 +151,7 @@
         "storage": "Rangements"
       }
     },
-    "bike": {
+    "bike-camper": {
       "hero": {
         "title": "Caravane Vélo",
         "price": "À partir de"
@@ -229,7 +229,7 @@
   "navigation": {
     "home": "Accueil",
     "teardrop": "Teardrop",
-    "bike": "Caravane Vélo",
+    "bike-camper": "Caravane Vélo",
     "configurator": "Configurateur",
     "rental": "Location",
     "contact": "Contact",
@@ -329,7 +329,7 @@
         "mattressValue": "132 x 190 cm"
       }
     },
-    "bike": {
+    "bike-camper": {
       "description": "Tout en légèreté, sans oublier la praticité !",
       "packs": {}
     }
@@ -363,7 +363,7 @@
       "question7": "Est-il possible d'essayer une teardrop avant l'achat ?",
       "answer7": "Oui, nous proposons des visites et des essais à notre atelier à Montpellier. Contactez-nous pour organiser un rendez-vous !"
     },
-    "bike": {
+    "bike-camper": {
       "question1": "Est-ce que la Caravane vélo s’accroche à tous les vélos ?",
       "answer1": "Quasi, si votre vélo est chelou, vous pouvez nous contacter pour une fixation sur mesure.",
       "question2": "Est-ce que je peux me la faire livrer ?",

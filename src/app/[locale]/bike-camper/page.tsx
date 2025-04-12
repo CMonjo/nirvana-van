@@ -17,10 +17,10 @@ import WeekendIcon from '@mui/icons-material/Weekend';
 import Advantages from '@/components/sections/Advantages';
 import { products } from '@/products/products';
 
-const product = products.find((product) => product.key === 'bike');
+const product = products.find((product) => product.key === 'bike-camper');
 
 export default function Page() {
-  const tPage = useTranslations('pages.bike');
+  const tPage = useTranslations('pages.bike-camper');
 
   const advantages = [
     {
@@ -66,8 +66,11 @@ export default function Page() {
         />
         <History />
         <Bento />
-        <CTAConfig productKey='bike' />
-        <FAQ productKey={'bike'} color={product?.color as 'orange' | 'green'} />
+        <CTAConfig productKey='bike-camper' />
+        <FAQ
+          productKey={'bike-camper'}
+          color={product?.color as 'orange' | 'green'}
+        />
       </main>
       <Footer />
     </div>

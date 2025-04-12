@@ -8,7 +8,7 @@ import Typography from '../../../../components/atoms/typography';
 import { useTranslations } from 'next-intl';
 
 export default function History() {
-  const tPage = useTranslations('pages.bike.history');
+  const tPage = useTranslations('pages.bike-camper.history');
 
   return (
     <Section className='bg-white' topoBackground>
