@@ -24,7 +24,7 @@ export default function ChooseModel() {
   return (
     <Section className='bg-white' topoBackground>
       <Container className='flex-col'>
-        <SectionTitle title={tPage('title')} />
+        <SectionTitle title={tPage('title')} className='mb-4' />
         <div className='flex w-full flex-col gap-4 lg:flex-row'>
           <Model
             productKey='teardrop'

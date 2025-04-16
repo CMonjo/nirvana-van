@@ -17,7 +17,6 @@ export default function Story() {
         <div className='flex flex-col gap-2 text-center md:gap-4'>
           <Typography variant='h3'>{t('text1')}</Typography>
           <Typography variant='h3'>{t('text2')}</Typography>
-          <Typography variant='h3'>{t('text3')}</Typography>
         </div>
         <div className='mt-8 flex max-w-3xl flex-col gap-4 text-center'>
           <Image src='/home/story.png' alt='story' width={1155} height={680} />

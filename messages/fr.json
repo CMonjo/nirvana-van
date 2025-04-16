@@ -31,9 +31,8 @@
       },
       "story": {
         "title": "Bienvenue dans mon atelier !",
-        "text1": "C'est dans mon atelier dans le sud de la France que je conçois et fabrique, depuis plus deux ans, des mini-caravanes uniques.",
-        "text2": "Mon approche artisanale me tient à cœur: de la première esquisse aux derniers ajustements, chaque détail est réalisé à la main et continuellement affiné pour offrir une mini-caravane 100 % fait maison.",
-        "text3": "Si vous souhaitez discuter d'un projet ou découvrir de près le processus de fabrication, je serai ravi de vous accueillir !"
+        "text1": "C'est dans mon atelier dans le sud de la France que je conçois et fabrique, depuis plus deux ans, des mini-caravanes uniques. Mon approche artisanale me tient à cœur: de la première esquisse aux derniers ajustements, chaque détail est réalisé à la main et continuellement affiné pour offrir une mini-caravane 100 % fait maison.",
+        "text2": "Si vous souhaitez discuter d'un projet ou découvrir de près le processus de fabrication, je serai ravi de vous accueillir !"
       },
       "socials": {
         "title": "Partagez vos aventures"
@@ -44,7 +43,7 @@
       "configure": "Configurez votre",
       "include": "Inclus",
       "selected": "Sélectionné",
-      "subtitle": "Choissiez sa couleur, ses options, créer la caravane de vos rêves!",
+      "subtitle": "Créer la caravane de vos rêves",
       "receiveEmailQuote": "Recevez votre configuration par email !",
       "quoteSent": "Votre configuration a bien été envoyée !",
       "quoteSentDescription": "N'hésitez pas à nous contacter si vous avez la moindre question à",

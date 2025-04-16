@@ -30,7 +30,7 @@ const Model = ({
   return (
     <div
       onClick={handleClick}
-      className={`relative flex h-[450px] w-full flex-col items-center justify-between rounded-3xl px-4 py-8 text-center text-white ${onClick ? 'cursor-pointer' : ''}`}
+      className={`relative flex h-[450px] w-full flex-col items-center justify-between rounded-3xl px-4 py-8 pt-12 text-center text-white ${onClick ? 'cursor-pointer' : ''}`}
     >
       <div className='z-10'>
         <Transition>
@@ -41,9 +41,9 @@ const Model = ({
             {product.name}
           </Typography>
         </Transition>
-        <p className='font-lg my-3 mt-2 font-kobe11 text-2xl'>
+        {/* <p className='font-lg my-3 mt-2 font-kobe11 text-2xl'>
           {t('description')}
-        </p>
+        </p> */}
       </div>
       {button ? <div className='z-10'>{button}</div> : null}
 

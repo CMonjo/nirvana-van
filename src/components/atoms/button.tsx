@@ -88,7 +88,7 @@ export default function Button({
         hoverTextClass,
         sizeClass,
         disabledClass,
-        'border-3 flex items-center rounded-full border font-acorn text-sm font-medium transition-all duration-300',
+        'border-3 flex items-center rounded-full border font-acorn font-medium transition-all duration-300',
         className
       )}
     >

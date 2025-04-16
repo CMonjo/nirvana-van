@@ -40,7 +40,7 @@ export default function Advantages({
             <div
               key={index}
               className={`
-                flex flex-col items-center gap-2 rounded-lg bg-gray-50 p-6 text-center
+                flex flex-col items-center gap-2 rounded-xl bg-gray-50 p-6 text-center
                 ${advantages.length === 5 && index > 2 ? 'md:col-span-1 md:translate-x-1/2' : ''}
               `}
             >

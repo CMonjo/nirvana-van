@@ -22,6 +22,9 @@ export default function CTAConfig({ productKey }: CTAConfigProps) {
         <Button size='large' color='white' textColor={product?.color}>
           Configurer ma caravane
         </Button>
+        <Button size='large' color='white' textColor={product?.color}>
+          Essayer avant d'acheter
+        </Button>
       </Container>
     </Section>
   );

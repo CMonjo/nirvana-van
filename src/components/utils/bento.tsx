@@ -23,9 +23,11 @@ const BentoItem = ({ className, ...rest }: BentoItemProps) => {
           opacity: 1,
         },
       }}
-      whileHover={{
-        rotate: '0.5deg',
-      }}
+      whileHover={
+        {
+          // rotate: '0.5deg',
+        }
+      }
       transition={{
         type: 'spring',
         mass: 3,
@@ -60,9 +62,12 @@ const BentoText = ({
 }) => {
   return (
     <div className='relative flex h-full w-full flex-col items-center justify-center gap-2 rounded-3xl p-6 text-white'>
-      <Typography variant='h2-acorn'>{title}</Typography>
+      <Typography variant='h2-acorn' className={description ? 'mb-2' : ''}>
+        {title}
+      </Typography>
       {description ? (
-        <Typography variant='body1' className='text-center'>
+        //TODO Grossir un peu le texte
+        <Typography variant='body1' className='text-center text-2xl'>
           {description}
         </Typography>
       ) : null}
