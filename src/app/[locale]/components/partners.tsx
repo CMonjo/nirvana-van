@@ -4,6 +4,7 @@ import Section from '@/components/atoms/section';
 import LinkWrapper from '@/components/utils/LinkWrapper';
 import Typography from '@/components/atoms/typography';
 import { useTranslations } from 'next-intl';
+import Tooltip from '@/components/atoms/tooltip';
 
 const partners = [
   {
@@ -51,15 +52,17 @@ function Partners() {
         <div className='flex flex-wrap items-center justify-center gap-4 md:gap-8'>
           {partners.map((partner) => (
             <LinkWrapper key={partner.name} href={partner.link} target='_blank'>
-              <div className='relative transition-all duration-300 hover:opacity-100'>
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  width={partner.width}
-                  height={partner.height || 60}
-                  className='h-10 w-auto object-contain'
-                />
-              </div>
+              <Tooltip content={partner.name} position='top'>
+                <div className='relative transition-all duration-300 hover:opacity-100'>
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={partner.width}
+                    height={partner.height || 60}
+                    className='h-10 w-auto object-contain'
+                  />
+                </div>
+              </Tooltip>
             </LinkWrapper>
           ))}
         </div>
