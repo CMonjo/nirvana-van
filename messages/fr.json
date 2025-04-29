@@ -66,8 +66,7 @@
     },
     "teardrop": {
       "hero": {
-        "title": "Teardrop",
-        "price": "À partir de"
+        "title": "Teardrop"
       },
       "story": {
         "title": "Tout le nécessaire, à tracter derrière sa voiture",
@@ -152,8 +151,7 @@
     },
     "bike-camper": {
       "hero": {
-        "title": "Caravane Vélo",
-        "price": "À partir de"
+        "title": "Caravane Vélo"
       },
       "story": {
         "title": "Une nouvelle façon de voyager à vélo",

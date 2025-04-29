@@ -8,7 +8,7 @@ import SectionTitle from '@/components/sections/title';
 import { useTranslations } from 'next-intl';
 
 export default function Bento() {
-  const t = useTranslations('pages.bike.bento');
+  const t = useTranslations('pages.bike-camper.bento');
 
   return (
     <Section className='bg-white'>

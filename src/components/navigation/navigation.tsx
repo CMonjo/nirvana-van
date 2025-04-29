@@ -20,7 +20,7 @@ const footerLinks = [
   { name: 'home', href: '/', icon: null },
   { name: 'teardrop', href: '/teardrop', icon: null },
   {
-    name: 'bike',
+    name: 'bike-camper',
     href: '/bike-camper',
     icon: null,
   },

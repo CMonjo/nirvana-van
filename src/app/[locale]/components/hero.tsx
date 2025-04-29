@@ -35,7 +35,7 @@ export default function Hero() {
           alt='logo'
         />
         <Typography variant='h3' className='text-center text-white'>
-          Fabrication artisanale de mini-caravane
+          Fabrication artisanale de mini-caravanes
         </Typography>
       </div>
     </HeroContainer>

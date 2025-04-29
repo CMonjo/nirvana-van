@@ -10,6 +10,7 @@ import Checkbox from '@/components/atoms/checkbox';
 import Radio from '@/components/atoms/radio';
 import { getPrice } from '@/utils/price';
 import clsx from 'clsx';
+import Tooltip from '@/components/atoms/tooltip';
 
 export default function OptionPicker({
   product,
@@ -78,9 +79,9 @@ export default function OptionPicker({
                   {tProduct(`options.${option.key}`)}
                 </Typography>
 
-                <Typography variant='caption' className='text-dark-lighter'>
+                {/* <Typography variant='caption' className='text-dark-lighter'>
                   Lorem ipsum dolor sit amet.
-                </Typography>
+                </Typography> */}
               </div>
 
               <div className='flex w-full items-center justify-between'>
@@ -92,15 +93,27 @@ export default function OptionPicker({
                     onChange={() => onChange(category.name, option.key)}
                   />
                 ) : (
-                  <Checkbox
-                    checked={isSelected(option.key)}
-                    color={product.color}
-                    disabled={
-                      option.comingSoon || option.disabled || option.soldOut
+                  <Tooltip
+                    content={
+                      option.comingSoon
+                        ? 'Prochainement !'
+                        : option.soldOut
+                          ? 'En rupture'
+                          : ''
                     }
-                    label={isSelected(option.key) ? tPage('selected') : ''}
-                    onChange={() => onChange(category.name, option.key)}
-                  />
+                    position='top'
+                    key={index}
+                  >
+                    <Checkbox
+                      checked={isSelected(option.key)}
+                      color={product.color}
+                      disabled={
+                        option.comingSoon || option.disabled || option.soldOut
+                      }
+                      label={isSelected(option.key) ? tPage('selected') : ''}
+                      onChange={() => onChange(category.name, option.key)}
+                    />
+                  </Tooltip>
                 )}
                 <Typography variant='none' className='text-md font-light'>
                   {option.included
