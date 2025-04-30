@@ -11,6 +11,7 @@ type TypographyProps = {
     | 'h4'
     | 'body1'
     | 'body2'
+    | 'body3'
     | 'caption'
     | 'caption2'
     | 'button'
@@ -44,6 +45,8 @@ export default function Typography({
         return ' text-xl font-light';
       case 'body2':
         return 'font-light text-lg';
+      case 'body3':
+        return 'font-light text-md';
       case 'caption':
         return 'text-sm font-light';
       case 'caption2':

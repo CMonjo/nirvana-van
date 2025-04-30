@@ -30,7 +30,9 @@ export default function Footer() {
         >{`Nirvana Van © 2022 - ${new Date().getFullYear()}`}</Typography>
         <Navigation color='white' nav='footer' />
         <Typography variant='caption' className='mt-8'>
-          Marseille - contact@nirvana-van.com - +33 6 22 22 22 22
+          Aubagne -{' '}
+          <a href='mailto:contact@nirvana-van.com'>contact@nirvana-van.com</a> -{' '}
+          <a href='tel:+33664049695'>+33 6 64 04 96 95</a>
         </Typography>
       </div>
       <div className='relative flex w-full flex-col-reverse items-center justify-between px-6 py-4 md:flex-row'>

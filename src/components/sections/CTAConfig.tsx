@@ -19,22 +19,27 @@ export default function CTAConfig({ productKey }: CTAConfigProps) {
     <Section
       className={`bg-${product?.color} min-h-[45vh] py-16`}
       topoBackground={true}
-      imageBackground='/hero.JPG'
+      imageBackground={`${product?.image}` || '/hero.JPG'}
       innerClassName='flex items-center justify-start'
     >
       <div className='absolute inset-0 bg-black/30' />
 
-      <Container className='relative z-10 flex flex-col items-start justify-center text-white'>
+      <Container
+        itemsAlign='start'
+        className='relative z-10 flex-col text-white'
+      >
         <SectionTitle title={"Testez avant d'acheter"} />
         <div className='flex gap-2'>
-          <Button size='large' color='orange'>
+          <Button size='large' color={product?.color}>
             Louer*
           </Button>
-          <Button size='large' color='orange'>
+          <Button size='large' color={product?.color}>
             Configurer ma caravane
           </Button>
         </div>
-        <Typography>* Toute location est offerte en cas d'achat</Typography>
+        <Typography variant='body3'>
+          * En cas d'achat suite à une location, votre séjour est offert !
+        </Typography>
       </Container>
     </Section>
   );
