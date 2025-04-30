@@ -106,7 +106,7 @@
           "content": "Grand plan de travail\nPoint d'eau\nDouchette\nRéchaud\nGlacière Dometic 21l\nRangements\nÉclairage LED"
         },
         "2": {
-          "title": "Intérieur cosy",
+          "title": "Intérieur confortable",
           "content": "Lit de 132 x 190cm\nPrises 220v et USB\nÉclairage LED\nLanterneau et fenêtres\nRideaux occultants\nRangements\nTablette rétractable"
         },
         "3": {
@@ -138,10 +138,10 @@
         }
       },
       "bento": {
-        "title": "Les équipements",
+        "title": "Ce qui fait la différence",
         "crutches": "Béquilles",
         "solarPanel": "Panneau solaire",
-        "ecoflowLighting": "Ecoflow / éclairage LED",
+        "ecoflowLighting": "Batterie / Éclairage LED",
         "materials": "Matériaux",
         "openings": "Ouvertures",
         "insulation": "Isolation",

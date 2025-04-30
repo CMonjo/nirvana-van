@@ -18,12 +18,13 @@ export default function Hero() {
       />
 
       <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-32 lg:top-[120px]'>
-        <HeroTitle>Créateur d'aventures</HeroTitle>
+        <HeroTitle>Prenez la route</HeroTitle>
         <Typography
           variant='h3'
           className='mt-4 max-w-96 text-center text-white'
         >
-          Des teardrops confortables, esthétiques et bien pensés
+          {/* //TODO Grossir text */}
+          Des teardrops élégantes, robustes et bien pensées.
         </Typography>
       </div>
 
