@@ -14,47 +14,60 @@ export default function Bento() {
     <Section className='bg-white'>
       <Container className='flex-col'>
         <SectionTitle title={t('title')} />
+
+        {/* Version Mobile */}
         <motion.div
           initial='initial'
           animate='animate'
           transition={{
             staggerChildren: 0.05,
           }}
-          className='grid h-[1800px] w-full grid-cols-2 grid-rows-6 gap-4 lg:h-[800px] lg:grid-cols-12 lg:grid-rows-3'
+          className='grid w-full auto-rows-[300px] grid-cols-2 gap-4 lg:hidden'
         >
-          <BentoItem className='col-span-1 row-span-1 bg-orange  lg:col-span-6 lg:row-span-1'>
+          <BentoItem className='col-span-2 row-span-1 bg-orange'>
             <BentoText title={t('1.title')} description={t('1.description')} />
           </BentoItem>
-          <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
+          <BentoItem className='col-span-2 row-span-1 bg-green'>
             <BentoImage url='/bento-1.jpeg' />
           </BentoItem>
-          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
-            <BentoImage url='/bento-5.jpeg' />
-          </BentoItem>
-          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-6 lg:row-span-2'>
-            <BentoImage url='/bento-5.jpeg' />
-          </BentoItem>
-          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-6 lg:row-span-1'>
-            <BentoImage url='/bento-5.jpeg' />
-          </BentoItem>
-          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-6 lg:row-span-1'>
+          <BentoItem className='col-span-2 row-span-1 bg-green'>
             <BentoText title={t('2.title')} description={t('2.description')} />
           </BentoItem>
-          {/* <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
-            <BentoImage url='/bento-3.jpg' />
+          <BentoItem className='col-span-1 row-span-1 bg-green'>
+            <BentoImage url='/bento-5.jpeg' />
           </BentoItem>
-          <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
-            <BentoImage url='/bento-4.jpeg' />
-          </BentoItem> */}
-          {/* <BentoItem className='col-span-2 row-span-1 bg-green  lg:col-span-3 lg:row-span-1'>
-            <BentoImage url='/bento-6.png' />
+          <BentoItem className='col-span-1 row-span-1 bg-green'>
+            <BentoImage url='/bento-5.jpeg' />
           </BentoItem>
-          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-6 lg:row-span-2'>
-            <BentoImage url='/bento-2.jpeg' />
+        </motion.div>
+
+        {/* Version Desktop */}
+        <motion.div
+          initial='initial'
+          animate='animate'
+          transition={{
+            staggerChildren: 0.05,
+          }}
+          className='hidden h-[800px] w-full grid-cols-12 grid-rows-3 gap-4 lg:grid'
+        >
+          <BentoItem className='col-span-6 row-span-1 bg-orange'>
+            <BentoText title={t('1.title')} description={t('1.description')} />
           </BentoItem>
-          <BentoItem className='col-span-1 row-span-1 bg-green  lg:col-span-6 lg:row-span-1'>
+          <BentoItem className='col-span-3 row-span-1 bg-green'>
+            <BentoImage url='/bento-1.jpeg' />
+          </BentoItem>
+          <BentoItem className='col-span-3 row-span-1 bg-green'>
+            <BentoImage url='/bento-5.jpeg' />
+          </BentoItem>
+          <BentoItem className='col-span-6 row-span-2 bg-green'>
+            <BentoImage url='/bento-5.jpeg' />
+          </BentoItem>
+          <BentoItem className='col-span-6 row-span-1 bg-green'>
+            <BentoImage url='/bento-5.jpeg' />
+          </BentoItem>
+          <BentoItem className='col-span-6 row-span-1 bg-green'>
             <BentoText title={t('2.title')} description={t('2.description')} />
-          </BentoItem> */}
+          </BentoItem>
         </motion.div>
       </Container>
     </Section>
