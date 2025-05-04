@@ -17,14 +17,14 @@ export default function Hero() {
         alt='hero'
       />
 
-      <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-32 lg:top-[120px]'>
-        <HeroTitle>Prenez la route</HeroTitle>
+      <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-16 lg:top-[120px]'>
+        <HeroTitle>{t('hero.title')}</HeroTitle>
         <Typography
           variant='h3'
-          className='mt-4 max-w-96 text-center text-white'
+          sizeOverride='md:text-2xl lg:text-3xl'
+          className='mt-4 text-center text-white'
         >
-          {/* //TODO Grossir text */}
-          Des teardrops élégantes, robustes et bien pensées.
+          {t('hero.description')}
         </Typography>
       </div>
 
@@ -35,7 +35,11 @@ export default function Hero() {
           height={20}
           alt='logo'
         />
-        <Typography variant='h3' className='text-center text-white'>
+        <Typography
+          variant='h3'
+          className='text-center text-white'
+          sizeOverride='text-xl md:text-3xl'
+        >
           Fabrication artisanale de mini-caravanes
         </Typography>
       </div>

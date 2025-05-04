@@ -20,6 +20,7 @@ type TypographyProps = {
   className?: string;
   style?: React.CSSProperties;
   children: ReactNode;
+  sizeOverride?: string;
 };
 
 export default function Typography({
@@ -28,6 +29,7 @@ export default function Typography({
   className = '',
   style,
   children,
+  sizeOverride,
 }: TypographyProps) {
   const getFontClass = (variant: string) => {
     switch (variant) {
@@ -42,7 +44,7 @@ export default function Typography({
       case 'h4':
         return 'text-lg md:text-xl font-medium';
       case 'body1':
-        return ' text-xl font-light';
+        return 'text-xl font-light';
       case 'body2':
         return 'font-light text-lg';
       case 'body3':
@@ -58,8 +60,22 @@ export default function Typography({
     }
   };
 
+  const baseClasses = getFontClass(variant);
+  const sizeClass = sizeOverride ? `!${sizeOverride}` : '';
+  const finalClasses = `${baseClasses} ${sizeClass} ${className}`.trim();
+
+  if (typeof children === 'string' && children.includes('<br/>')) {
+    return (
+      <Tag
+        className={finalClasses}
+        style={style}
+        dangerouslySetInnerHTML={{ __html: children }}
+      />
+    );
+  }
+
   return (
-    <Tag className={`${getFontClass(variant)} ${className}`} style={style}>
+    <Tag className={finalClasses} style={style}>
       {children}
     </Tag>
   );

@@ -31,11 +31,11 @@ export default function Specification({
           >
             <Image
               fill
-              src={`/${productKey}/specifications.png`}
+              src={`/${productKey}/spec.png`}
               alt='bento'
-              className='rounded-3xl object-cover'
+              className='rounded-3xl object-contain'
             />
-            <div className='absolute inset-0 rounded-3xl bg-black/15' />
+            {/* <div className='absolute inset-0 rounded-3xl bg-black/15' /> */}
           </div>
 
           <div className='flex flex-[1] flex-col gap-2 rounded-3xl bg-grey px-4 py-4'>

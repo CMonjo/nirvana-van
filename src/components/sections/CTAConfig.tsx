@@ -17,9 +17,9 @@ export default function CTAConfig({ productKey }: CTAConfigProps) {
 
   return (
     <Section
-      className={`bg-${product?.color} min-h-[45vh] py-16`}
+      className={`bg-${product?.color} min-h-[55vh] py-16`}
       topoBackground={true}
-      imageBackground={`${product?.image}` || '/hero.JPG'}
+      imageBackground={`/rent.jpeg`}
       innerClassName='flex items-center justify-start'
     >
       <div className='absolute inset-0 bg-black/30' />

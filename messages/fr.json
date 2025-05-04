@@ -5,7 +5,8 @@
   "pages": {
     "home": {
       "hero": {
-        "title": "Fabricant artisanal français de mini-caravanes"
+        "title": "Prenez la route",
+        "description": "Des teardrops élégantes, robustes et<br/>bien pensées."
       },
       "models": {
         "title": "TODO"
@@ -391,5 +392,8 @@
       "success": "Message envoyé avec succès ! Nous vous recontacterons au plus vite.",
       "error": "Une erreur est survenue. Veuillez réessayer ou nous contacter à"
     }
+  },
+  "utils": {
+    "startingPrice": "À partir de"
   }
 }
