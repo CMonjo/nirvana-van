@@ -98,9 +98,9 @@ export const products: IProduct[] = [
         type: 'checkbox',
         options: [
           { key: 'roof_bars', price: 490, picture: 'roof_bars.JPG' },
-          { key: 'arrow_chest', price: 100, picture: 'arrow_chest.jpeg' },
+          { key: 'arrow_chest', price: 100, picture: 'arrow_chest.jpeg' }, //TODO Sur demande
           { key: 'bike_rack', price: 220, picture: 'bike_rack.JPG' },
-          { key: 'roof_tent', price: 2000, comingSoon: true },
+          { key: 'roof_tent', price: 2000, comingSoon: true }, //TODO Sur demande
         ],
       },
       //   {

@@ -26,7 +26,6 @@ export default function Advantages({
     <Section className='bg-white'>
       <Container className='flex flex-col items-center'>
         <SectionTitle title={title} />
-
         <div
           className={`
           grid gap-6

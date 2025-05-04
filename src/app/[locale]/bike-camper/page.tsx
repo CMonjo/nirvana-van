@@ -2,13 +2,12 @@ import Header from '@/components/navigation/header';
 import Footer from '@/components/navigation/footer';
 import Video from '@/components/sections/video';
 import FAQ from '@/components/sections/faq';
-import Typography from '@/components/atoms/typography';
 import Hero from './components/hero';
 import Story from './components/story';
 import { useTranslations } from 'next-intl';
 import Bento from './components/bento';
 import History from './components/history';
-import Specification from '@/components/sections/specification';
+import ModelSpecifications from './components/modelSpecifications';
 import CTAConfig from '@/components/sections/CTAConfig';
 import ScaleIcon from '@mui/icons-material/Scale';
 import LuggageIcon from '@mui/icons-material/Luggage';
@@ -64,9 +63,12 @@ export default function Page() {
           descriptionRight={tPage('video.right')}
           showSocials
         />
-        <History />
+        {/* Block spec comme le site de vélo zarma */}
+        <ModelSpecifications />
         <Bento />
+        {/* TODO title, subtitle, rent:boolean */}
         <CTAConfig productKey='bike-camper' />
+        <History />
         <FAQ
           productKey={'bike-camper'}
           color={product?.color as 'orange' | 'green'}

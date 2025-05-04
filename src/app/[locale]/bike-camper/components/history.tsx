@@ -14,7 +14,7 @@ export default function History() {
     <Section className='bg-white' topoBackground>
       <Container>
         <div className='flex flex-col items-center gap-8 md:flex-row'>
-          <div className='flex w-full justify-center md:w-2/3 md:justify-end'>
+          <div className='flex w-full justify-center md:w-1/2 md:justify-end'>
             <Image
               src='/bike-camper/history.png'
               alt='History'
@@ -23,7 +23,7 @@ export default function History() {
               className='w-full'
             />
           </div>
-          <div className='flex w-full flex-col items-center md:w-1/3 md:items-start'>
+          <div className='flex w-full flex-col items-center md:w-1/2 md:items-start'>
             <SectionTitle
               title={tPage('title')}
               className='mb-4 md:text-left'

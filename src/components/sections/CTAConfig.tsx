@@ -28,7 +28,7 @@ export default function CTAConfig({ productKey }: CTAConfigProps) {
         itemsAlign='start'
         className='relative z-10 flex-col text-white'
       >
-        <SectionTitle title={'Location gratuite*'} />
+        <SectionTitle title={"Location remboursée en cas d'achat"} />
         <div className='flex gap-2'>
           <Button size='large' color={product?.color}>
             Louer
@@ -37,9 +37,9 @@ export default function CTAConfig({ productKey }: CTAConfigProps) {
             Configurer ma caravane
           </Button>
         </div>
-        <Typography variant='body3'>
-          * Location remboursée en cas d'achat
-        </Typography>
+        {/* <Typography variant='body3'> */}
+        {/* * Location remboursée en cas d'achat */}
+        {/* </Typography> */}
       </Container>
     </Section>
   );
