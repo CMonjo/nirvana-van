@@ -18,7 +18,7 @@ const SpecItem = ({
   description: string;
 }) => {
   return (
-    <div className='flex flex-col gap-0'>
+    <div className='flex flex-col justify-between gap-1 md:flex-row'>
       <Typography className='font-medium'>{title}</Typography>
       <Typography variant='body2'>{description}</Typography>
     </div>
@@ -61,26 +61,20 @@ export default function ModelSpecifications() {
               <div className='flex flex-col gap-2'>
                 <SpecItem
                   title='Matériaux coque'
-                  description='La grosse bite a lulu'
+                  description='Fibre de verre'
                 />
+                <SpecItem title='Matériaux châssis' description='Aluminium' />
                 <SpecItem
-                  title='Matériaux châssis'
-                  description='La grosse bite a lulu'
+                  title='Isolation'
+                  description='Polyester extrudé 20mm'
                 />
-                <SpecItem
-                  title='Dimensions ext'
-                  description='La grosse bite a lulu'
-                />
+                <SpecItem title='Dimensions ext' description='200cm x 95cm' />
 
                 <SpecItem
                   title='Dimensions matelas'
-                  description='La grosse bite a lulu'
+                  description='190cm x 70cm'
                 />
-                <SpecItem title='Poids' description='La grosse bite a lulu' />
-                <SpecItem
-                  title='Isolation'
-                  description='La grosse bite a lulu'
-                />
+                <SpecItem title='Poids' description='54kg à vide' />
               </div>
               <div>
                 <Button color='orange'>Configurer</Button>
