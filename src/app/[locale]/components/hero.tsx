@@ -17,12 +17,12 @@ export default function Hero() {
         alt='hero'
       />
 
-      <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-16 lg:top-[110px]'>
+      <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-16 lg:top-[100px]'>
         <HeroTitle>{t('hero.title')}</HeroTitle>
         <Typography
           variant='h3'
           sizeOverride='md:text-2xl lg:text-3xl'
-          className='mt-4 text-center text-white'
+          className='mt-1 text-center text-white'
         >
           {t('hero.description')}
         </Typography>
