@@ -8,7 +8,9 @@ import Typography from '../../../../components/atoms/typography';
 import { useTranslations } from 'next-intl';
 import { Divider } from '@mui/material';
 import Button from '@/components/atoms/button';
-import ScaleIcon from '@mui/icons-material/Scale';
+import { products } from '@/products/products';
+
+const product = products.find((product) => product.key === 'bike-camper');
 
 const SpecItem = ({
   title,
@@ -77,7 +79,7 @@ export default function ModelSpecifications() {
                 <SpecItem title='Poids à vide' description='54kg' />
               </div>
               <div>
-                <Button color='orange'>Configurer</Button>
+                <Button color={product?.color}>Configurer</Button>
               </div>
             </div>
           </div>
@@ -123,7 +125,7 @@ export default function ModelSpecifications() {
                 <SpecItem title='Poids à vide' description='67kg' />
               </div>
               <div>
-                <Button color='orange'>Configurer</Button>
+                <Button color={product?.color}>Configurer</Button>
               </div>
             </div>
           </div>

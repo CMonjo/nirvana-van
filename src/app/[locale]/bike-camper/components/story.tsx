@@ -79,6 +79,9 @@ export default function Story() {
   const tPage = useTranslations('pages.bike-camper.story');
   const tConfigurator = useTranslations('pages.configurator');
 
+  // Notre mission ?
+  // Rendre le cyclotourisme plus accessible et confortable que jamais, sans compromis sur la simplicité et le plaisir du voyage.
+
   return (
     <Section className='bg-white' topoBackground>
       <Container>

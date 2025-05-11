@@ -39,7 +39,6 @@ const Buttons = () => {
 
 export default function Story() {
   const tPage = useTranslations('pages.teardrop.story');
-  const tAction = useTranslations('actions');
 
   return (
     <Section className='bg-white' topoBackground>
