@@ -140,7 +140,7 @@ export const products: IProduct[] = [
     name: 'Caravane Vélo',
     image: '/karavel.jpeg',
     color: 'green',
-    basePrice: 5000,
+    basePrice: 3300,
   },
 ];
 

@@ -26,7 +26,7 @@ export default function CTAConfig({ productKey }: CTAConfigProps) {
 
       <Container
         itemsAlign='start'
-        className='relative z-10 flex-col text-white'
+        className='relative z-10 w-full flex-col items-center text-white md:items-start'
       >
         <SectionTitle title={"Location remboursée en cas d'achat"} />
         <div className='flex gap-2'>

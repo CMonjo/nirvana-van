@@ -15,9 +15,9 @@
         "title": "Ils parlent de nous"
       },
       "video": {
-        "title": "Nirvana Van en action!",
+        "title": "Nirvana Van en action !",
         "left": "Nirvana Van",
-        "right": "En action!"
+        "right": "En action !"
       },
       "bento": {
         "title": "La philosophie de Nirvana Van",
@@ -27,7 +27,7 @@
         },
         "2": {
           "title": "Made in France",
-          "description": "Fiers de notre fabrication artisanale, nous mettons un point d'honneur à concevoir et fabriquer nos teardrops en France. En choisissant nos produits Made in France, vous soutenez la production locale tout en profitant de produits durables et haut de gamme 🌱"
+          "description": "Fiers de notre fabrication artisanale, nous mettons un point d'honneur à concevoir et fabriquer nos teardrops en France. En choisissant nos produits Made in France, vous soutenez la production locale tout en profitant de produits durables."
         }
       },
       "story": {
@@ -41,7 +41,8 @@
     },
     "configurator": {
       "title": "Configurateur",
-      "configure": "Configurez votre",
+      "configureYour": "Configurez votre",
+      "configure": "Configurez",
       "include": "Inclus",
       "selected": "Sélectionné",
       "subtitle": "Créer la caravane de vos rêves",
@@ -74,9 +75,9 @@
         "description": "Optez pour une Teardrop : la caravane compacte et facile à tracter, offrant un confort optimal pour vos séjours. Avec son design élégant, son entretien minimal et l'absence de frais mécaniques, vous profitez de chaque aventure en toute simplicité. Votre cocon vous accompagne partout, prêt à partir à tout moment."
       },
       "video": {
-        "title": "La Teardrop en action!",
+        "title": "La Teardrop en action !",
         "left": "La Teardrop",
-        "right": "En action!"
+        "right": "En action !"
       },
       "productAdvantages": {
         "title": "Pourquoi choisir une teardrop pour voyager ?",

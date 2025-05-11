@@ -101,7 +101,7 @@ export default function Story() {
                 }}
               >
                 <Button color='green' size='large'>
-                  {tConfigurator('title')}
+                  {tConfigurator('configure')}
                 </Button>
               </Link>
             </div>

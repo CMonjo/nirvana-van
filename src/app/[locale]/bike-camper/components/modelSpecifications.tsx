@@ -45,7 +45,7 @@ export default function ModelSpecifications() {
               <div className='flex flex-col gap-2'>
                 <div className='flex items-center gap-2'>
                   <Typography variant='h3' className='font-medium'>
-                    La Kulba
+                    Premium
                   </Typography>
                   <Typography variant='body2' className='font-medium'>
                     (4000€)
@@ -68,13 +68,13 @@ export default function ModelSpecifications() {
                   title='Isolation'
                   description='Polyester extrudé 20mm'
                 />
-                <SpecItem title='Dimensions ext' description='200cm x 95cm' />
-
                 <SpecItem
-                  title='Dimensions matelas'
-                  description='190cm x 70cm'
+                  title='Dimensions extérieur'
+                  description='208 x 95cm'
                 />
-                <SpecItem title='Poids' description='54kg à vide' />
+
+                <SpecItem title='Dimensions matelas' description='200 x 73cm' />
+                <SpecItem title='Poids à vide' description='54kg' />
               </div>
               <div>
                 <Button color='orange'>Configurer</Button>
@@ -94,7 +94,7 @@ export default function ModelSpecifications() {
               <div className='flex flex-col gap-2'>
                 <div className='flex items-center gap-2'>
                   <Typography variant='h3' className='font-medium'>
-                    La Kool
+                    Eco
                   </Typography>
                   <Typography variant='body2' className='font-medium'>
                     (1000€)
@@ -110,26 +110,17 @@ export default function ModelSpecifications() {
               <div className='flex flex-col gap-4'>
                 <SpecItem
                   title='Matériaux coque'
-                  description='La grosse bite a lulu'
+                  description='Polypropylène alvéolaire'
                 />
+                <SpecItem title='Matériaux châssis' description='Acier' />
+                <SpecItem title='Isolation' description='Armaflex 10mm' />
                 <SpecItem
-                  title='Matériaux châssis'
-                  description='La grosse bite a lulu'
-                />
-                <SpecItem
-                  title='Dimensions ext'
-                  description='La grosse bite a lulu'
+                  title='Dimensions extérieur'
+                  description='208 x 95cm'
                 />
 
-                <SpecItem
-                  title='Dimensions matelas'
-                  description='La grosse bite a lulu'
-                />
-                <SpecItem title='Poids' description='La grosse bite a lulu' />
-                <SpecItem
-                  title='Isolation'
-                  description='La grosse bite a lulu'
-                />
+                <SpecItem title='Dimensions matelas' description='200 x 73cm' />
+                <SpecItem title='Poids à vide' description='67kg' />
               </div>
               <div>
                 <Button color='orange'>Configurer</Button>
