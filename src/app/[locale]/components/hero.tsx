@@ -17,7 +17,7 @@ export default function Hero() {
         alt='hero'
       />
 
-      <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-16 lg:top-[100px] xl:top-[120px]'>
+      <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-16 lg:top-[100px]'>
         <HeroTitle>{t('hero.title')}</HeroTitle>
         <Typography
           variant='h3'
