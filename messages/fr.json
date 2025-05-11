@@ -32,7 +32,7 @@
       },
       "story": {
         "title": "Bienvenue dans mon atelier !",
-        "text1": "C'est dans mon atelier dans le sud de la France que je conçois et fabrique, depuis plus deux ans, des mini-caravanes uniques. Mon approche artisanale me tient à cœur: de la première esquisse aux derniers ajustements, chaque détail est réalisé à la main et continuellement affiné pour offrir une mini-caravane 100 % fait maison.",
+        "text1": "C'est dans le sud de la France que je conçois et fabrique, depuis plus deux ans, des mini-caravanes uniques. Mon approche artisanale me tient à cœur: de la première esquisse aux derniers ajustements, chaque détail est réalisé à la main et continuellement affiné pour offrir une mini-caravane 100 % fait maison.",
         "text2": "Si vous souhaitez discuter d'un projet ou découvrir de près le processus de fabrication, je serai ravi de vous accueillir !"
       },
       "socials": {
@@ -82,23 +82,23 @@
         "title": "Pourquoi choisir une teardrop pour voyager ?",
         "1": {
           "title": "Personnalisation",
-          "description": "Créez une caravane unique qui vous ressemble, adaptée à vos besoins et à votre style."
+          "description": "Créez une caravane unique, adaptée à vos besoins et à votre style."
         },
         "2": {
           "title": "Design unique",
           "description": "Un format discret qui attire les regards et facilite le stationnement."
         },
         "3": {
-          "title": "Frais réduits",
-          "description": "Aucun surcoût au péage, pas d'entretien mécanique."
+          "title": "Rapidité d'utilisation",
+          "description": "Prête en un clin d’œil : accrochez-la et partez, sans montage ni lit à déplier."
         },
         "4": {
-          "title": "Rapidité d'utilisation",
-          "description": "Attachez-la à votre voiture et partez en un instant, de 2 à 4 personnes, sans avoir à monter une tente ou déplier un lit comme dans un van."
+          "title": "Frais réduits",
+          "description": "Aucun surcoût au péage, aucun entretien mécanique."
         },
         "5": {
           "title": "Confort et autonomie",
-          "description": "Offrez-vous un voyage confortable et original, tout en bénéficiant d'une autonomie accrue."
+          "description": "Offrez-vous un voyage confortable, où que vous soyez."
         }
       },
       "productDescription": {

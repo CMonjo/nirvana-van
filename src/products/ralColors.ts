@@ -2,6 +2,7 @@ export const ralColors = [
   {
     color: 'yellow',
     shades: [
+      { code: 'RAL 1021', hex: '#F3DA0B' },
       { code: 'RAL 1000', hex: '#BEBD7F' },
       { code: 'RAL 1001', hex: '#C2B078' },
       { code: 'RAL 1002', hex: '#C6A664' },
@@ -20,7 +21,6 @@ export const ralColors = [
       { code: 'RAL 1018', hex: '#F8F32B' },
       { code: 'RAL 1019', hex: '#9E9764' },
       { code: 'RAL 1020', hex: '#999950' },
-      { code: 'RAL 1021', hex: '#F3DA0B' },
       { code: 'RAL 1023', hex: '#FAD201' },
       { code: 'RAL 1024', hex: '#AEA04B' },
       { code: 'RAL 1026', hex: '#FFFF00' },
@@ -56,6 +56,7 @@ export const ralColors = [
   {
     color: 'red',
     shades: [
+      { code: 'RAL 3020', hex: '#CC0605' },
       { code: 'RAL 3000', hex: '#AF2B1E' },
       { code: 'RAL 3001', hex: '#A2231D' },
       { code: 'RAL 3002', hex: '#A2231D' },
@@ -72,7 +73,6 @@ export const ralColors = [
       { code: 'RAL 3016', hex: '#B32821' },
       { code: 'RAL 3017', hex: '#D53032' },
       { code: 'RAL 3018', hex: '#D53032' },
-      { code: 'RAL 3020', hex: '#CC0605' },
       { code: 'RAL 3022', hex: '#D36E70' },
       { code: 'RAL 3024', hex: '#F80000' },
       { code: 'RAL 3026', hex: '#F80000' },
@@ -86,6 +86,7 @@ export const ralColors = [
   {
     color: 'purple',
     shades: [
+      { code: 'RAL 4008', hex: '#924E7D' },
       { code: 'RAL 4001', hex: '#6C6874' },
       { code: 'RAL 4002', hex: '#922B3E' },
       { code: 'RAL 4003', hex: '#DE4C8A' },
@@ -93,7 +94,6 @@ export const ralColors = [
       { code: 'RAL 4005', hex: '#6C6874' },
       { code: 'RAL 4006', hex: '#A03472' },
       { code: 'RAL 4007', hex: '#4A192C' },
-      { code: 'RAL 4008', hex: '#924E7D' },
       { code: 'RAL 4009', hex: '#A18594' },
       { code: 'RAL 4010', hex: '#CF3476' },
       { code: 'RAL 4011', hex: '#8673A1' },
@@ -103,6 +103,7 @@ export const ralColors = [
   {
     color: 'blue',
     shades: [
+      { code: 'RAL 5021', hex: '#3E5F8A' },
       { code: 'RAL 5000', hex: '#354D73' },
       { code: 'RAL 5001', hex: '#1F3438' },
       { code: 'RAL 5002', hex: '#20214F' },
@@ -122,7 +123,6 @@ export const ralColors = [
       { code: 'RAL 5018', hex: '#3A444D' },
       { code: 'RAL 5019', hex: '#1F3438' },
       { code: 'RAL 5020', hex: '#3A444D' },
-      { code: 'RAL 5021', hex: '#3E5F8A' },
       { code: 'RAL 5022', hex: '#20214F' },
       { code: 'RAL 5023', hex: '#3A444D' },
       { code: 'RAL 5024', hex: '#3E5F8A' },
@@ -173,6 +173,7 @@ export const ralColors = [
   {
     color: 'grey',
     shades: [
+      { code: 'RAL 7030', hex: '#A5A5A5' },
       { code: 'RAL 7000', hex: '#78858B' },
       { code: 'RAL 7001', hex: '#8A9597' },
       { code: 'RAL 7002', hex: '#817D6E' },
@@ -193,7 +194,6 @@ export const ralColors = [
       { code: 'RAL 7023', hex: '#8C8F85' },
       { code: 'RAL 7024', hex: '#4E5455' },
       { code: 'RAL 7026', hex: '#374447' },
-      { code: 'RAL 7030', hex: '#A5A5A5' },
       { code: 'RAL 7031', hex: '#474B4E' },
       { code: 'RAL 7032', hex: '#B5B8B1' },
       { code: 'RAL 7033', hex: '#7D8471' },
@@ -215,6 +215,7 @@ export const ralColors = [
   {
     color: 'brown',
     shades: [
+      { code: 'RAL 8024', hex: '#79553D' },
       { code: 'RAL 8000', hex: '#887142' },
       { code: 'RAL 8001', hex: '#9C6B30' },
       { code: 'RAL 8002', hex: '#79553D' },
@@ -231,7 +232,6 @@ export const ralColors = [
       { code: 'RAL 8019', hex: '#3A3331' },
       { code: 'RAL 8022', hex: '#1C1C1C' },
       { code: 'RAL 8023', hex: '#A65E2E' },
-      { code: 'RAL 8024', hex: '#79553D' },
       { code: 'RAL 8025', hex: '#755C48' },
       { code: 'RAL 8028', hex: '#4E3B31' },
       { code: 'RAL 8029', hex: '#763C28' },
@@ -240,10 +240,10 @@ export const ralColors = [
   {
     color: 'blackAndWhite',
     shades: [
+      { code: 'RAL 9004', hex: '#282828' },
       { code: 'RAL 9001', hex: '#FDF4E3' },
       { code: 'RAL 9002', hex: '#E7EBDA' },
       { code: 'RAL 9003', hex: '#F4F4F4' },
-      { code: 'RAL 9004', hex: '#282828' },
       { code: 'RAL 9005', hex: '#0A0A0A' },
       { code: 'RAL 9006', hex: '#A5A5A5' },
       { code: 'RAL 9007', hex: '#8F8F8F' },

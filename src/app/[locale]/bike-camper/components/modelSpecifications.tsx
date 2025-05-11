@@ -58,7 +58,7 @@ export default function ModelSpecifications() {
                 </Typography>
               </div>
               <Divider />
-              <div className='flex flex-col gap-2'>
+              <div className='flex flex-col gap-4'>
                 <SpecItem
                   title='Matériaux coque'
                   description='Fibre de verre'
@@ -107,7 +107,7 @@ export default function ModelSpecifications() {
                 </Typography>
               </div>
               <Divider />
-              <div className='flex flex-col gap-2'>
+              <div className='flex flex-col gap-4'>
                 <SpecItem
                   title='Matériaux coque'
                   description='La grosse bite a lulu'

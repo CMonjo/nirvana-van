@@ -63,7 +63,6 @@ export default function Page() {
           descriptionRight={tPage('video.right')}
           showSocials
         />
-        {/* Block spec comme le site de vélo zarma */}
         <ModelSpecifications />
         <Bento />
         {/* TODO title, subtitle, rent:boolean */}

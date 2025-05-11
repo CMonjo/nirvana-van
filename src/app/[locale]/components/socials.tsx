@@ -51,8 +51,8 @@ export default function Socials() {
             <motion.div
               key={index}
               className='relative h-40 w-28 flex-shrink-0 md:h-80 md:w-56'
-              whileHover={{ scale: 0.95 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              //   whileHover={{ scale: 0.95 }}
+              //   transition={{ type: 'spring', stiffness: 300, damping: 50 }}
             >
               <Image
                 className='rounded-3xl object-cover'

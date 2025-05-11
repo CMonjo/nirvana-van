@@ -6,7 +6,7 @@ export const products: IProduct[] = [
     name: 'Teardrop',
     image: '/model_td.jpeg',
     color: 'orange',
-    basePrice: 10500,
+    basePrice: 10900,
     categories: [
       {
         name: 'main_color',

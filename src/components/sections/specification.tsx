@@ -8,6 +8,7 @@ import SectionTitle from '@/components/sections/title';
 import { useTranslations } from 'next-intl';
 import { ProductType } from '@/products/types';
 import { products } from '@/products/products';
+import CardList from '../utils/CardList';
 
 export default function Specification({
   productKey,
@@ -27,7 +28,7 @@ export default function Specification({
           className={`flex w-full flex-col items-stretch gap-4 md:flex-row md:gap-8`}
         >
           <div
-            className={`relative flex min-h-[350px] w-full flex-[3] items-center justify-center rounded-3xl bg-${product?.color} md:min-h-[400px]`}
+            className={`relative flex min-h-[350px] w-full flex-[3] items-center justify-center rounded-3xl bg-grey md:min-h-[400px]`}
           >
             <Image
               fill
@@ -35,7 +36,6 @@ export default function Specification({
               alt='bento'
               className='rounded-3xl object-contain'
             />
-            {/* <div className='absolute inset-0 rounded-3xl bg-black/15' /> */}
           </div>
 
           <div className='flex flex-[1] flex-col gap-2 rounded-3xl bg-grey px-4 py-4'>
