@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import SectionTitle from '../sections/title';
+import SectionTitle from './title';
 import Section from '../atoms/section';
 import Container from '../atoms/container';
 import Typography from '../atoms/typography';

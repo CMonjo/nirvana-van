@@ -138,7 +138,7 @@ export const products: IProduct[] = [
   {
     key: 'bike-camper',
     name: 'Caravane Vélo',
-    image: '/karavel.jpeg',
+    image: '/model_kv.JPG',
     color: 'green',
     basePrice: 3300,
   },

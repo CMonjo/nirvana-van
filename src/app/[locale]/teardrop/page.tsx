@@ -16,8 +16,7 @@ import SellIcon from '@mui/icons-material/Sell';
 import BoltIcon from '@mui/icons-material/Bolt';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import BedtimeIcon from '@mui/icons-material/Bedtime';
-import CTAConfig from '@/components/sections/CTAConfig';
-import SplitImageText from '@/components/SplitImageText';
+import CTAConfig from './components/CTAConfig';
 
 const product = products.find((product) => product.key === 'teardrop');
 export default function Page() {
@@ -88,7 +87,7 @@ export default function Page() {
         ))}
         <Bento />
         <Specification productKey='teardrop' specs={5} />
-        <CTAConfig productKey='teardrop' />
+        <CTAConfig />
         <FAQ productKey={'teardrop'} color='orange' />
       </main>
 

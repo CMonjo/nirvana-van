@@ -37,7 +37,7 @@ export default function ModelSpecifications() {
           <div className='flex w-full flex-col justify-center rounded-xl bg-grey'>
             <div className='relative h-[300px] w-full rounded-lg'>
               <Image
-                src='/model_kv.png'
+                src='/bike-camper/hero.JPG'
                 alt='Model Specifications'
                 fill
                 className='rounded-2xl object-cover'
@@ -86,7 +86,7 @@ export default function ModelSpecifications() {
           <div className='flex w-full flex-col justify-center rounded-xl bg-grey'>
             <div className='relative h-[300px] w-full rounded-lg'>
               <Image
-                src='/model_kv.png'
+                src='/bike-camper/model-eco.jpeg'
                 alt='Model Specifications'
                 fill
                 className='rounded-2xl object-cover'

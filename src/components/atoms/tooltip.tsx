@@ -19,6 +19,10 @@ export default function Tooltip({
     right: 'left-full top-1/2 transform -translate-y-1/2 ml-2',
   };
 
+  if (content === '') {
+    return children;
+  }
+
   return (
     <div
       className='relative inline-block'

@@ -8,40 +8,40 @@ import SectionTitle from '../../../../components/sections/title';
 import { useTranslations } from 'next-intl';
 
 export default function Bento() {
-  const t = useTranslations('pages.teardrop.bento');
+  const t = useTranslations('pages.bike-camper.bento');
 
   const items = [
     {
-      image: '/teardrop/bento/alu.png',
-      title: t('aluminum'),
-    },
-    {
-      image: '/teardrop/bento/solar.png',
-      title: t('solarPanel'),
-    },
-    {
-      image: '/teardrop/bento/crutches.png',
-      title: t('crutches'),
-    },
-    {
-      image: '/teardrop/bento/materials.jpeg',
-      title: t('materials'),
-    },
-    {
-      image: '/teardrop/bento/openings.JPG',
+      image: '/bike-camper/bento/openings.png',
       title: t('openings'),
     },
     {
-      image: '/teardrop/bento/storage.JPG',
+      image: '/bike-camper/bento/parkingBrake.JPG',
+      title: t('parkingBrake'),
+    },
+    {
+      image: '/bike-camper/bento/table.JPG',
+      title: t('table'),
+    },
+    {
+      image: '/bike-camper/bento/wheel.JPG',
+      title: t('wheel'),
+    },
+    {
+      image: '/bike-camper/bento/solar.JPG',
+      title: t('solarPanel'),
+    },
+    {
+      image: '/bike-camper/bento/light.JPG',
+      title: t('light'),
+    },
+    {
+      image: '/bike-camper/bento/storage.JPG',
       title: t('storage'),
     },
     {
-      image: '/teardrop/bento/ecoflow.png',
-      title: t('ecoflowLighting'),
-    },
-    {
-      image: '/teardrop/bento/insulation.png',
-      title: t('insulation'),
+      image: '/bike-camper/bento/crutches.jpeg',
+      title: t('crutches'),
     },
   ];
 

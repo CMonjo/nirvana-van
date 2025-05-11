@@ -31,7 +31,7 @@ export default function ChooseModel() {
             onClick={handleClick}
             button={
               <Button color={'orange'} size='small'>
-                {tActions('configureYour')}
+                {tActions('configure')}
               </Button>
             }
           />
@@ -40,7 +40,7 @@ export default function ChooseModel() {
             onClick={handleClick}
             button={
               <Button color={'green'} size='small'>
-                {tActions('configureYour')}
+                {tActions('configure')}
               </Button>
             }
           />

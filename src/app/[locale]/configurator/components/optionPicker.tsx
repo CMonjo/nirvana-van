@@ -96,9 +96,9 @@ export default function OptionPicker({
                   <Tooltip
                     content={
                       option.comingSoon
-                        ? 'Prochainement !'
+                        ? tPage('comingSoon')
                         : option.soldOut
-                          ? 'En rupture'
+                          ? tPage('soldOut')
                           : ''
                     }
                     position='top'
@@ -115,11 +115,28 @@ export default function OptionPicker({
                     />
                   </Tooltip>
                 )}
-                <Typography variant='none' className='text-md font-light'>
-                  {option.included
-                    ? tPage('include')
-                    : getPrice(option.price || 0)}
-                </Typography>
+                <div className='flex flex-col items-end'>
+                  <Typography
+                    variant='none'
+                    className={clsx('text-md font-light', {
+                      'line-through': option.comingSoon || option.soldOut,
+                    })}
+                  >
+                    {option.included
+                      ? tPage('include')
+                      : getPrice(option.price || 0)}
+                  </Typography>
+                  {(option.comingSoon || option.soldOut) && (
+                    <Typography
+                      variant='caption'
+                      className='text-md mt-[-5px] font-light'
+                    >
+                      {option.comingSoon
+                        ? tPage('comingSoon')
+                        : tPage('soldOut')}
+                    </Typography>
+                  )}
+                </div>
               </div>
             </div>
           </div>

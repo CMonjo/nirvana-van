@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 import Bento from './components/bento';
 import History from './components/history';
 import ModelSpecifications from './components/modelSpecifications';
-import CTAConfig from '@/components/sections/CTAConfig';
+import CTAConfig from './components/CTAConfig';
 import ScaleIcon from '@mui/icons-material/Scale';
 import LuggageIcon from '@mui/icons-material/Luggage';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
@@ -65,8 +65,7 @@ export default function Page() {
         />
         <ModelSpecifications />
         <Bento />
-        {/* TODO title, subtitle, rent:boolean */}
-        <CTAConfig productKey='bike-camper' />
+        <CTAConfig />
         <History />
         <FAQ
           productKey={'bike-camper'}

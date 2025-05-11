@@ -44,6 +44,8 @@
       "configureYour": "Configurez votre",
       "configure": "Configurez",
       "include": "Inclus",
+      "comingSoon": "Prochainement",
+      "soldOut": "En rupture",
       "selected": "Sélectionné",
       "subtitle": "Créer la caravane de vos rêves",
       "receiveEmailQuote": "Recevez votre configuration par email !",
@@ -91,7 +93,7 @@
         },
         "3": {
           "title": "Rapidité d'utilisation",
-          "description": "Prête en un clin d’œil : accrochez-la et partez, sans montage ni lit à déplier."
+          "description": "Prête en un clin d'œil : accrochez-la et partez, sans montage ni lit à déplier."
         },
         "4": {
           "title": "Frais réduits",
@@ -157,7 +159,7 @@
       },
       "story": {
         "title": "Une nouvelle façon de voyager à vélo",
-        "description": "Embarquez pour vos excursions de cyclotourisme, que ce soit le temps d’un week-end ou pour plusieurs mois. Découvrez un hébergement prêt à l’emploi qui s’installe en un clin d’œil, vous offrant une solution pratique pour profiter pleinement de chaque étape. Concentrez-vous sur l’essentiel : pédaler en toute liberté et vivre l’aventure au plus près de la nature."
+        "description": "Embarquez pour vos excursions de cyclotourisme, que ce soit le temps d'un week-end ou pour plusieurs mois. Découvrez un hébergement prêt à l'emploi qui s'installe en un clin d'œil, vous offrant une solution pratique pour profiter pleinement de chaque étape. Concentrez-vous sur l'essentiel : pédaler en toute liberté et vivre l'aventure au plus près de la nature."
       },
       "video": {
         "title": "La Caravane Vélo en action!",
@@ -213,15 +215,15 @@
         }
       },
       "bento": {
-        "title": "Pour une expérience unique et inoubliable",
-        "1": {
-          "title": "Tout confort",
-          "description": "Le roadtrip a vélo comme vous l'avez jamais fait"
-        },
-        "2": {
-          "title": "Libre comme l'air",
-          "description": "Bla bla blaBla bla blaBla bla blaBla bla blaBla bla bla"
-        }
+        "title": "Ce qui fait la différence",
+        "openings": "Ouvertures",
+        "parkingBrake": "Frein de stationnement",
+        "table": "Table",
+        "wheel": "Roues renforcées",
+        "solarPanel": "Panneau solaire",
+        "light": "Éclairage",
+        "storage": "Rangements",
+        "crutches": "Béquilles"
       }
     }
   },
@@ -363,15 +365,15 @@
       "answer7": "Oui, nous proposons des visites et des essais à notre atelier à Montpellier. Contactez-nous pour organiser un rendez-vous !"
     },
     "bike-camper": {
-      "question1": "Est-ce que la Caravane vélo s’accroche à tous les vélos ?",
+      "question1": "Est-ce que la Caravane vélo s'accroche à tous les vélos ?",
       "answer1": "Quasi, si votre vélo est chelou, vous pouvez nous contacter pour une fixation sur mesure.",
       "question2": "Est-ce que je peux me la faire livrer ?",
       "answer2": "On va faire en sorte, challah Où est-ce possible de dormir avec ? Règle du bivouac je crois, allez où vous voulez Proposez-vous un service après-vente ? Oui, garantie 2 ans Quel est le délai de fabrication ? Ca dep quoi.",
-      "question3": "Est-il possible d’utiliser cette caravane avec un vélo non électrique ?",
+      "question3": "Est-il possible d'utiliser cette caravane avec un vélo non électrique ?",
       "answer3": "Oui, la caravane est conçue pour être tractée par un vélo classique. Cependant, sur des terrains vallonnés ou pour de longues distances, un vélo électrique peut offrir plus de confort.",
       "question4": "Les mini-caravanes sont-elles adaptées à toutes les saisons ?",
-      "answer4": "Oui, la caravane est équipée d’une isolation en Armaflex pour offrir un confort thermique, que ce soit par temps chaud ou froid.",
-      "question5": "Est-il possible de l’essayer avant de l’acheter ?",
+      "answer4": "Oui, la caravane est équipée d'une isolation en Armaflex pour offrir un confort thermique, que ce soit par temps chaud ou froid.",
+      "question5": "Est-il possible de l'essayer avant de l'acheter ?",
       "answer5": "Nous proposons des démonstrations et des essais sur rendez-vous à notre atelier à Montpellier. Contactez-nous pour organiser une visite !"
     }
   },
