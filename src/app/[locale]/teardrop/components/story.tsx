@@ -50,7 +50,7 @@ export default function Story() {
               {tPage('description')}
             </Typography>
             {/* Desktop buttons */}
-            <div className='hidden flex-col items-center gap-4 md:flex md:flex-row md:items-start'>
+            <div className='hidden flex-col items-center gap-2 md:flex md:flex-row md:items-start'>
               <Buttons />
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Story() {
             />
           </div>
           {/* Mobile buttons */}
-          <div className='flex flex-col items-center gap-4 md:hidden'>
+          <div className='flex flex-col items-center gap-2 md:hidden'>
             <Buttons />
           </div>
         </div>
