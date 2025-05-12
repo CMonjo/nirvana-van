@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 export const HeroTitle = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.h1
-      className='text-center font-acorn text-5xl text-white sm:text-3xl lg:text-6xl xl:text-8xl max-xs:text-[1.25rem]'
+      className='text-center font-acorn text-5xl text-white sm:text-3xl lg:text-5xl xl:text-7xl max-xs:text-[1.25rem]'
       initial={{ rotate: 0, scale: 0.8 }}
       animate={{ rotate: 0, scale: 1 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
