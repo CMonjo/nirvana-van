@@ -16,12 +16,12 @@ export default function Bento() {
       title: t('openings'),
     },
     {
-      image: '/bike-camper/bento/parkingBrake.JPG',
-      title: t('parkingBrake'),
-    },
-    {
       image: '/bike-camper/bento/table.JPG',
       title: t('table'),
+    },
+    {
+      image: '/bike-camper/bento/parkingBrake.JPG',
+      title: t('parkingBrake'),
     },
     {
       image: '/bike-camper/bento/wheel.JPG',
@@ -32,16 +32,16 @@ export default function Bento() {
       title: t('solarPanel'),
     },
     {
+      image: '/bike-camper/bento/crutches.jpeg',
+      title: t('crutches'),
+    },
+    {
       image: '/bike-camper/bento/light.JPG',
       title: t('light'),
     },
     {
       image: '/bike-camper/bento/storage.JPG',
       title: t('storage'),
-    },
-    {
-      image: '/bike-camper/bento/crutches.jpeg',
-      title: t('crutches'),
     },
   ];
 

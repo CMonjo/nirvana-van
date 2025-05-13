@@ -58,9 +58,9 @@ export default function Page() {
         <Video
           source='/home/video.mp4'
           thumbnail='/bento-1.jpeg'
-          title={tPage('video.title')}
-          descriptionLeft={tPage('video.left')}
-          descriptionRight={tPage('video.right')}
+          //   title={tPage('video.title')}
+          //   descriptionLeft={tPage('video.left')}
+          //   descriptionRight={tPage('video.right')}
           showSocials
         />
         <ModelSpecifications />

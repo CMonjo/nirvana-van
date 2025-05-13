@@ -7,8 +7,6 @@ import Typography from '@/components/atoms/typography';
 import SectionTitle from '@/components/sections/title';
 import { useTranslations } from 'next-intl';
 import { ProductType } from '@/products/types';
-import { products } from '@/products/products';
-import CardList from '../utils/CardList';
 
 export default function Specification({
   productKey,
@@ -18,7 +16,6 @@ export default function Specification({
   specs: number;
 }) {
   const t = useTranslations(`pages.${productKey}.productSpecification`);
-  const product = products.find((p) => p.key === productKey);
 
   return (
     <Section className={`bg-white`}>

@@ -12,6 +12,7 @@ import { useTranslations } from 'next-intl';
 export default function Story() {
   const tPage = useTranslations('pages.bike-camper.story');
   const tConfigurator = useTranslations('pages.configurator');
+  const tAction = useTranslations('actions');
 
   // Notre mission ?
   // Rendre le cyclotourisme plus accessible et confortable que jamais, sans compromis sur la simplicité et le plaisir du voyage.
@@ -20,16 +21,13 @@ export default function Story() {
     <Section className='bg-white' topoBackground>
       <Container>
         <div className='flex flex-col items-center gap-8 md:flex-row'>
-          <div className='flex w-full flex-col items-center md:w-3/5 md:items-start'>
-            <SectionTitle
-              title={tPage('title')}
-              className='mb-4 md:text-left'
-            />
-            <Typography className='text-center md:mb-8 md:text-left'>
+          <div className='flex w-full flex-col items-center gap-4 md:w-3/5 md:items-start'>
+            <SectionTitle title={tPage('title')} className='md:text-left' />
+            <Typography className='text-center md:text-left'>
               {tPage('description')}
             </Typography>
             {/* Desktop buttons */}
-            <div className='hidden flex-col items-center gap-4 md:flex md:flex-row md:items-start'>
+            <div className='hidden flex-col items-center gap-2 md:flex md:flex-row md:items-start'>
               <Link
                 className='mb-2'
                 href={{
@@ -38,7 +36,7 @@ export default function Story() {
                 }}
               >
                 <Button color='green' size='large'>
-                  {tConfigurator('configure')}
+                  {tAction('configureBikeCamper')}
                 </Button>
               </Link>
             </div>

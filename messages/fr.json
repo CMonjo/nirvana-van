@@ -121,20 +121,20 @@
       "productSpecification": {
         "title": "Spécifications",
         "1": {
-          "title": "Vitesse maximale",
-          "value": "100 km/h"
-        },
-        "2": {
           "title": "Poids à vide",
           "value": "400 kg"
         },
-        "3": {
-          "title": "Hauteur extérieure",
+        "2": {
+          "title": "Hauteur",
           "value": "174 cm"
         },
+        "3": {
+          "title": "Largueur",
+          "value": "183 cm"
+        },
         "4": {
-          "title": "Dimensions extérieures",
-          "value": "354 x 183 cm"
+          "title": "Longueur",
+          "value": "354 cm"
         },
         "5": {
           "title": "Pas de permis nécessaire",
@@ -241,6 +241,7 @@
   "actions": {
     "contactUs": "Nous contacter",
     "configureMy": "Configurer ma",
+    "configureBikeCamper": "Configurer ma caravane",
     "iWantRent": "Je veux la louer",
     "discover": "Découvrir",
     "configure": "Configurer"

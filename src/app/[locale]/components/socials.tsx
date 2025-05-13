@@ -57,7 +57,7 @@ export default function Socials() {
               <Image
                 className='rounded-3xl object-cover'
                 fill
-                alt={`social-image-${index + 1}`}
+                alt={`social-image-r-${index + 1}`}
                 src={image}
               />
             </motion.div>
@@ -65,7 +65,27 @@ export default function Socials() {
         </div>
       </div>
 
-      <div className='mt-4 w-full overflow-hidden pl-2 md:hidden'>
+      <div className='mt-4 w-full overflow-hidden pl-2 md:mt-8'>
+        <div className='-ml-20 flex gap-4 md:gap-8'>
+          {images.reverse().map((image, index) => (
+            <motion.div
+              key={index}
+              className='relative h-40 w-28 flex-shrink-0 md:h-80 md:w-56'
+              //   whileHover={{ scale: 0.95 }}
+              //   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            >
+              <Image
+                className='rounded-3xl object-cover'
+                fill
+                alt={`social-image-l-${index + 1}`}
+                src={image}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* <div className='mt-4 w-full overflow-hidden pl-2 md:hidden'>
         <div className='-ml-20 flex gap-4'>
           {images.reverse().map((image, index) => (
             <motion.div
@@ -83,7 +103,7 @@ export default function Socials() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
