@@ -87,7 +87,7 @@ export default function Page() {
         <Bento />
         <Specification productKey='teardrop' specs={5} />
         <CTAConfig />
-        <FAQ productKey={'teardrop'} color='orange' />
+        <FAQ productKey={'teardrop'} />
       </main>
 
       <Footer />

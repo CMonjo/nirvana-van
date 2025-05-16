@@ -7,6 +7,7 @@ export const products: IProduct[] = [
     image: '/model_td.jpeg',
     color: 'orange',
     basePrice: 10900,
+    faqLength: 6,
     categories: [
       {
         name: 'main_color',
@@ -141,6 +142,7 @@ export const products: IProduct[] = [
     image: '/model_kv.JPG',
     color: 'green',
     basePrice: 3300,
+    faqLength: 7,
   },
 ];
 

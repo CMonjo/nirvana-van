@@ -27,12 +27,13 @@ const SpecItem = ({
   );
 };
 export default function ModelSpecifications() {
-  const tPage = useTranslations('pages.bike-camper.productSpecifications');
+  const tPage = useTranslations('pages.bike-camper.models');
+  const tActions = useTranslations('actions');
 
   return (
     <Section className='bg-white' topoBackground>
       <Container className='flex-col'>
-        <SectionTitle title={'Découvrez nos modèles'} />
+        <SectionTitle title={tPage('title')} />
         <div className='flex w-full flex-col items-center gap-8  md:flex-row'>
           <div className='flex w-full flex-col justify-center rounded-xl bg-grey'>
             <div className='relative h-[300px] w-full rounded-lg'>
@@ -79,7 +80,7 @@ export default function ModelSpecifications() {
                 <SpecItem title='Poids à vide' description='54kg' />
               </div>
               <div>
-                <Button color={product?.color}>Configurer</Button>
+                <Button color={product?.color}>{tActions('configure')}</Button>
               </div>
             </div>
           </div>
@@ -125,7 +126,7 @@ export default function ModelSpecifications() {
                 <SpecItem title='Poids à vide' description='67kg' />
               </div>
               <div>
-                <Button color={product?.color}>Configurer</Button>
+                <Button color={product?.color}>{tActions('configure')}</Button>
               </div>
             </div>
           </div>

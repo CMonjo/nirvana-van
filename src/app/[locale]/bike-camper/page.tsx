@@ -8,12 +8,12 @@ import { useTranslations } from 'next-intl';
 import Bento from './components/bento';
 import History from './components/history';
 import ModelSpecifications from './components/modelSpecifications';
-import CTAConfig from './components/CTAConfig';
 import ScaleIcon from '@mui/icons-material/Scale';
-import LuggageIcon from '@mui/icons-material/Luggage';
-import AutorenewIcon from '@mui/icons-material/Autorenew';
-import WeekendIcon from '@mui/icons-material/Weekend';
 import Advantages from '@/components/sections/Advantages';
+import AirlineSeatFlatIcon from '@mui/icons-material/AirlineSeatFlat';
+import KeyIcon from '@mui/icons-material/Key';
+import PublicIcon from '@mui/icons-material/Public';
+import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import { products } from '@/products/products';
 
 const product = products.find((product) => product.key === 'bike-camper');
@@ -23,24 +23,29 @@ export default function Page() {
 
   const advantages = [
     {
-      icon: <ScaleIcon sx={{ fontSize: 'inherit' }} />,
+      icon: <PublicIcon sx={{ fontSize: 'inherit' }} />,
       title: tPage('productAdvantages.1.title'),
       description: tPage('productAdvantages.1.description'),
     },
     {
-      icon: <LuggageIcon sx={{ fontSize: 'inherit' }} />,
+      icon: <AirlineSeatFlatIcon sx={{ fontSize: 'inherit' }} />,
       title: tPage('productAdvantages.2.title'),
       description: tPage('productAdvantages.2.description'),
     },
     {
-      icon: <AutorenewIcon sx={{ fontSize: 'inherit' }} />,
+      icon: <KeyIcon sx={{ fontSize: 'inherit' }} />,
       title: tPage('productAdvantages.3.title'),
       description: tPage('productAdvantages.3.description'),
     },
     {
-      icon: <WeekendIcon sx={{ fontSize: 'inherit' }} />,
+      icon: <ScaleIcon sx={{ fontSize: 'inherit' }} />,
       title: tPage('productAdvantages.4.title'),
       description: tPage('productAdvantages.4.description'),
+    },
+    {
+      icon: <InsertEmoticonIcon sx={{ fontSize: 'inherit' }} />,
+      title: tPage('productAdvantages.5.title'),
+      description: tPage('productAdvantages.5.description'),
     },
   ];
 
@@ -55,22 +60,11 @@ export default function Page() {
           color={product?.color}
           advantages={advantages}
         />
-        <Video
-          source='/home/video.mp4'
-          thumbnail='/bento-1.jpeg'
-          //   title={tPage('video.title')}
-          //   descriptionLeft={tPage('video.left')}
-          //   descriptionRight={tPage('video.right')}
-          showSocials
-        />
-        <ModelSpecifications />
+        <Video source='/home/video.mp4' thumbnail='/bento-1.jpeg' showSocials />
         <Bento />
-        <CTAConfig />
+        <ModelSpecifications />
         <History />
-        <FAQ
-          productKey={'bike-camper'}
-          color={product?.color as 'orange' | 'green'}
-        />
+        <FAQ productKey={'bike-camper'} />
       </main>
       <Footer />
     </div>

@@ -11,6 +11,7 @@ import { useTranslations } from 'next-intl';
 import Button from '../atoms/button';
 import { Link } from '@/i18n/routing';
 import { ProductType } from '@/products/types';
+import { products } from '@/products/products';
 
 const FAQItem = ({
   question,
@@ -63,37 +64,37 @@ const FAQItem = ({
   );
 };
 
-const FAQ = ({
-  productKey,
-  color,
-}: {
-  productKey: ProductType;
-  color: 'green' | 'orange';
-}) => {
+const FAQ = ({ productKey }: { productKey: ProductType }) => {
   const tProduct = useTranslations(`faq`);
   const tActions = useTranslations(`actions`);
-  const totalQuestions = productKey === 'teardrop' ? 6 : 5;
+
+  const product = products.find((product) => product.key === productKey);
+
+  if (!product) {
+    return null;
+  }
 
   return (
     <Section className='bg-white'>
       <Container className='flex-col'>
         <SectionTitle title={`F.A.Q`} />
         <div className='flex w-full flex-col gap-4'>
-          {Array.from({ length: totalQuestions }, (_, index) => index).map(
-            (index: number) => (
-              <div className='mb-2' key={index}>
-                <FAQItem
-                  color={color}
-                  question={tProduct(`${productKey}.question${index + 1}`)}
-                  answer={tProduct(`${productKey}.answer${index + 1}`)}
-                />
-              </div>
-            )
-          )}
+          {Array.from(
+            { length: product?.faqLength ?? 0 },
+            (_, index) => index
+          ).map((index: number) => (
+            <div className='mb-2' key={index}>
+              <FAQItem
+                color={product.color}
+                question={tProduct(`${productKey}.question${index + 1}`)}
+                answer={tProduct(`${productKey}.answer${index + 1}`)}
+              />
+            </div>
+          ))}
         </div>
         <Typography className='mt-2'>{tProduct('otherQuestions')}</Typography>
         <Link href='/contact'>
-          <Button color={color}>{tActions('contactUs')}</Button>
+          <Button color={product.color}>{tActions('contactUs')}</Button>
         </Link>
       </Container>
     </Section>

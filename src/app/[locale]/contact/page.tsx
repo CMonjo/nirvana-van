@@ -18,25 +18,25 @@ export default function Teardrop() {
       <Section className='bg-white'>
         <Container className='flex-col'>
           <div className='flex w-full max-w-3xl flex-col items-center justify-center gap-4 rounded-3xl bg-grey px-4 py-8 md:p-16'>
-            <SectionTitle title={tPage('title')} />
+            <SectionTitle title={tPage('contactUs')} />
             <ContactForm />
           </div>
           <div className='flex w-full max-w-3xl flex-col items-center gap-4 rounded-3xl bg-grey px-4 py-8 md:p-16'>
-            <SectionTitle title={"Venez découvrir l'atelier"} />
+            <SectionTitle title={tPage('visitWorkshop')} />
             <Image src='/map.png' alt='map' width={803 / 2} height={793 / 2} />
             <div className='flex w-full flex-col justify-between gap-4 md:flex-row'>
               <div className='flex flex-col gap-0'>
-                <Typography variant='body3'>Adresse</Typography>
-                <Typography variant='body1'>51 rue de Barcelone</Typography>
-                <Typography variant='body1'>75010 Paris</Typography>
+                <Typography variant='body3'>{tPage('address')}</Typography>
+                <Typography variant='body1'>Z.I des Paluds</Typography>
+                <Typography variant='body1'>13400 Aubagne</Typography>
               </div>
               <div className='flex flex-col gap-0'>
-                <Typography variant='body3'>Téléphone</Typography>
-                <Typography variant='body1'>01 43 54 23 89</Typography>
+                <Typography variant='body3'>{tPage('phone')}</Typography>
+                <Typography variant='body1'>06 64 04 96 95 </Typography>
               </div>
               <div className='flex flex-col gap-0'>
                 <Typography variant='body3'>Email</Typography>
-                <Typography variant='body1'>contact@atelier.com</Typography>
+                <Typography variant='body1'>contact@nirvana-van.com</Typography>
               </div>
             </div>
           </div>

@@ -25,6 +25,7 @@ export interface IProduct {
   color: 'orange' | 'green';
   basePrice: number;
   categories?: OptionCategory[];
+  faqLength?: number;
 }
 
 export interface SelectedOption {

@@ -23,7 +23,7 @@
         "title": "La philosophie de Nirvana Van",
         "1": {
           "title": "Qualité",
-          "description": "Nos teardrops sont conçus pour offrir une robustesse et un confort exceptionnels. Chaque produit est fabriqué à partir de matériaux de haute qualité, assurant une longévité maximale, même dans des conditions d'utilisation extrêmes."
+          "description": "Nos teardrops sont conçues pour offrir une robustesse et un confort exceptionnels. Chaque produit est fabriqué à partir de matériaux de haute qualité, assurant une longévité maximale, même dans des conditions d'utilisation extrêmes."
         },
         "2": {
           "title": "Made in France",
@@ -63,7 +63,10 @@
       }
     },
     "contact": {
-      "title": "Contactez-nous"
+      "contactUs": "Contactez-nous",
+      "visitWorkshop": "Venez découvrir l'atelier",
+      "phone": "Téléphone",
+      "address": "Adresse"
     },
     "rental": {
       "title": "Demande de location"
@@ -74,7 +77,7 @@
       },
       "story": {
         "title": "Tout le nécessaire, à tracter derrière sa voiture",
-        "description": "Optez pour une Teardrop : la caravane compacte et facile à tracter, offrant un confort optimal pour vos séjours. Avec son design élégant, son entretien minimal et l'absence de frais mécaniques, vous profitez de chaque aventure en toute simplicité. Votre cocon vous accompagne partout, prêt à partir à tout moment."
+        "description": "Optez pour une Teardrop : la caravane compacte et facile à tracter, offrant un confort optimal pour vos séjours.<br/><br/>Avec son design élégant, son entretien minimal et l'absence de frais mécaniques, vous profitez de chaque aventure en toute simplicité.<br/>Votre cocon vous accompagne partout, prêt à partir à tout moment."
       },
       "video": {
         "title": "La Teardrop en action !",
@@ -106,7 +109,7 @@
       },
       "productDescription": {
         "1": {
-          "title": "Kitchenette tout équipée",
+          "title": "Kitchenette toute équipée",
           "content": "Grand plan de travail\nPoint d'eau\nDouchette\nRéchaud\nGlacière Dometic 21l\nRangements\nÉclairage LED"
         },
         "2": {
@@ -148,7 +151,7 @@
         "ecoflowLighting": "Batterie / Éclairage LED",
         "materials": "Matériaux",
         "openings": "Ouvertures",
-        "insulation": "Isolation",
+        "insulation": "Isolation naturelle",
         "aluminum": "Parrois aluminium",
         "storage": "Rangements"
       }
@@ -159,7 +162,7 @@
       },
       "story": {
         "title": "Une nouvelle façon de voyager à vélo",
-        "description": "Embarquez pour vos excursions de cyclotourisme, que ce soit le temps d'un week-end ou pour plusieurs mois. Découvrez un hébergement prêt à l'emploi qui s'installe en un clin d'œil, vous offrant une solution pratique pour profiter pleinement de chaque étape. Concentrez-vous sur l'essentiel : pédaler en toute liberté et vivre l'aventure au plus près de la nature."
+        "description": "Pour une escapade de quelques jours ou un long périple, notre caravane vélo vous accompagne partout.<br/>Facile à tracter, conçue pour une mise en place rapide et sans contrainte, elle vous offre un abri fiable et confortable à chaque étape.<br/><br/>Concentrez-vous sur l'essentiel : pédaler en toute liberté et vivre l'aventure au plus près de la nature."
       },
       "video": {
         "title": "La Caravane Vélo en action!",
@@ -175,21 +178,28 @@
       "productAdvantages": {
         "title": "Pourquoi choisir une caravane vélo ?",
         "1": {
-          "title": "Ultra-légère",
-          "description": "Se tracte facilement, même avec un vélo non électrique."
+          "title": "Liberté",
+          "description": "Prête en un clin d'œil : accrochez-la et partez, sans montage ni lit à faire."
         },
         "2": {
-          "title": "Pratique",
-          "description": "Aucune installation nécessaire, prête à l'emploi en quelques secondes."
-        },
-        "3": {
-          "title": "Confortable",
+          "title": "Confort",
           "description": "Un vrai lit, un espace optimisé et une protection contre les intempéries."
         },
+        "3": {
+          "title": "Sécurité",
+          "description": "Avec la porte qui se ferme à clé, vos affaires et vous même êtes en sécurité."
+        },
         "4": {
-          "title": "Autonome",
+          "title": "Légèreté",
+          "description": "Se tracte facilement, même avec un vélo non électrique."
+        },
+        "5": {
+          "title": "Autonomie",
           "description": "Un design pensé pour le voyage longue distance et l'itinérance."
         }
+      },
+      "models": {
+        "title": "Découvrez nos modèles"
       },
       "productSpecification": {
         "title": "Spécifications",
@@ -366,16 +376,20 @@
       "answer7": "Oui, nous proposons des visites et des essais à notre atelier à Montpellier. Contactez-nous pour organiser un rendez-vous !"
     },
     "bike-camper": {
-      "question1": "Est-ce que la Caravane vélo s'accroche à tous les vélos ?",
-      "answer1": "Quasi, si votre vélo est chelou, vous pouvez nous contacter pour une fixation sur mesure.",
+      "question1": "Est-ce que la caravane vélo s'accroche à tous les vélos ?",
+      "answer1": "La plupart du temps, oui. Si votre vélo possède des caractéristiques particulières, nous pouvons concevoir une fixation sur mesure. N'hésitez pas à nous contacter.",
       "question2": "Est-ce que je peux me la faire livrer ?",
-      "answer2": "On va faire en sorte, challah Où est-ce possible de dormir avec ? Règle du bivouac je crois, allez où vous voulez Proposez-vous un service après-vente ? Oui, garantie 2 ans Quel est le délai de fabrication ? Ca dep quoi.",
-      "question3": "Est-il possible d'utiliser cette caravane avec un vélo non électrique ?",
-      "answer3": "Oui, la caravane est conçue pour être tractée par un vélo classique. Cependant, sur des terrains vallonnés ou pour de longues distances, un vélo électrique peut offrir plus de confort.",
-      "question4": "Les mini-caravanes sont-elles adaptées à toutes les saisons ?",
-      "answer4": "Oui, la caravane est équipée d'une isolation en Armaflex pour offrir un confort thermique, que ce soit par temps chaud ou froid.",
-      "question5": "Est-il possible de l'essayer avant de l'acheter ?",
-      "answer5": "Nous proposons des démonstrations et des essais sur rendez-vous à notre atelier à Montpellier. Contactez-nous pour organiser une visite !"
+      "answer2": "Oui, la livraison est possible. Contactez-nous pour connaître les modalités en fonction de votre localisation.",
+      "question3": "Où est-ce possible de dormir avec ?",
+      "answer3": "La caravane peut être utilisée partout où le bivouac est autorisé. Renseignez-vous sur la réglementation locale : en général, vous pouvez vous installer dans la nature pour une nuit, à condition de respecter l'environnement.",
+      "question4": "Proposez-vous un service après-vente ?",
+      "answer4": "Oui, toutes nos caravanes sont garanties 2 ans. Nous assurons également un suivi en cas de besoin.",
+      "question5": "Quel est le délai de fabrication ?",
+      "answer5": "Le délai varie en fonction de la période et du niveau de personnalisation souhaité. Comptez généralement entre 2 et 6 semaines. Contactez-nous pour une estimation plus précise.",
+      "question6": "Est-il possible d'utiliser cette caravane avec un vélo non électrique ?",
+      "answer6": "Oui, elle est conçue pour être tractée par un vélo classique. Toutefois, pour les longues distances ou les terrains vallonnés, un vélo électrique peut améliorer le confort.",
+      "question7": "Les caravanes pour vélo sont-elles adaptées à toutes les saisons ?",
+      "answer7": "En hiver, elles protègent efficacement du froid, mais en cas de températures extrêmes, un équipement adapté (sac de couchage, couette) peut être nécessaire pour un confort optimal. En été, les ouvertures permettent une bonne circulation de l’air pour rester au frais."
     }
   },
   "forms": {
@@ -387,7 +401,7 @@
       "message": "Écrivez votre message",
       "addMessage": "Une message à nous faire passer ?",
       "send": "Envoyer",
-      "option": "Sélectionnez une options",
+      "option": "Sélectionnez une option",
       "startDate": "Date de départ",
       "endDate": "Date de retour"
     },
