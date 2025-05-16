@@ -115,11 +115,11 @@
         },
         "2": {
           "title": "Intérieur confortable",
-          "content": "Lit de 132 x 190cm\nPrises 220v et USB\nÉclairage LED\nLanterneau et fenêtres\nRideaux occultants\nRangements\nTablette rétractable"
+          "content": "Lit de 132 x 190 cm\nPrises 220 v et USB\nÉclairage LED\nLanterneau et fenêtres\nRideaux occultants\nRangements\nTablette rétractable"
         },
         "3": {
           "title": "Blabla",
-          "content": "Châssis acier galvanisé\nFaisceau 7 broches\nPoids à vide 400kg\nPTAC 500, 600 ou 750kg\nDimensions :3m55 x 1m83\nHauteur : 1m74\nEssieu freiné sur option\nPrise 220v extérieur"
+          "content": "Châssis acier galvanisé\nFaisceau 7 broches\nPoids à vide 400 kg\nPTAC 500, 600 ou 750 kg\nDimensions :355 x 183 cm\nHauteur : 174 cm\nEssieu freiné sur option\nPrise 220 v extérieur"
         }
       },
       "productSpecification": {
@@ -271,7 +271,7 @@
         "axle": {
           "name": "Essieu",
           "options": {
-            "classic_axle_500kg": "Essieu classique 500kg",
+            "classic_axle_500kg": "Essieu classique 500 kg",
             "classic_axle_600_750kg": "Essieu classique 600/750 kg  ",
             "braked_axle_750kg": "Essieu freiné 750 kg"
           }
@@ -353,10 +353,10 @@
           "specifications": {
             "shellMaterials": "Fibre de verre",
             "chassisMaterials": "Aluminium",
-            "insulation": "Polyester extrudé 20mm",
-            "externalDimensions": "208 x 95cm",
-            "mattress": "200 x 73cm",
-            "unladenWeight": "54kg"
+            "insulation": "Polyester extrudé 20 mm",
+            "externalDimensions": "208 x 95 cm",
+            "mattress": "200 x 73 cm",
+            "unladenWeight": "54 kg"
           }
         },
         "eco": {
@@ -365,10 +365,10 @@
           "specifications": {
             "shellMaterials": "Polypropylène alvéolaire",
             "chassisMaterials": "Acier",
-            "insulation": "Armaflex 10mm",
-            "externalDimensions": "208 x 95cm",
-            "mattress": "200 x 73cm",
-            "unladenWeight": "67kg"
+            "insulation": "Armaflex 10 mm",
+            "externalDimensions": "208 x 95 cm",
+            "mattress": "200 x 73 cm",
+            "unladenWeight": "67 kg"
           }
         }
       }
