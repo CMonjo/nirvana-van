@@ -13,7 +13,7 @@ import Advantages from '@/components/sections/Advantages';
 import AirlineSeatFlatIcon from '@mui/icons-material/AirlineSeatFlat';
 import KeyIcon from '@mui/icons-material/Key';
 import PublicIcon from '@mui/icons-material/Public';
-import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
+import CottageIcon from '@mui/icons-material/Cottage';
 import { products } from '@/products/products';
 
 const product = products.find((product) => product.key === 'bike-camper');
@@ -43,7 +43,7 @@ export default function Page() {
       description: tPage('productAdvantages.4.description'),
     },
     {
-      icon: <InsertEmoticonIcon sx={{ fontSize: 'inherit' }} />,
+      icon: <CottageIcon sx={{ fontSize: 'inherit' }} />,
       title: tPage('productAdvantages.5.title'),
       description: tPage('productAdvantages.5.description'),
     },
