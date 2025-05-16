@@ -9,7 +9,8 @@
         "description": "Des teardrops élégantes,<br/>robustes et bien pensées."
       },
       "models": {
-        "title": "TODO"
+        "title": "Votre aventure sur-mesure",
+        "description": "Découvrez une nouvelle façon de voyager où le confort rencontre la simplicité. <br />Nos mini-caravanes vous offrent tout le nécessaire pour une expérience inoubliable."
       },
       "partners": {
         "title": "Ils parlent de nous"
@@ -175,6 +176,9 @@
         "missionTitle": "Notre mission ?",
         "mission": "Rendre le cyclotourisme plus accessible et confortable que jamais, sans compromis sur la simplicité et le plaisir du voyage."
       },
+      "modelsSpecifications": {
+        "title": "Découvrez nos modèles"
+      },
       "productAdvantages": {
         "title": "Pourquoi choisir une caravane vélo ?",
         "1": {
@@ -197,9 +201,6 @@
           "title": "Autonomie",
           "description": "Un design pensé pour le voyage longue distance et l'itinérance."
         }
-      },
-      "models": {
-        "title": "Découvrez nos modèles"
       },
       "productSpecification": {
         "title": "Spécifications",

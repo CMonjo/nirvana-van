@@ -27,7 +27,7 @@ const SpecItem = ({
   );
 };
 export default function ModelSpecifications() {
-  const tPage = useTranslations(`pages.${product?.key}.models`);
+  const tPage = useTranslations(`pages.${product?.key}.modelsSpecifications`);
   const tProduct = useTranslations(`products.${product?.key}.models`);
   const tSpec = useTranslations(`products.specifications`);
   const tActions = useTranslations('actions');
@@ -57,7 +57,7 @@ export default function ModelSpecifications() {
                       {tProduct(`${model.key}.name`)}
                     </Typography>
                     <Typography variant='body2' className='font-medium'>
-                      {model.basePrice}€
+                      ({model.basePrice}€)
                     </Typography>
                   </div>
                   <Typography>

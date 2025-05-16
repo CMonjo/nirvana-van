@@ -24,19 +24,9 @@ export default function Models() {
   return (
     <Section className='bg-white'>
       <Container className='flex-col'>
-        <SectionTitle
-          title={
-            'En voiture ou à vélo' /*'Pour tout type de voyages / Découvrez nos modèles'*/
-          }
-        />
+        <SectionTitle title={t('title')} />
         <Typography variant='h3' className='mb-4 text-center'>
-          Découvrez une nouvelle façon de voyager où le confort rencontre la
-          simplicité. <br />
-          Nos mini-caravanes vous offre tout le nécessaire pour une expérience
-          authentique.
-          {/* Nos mini-caravanes incarnent l'équilibre parfait entre */}
-          {/* fonctionnalité et bien-être, vous offrant tout le nécessaire pour une */}
-          {/* expérience authentique. */}
+          {t('description')}
         </Typography>
         <div className='flex w-full flex-col gap-8 lg:flex-row'>
           <Model
