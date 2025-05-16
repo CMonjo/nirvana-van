@@ -69,9 +69,6 @@ export default function Page() {
         <Video
           source='/teardrop/video.mp4'
           thumbnail='/bento-2.jpeg'
-          //   title={tPage('video.title')}
-          //   descriptionLeft={tPage('video.left')}
-          //   descriptionRight={tPage('video.right')}
           showSocials
         />
         {productDescriptions.map((el: string, index: number) => (

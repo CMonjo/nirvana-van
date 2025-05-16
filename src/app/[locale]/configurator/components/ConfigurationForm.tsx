@@ -52,6 +52,8 @@ export default function ConfigurationForm({
   //Hooks
   const currentLocale = useLocale();
 
+  const tProduct = useTranslations(`products.${product?.key}`);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -72,7 +74,7 @@ export default function ConfigurationForm({
         body: JSON.stringify({
           ...formData,
           config,
-          product: product?.name,
+          product: tProduct(`name`),
           total: getPrice(productConfiguration?.totalPrice || 0),
           mailSubject: tMail('subject'),
           mailMessage: tMail('message'),

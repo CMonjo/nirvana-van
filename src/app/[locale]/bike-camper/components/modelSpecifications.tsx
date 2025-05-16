@@ -27,15 +27,65 @@ const SpecItem = ({
   );
 };
 export default function ModelSpecifications() {
-  const tPage = useTranslations('pages.bike-camper.models');
+  const tPage = useTranslations(`pages.${product?.key}.models`);
+  const tProduct = useTranslations(`products.${product?.key}.models`);
+  const tSpec = useTranslations(`products.specifications`);
   const tActions = useTranslations('actions');
 
   return (
     <Section className='bg-white' topoBackground>
       <Container className='flex-col'>
         <SectionTitle title={tPage('title')} />
-        <div className='flex w-full flex-col items-center gap-8  md:flex-row'>
-          <div className='flex w-full flex-col justify-center rounded-xl bg-grey'>
+        <div className='flex w-full flex-col gap-8 md:flex-row'>
+          {product?.models?.map((model) => (
+            <div
+              className='flex w-full flex-col rounded-xl bg-grey'
+              key={model.key}
+            >
+              <div className='relative h-[300px] w-full rounded-lg'>
+                <Image
+                  src={model.image}
+                  alt={`${model.key} model specifications`}
+                  fill
+                  className='rounded-2xl object-cover'
+                />
+              </div>
+              <div className='flex flex-col gap-4 p-6'>
+                <div className='flex flex-col gap-2'>
+                  <div className='flex items-center gap-2'>
+                    <Typography variant='h3' className='font-medium'>
+                      {tProduct(`${model.key}.name`)}
+                    </Typography>
+                    <Typography variant='body2' className='font-medium'>
+                      {model.basePrice}€
+                    </Typography>
+                  </div>
+                  <Typography>
+                    {tProduct(`${model.key}.description`)}
+                  </Typography>
+                </div>
+                <Divider />
+                <div className='flex flex-col gap-4'>
+                  {model?.specifications?.map((spec) => (
+                    <SpecItem
+                      key={model.key + spec}
+                      title={tSpec(spec)}
+                      description={tProduct(
+                        `${model.key}.specifications.${spec}`
+                      )}
+                    />
+                  ))}
+                </div>
+                <div className='flex items-end'>
+                  <Button color={product?.color}>
+                    {tActions('configure')}
+                  </Button>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {/* <div className='flex w-full flex-col justify-center rounded-xl bg-grey'>
             <div className='relative h-[300px] w-full rounded-lg'>
               <Image
                 src='/bike-camper/hero.JPG'
@@ -83,8 +133,8 @@ export default function ModelSpecifications() {
                 <Button color={product?.color}>{tActions('configure')}</Button>
               </div>
             </div>
-          </div>
-          <div className='flex w-full flex-col justify-center rounded-xl bg-grey'>
+          </div> */}
+          {/* <div className='flex w-full flex-col justify-center rounded-xl bg-grey'>
             <div className='relative h-[300px] w-full rounded-lg'>
               <Image
                 src='/bike-camper/model-eco.jpeg'
@@ -129,7 +179,7 @@ export default function ModelSpecifications() {
                 <Button color={product?.color}>{tActions('configure')}</Button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Container>
     </Section>

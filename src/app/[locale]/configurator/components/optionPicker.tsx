@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import { useTranslations } from 'next-intl';
 import ConfiguratorCard, { ConfiguratorCardTitle } from './configuratorCard';
-import { IProduct, OptionCategory, Option } from '@/products/types';
+import { IProduct, ConfiguratorCategory, Option } from '@/products/types';
 import Checkbox from '@/components/atoms/checkbox';
 import Radio from '@/components/atoms/radio';
 import { getPrice } from '@/utils/price';
@@ -19,7 +19,7 @@ export default function OptionPicker({
   selectedOption,
 }: {
   product: IProduct;
-  category: OptionCategory;
+  category: ConfiguratorCategory;
   onChange: (category: string, value: string) => void;
   selectedOption: string | string[];
 }) {
@@ -33,7 +33,7 @@ export default function OptionPicker({
       ? selectedOption.includes(optionKey)
       : selectedOption === optionKey;
 
-  const handleChange = (category: OptionCategory, option: Option) => {
+  const handleChange = (category: ConfiguratorCategory, option: Option) => {
     if (option.disabled || option.comingSoon || option.soldOut) return;
     if (onChange) onChange(category.name, option.key);
   };

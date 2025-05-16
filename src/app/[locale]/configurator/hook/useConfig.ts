@@ -11,7 +11,7 @@ export default function useConfig(
 ): IBasketConfig[] | null {
   const [config, setConfig] = useState<IBasketConfig[] | null>(null);
 
-  const tProduct = useTranslations(`products.${product?.key}.options`);
+  const tProduct = useTranslations(`products.${product?.key}`);
   const tPage = useTranslations('pages.configurator');
   const tColors = useTranslations('ralColors');
 
@@ -22,14 +22,14 @@ export default function useConfig(
         name: null,
         options: [
           {
-            key: product.name,
+            key: tProduct(`name`),
             price: getPrice(product.basePrice),
           },
         ],
       },
     ];
     const selectedOpts = productConfiguration.selectedOptions;
-    for (const cat of product.categories || []) {
+    for (const cat of product.configurator || []) {
       const isCategorySelected = selectedOpts.some(
         (o) => o.category === cat.name
       );
@@ -53,10 +53,10 @@ export default function useConfig(
         });
       } else {
         const newCat = {
-          name: tProduct(`${cat.name}.name`),
+          name: tProduct(`options.${cat.name}.name`),
           options: options?.length
             ? options.map((option) => ({
-                key: tProduct(`${cat.name}.options.${option.key}`),
+                key: tProduct(`options.${cat.name}.options.${option.key}`),
                 price: option.included
                   ? tPage('include')
                   : getPrice(option.price || 0),

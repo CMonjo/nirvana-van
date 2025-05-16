@@ -17,7 +17,7 @@ const Model = ({
   customImage?: string;
   button: React.ReactNode;
 }) => {
-  const t = useTranslations(`products.${productKey}`);
+  const tProduct = useTranslations(`products.${productKey}`);
 
   const product: any = useMemo(() => {
     return products.find((p: any) => p.key === productKey);
@@ -38,7 +38,7 @@ const Model = ({
             variant='h2-acorn'
             className='font-acorn !text-4xl font-medium'
           >
-            {product.name}
+            {tProduct(`name`)}
           </Typography>
         </Transition>
         {/* <p className='font-lg my-3 mt-2 font-kobe11 text-2xl'>
@@ -49,7 +49,7 @@ const Model = ({
 
       <Image
         src={customImage || product.image}
-        alt={product.name}
+        alt={tProduct(`name`)}
         fill
         style={{ objectFit: 'cover' }}
         className='rounded-3xl'

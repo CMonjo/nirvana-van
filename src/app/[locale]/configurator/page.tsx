@@ -55,6 +55,7 @@ export default function Configurator() {
   //Translation
   const tPage = useTranslations('pages.configurator');
   const tBasket = useTranslations('pages.configurator.basket');
+  const tProduct = useTranslations('products');
 
   //Image
   const mainImageRef = useRef<HTMLDivElement>(null);
@@ -114,13 +115,13 @@ export default function Configurator() {
                       <Image
                         fill
                         src={`${product.image}`}
-                        alt={product.name}
+                        alt={tProduct(`${product.key}.name`)}
                         className='rounded-3xl object-cover'
                       />
                     </div>
-                    {product.categories ? (
+                    {product.configurator ? (
                       <>
-                        {product.categories.map((category) => {
+                        {product.configurator.map((category) => {
                           if (category.name === 'shade_color') return null;
                           return (
                             <div key={category.name}>
@@ -173,7 +174,7 @@ export default function Configurator() {
                               <Image
                                 fill
                                 src={`${product.image}`}
-                                alt={product.name}
+                                alt={tProduct(`${product.key}.name`)}
                                 className='rounded-3xl object-cover'
                               />
                             </motion.div>

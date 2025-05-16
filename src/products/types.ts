@@ -1,6 +1,6 @@
 export type ProductType = 'teardrop' | 'bike-camper';
 
-export interface OptionCategory {
+export interface ConfiguratorCategory {
   name: string;
   type: 'radio' | 'checkbox';
   options?: Option[];
@@ -20,12 +20,19 @@ export interface Option {
 
 export interface IProduct {
   key: ProductType;
-  name: string;
   image: string;
   color: 'orange' | 'green';
   basePrice: number;
-  categories?: OptionCategory[];
+  configurator?: ConfiguratorCategory[];
   faqLength?: number;
+  models?: IModel[];
+}
+
+export interface IModel {
+  key: string;
+  image: string;
+  basePrice: number;
+  specifications?: string[];
 }
 
 export interface SelectedOption {

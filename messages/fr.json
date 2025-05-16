@@ -258,6 +258,7 @@
   },
   "products": {
     "teardrop": {
+      "name": "Teardrop",
       "description": "Tout ce dont vous avez besoin, même le confort !",
       "options": {
         "main_color": {
@@ -342,8 +343,42 @@
       }
     },
     "bike-camper": {
+      "name": "Caravane Vélo",
       "description": "Tout en légèreté, sans oublier la praticité !",
-      "packs": {}
+      "models": {
+        "premium": {
+          "name": "Premium",
+          "description": "Conçue pour les voyageurs exigeants, cette caravane associe légèreté, matériaux haut de gamme et finitions soignées. Le choix idéal pour (celles et) ceux qui veulent ce qui se fait de mieux.",
+          "specifications": {
+            "shellMaterials": "Fibre de verre",
+            "chassisMaterials": "Aluminium",
+            "insulation": "Polyester extrudé 20mm",
+            "externalDimensions": "208 x 95cm",
+            "mattress": "200 x 73cm",
+            "unladenWeight": "54kg"
+          }
+        },
+        "eco": {
+          "name": "Eco",
+          "description": "Une version plus accessible qui va à l'essentiel, sans compromis sur la qualité.<br/>Un excellent rapport qualité/prix pour partir à l'aventure en toute confiance.",
+          "specifications": {
+            "shellMaterials": "Polypropylène alvéolaire",
+            "chassisMaterials": "Acier",
+            "insulation": "Armaflex 10mm",
+            "externalDimensions": "208 x 95cm",
+            "mattress": "200 x 73cm",
+            "unladenWeight": "67kg"
+          }
+        }
+      }
+    },
+    "specifications": {
+      "shellMaterials": "Matériaux de la coque",
+      "chassisMaterials": "Matériaux du châssis",
+      "insulation": "Isolation",
+      "externalDimensions": "Dimensions extérieures",
+      "mattress": "Matelas",
+      "unladenWeight": "Poids à vide"
     }
   },
   "ralColors": {

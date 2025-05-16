@@ -3,12 +3,18 @@ import { IProduct, IProductConfig, SelectedOption } from './types';
 export const products: IProduct[] = [
   {
     key: 'teardrop',
-    name: 'Teardrop',
     image: '/model_td.jpeg',
     color: 'orange',
     basePrice: 10900,
     faqLength: 6,
-    categories: [
+    models: [
+      {
+        key: 'teardrop',
+        image: '/model_td.jpeg',
+        basePrice: 10900,
+      },
+    ],
+    configurator: [
       {
         name: 'main_color',
         type: 'radio',
@@ -138,18 +144,57 @@ export const products: IProduct[] = [
   },
   {
     key: 'bike-camper',
-    name: 'Caravane Vélo',
     image: '/model_kv.JPG',
     color: 'green',
     basePrice: 3300,
     faqLength: 7,
+    models: [
+      {
+        key: 'premium',
+        image: '/bike-camper/premium.JPG',
+        basePrice: 3800,
+        specifications: [
+          'shellMaterials',
+          'chassisMaterials',
+          'insulation',
+          'externalDimensions',
+          'mattress',
+          'unladenWeight',
+        ],
+      },
+      {
+        key: 'eco',
+        image: '/bike-camper/eco.jpeg',
+        basePrice: 3200,
+        specifications: [
+          'shellMaterials',
+          'chassisMaterials',
+          'insulation',
+          'externalDimensions',
+          'mattress',
+          'unladenWeight',
+        ],
+      },
+    ],
+    configurator: [
+      {
+        name: 'main_color',
+        type: 'radio',
+        required: true,
+      },
+      {
+        name: 'shade_color',
+        type: 'radio',
+        required: true,
+      },
+    ],
   },
 ];
 
 export function getProductConfiguration(product: IProduct): IProductConfig {
   let selectedOptions: SelectedOption[] = [];
-  if (product.categories) {
-    selectedOptions = product.categories
+  if (product.configurator) {
+    selectedOptions = product.configurator
       .filter((category) => category.options)
       .flatMap((category) => {
         const option = category.options?.find((opt) => opt.included);
@@ -170,7 +215,7 @@ const getConfigurationPrice = (
 ): number => {
   let price = product.basePrice;
   selectedOptions.forEach((selected) => {
-    const category = product.categories?.find(
+    const category = product.configurator?.find(
       (cat) => cat.name === selected.category
     );
     if (category) {
@@ -187,40 +232,47 @@ const getConfigurationPrice = (
 export function updateProductConfiguration(
   config: IProductConfig,
   product: IProduct,
-  optionCategory: string,
+  configuratorCategory: string,
   optionValue: string
 ): IProductConfig {
   let selectedOptions = [...config.selectedOptions];
 
-  if (!product.categories)
-    throw new Error(`Product "${product.key}" has no categories.`);
+  if (!product.configurator)
+    throw new Error(`Product "${product.key}" has no configurator.`);
 
-  const category = product.categories.find(
-    (cat) => cat.name === optionCategory
+  const category = product.configurator.find(
+    (cat) => cat.name === configuratorCategory
   );
 
   if (category) {
     if (category.type === 'radio') {
       const index = selectedOptions.findIndex(
-        (opt) => opt.category === optionCategory
+        (opt) => opt.category === configuratorCategory
       );
       if (index !== -1) {
         selectedOptions.splice(index, 1);
       }
-      selectedOptions.push({ category: optionCategory, key: optionValue });
+      selectedOptions.push({
+        category: configuratorCategory,
+        key: optionValue,
+      });
     } else if (category.type === 'checkbox') {
       const index = selectedOptions.findIndex(
-        (opt) => opt.category === optionCategory && opt.key === optionValue
+        (opt) =>
+          opt.category === configuratorCategory && opt.key === optionValue
       );
       if (index !== -1) {
         selectedOptions.splice(index, 1);
       } else {
-        selectedOptions.push({ category: optionCategory, key: optionValue });
+        selectedOptions.push({
+          category: configuratorCategory,
+          key: optionValue,
+        });
       }
     }
   }
 
-  if (optionCategory === 'main_color') {
+  if (configuratorCategory === 'main_color') {
     selectedOptions = selectedOptions.filter(
       (opt) => opt.category !== 'shade_color'
     );
