@@ -63,7 +63,7 @@ export default function Page() {
         <Video source='/home/video.mp4' thumbnail='/bento-1.jpeg' showSocials />
         <Bento />
         <ModelSpecifications />
-        <History />
+        {/* <History /> */}
         <FAQ productKey={'bike-camper'} />
       </main>
       <Footer />
