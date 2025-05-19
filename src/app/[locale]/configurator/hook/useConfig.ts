@@ -11,7 +11,7 @@ export default function useConfig(
 ): IBasketConfig[] | null {
   const [config, setConfig] = useState<IBasketConfig[] | null>(null);
 
-  const tProduct = useTranslations(`products.${product?.key}`);
+  const tProduct = useTranslations(product ? `products.${product?.key}` : '');
   const tPage = useTranslations('pages.configurator');
   const tColors = useTranslations('ralColors');
 
