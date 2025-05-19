@@ -4,7 +4,7 @@ import * as config from '@/config';
 
 export async function POST(request: NextRequest) {
   try {
-    const { firstname, lastname, phone, email, message, locale } =
+    const { firstname, lastname, phone, email, message, subject, locale } =
       await request.json();
 
     let apiInstance = new brevo.TransactionalEmailsApi();
@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
     apiKey.apiKey = process.env.BREVO_API_KEY;
     let sendSmtpEmail = new brevo.SendSmtpEmail();
 
-    if (!firstname || !lastname || !email || !message) {
+    if (!firstname || !lastname || !email || !message || !subject) {
       return NextResponse.json({ error: 'missingFields' }, { status: 400 });
     }
 

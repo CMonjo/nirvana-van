@@ -44,7 +44,7 @@ export default function Story() {
     <Section className='bg-white' topoBackground>
       <Container>
         <div className='flex flex-col items-center gap-8 md:flex-row'>
-          <div className='flex w-full flex-col items-center gap-4 md:w-1/2 md:items-start'>
+          <div className='flex w-full flex-col items-center gap-4 md:w-3/5 md:items-start'>
             <SectionTitle title={tPage('title')} className='md:text-left' />
             <Typography className='text-center md:text-left'>
               {tPage('description')}
@@ -55,7 +55,7 @@ export default function Story() {
             </div>
           </div>
 
-          <div className='flex w-full justify-center md:w-1/2 md:justify-end'>
+          <div className='flex w-full justify-center md:w-2/5 md:justify-end'>
             <Image
               src='/teardrop/story.png'
               alt='story'

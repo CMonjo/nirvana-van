@@ -435,11 +435,13 @@
       "email": "Email",
       "phone": "Téléphone",
       "message": "Écrivez votre message",
-      "addMessage": "Une message à nous faire passer ?",
+      "addMessage": "Un message à nous transmettre ?",
       "send": "Envoyer",
       "option": "Sélectionnez une option",
       "startDate": "Date de départ",
-      "endDate": "Date de retour"
+      "endDate": "Date de retour",
+      "help": "Aide",
+      "other": "Autre"
     },
     "status": {
       "missingFields": "Des champs obligatoires n'ont pas été remplis.",

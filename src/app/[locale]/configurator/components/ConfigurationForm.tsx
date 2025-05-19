@@ -152,6 +152,7 @@ export default function ConfigurationForm({
       </div>
       <Textarea
         id='message'
+        color={color}
         name='message'
         value={formData.message}
         onChange={handleChange}

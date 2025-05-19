@@ -7,6 +7,7 @@ import Select from '@/components/atoms/select';
 import Typography from '@/components/atoms/typography';
 import { useState } from 'react';
 import * as config from '@/config';
+import { products } from '@/products/products';
 import { useLocale, useTranslations } from 'next-intl';
 
 type FormData = {
@@ -21,6 +22,7 @@ type FormData = {
 export default function ContactForm() {
   const tContactForm = useTranslations('forms.contactForm');
   const tStatus = useTranslations('forms.status');
+  const tProduct = useTranslations('products');
   const currentLocale = useLocale();
 
   const [formData, setFormData] = useState<FormData>({
@@ -137,12 +139,17 @@ export default function ContactForm() {
       </div>
       <Select
         options={[
-          { label: 'Location', value: 'rental' },
-          { label: 'Support', value: 'help' },
+          ...products.map((product) => ({
+            label: tProduct(`${product.key}.name`),
+            value: product.key,
+          })),
+          { label: tContactForm('help'), value: 'help' },
+          { label: tContactForm('other'), value: 'other' },
         ]}
         value={formData.subject}
         onChange={handleSubjectChange}
         variant='filled'
+        required
         placeholder={tContactForm('option')}
         size='medium'
         color='white'

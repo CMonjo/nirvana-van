@@ -11,6 +11,7 @@ export default function Select({
   color = 'orange',
   variant = 'filled',
   size = 'medium',
+  required = false,
 }: {
   options: { label: string; value: string }[];
   onChange?: (value: string) => void;
@@ -21,6 +22,7 @@ export default function Select({
   color?: 'white' | 'orange' | 'green';
   variant?: 'filled' | 'outlined';
   size?: 'small' | 'medium';
+  required?: boolean;
 }) {
   const selectRef = useRef<HTMLSelectElement>(null);
 
@@ -92,7 +94,10 @@ export default function Select({
       {selectedLabel ? (
         <span>{selectedLabel}</span>
       ) : (
-        <span>{placeholder}</span>
+        <span>
+          <span className='text-gray-500'>{placeholder}</span>
+          {required && <span className='text-xs text-red-500'>*</span>}
+        </span>
       )}
       <span className='absolute right-1.5 flex items-center'>
         <svg
@@ -109,6 +114,7 @@ export default function Select({
         onChange={(e) => onChange && onChange(e.target.value)}
         ref={selectRef}
         className='absolute inset-0 cursor-pointer opacity-0'
+        required={required}
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>
