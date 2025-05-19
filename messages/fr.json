@@ -460,9 +460,9 @@
       "invalidPhone": "Numéro de téléphone invalide",
       "missingFields": "Des champs obligatoires n'ont pas été remplis.",
       "error": "Une erreur est survenue. Veuillez réessayer ou nous contacter à",
-      "messageSent": "Message envoyé avec succès !",
-      "rentalSent": "Demande de location envoyée avec succès !",
-      "quoteSent": "Configuration envoyée avec succès !"
+      "messageSent": "Votre message a été envoyé avec succès !",
+      "rentalSent": "Votre demande de location a été envoyée avec succès !",
+      "quoteSent": "Votre configuration a été envoyée avec succès !"
     }
   },
   "utils": {
