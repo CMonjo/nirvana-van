@@ -27,6 +27,7 @@ import * as envConfig from '@/config';
 import useConfig from './hook/useConfig';
 import AnimatedPrice from './components/animatedPrice';
 import Button from '@/components/atoms/button';
+import ConfirmationModal from '@/components/ConfirmationModal';
 
 export default function Configurator() {
   //State
@@ -56,6 +57,7 @@ export default function Configurator() {
   const tPage = useTranslations('pages.configurator');
   const tBasket = useTranslations('pages.configurator.basket');
   const tProduct = useTranslations('products');
+  const tStatus = useTranslations('forms.status');
 
   //Image
   const mainImageRef = useRef<HTMLDivElement>(null);
@@ -254,28 +256,24 @@ export default function Configurator() {
         isOpen={isModalOpen}
         onClose={() => {
           setIsModalOpen(false);
-          setConfigurationSent(false);
         }}
-        title={
-          configurationSent ? tPage('quoteSent') : tPage('receiveEmailQuote')
-        }
+        title={tPage('receiveEmailQuote')}
       >
-        {configurationSent ? (
-          <div className='flex flex-col justify-center gap-4'>
-            <Typography variant='body1' className='text-center'>
-              {`${tPage('quoteSentDescription')} ${envConfig.mailContact} `}
-            </Typography>
-            <SocialLinks />
-          </div>
-        ) : (
-          <ConfigurationForm
-            color={product?.color || 'orange'}
-            onSuccess={() => setConfigurationSent(true)}
-            product={product}
-            productConfiguration={productConfiguration}
-          />
-        )}
+        <ConfigurationForm
+          color={product?.color || 'orange'}
+          onSuccess={() => {
+            setConfigurationSent(true);
+            setIsModalOpen(false);
+          }}
+          product={product}
+          productConfiguration={productConfiguration}
+        />
       </Modal>
+      <ConfirmationModal
+        open={configurationSent}
+        title={tStatus('quoteSent')}
+        onClose={() => setConfigurationSent(false)}
+      />
     </div>
   );
 }

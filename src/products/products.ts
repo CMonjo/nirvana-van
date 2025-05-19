@@ -150,9 +150,9 @@ export const products: IProduct[] = [
     faqLength: 7,
     models: [
       {
-        key: 'premium',
-        image: '/bike-camper/premium.JPG',
-        basePrice: 3800,
+        key: 'eco',
+        image: '/bike-camper/eco.jpeg',
+        basePrice: 3200,
         specifications: [
           'shellMaterials',
           'chassisMaterials',
@@ -163,9 +163,9 @@ export const products: IProduct[] = [
         ],
       },
       {
-        key: 'eco',
-        image: '/bike-camper/eco.jpeg',
-        basePrice: 3200,
+        key: 'premium',
+        image: '/bike-camper/premium.JPG',
+        basePrice: 3900,
         specifications: [
           'shellMaterials',
           'chassisMaterials',

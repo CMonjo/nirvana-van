@@ -50,8 +50,6 @@
       "selected": "Sélectionné",
       "subtitle": "Créer la caravane de vos rêves",
       "receiveEmailQuote": "Recevez votre configuration par email !",
-      "quoteSent": "Votre configuration a bien été envoyée !",
-      "quoteSentDescription": "N'hésitez pas à nous contacter si vous avez la moindre question à",
       "basket": {
         "yourConfiguration": "Votre configuration",
         "receiveQuote": "Recevoir ma configuration par email",
@@ -346,6 +344,14 @@
     "bike-camper": {
       "name": "Caravane Vélo",
       "description": "Tout en légèreté, sans oublier la praticité !",
+      "options": {
+        "main_color": {
+          "name": "Couleur"
+        },
+        "shade_color": {
+          "name": "Teinte"
+        }
+      },
       "models": {
         "premium": {
           "name": "Premium",
@@ -359,8 +365,8 @@
             "unladenWeight": "54 kg"
           }
         },
-        "eco": {
-          "name": "Eco",
+        "light": {
+          "name": "Light",
           "description": "Une version plus accessible qui va à l'essentiel, sans compromis sur la qualité.<br/>Un excellent rapport qualité/prix pour partir à l'aventure en toute confiance.",
           "specifications": {
             "shellMaterials": "Polypropylène alvéolaire",
@@ -444,9 +450,19 @@
       "other": "Autre"
     },
     "status": {
+      "loading": "Chargement...",
+      "invalidDate": "Date invalide",
+      "dateRange": "La date doit être comprise entre aujourd'hui et dans 365 jours",
+      "dateStartBeforeEnd": "La date de départ doit être au moins 1 jour avant la date de retour",
+      "dateStartAfterEnd": "La date de départ doit être avant la date de retour",
+      "dateEndBeforeStart": "La date de retour doit être au moins 1 jour après la date de départ",
+      "invalidEmail": "Email invalide",
+      "invalidPhone": "Numéro de téléphone invalide",
       "missingFields": "Des champs obligatoires n'ont pas été remplis.",
-      "success": "Message envoyé avec succès ! Nous vous recontacterons au plus vite.",
-      "error": "Une erreur est survenue. Veuillez réessayer ou nous contacter à"
+      "error": "Une erreur est survenue. Veuillez réessayer ou nous contacter à",
+      "messageSent": "Message envoyé avec succès !",
+      "rentalSent": "Demande de location envoyée avec succès !",
+      "quoteSent": "Configuration envoyée avec succès !"
     }
   },
   "utils": {

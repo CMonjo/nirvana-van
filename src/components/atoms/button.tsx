@@ -74,6 +74,12 @@ export default function Button({
 
   const disabledClass = clsx({
     'cursor-not-allowed': disabled,
+    'bg-green': disabled && color === 'green' && variant === 'outlined',
+    'bg-white': disabled && color === 'white' && variant === 'outlined',
+    'bg-orange': disabled && color === 'orange' && variant === 'outlined',
+    'opacity-90': disabled && variant === 'filled',
+    'text-white': disabled && variant === 'outlined' && color !== 'white',
+    'text-dark': disabled && variant === 'outlined' && color === 'white',
   });
 
   return (

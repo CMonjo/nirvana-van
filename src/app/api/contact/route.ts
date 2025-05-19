@@ -16,17 +16,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'missingFields' }, { status: 400 });
     }
 
-    sendSmtpEmail.subject = `Nouveau message de ${firstname} ${lastname} (${email})`;
+    sendSmtpEmail.subject = `Nouveau message de ${firstname} ${lastname?.toUpperCase()} (${email})`;
     sendSmtpEmail.htmlContent = `
-        <p>Vous avez reçu un nouveau message de contact.</p>
-        <p><strong>Contact :</strong> ${firstname} ${lastname}</p>
-        <p><strong>Téléphone :</strong> ${phone ? phone : 'Non renseigné'}</p>
-        <p><strong>Email :</strong> ${email}</p>
+        <p>Nouvelle demande de contac.</p>
+        <p><strong>Contact :</strong> ${firstname} ${lastname?.toUpperCase()} (${email})</p>
+        <p><strong>Téléphone :</strong> ${phone || 'Non renseigné'}</p>
+        <p><strong>Sujet :</strong> ${subject}</p>
         <p><strong>Message :</strong> ${message}</p>
-        <p><strong>Langue de l'utilisateur:</strong> ${locale}</p>
+        <p><strong>Langue utilisée:</strong> ${locale}</p>
       `;
     sendSmtpEmail.sender = {
-      name: firstname + ' ' + lastname,
+      name: 'Nouveau message de contact',
       email: config.mailContact,
     };
     sendSmtpEmail.to = [{ email: config.mailContact, name: 'Nirvana Van' }];
@@ -35,11 +35,11 @@ export async function POST(request: NextRequest) {
     ];
     sendSmtpEmail.replyTo = {
       email: email,
-      name: firstname + ' ' + lastname,
+      name: firstname + ' ' + lastname?.toUpperCase(),
     };
 
     await apiInstance.sendTransacEmail(sendSmtpEmail);
-    return NextResponse.json({ message: 'success' }, { status: 200 });
+    return NextResponse.json({ message: 'messageSent' }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error: null }, { status: 500 });
   }

@@ -1,5 +1,3 @@
-'use client';
-
 import Header from '@/components/navigation/header';
 import Footer from '@/components/navigation/footer';
 import ContactForm from './components/ContactForm';
@@ -9,7 +7,8 @@ import SectionTitle from '@/components/sections/title';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Typography from '@/components/atoms/typography';
-export default function Teardrop() {
+
+export default function Contact() {
   const tPage = useTranslations('pages.contact');
 
   return (

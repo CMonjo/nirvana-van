@@ -5,6 +5,7 @@ import HeroContainer, { HeroTitle } from '@/components/sections/heroContainer';
 import { products } from '@/products/products';
 import Typography from '@/components/atoms/typography';
 import { useTranslations } from 'next-intl';
+import { getPrice } from '@/utils/price';
 
 const product = products.find((product) => product.key === 'teardrop');
 
@@ -29,13 +30,15 @@ export default function Hero() {
         <HeroTitle>{tProduct('name')}</HeroTitle>
       </div>
       <div className='absolute bottom-8 z-10 flex w-full flex-col items-center justify-center gap-2 px-2'>
-        <Typography
-          variant='h3'
-          className='text-center text-white'
-          sizeOverride='text-xl md:text-3xl'
-        >
-          {t('startingPrice')} {lowestPrice}€
-        </Typography>
+        {lowestPrice ? (
+          <Typography
+            variant='h3'
+            className='text-center text-white'
+            sizeOverride='text-xl md:text-3xl'
+          >
+            {t('startingPrice')} {getPrice(lowestPrice)}
+          </Typography>
+        ) : null}
       </div>
     </HeroContainer>
   );

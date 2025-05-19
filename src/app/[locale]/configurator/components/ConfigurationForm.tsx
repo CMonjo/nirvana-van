@@ -11,13 +11,22 @@ import { useLocale, useTranslations } from 'next-intl';
 import { IProduct, IProductConfig } from '@/products/types';
 import useConfig from '../hook/useConfig';
 import { getPrice } from '@/utils/price';
-
+// @ts-ignore
+import validator from 'validator';
 type FormData = {
   firstname: string;
   lastname: string;
   email: string;
   phone: string;
   message: string;
+};
+
+const initialFormData: FormData = {
+  firstname: '',
+  lastname: '',
+  phone: '',
+  email: '',
+  message: '',
 };
 
 export default function ConfigurationForm({
@@ -37,17 +46,12 @@ export default function ConfigurationForm({
 
   const config = useConfig(productConfiguration, product);
 
-  const [formData, setFormData] = useState<FormData>({
-    firstname: '',
-    lastname: '',
-    phone: '',
-    email: '',
-    message: '',
-  });
+  const [formData, setFormData] = useState<FormData>(initialFormData);
   const [status, setStatus] = useState<{
     text: string;
     type: 'success' | 'error';
   } | null>(null);
+  const [loading, setLoading] = useState(false);
 
   //Hooks
   const currentLocale = useLocale();
@@ -61,10 +65,31 @@ export default function ConfigurationForm({
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const validators = () => {
+    if (!validator.isEmail(formData.email)) {
+      setStatus({
+        type: 'error',
+        text: tStatus('invalidEmail'),
+      });
+      return false;
+    }
+    if (formData.phone && !validator.isMobilePhone(formData.phone, '')) {
+      setStatus({
+        type: 'error',
+        text: tStatus('invalidPhone'),
+      });
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus(null);
-
+    if (!validators()) {
+      return;
+    }
+    setLoading(true);
     let messageError = `${tStatus('error')} ${envConfig.mailContact}`;
 
     try {
@@ -84,13 +109,7 @@ export default function ConfigurationForm({
 
       if (response.ok) {
         onSuccess();
-        setFormData({
-          firstname: 'Camille',
-          lastname: 'MONJO',
-          phone: '',
-          email: 'monjocamille@gmail.com',
-          message: '',
-        });
+        setFormData(initialFormData);
       } else {
         const data = await response.json();
 
@@ -108,6 +127,8 @@ export default function ConfigurationForm({
         type: 'error',
         text: messageError,
       });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -160,18 +181,18 @@ export default function ConfigurationForm({
         rows={2}
       />
       <div className='flex w-full items-center justify-end gap-8'>
-        {status ? (
+        {status?.type === 'error' || loading ? (
           <Typography
             variant='caption'
-            className={`${status.type === 'error' ? 'text-red-500' : 'text-dark'} w-full`}
+            className={`${status?.type === 'error' ? 'text-red-500' : 'text-dark'} w-full`}
           >
-            {status.text}
+            {loading ? tStatus('loading') : status?.text}
           </Typography>
         ) : (
           <div className='flex w-full' />
         )}
         <div className='flex justify-end self-end'>
-          <Button type='submit' color={color}>
+          <Button type='submit' color={color} disabled={loading}>
             {tContactForm('send')}
           </Button>
         </div>
