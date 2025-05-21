@@ -40,7 +40,7 @@ export default function Hero() {
           className='text-center text-white'
           sizeOverride='text-xl md:text-3xl'
         >
-          Fabrication artisanale de mini-caravanes
+          {t('hero.subtitle')}
         </Typography>
       </div>
     </HeroContainer>

@@ -6,7 +6,8 @@
     "home": {
       "hero": {
         "title": "Prenez la route",
-        "description": "Des teardrops élégantes,<br/>robustes et bien pensées."
+        "description": "Des teardrops élégantes,<br/>robustes et bien pensées.",
+        "subtitle": "Fabrication artisanale de mini-caravanes"
       },
       "models": {
         "title": "Votre aventure sur-mesure",
@@ -68,7 +69,9 @@
       "address": "Adresse"
     },
     "rental": {
-      "title": "Demande de location"
+      "title": "Demande de location",
+      "leaveFrom": "Je souhaite partir...",
+      "myInformations": "Mes informations"
     },
     "teardrop": {
       "hero": {
@@ -140,7 +143,7 @@
         },
         "5": {
           "title": "Pas de permis nécessaire",
-          "value": "PTAC <= 750 kg"
+          "value": "PTAC ≤ 750 kg"
         }
       },
       "bento": {
@@ -153,6 +156,9 @@
         "insulation": "Isolation naturelle",
         "aluminum": "Parrois aluminium",
         "storage": "Rangements"
+      },
+      "ctaSection": {
+        "title": "Location remboursée en cas d'achat"
       }
     },
     "bike-camper": {
@@ -220,7 +226,7 @@
         },
         "5": {
           "title": "Pas de permis nécessaire",
-          "value": "PTAC <= 750 kg"
+          "value": "PTAC ≤ 750 kg"
         }
       },
       "bento": {
@@ -250,10 +256,11 @@
   "actions": {
     "contactUs": "Nous contacter",
     "configureMy": "Configurer ma",
-    "configureBikeCamper": "Configurer ma caravane",
+    "configureMyTrailer": "Configurer ma caravane",
     "iWantRent": "Je veux la louer",
     "discover": "Découvrir",
-    "configure": "Configurer"
+    "configure": "Configurer",
+    "rent": "Louer"
   },
   "products": {
     "teardrop": {
@@ -462,7 +469,8 @@
       "error": "Une erreur est survenue. Veuillez réessayer ou nous contacter à",
       "messageSent": "Votre message a été envoyé avec succès !",
       "rentalSent": "Votre demande de location a été envoyée avec succès !",
-      "quoteSent": "Votre configuration a été envoyée avec succès !"
+      "quoteSent": "Votre configuration a été envoyée avec succès !",
+      "spam": "Rien reçu ? Pensez à vérifier vos spams ou nous recontacter à"
     }
   },
   "utils": {

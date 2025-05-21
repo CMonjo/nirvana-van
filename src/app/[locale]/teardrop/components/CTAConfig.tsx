@@ -5,9 +5,12 @@ import Section from '@/components/atoms/section';
 import Container from '@/components/atoms/container';
 import { products } from '@/products/products';
 import Button from '@/components/atoms/button';
+import { useTranslations } from 'next-intl';
 
 export default function CTAConfig() {
   const product = products.find((product) => product.key === 'teardrop');
+  const tPage = useTranslations('pages.teardrop.ctaSection');
+  const tActions = useTranslations('actions');
 
   return (
     <Section
@@ -22,13 +25,13 @@ export default function CTAConfig() {
         itemsAlign='start'
         className='relative z-10 w-full flex-col items-center text-white md:items-start'
       >
-        <SectionTitle title={"Location remboursée en cas d'achat"} />
+        <SectionTitle title={tPage('title')} />
         <div className='flex gap-2'>
           <Button size='large' color={product?.color}>
-            Louer
+            {tActions('rent')}
           </Button>
           <Button size='large' color={product?.color}>
-            Configurer ma caravane
+            {tActions('configureMyTrailer')}
           </Button>
         </div>
       </Container>

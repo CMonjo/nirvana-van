@@ -1,0 +1,479 @@
+{
+  "manifest": {
+    "name": "Nirvana Van"
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title": "Ab auf die Straße",
+        "description": "Elegante Teardrops,<br/>robust und durchdacht.",
+        "subtitle": "Handgefertigte Mini-Caravans"
+      },
+      "models": {
+        "title": "Ihr maßgeschneidertes Abenteuer",
+        "description": "Entdecken Sie eine neue Art des Reisens, in der Komfort auf Einfachheit trifft.<br/>Unsere Mini-Caravans bieten Ihnen alles, was Sie für unvergessliche Erlebnisse brauchen."
+      },
+      "partners": {
+        "title": "Über uns wird gesprochen"
+      },
+      "video": {
+        "title": "Nirvana Van in Aktion!",
+        "left": "Nirvana Van",
+        "right": "In Aktion!"
+      },
+      "bento": {
+        "title": "Die Philosophie von Nirvana Van",
+        "1": {
+          "title": "Qualität",
+          "description": "Unsere Teardrops sind für außergewöhnliche Langlebigkeit und Komfort gebaut. Jedes Exemplar wird aus hochwertigen Materialien gefertigt, um selbst unter anspruchsvollen Bedingungen maximale Lebensdauer zu gewährleisten."
+        },
+        "2": {
+          "title": "Made in France",
+          "description": "Wir sind stolz auf unsere handwerkliche Fertigung in Frankreich. Mit dem Kauf unterstützen Sie die lokale Produktion und erhalten zugleich ein langlebiges Produkt."
+        }
+      },
+      "story": {
+        "title": "Willkommen in meiner Werkstatt!",
+        "text1": "Im Süden Frankreichs entwerfe und baue ich seit über zwei Jahren einzigartige Mini-Caravans. Von der ersten Skizze bis zum letzten Feinschliff entsteht jedes Detail in Handarbeit, um Ihnen einen zu 100 % selbstgebauten Caravan zu liefern.",
+        "text2": "Wenn Sie ein Projekt besprechen oder den Herstellungsprozess aus nächster Nähe sehen möchten, freue ich mich auf Ihren Besuch!"
+      },
+      "socials": {
+        "title": "Teile deine Abenteuer"
+      }
+    },
+    "configurator": {
+      "title": "Konfigurator",
+      "configureYour": "Konfigurieren Sie Ihren",
+      "configure": "Konfigurieren",
+      "include": "Inklusive",
+      "comingSoon": "Demnächst verfügbar",
+      "soldOut": "Ausverkauft",
+      "selected": "Ausgewählt",
+      "subtitle": "Stellen Sie sich den Caravan Ihrer Träume zusammen",
+      "receiveEmailQuote": "Erhalte deine Konfiguration per E-Mail!",
+      "basket": {
+        "yourConfiguration": "Ihre Konfiguration",
+        "receiveQuote": "Konfiguration per E-Mail senden",
+        "total": "GESAMT",
+        "vat": "inkl. MwSt. (20 %)"
+      },
+      "mail": {
+        "subject": "Ihre Konfiguration ist bereit!",
+        "message": "Hier ist die Konfiguration, die Sie auf unserer Website erstellt haben. Kontaktieren Sie uns gern, falls Sie Fragen haben oder bestellen möchten. Bis bald!"
+      }
+    },
+    "contact": {
+      "contactUs": "Kontaktieren Sie uns",
+      "visitWorkshop": "Besuchen Sie die Werkstatt",
+      "phone": "Telefon",
+      "address": "Adresse"
+    },
+    "rental": {
+      "title": "Mietanfrage",
+      "leaveFrom": "Ich möchte losfahren …",
+      "myInformations": "Meine Daten"
+    },
+    "teardrop": {
+      "hero": {
+        "title": "Teardrop"
+      },
+      "story": {
+        "title": "Alles, was Sie brauchen – hinter Ihrem Auto",
+        "description": "Wählen Sie einen Teardrop: der kompakte, leicht zu ziehende Caravan mit optimalem Komfort für Ihre Reisen.<br/><br/>Dank seines schlanken Designs, minimaler Wartung und keinen mechanischen Kosten genießen Sie jedes Abenteuer in voller Gelassenheit.<br/>Ihr gemütliches Zuhause auf Rädern begleitet Sie überallhin und ist jederzeit startbereit."
+      },
+      "video": {
+        "title": "Der Teardrop in Aktion!",
+        "left": "Der Teardrop",
+        "right": "In Aktion!"
+      },
+      "productAdvantages": {
+        "title": "Warum mit einem Teardrop reisen?",
+        "1": {
+          "title": "Personalisierung",
+          "description": "Gestalten Sie einen einzigartigen Caravan, der Ihren Bedürfnissen und Ihrem Stil entspricht."
+        },
+        "2": {
+          "title": "Einzigartiges Design",
+          "description": "Ein schlankes Format, das Blicke auf sich zieht und Parken erleichtert."
+        },
+        "3": {
+          "title": "Schnell einsatzbereit",
+          "description": "Ankuppeln und losfahren – ganz ohne Aufbau oder Bett ausklappen."
+        },
+        "4": {
+          "title": "Geringere Kosten",
+          "description": "Keine zusätzlichen Mautgebühren, keine mechanische Wartung."
+        },
+        "5": {
+          "title": "Komfort & Autonomie",
+          "description": "Genießen Sie komfortables Reisen, wo immer Sie sind."
+        }
+      },
+      "productDescription": {
+        "1": {
+          "title": "Voll ausgestattete Küche",
+          "content": "Große Arbeitsfläche\nWasseranschluss\nHanddusche\nKocher\nDometic-Kühlbox 21 l\nStauraum\nLED-Beleuchtung"
+        },
+        "2": {
+          "title": "Gemütlicher Innenraum",
+          "content": "132 × 190 cm Bett\n220-V- und USB-Steckdosen\nLED-Beleuchtung\nDachlüfter und Fenster\nVerdunkelungsvorhänge\nStauraum\nAusziehbare Ablage"
+        },
+        "3": {
+          "title": "Aufbau & Fahrgestell",
+          "content": "Feuerverzinktes Stahlchassis\n7-poliger Kabelbaum\nLeergewicht 400 kg\nzGG 500, 600 oder 750 kg\nMaße: 355 × 183 cm\nHöhe: 174 cm\nGebremste Achse optional\nExterner 220-V-Anschluss"
+        }
+      },
+      "productSpecification": {
+        "title": "Technische Daten",
+        "1": {
+          "title": "Leergewicht",
+          "value": "400 kg"
+        },
+        "2": {
+          "title": "Höhe",
+          "value": "174 cm"
+        },
+        "3": {
+          "title": "Breite",
+          "value": "183 cm"
+        },
+        "4": {
+          "title": "Länge",
+          "value": "354 cm"
+        },
+        "5": {
+          "title": "Führerscheinfrei",
+          "value": "zGG ≤ 750 kg"
+        }
+      },
+      "bento": {
+        "title": "Was den Unterschied macht",
+        "crutches": "Stützfüße",
+        "solarPanel": "Solarmodul",
+        "ecoflowLighting": "Batterie / LED-Licht",
+        "materials": "Materialien",
+        "openings": "Öffnungen",
+        "insulation": "Natürliche Isolierung",
+        "aluminum": "Aluminiumplatten",
+        "storage": "Stauraum"
+      },
+      "ctaSection": {
+        "title": "Mietpreis wird beim Kauf angerechnet"
+      }
+    },
+    "bike-camper": {
+      "hero": {
+        "title": "Bike Camper"
+      },
+      "story": {
+        "title": "Eine neue Art, per Rad zu reisen",
+        "description": "Ob für einen Kurztrip oder eine lange Tour – unser Bike Camper begleitet Sie überallhin.<br/>Leicht zu ziehen und für einen schnellen, problemlosen Aufbau konzipiert, bietet er bei jedem Stopp einen zuverlässigen und komfortablen Unterschlupf.<br/><br/>Konzentrieren Sie sich auf das Wesentliche: treten Sie frei in die Pedale und erleben Sie Abenteuer in der Natur."
+      },
+      "video": {
+        "title": "Der Bike Camper in Aktion!",
+        "left": "Der Bike Camper",
+        "right": "In Aktion!"
+      },
+      "history": {
+        "title": "Ein Herzensprojekt",
+        "description": "Nachdem wir mit unseren Teardrops das Autoreisen revolutioniert haben, brachten wir im Frühjahr 2025 den Bike Camper auf den Markt, um Radreisenden dieselbe Freiheit zu bieten. Nach mehreren Prototypen und Praxistests entstand ein leichter, robuster und ergonomischer Mini-Caravan für lange Distanzen.",
+        "missionTitle": "Unsere Mission?",
+        "mission": "Radreisen zugänglicher und komfortabler denn je zu machen – ohne Kompromisse bei Einfachheit und Freude am Reisen."
+      },
+      "modelsSpecifications": {
+        "title": "Entdecken Sie unsere Modelle"
+      },
+      "productAdvantages": {
+        "title": "Warum einen Bike Camper wählen?",
+        "1": {
+          "title": "Freiheit",
+          "description": "Ankuppeln und losfahren – ganz ohne Aufbau oder Bett machen."
+        },
+        "2": {
+          "title": "Komfort",
+          "description": "Ein echtes Bett, optimierter Raum und Schutz vor Witterung."
+        },
+        "3": {
+          "title": "Sicherheit",
+          "description": "Dank abschließbarer Tür sind Sie und Ihr Gepäck sicher."
+        },
+        "4": {
+          "title": "Leichtigkeit",
+          "description": "Leicht zu ziehen – auch mit einem nicht-elektrischen Rad."
+        },
+        "5": {
+          "title": "Autonomie",
+          "description": "Für Langstrecken und Wildcamping entwickelt."
+        }
+      },
+      "productSpecification": {
+        "title": "Technische Daten",
+        "1": {
+          "title": "Höchstgeschwindigkeit",
+          "value": "100 km/h"
+        },
+        "2": {
+          "title": "Leergewicht",
+          "value": "400 kg"
+        },
+        "3": {
+          "title": "Außenhöhe",
+          "value": "174 cm"
+        },
+        "4": {
+          "title": "Außenmaße",
+          "value": "354 × 183 cm"
+        },
+        "5": {
+          "title": "Führerscheinfrei",
+          "value": "zGG ≤ 750 kg"
+        }
+      },
+      "bento": {
+        "title": "Was den Unterschied macht",
+        "openings": "Öffnungen",
+        "parkingBrake": "Feststellbremse",
+        "table": "Tisch",
+        "wheel": "Verstärkte Räder",
+        "solarPanel": "Solarmodul",
+        "light": "Beleuchtung",
+        "storage": "Stauraum",
+        "crutches": "Stützfüße"
+      }
+    }
+  },
+  "navigation": {
+    "home": "Startseite",
+    "teardrop": "Teardrop",
+    "bike-camper": "Bike Camper",
+    "configurator": "Konfigurator",
+    "rental": "Vermietung",
+    "contact": "Kontakt",
+    "legalNotice": "Impressum",
+    "cgv": "AGB",
+    "policy": "Datenschutz"
+  },
+  "actions": {
+    "contactUs": "Kontaktieren Sie uns",
+    "configureMy": "Konfigurieren Sie meinen",
+    "configureMyTrailer": "Konfigurieren Sie meinen Anhänger",
+    "iWantRent": "Ich möchte ihn mieten",
+    "discover": "Entdecken",
+    "configure": "Konfigurieren",
+    "rent": "Mieten"
+  },
+  "products": {
+    "teardrop": {
+      "name": "Teardrop",
+      "description": "Alles, was Sie brauchen – mit Komfort!",
+      "options": {
+        "main_color": {
+          "name": "Farbe"
+        },
+        "shade_color": {
+          "name": "Abstufung"
+        },
+        "axle": {
+          "name": "Achse",
+          "options": {
+            "classic_axle_500kg": "Standardachse 500 kg",
+            "classic_axle_600_750kg": "Standardachse 600/750 kg",
+            "braked_axle_750kg": "Gebremste Achse 750 kg"
+          }
+        },
+        "chassis": {
+          "name": "Fahrgestell",
+          "options": {
+            "stabilizer_legs": "Stützfüße",
+            "rounded_fenders": "Runde Kotflügel",
+            "spare_wheel": "Ersatzrad"
+          }
+        },
+        "electricity": {
+          "name": "Elektrik",
+          "options": {
+            "electric_installation": "Elektrische Anlage",
+            "solar_panel": "Solarmodul",
+            "big_battery": "Große Batterie"
+          }
+        },
+        "kitchen": {
+          "name": "Küche",
+          "options": {
+            "water_point": "Wasseranschluss",
+            "electric_cooler": "Elektrische Kühlbox",
+            "stove": "Kocher",
+            "shower": "Handdusche"
+          }
+        },
+        "exterior": {
+          "name": "Außen",
+          "options": {
+            "rear_awning": "Heckmarkise",
+            "side_awning": "Seitenmarkise",
+            "cover": "Abdeckung"
+          }
+        },
+        "equipments": {
+          "name": "Ausstattung",
+          "options": {
+            "roof_bars": "Dachträger",
+            "arrow_chest": "Deichselbox",
+            "bike_rack": "Fahrradträger",
+            "roof_tent": "Dachzelt"
+          }
+        },
+        "built-in": {
+          "name": "Möbel",
+          "options": {
+            "front_and_rear_closets": "Schränke vorne & hinten",
+            "no_closets": "Ohne Schränke"
+          }
+        },
+        "opening": {
+          "name": "Öffnungen",
+          "options": {
+            "two_side_doors": "Zwei Seitentüren + Heck",
+            "one_side_door": "Eine Seitentür",
+            "no_rear_door": "Ohne Hecktür"
+          }
+        }
+      },
+      "specifications": {
+        "externalHeight": "Außenhöhe",
+        "externalHeightValue": "174 cm",
+        "externalLenght": "Außenlänge",
+        "externalLenghtValue": "174 cm",
+        "mattress": "Matratze",
+        "mattressValue": "132 × 190 cm"
+      }
+    },
+    "bike-camper": {
+      "name": "Bike Camper",
+      "description": "Ultraleicht ohne Verzicht auf Praktikabilität!",
+      "options": {
+        "main_color": {
+          "name": "Farbe"
+        },
+        "shade_color": {
+          "name": "Abstufung"
+        }
+      },
+      "models": {
+        "premium": {
+          "name": "Premium",
+          "description": "Für anspruchsvolle Reisende: leicht, hochwertige Materialien, erstklassige Verarbeitung. Die ideale Wahl für alle, die das Beste wollen.",
+          "specifications": {
+            "shellMaterials": "Glasfaser",
+            "chassisMaterials": "Aluminium",
+            "insulation": "Extrudiertes Polystyrol 20 mm",
+            "externalDimensions": "208 × 95 cm",
+            "mattress": "200 × 73 cm",
+            "unladenWeight": "54 kg"
+          }
+        },
+        "light": {
+          "name": "Light",
+          "description": "Die preisgünstigere Version konzentriert sich auf das Wesentliche, ohne Kompromisse bei der Qualität – top Preis-Leistungs-Verhältnis für sorgenfreie Abenteuer.",
+          "specifications": {
+            "shellMaterials": "Zellpolypropylen",
+            "chassisMaterials": "Stahl",
+            "insulation": "Armaflex 10 mm",
+            "externalDimensions": "208 × 95 cm",
+            "mattress": "200 × 73 cm",
+            "unladenWeight": "67 kg"
+          }
+        }
+      }
+    },
+    "specifications": {
+      "shellMaterials": "Außenmaterial",
+      "chassisMaterials": "Fahrgestellmaterial",
+      "insulation": "Isolation",
+      "externalDimensions": "Außenmaße",
+      "mattress": "Matratze",
+      "unladenWeight": "Leergewicht"
+    }
+  },
+  "ralColors": {
+    "yellow": "Gelb",
+    "orange": "Orange",
+    "red": "Rot",
+    "purple": "Lila",
+    "blue": "Blau",
+    "green": "Grün",
+    "grey": "Grau",
+    "brown": "Braun",
+    "blackAndWhite": "Schwarz / Weiß"
+  },
+  "faq": {
+    "otherQuestions": "Wenn Sie weitere Fragen haben, kontaktieren Sie uns gern – wir helfen Ihnen weiter!",
+    "teardrop": {
+      "question1": "Benötige ich einen speziellen Führerschein, um einen Teardrop zu ziehen?",
+      "answer1": "Nein. Für einen Teardrop mit zGG zwischen 500 und 750 kg ist kein zusätzlicher Führerschein erforderlich. Achten Sie jedoch darauf, dass das kombinierte zGG von Caravan und Zugfahrzeug 3 500 kg nicht überschreitet. Andernfalls ist die Schulung B96 erforderlich.",
+      "question2": "Kann der Teardrop von jedem Fahrzeug gezogen werden?",
+      "answer2": "Dank seines geringen Gewichts kann der Teardrop von den meisten Autos gezogen werden. Um sicherzugehen, prüfen Sie die Daten Ihres Fahrzeugherstellers oder den Fahrzeugschein: Ziehen Sie Zeile F2 von F3 ab – das Ergebnis muss ≥ 500 kg sein.",
+      "question3": "Bietet ihr einen Kundendienst an?",
+      "answer3": "Ja, unsere Caravans haben 2 Jahre Garantie. Zudem bieten wir individuellen Support für Reparaturen, Änderungen oder technische Fragen nach dem Kauf.",
+      "question4": "Kann man eure Werkstatt besichtigen?",
+      "answer4": "Natürlich! Wir freuen uns auf Ihren Besuch. Vereinbaren Sie einen Termin über unser Kontaktformular.",
+      "question5": "Wie lange ist die Herstellungszeit?",
+      "answer5": "Im Durchschnitt zwei Monate, kann je nach Auftragslage aber länger sein.",
+      "question6": "Sind die Mini-Caravans für alle Jahreszeiten geeignet?",
+      "answer6": "Der Teardrop bietet zu jeder Jahreszeit optimalen Komfort. Die Außenküche ist zwar bei gutem Wetter angenehmer, doch die Isolation sorgt für warme Nächte.",
+      "question7": "Kann man einen Teardrop vor dem Kauf testen?",
+      "answer7": "Ja, wir bieten Besichtigungen und Probefahrten in unserer Werkstatt in Montpellier an. Kontaktieren Sie uns für einen Termin!"
+    },
+    "bike-camper": {
+      "question1": "Passt der Bike Camper an jedes Fahrrad?",
+      "answer1": "In den meisten Fällen ja. Wenn Ihr Fahrrad besondere Eigenschaften hat, fertigen wir eine maßgeschneiderte Kupplung. Kontaktieren Sie uns gern.",
+      "question2": "Kann ich ihn liefern lassen?",
+      "answer2": "Ja, Lieferung ist möglich. Kontaktieren Sie uns für die Konditionen an Ihrem Standort.",
+      "question3": "Wo darf ich damit übernachten?",
+      "answer3": "Der Camper kann überall genutzt werden, wo Biwakieren erlaubt ist. Prüfen Sie die lokalen Vorschriften: In der Regel dürfen Sie eine Nacht in der Natur verbringen, solange Sie die Umwelt respektieren.",
+      "question4": "Bietet ihr einen Kundendienst an?",
+      "answer4": "Ja, alle unsere Camper haben 2 Jahre Garantie. Bei Bedarf bieten wir Support.",
+      "question5": "Wie lange ist die Herstellungszeit?",
+      "answer5": "Je nach Saison und gewünschter Personalisierung 2–6 Wochen. Kontaktieren Sie uns für eine genauere Einschätzung.",
+      "question6": "Kann man den Camper mit einem nicht-elektrischen Rad nutzen?",
+      "answer6": "Ja, er ist dafür ausgelegt. Für lange Strecken oder hügeliges Gelände erhöht ein E-Bike jedoch den Komfort.",
+      "question7": "Sind Bike Camper für alle Jahreszeiten geeignet?",
+      "answer7": "Im Winter schützen sie effektiv vor Kälte. Bei sehr niedrigen Temperaturen empfiehlt sich passende Ausrüstung (Schlafsack, Decke). Im Sommer sorgen Öffnungen für gute Belüftung."
+    }
+  },
+  "forms": {
+    "contactForm": {
+      "firstname": "Vorname",
+      "lastname": "Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "message": "Ihre Nachricht",
+      "addMessage": "Eine Nachricht für uns?",
+      "send": "Senden",
+      "option": "Option wählen",
+      "startDate": "Startdatum",
+      "endDate": "Enddatum",
+      "help": "Hilfe",
+      "other": "Sonstiges"
+    },
+    "status": {
+      "loading": "Lädt …",
+      "invalidDate": "Ungültiges Datum",
+      "dateRange": "Datum muss zwischen heute und innerhalb von 365 Tagen liegen",
+      "dateStartBeforeEnd": "Startdatum muss mindestens 1 Tag vor dem Enddatum liegen",
+      "dateStartAfterEnd": "Startdatum muss vor dem Enddatum liegen",
+      "dateEndBeforeStart": "Enddatum muss mindestens 1 Tag nach dem Startdatum liegen",
+      "invalidEmail": "Ungültige E-Mail",
+      "invalidPhone": "Ungültige Telefonnummer",
+      "missingFields": "Pflichtfelder fehlen.",
+      "error": "Es ist ein Fehler aufgetreten. Versuchen Sie es erneut oder kontaktieren Sie uns unter",
+      "messageSent": "Ihre Nachricht wurde erfolgreich gesendet!",
+      "rentalSent": "Ihre Mietanfrage wurde erfolgreich gesendet!",
+      "quoteSent": "Ihre Konfiguration wurde erfolgreich gesendet!",
+      "spam": "Sollten Sie nichts erhalten haben, prüfen Sie bitte Ihren Spam-Ordner oder kontaktieren Sie uns unter"
+    }
+  },
+  "utils": {
+    "startingPrice": "Ab"
+  }
+}

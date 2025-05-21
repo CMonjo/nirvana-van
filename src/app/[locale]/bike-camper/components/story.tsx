@@ -33,7 +33,7 @@ export default function Story() {
                 }}
               >
                 <Button color='green' size='large'>
-                  {tAction('configureBikeCamper')}
+                  {tAction('configureMyTrailer')}
                 </Button>
               </Link>
             </div>

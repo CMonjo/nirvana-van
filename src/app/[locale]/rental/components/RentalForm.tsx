@@ -33,6 +33,7 @@ const initialFormData: FormData = {
 };
 
 export default function RentalForm() {
+  const tPage = useTranslations('pages.rental');
   const tRentalForm = useTranslations('forms.contactForm');
   const tStatus = useTranslations('forms.status');
   const currentLocale = useLocale();
@@ -187,7 +188,7 @@ export default function RentalForm() {
   return (
     <>
       <form onSubmit={handleSubmit} className='flex w-full flex-col gap-4'>
-        <Typography variant='caption'>Je souhaite partir...</Typography>
+        <Typography variant='caption'>{tPage('leaveFrom')}</Typography>
         <div className='flex flex-col gap-4 md:flex-row'>
           <DatePicker
             value={formData.startDate}
@@ -210,7 +211,7 @@ export default function RentalForm() {
         {dateErrors.endDate && (
           <p className='mt-1 text-sm text-red-500'>{dateErrors.endDate}</p>
         )}
-        <Typography variant='caption'>Mes informations</Typography>
+        <Typography variant='caption'>{tPage('myInformations')}</Typography>
         <div className='flex flex-col gap-4 md:flex-row'>
           <Input
             value={formData.firstname}

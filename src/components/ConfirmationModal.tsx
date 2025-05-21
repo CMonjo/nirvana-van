@@ -14,15 +14,12 @@ export default function ConfirmationModal({
   onClose: () => void;
   title: string;
 }) {
-  //Translation
-  const tPage = useTranslations('pages.configurator');
-
+  const tPage = useTranslations('forms.status');
   return (
     <Modal isOpen={open} onClose={onClose} title={title}>
       <div className='flex flex-col justify-center gap-4'>
         <Typography variant='body1' className='text-center'>
-          {`Rien reçu ? Pensez à vérifier vos spams ou nous recontacter à
-          ${envConfig.mailContact}`}
+          {`${tPage('spam')} ${envConfig.mailContact}`}
         </Typography>
         <SocialLinks />
       </div>
