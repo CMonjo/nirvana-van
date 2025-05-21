@@ -8,7 +8,7 @@ type Props = {
 // Use for `not-found.tsx` page
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang='en'>
+    <html lang='fr'>
       <GoogleTagManager gtmId='GTM-MNNRXJVX' />
       <body>{children}</body>
     </html>

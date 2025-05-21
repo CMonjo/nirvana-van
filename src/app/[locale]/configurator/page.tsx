@@ -8,7 +8,7 @@ import {
   updateProductConfiguration,
 } from '@/products/products';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import ChooseModel from './components/chooseModel';
+import ChooseProduct from './components/chooseProduct';
 import Image from 'next/image';
 import SectionTitle from '../../../components/sections/title';
 import Section from '../../../components/atoms/section';
@@ -28,6 +28,7 @@ import useConfig from './hook/useConfig';
 import AnimatedPrice from './components/animatedPrice';
 import Button from '@/components/atoms/button';
 import ConfirmationModal from '@/components/ConfirmationModal';
+import SelectModel from './components/selectModel';
 
 export default function Configurator() {
   //State
@@ -100,13 +101,12 @@ export default function Configurator() {
     <div className='min-h-screen bg-bg-2'>
       <Header fixedMenu />
       {!product ? (
-        <ChooseModel />
+        <ChooseProduct />
       ) : (
         <>
           <Section className='bg-white'>
             <Container className='flex-col'>
               <SectionTitle title={`${tPage('subtitle')}`} className='mb-4' />
-              {/* <Typography variant='h3'>{tPage('subtitle')}</Typography> */}
               <div className='relative block h-auto w-full'>
                 <div className='mx-auto flex w-full justify-between gap-x-6'>
                   <div className='flex w-full flex-col gap-4'>
@@ -121,6 +121,18 @@ export default function Configurator() {
                         className='rounded-3xl object-cover'
                       />
                     </div>
+                    {/* TODO Product selector */}
+                    {/* {product && product?.models && product.models.length > 1 ? (
+                      <SelectModel
+                        product={product}
+                        onChange={onProductChange}
+                        selectedModel={
+                          productConfiguration?.selectedOptions.find(
+                            (opt) => opt.category === 'main_color'
+                          )?.key
+                        }
+                      />
+                    ) : null} */}
                     {product.configurator ? (
                       <>
                         {product.configurator.map((category) => {

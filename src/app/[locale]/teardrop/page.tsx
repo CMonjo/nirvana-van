@@ -10,7 +10,6 @@ import Specification from '../../../components/sections/specification';
 import { useTranslations } from 'next-intl';
 import Advantages from '@/components/sections/Advantages';
 import { products } from '@/products/products';
-import AddIcon from '@mui/icons-material/Add';
 import PaletteIcon from '@mui/icons-material/Palette';
 import SellIcon from '@mui/icons-material/Sell';
 import BoltIcon from '@mui/icons-material/Bolt';
@@ -24,7 +23,7 @@ export default function Page() {
 
   const productDescriptions = [
     '/teardrop/kitchen.JPG',
-    '/teardrop/interior.jpeg',
+    '/teardrop/interior.JPG',
   ];
 
   const advantages = [

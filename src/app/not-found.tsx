@@ -8,7 +8,7 @@ import { GoogleTagManager } from '@next/third-parties/google';
 
 export default function NotFound() {
   return (
-    <html lang='en'>
+    <html lang='fr'>
       <body>
         <Error statusCode={404} />
       </body>

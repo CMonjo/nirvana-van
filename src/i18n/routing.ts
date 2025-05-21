@@ -4,10 +4,11 @@ import { createNavigation } from 'next-intl/navigation';
 export const localesName = [
   { label: 'Français', value: 'fr' },
   { label: 'English', value: 'en' },
+  { label: 'Deutsch', value: 'de' },
 ];
 
 export const routing = defineRouting({
-  locales: ['fr', 'en'],
+  locales: ['fr', 'en', 'de'],
   defaultLocale: 'fr',
   localePrefix: 'always',
 });

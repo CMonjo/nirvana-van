@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <HeroContainer>
       <Image
-        src={`/bike-camper/hero.JPG`}
+        src={`/bike-camper/hero4.JPG`}
         fill
         className='absolute inset-0 object-cover'
         alt='hero'

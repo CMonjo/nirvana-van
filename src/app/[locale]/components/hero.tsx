@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <HeroContainer>
       <Image
-        src={`/hero.JPG`}
+        src={`/home/hero.JPG`}
         fill
         className='absolute inset-0 object-cover'
         alt='hero'

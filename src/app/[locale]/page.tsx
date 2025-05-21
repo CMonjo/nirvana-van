@@ -3,7 +3,6 @@ import Footer from '@/components/navigation/footer';
 import Hero from '@/app/[locale]/components/hero';
 import Video from '@/components/sections/video';
 import Story from './components/story';
-import Rental from './components/rental';
 import Bento from './components/bento';
 import Socials from './components/socials';
 import Models from './components/models';
@@ -22,7 +21,7 @@ export default function Home() {
         <Models />
         <Video
           source='/home/video.mp4'
-          thumbnail='/bento-1.jpeg'
+          thumbnail='/home/video_thumbnail.jpeg'
           //   title={tPage('video.title')}
           //   descriptionLeft={tPage('video.left')}
           //   descriptionRight={tPage('video.right')}

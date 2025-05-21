@@ -3,14 +3,14 @@ import { IProduct, IProductConfig, SelectedOption } from './types';
 export const products: IProduct[] = [
   {
     key: 'teardrop',
-    image: '/model_td.jpeg',
+    image: '/models/teardrop.png',
     color: 'orange',
     basePrice: 10900,
     faqLength: 6,
     models: [
       {
         key: 'teardrop',
-        image: '/model_td.jpeg',
+        image: '/models/teardrop.png',
         basePrice: 10900,
       },
     ],
@@ -144,14 +144,14 @@ export const products: IProduct[] = [
   },
   {
     key: 'bike-camper',
-    image: '/model_kv.JPG',
+    image: '/models/bike-camper2.png',
     color: 'green',
     basePrice: 3300,
     faqLength: 7,
     models: [
       {
-        key: 'eco',
-        image: '/bike-camper/eco.jpeg',
+        key: 'light',
+        image: '/bike-camper/light.jpeg',
         basePrice: 3200,
         specifications: [
           'shellMaterials',
