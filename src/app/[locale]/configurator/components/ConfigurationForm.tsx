@@ -8,8 +8,7 @@ import Typography from '@/components/atoms/typography';
 import { useState } from 'react';
 import * as envConfig from '@/config';
 import { useLocale, useTranslations } from 'next-intl';
-import { IProduct, IProductConfig } from '@/products/types';
-import useConfig from '../hook/useConfig';
+import { IModel, IProduct, IProductConfig } from '@/products/types';
 import { getPrice } from '@/utils/price';
 // @ts-ignore
 import validator from 'validator';
@@ -33,19 +32,27 @@ export default function ConfigurationForm({
   color,
   onSuccess,
   product,
+  model,
   productConfiguration,
+  config,
 }: {
   color: 'orange' | 'green';
   onSuccess: () => void;
   product: IProduct | null;
+  model: IModel | null;
   productConfiguration: IProductConfig | null;
+  config: any;
 }) {
+  //Translation
   const tContactForm = useTranslations('forms.contactForm');
   const tStatus = useTranslations('forms.status');
   const tMail = useTranslations('pages.configurator.mail');
+  const tProduct = useTranslations(`products.${product?.key}`);
+  const tModel = useTranslations(
+    model ? `products.${product?.key}.models.${model?.key}` : ''
+  );
 
-  const config = useConfig(productConfiguration, product);
-
+  //States
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [status, setStatus] = useState<{
     text: string;
@@ -55,8 +62,6 @@ export default function ConfigurationForm({
 
   //Hooks
   const currentLocale = useLocale();
-
-  const tProduct = useTranslations(`products.${product?.key}`);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -99,7 +104,10 @@ export default function ConfigurationForm({
         body: JSON.stringify({
           ...formData,
           config,
-          product: tProduct(`name`),
+          product:
+            product?.key !== model?.key
+              ? `${tProduct('name')} (${tModel('name')})`
+              : tProduct('name'),
           total: getPrice(productConfiguration?.totalPrice || 0),
           mailSubject: tMail('subject'),
           mailMessage: tMail('message'),

@@ -49,6 +49,8 @@ export default function Page() {
     },
   ];
 
+  if (!product) return null;
+
   return (
     <div className='bg-bg-2'>
       <Header />
@@ -62,7 +64,10 @@ export default function Page() {
         />
         <Video source='/home/video.mp4' thumbnail='/bento-1.jpeg' showSocials />
         <Bento />
-        <ModelSpecifications />
+        <ModelSpecifications
+          productKey={product.key}
+          title={tPage('modelsSpecifications.title')}
+        />
         {/* <History /> */}
         <FAQ productKey={'bike-camper'} />
       </main>

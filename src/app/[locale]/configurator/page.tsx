@@ -1,11 +1,11 @@
 'use client';
 import Header from '@/components/navigation/header';
 import Footer from '@/components/navigation/footer';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import {
-  getProductConfiguration,
+  getModelConfiguration,
   products,
-  updateProductConfiguration,
+  updateModelConfiguration,
 } from '@/products/products';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import ChooseProduct from './components/chooseProduct';
@@ -14,7 +14,7 @@ import SectionTitle from '../../../components/sections/title';
 import Section from '../../../components/atoms/section';
 import Container from '../../../components/atoms/container';
 import Typography from '../../../components/atoms/typography';
-import { IProduct, IProductConfig } from '@/products/types';
+import { IModel, IProduct, IProductConfig } from '@/products/types';
 import { useTranslations } from 'next-intl';
 import Colors from './components/colors';
 import Basket from './components/basket';
@@ -22,14 +22,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 import OptionPicker from './components/optionPicker';
 import Modal from '@/components/utils/modal';
 import ConfigurationForm from './components/ConfigurationForm';
-import SocialLinks from '@/components/utils/socialLinks';
-import * as envConfig from '@/config';
 import useConfig from './hook/useConfig';
 import AnimatedPrice from './components/animatedPrice';
 import Button from '@/components/atoms/button';
 import ConfirmationModal from '@/components/ConfirmationModal';
-import SelectModel from './components/selectModel';
-
+import ModelSpecifications from '../bike-camper/components/modelSpecifications';
 export default function Configurator() {
   //State
   const [productConfiguration, setProductConfiguration] =
@@ -41,18 +38,24 @@ export default function Configurator() {
   //Hooks
   const searchParams = useSearchParams();
   const productQuery = searchParams.get('product');
+  const modelQuery = searchParams.get('model');
 
   const product: IProduct | null = useMemo(() => {
     return products.find((p) => p.key === productQuery) || null;
   }, [productQuery]);
 
-  useEffect(() => {
-    if (product) {
-      setProductConfiguration(getProductConfiguration(product));
-    }
-  }, [product]);
+  const model: IModel | null = useMemo(() => {
+    if (!product) return null;
+    return product?.models?.find((m) => m.key === modelQuery) || null;
+  }, [modelQuery, product]);
 
-  const config = useConfig(productConfiguration, product);
+  useEffect(() => {
+    if (product && model) {
+      setProductConfiguration(getModelConfiguration(model));
+    }
+  }, [product, model]);
+
+  const config = useConfig(productConfiguration, product, model);
 
   //Translation
   const tPage = useTranslations('pages.configurator');
@@ -86,11 +89,11 @@ export default function Configurator() {
     };
   }, []);
 
-  const onProductChange = (category: string, option: string) => {
-    if (!productConfiguration || !product) return;
-    const updatedConfig = updateProductConfiguration(
+  const onUpdateConfig = (category: string, option: string) => {
+    if (!productConfiguration || !product || !model) return;
+    const updatedConfig = updateModelConfiguration(
       productConfiguration,
-      product,
+      model,
       category,
       option
     );
@@ -100,9 +103,15 @@ export default function Configurator() {
   return (
     <div className='min-h-screen bg-bg-2'>
       <Header fixedMenu />
-      {!product ? (
-        <ChooseProduct />
-      ) : (
+
+      {!product ? <ChooseProduct /> : null}
+      {product && !model ? (
+        <ModelSpecifications
+          productKey={product.key}
+          title={tProduct(`${product.key}.name`)}
+        />
+      ) : null}
+      {product && model ? (
         <>
           <Section className='bg-white'>
             <Container className='flex-col'>
@@ -116,26 +125,14 @@ export default function Configurator() {
                     >
                       <Image
                         fill
-                        src={`${product.image}`}
+                        src={`${model.image}`}
                         alt={tProduct(`${product.key}.name`)}
                         className='rounded-3xl object-cover'
                       />
                     </div>
-                    {/* TODO Product selector */}
-                    {/* {product && product?.models && product.models.length > 1 ? (
-                      <SelectModel
-                        product={product}
-                        onChange={onProductChange}
-                        selectedModel={
-                          productConfiguration?.selectedOptions.find(
-                            (opt) => opt.category === 'main_color'
-                          )?.key
-                        }
-                      />
-                    ) : null} */}
-                    {product.configurator ? (
+                    {model.configurator ? (
                       <>
-                        {product.configurator.map((category) => {
+                        {model.configurator.map((category) => {
                           if (category.name === 'shade_color') return null;
                           return (
                             <div key={category.name}>
@@ -152,13 +149,13 @@ export default function Configurator() {
                                       (opt) => opt.category === 'shade_color'
                                     )?.key
                                   }
-                                  onChange={onProductChange}
+                                  onChange={onUpdateConfig}
                                 />
                               ) : (
                                 <OptionPicker
                                   product={product}
                                   category={category}
-                                  onChange={onProductChange}
+                                  onChange={onUpdateConfig}
                                   // @ts-ignore
                                   selectedOption={productConfiguration?.selectedOptions
                                     .filter(
@@ -187,7 +184,7 @@ export default function Configurator() {
                             >
                               <Image
                                 fill
-                                src={`${product.image}`}
+                                src={`${model.image}`}
                                 alt={tProduct(`${product.key}.name`)}
                                 className='rounded-3xl object-cover'
                               />
@@ -252,7 +249,7 @@ export default function Configurator() {
             ) : null}
           </Section>
         </>
-      )}
+      ) : null}
       {product && productConfiguration ? (
         <div id={'mobile-basket'} className='md:hidden'>
           <Basket
@@ -278,7 +275,9 @@ export default function Configurator() {
             setIsModalOpen(false);
           }}
           product={product}
+          model={model}
           productConfiguration={productConfiguration}
+          config={config}
         />
       </Modal>
       <ConfirmationModal

@@ -23,9 +23,7 @@ export default function OptionPicker({
   onChange: (category: string, value: string) => void;
   selectedOption: string | string[];
 }) {
-  const tProduct = useTranslations(
-    `products.${product.key}.options.${category.name}`
-  );
+  const tOptions = useTranslations('pages.configurator.options');
   const tPage = useTranslations('pages.configurator');
 
   const isSelected = (optionKey: string) =>
@@ -40,7 +38,7 @@ export default function OptionPicker({
 
   return (
     <ConfiguratorCard>
-      <ConfiguratorCardTitle title={tProduct(`name`)} />
+      <ConfiguratorCardTitle title={tOptions(`${category.name}`)} />
       <div className='grid grid-cols-1 gap-3 lg:grid-cols-3'>
         {category?.options?.map((option, index) => (
           <div
@@ -56,7 +54,7 @@ export default function OptionPicker({
                     ? `/${product.key}/configurator/${option.picture}`
                     : '/full_black.png'
                 }
-                alt={tProduct(`options.${option.key}`)}
+                alt={tOptions(`${option.key}`)}
                 className={clsx('rounded-2xl rounded-b-none', {
                   'object-contain': !option.picture,
                   'object-cover': option.picture,
@@ -76,12 +74,8 @@ export default function OptionPicker({
             <div className='flex flex-grow flex-col justify-between p-3 py-4'>
               <div className='mb-4 flex flex-col gap-1'>
                 <Typography className='text-md font-medium' variant='none'>
-                  {tProduct(`options.${option.key}`)}
+                  {tOptions(`${option.key}`)}
                 </Typography>
-
-                {/* <Typography variant='caption' className='text-dark-lighter'>
-                  Lorem ipsum dolor sit amet.
-                </Typography> */}
               </div>
 
               <div className='flex w-full items-center justify-between'>

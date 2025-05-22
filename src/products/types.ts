@@ -23,9 +23,8 @@ export interface IProduct {
   image: string;
   color: 'orange' | 'green';
   basePrice: number;
-  configurator?: ConfiguratorCategory[];
   faqLength?: number;
-  models?: IModel[];
+  models: IModel[];
 }
 
 export interface IModel {
@@ -33,6 +32,7 @@ export interface IModel {
   image: string;
   basePrice: number;
   specifications?: string[];
+  configurator?: ConfiguratorCategory[];
 }
 
 export interface SelectedOption {
@@ -41,7 +41,7 @@ export interface SelectedOption {
 }
 
 export interface IProductConfig {
-  productKey: ProductType;
+  productKey: string;
   selectedOptions: SelectedOption[];
   totalPrice: number;
 }

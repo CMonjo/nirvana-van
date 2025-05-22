@@ -60,6 +60,39 @@
       "mail": {
         "subject": "Votre configuration est prête !",
         "message": "Voici la configuration que vous avez réalisée sur notre site. N'hésitez pas à nous contacter si vous avez la moindre question ou si vous souhaitez passer commande. À bientôt !"
+      },
+      "options": {
+        "main_color": "Couleur",
+        "shade_color": "Teinte",
+        "axle": "Essieu",
+        "classic_axle_500kg": "Essieu classique 500 kg",
+        "classic_axle_600_750kg": "Essieu classique 600/750 kg",
+        "braked_axle_750kg": "Essieu freiné 750 kg",
+        "chassis": "Châssis",
+        "stabilizer_legs": "Béquilles stabilisatrices",
+        "rounded_fenders": "Gardes boue arrondis",
+        "spare_wheel": "Roue de secours",
+        "electricity": "Electricité",
+        "electric_installation": "Installation électrique",
+        "solar_panel": "Panneau solaire",
+        "big_battery": "Grosse batterie",
+        "kitchen": "Cuisine",
+        "water_point": "Point d'eau",
+        "electric_cooler": "Glacière électrique",
+        "stove": "Réchaud",
+        "shower": "Douchette",
+        "equipments": "Équipements",
+        "roof_bars": "Barres de toit",
+        "arrow_chest": "Coffre de flèche",
+        "bike_rack": "Porte vélo",
+        "roof_tent": "Tente de toit",
+        "built-in": "Aménagement",
+        "front_and_rear_closets": "Placards avant et arrière",
+        "no_closets": "Pas de placards",
+        "opening": "Ouverture",
+        "two_side_doors": "Deux portes latérale et une arrière",
+        "one_side_door": "Une seule porte latérale",
+        "no_rear_door": "Pas de porte arrière"
       }
     },
     "contact": {
@@ -266,77 +299,9 @@
     "teardrop": {
       "name": "Teardrop",
       "description": "Tout ce dont vous avez besoin, même le confort !",
-      "options": {
-        "main_color": {
-          "name": "Couleur"
-        },
-        "shade_color": {
-          "name": "Teinte"
-        },
-        "axle": {
-          "name": "Essieu",
-          "options": {
-            "classic_axle_500kg": "Essieu classique 500 kg",
-            "classic_axle_600_750kg": "Essieu classique 600/750 kg  ",
-            "braked_axle_750kg": "Essieu freiné 750 kg"
-          }
-        },
-        "chassis": {
-          "name": "Châssis",
-          "options": {
-            "stabilizer_legs": "Béquilles stabilisatrices",
-            "rounded_fenders": "Gardes boue arrondis",
-            "spare_wheel": "Roue de secours"
-          }
-        },
-        "electricity": {
-          "name": "Electricité",
-          "options": {
-            "electric_installation": "Installation électrique",
-            "solar_panel": "Panneau solaire",
-            "big_battery": "Grosse batterie"
-          }
-        },
-        "kitchen": {
-          "name": "Cuisine",
-          "options": {
-            "water_point": "Point d'eau",
-            "electric_cooler": "Glacière électrique",
-            "stove": "Réchaud",
-            "shower": "Douchette"
-          }
-        },
-        "exterior": {
-          "name": "Extérieur",
-          "options": {
-            "rear_awning": "Auvent arrière",
-            "side_awning": "Auvent latéral",
-            "cover": "Bache"
-          }
-        },
-        "equipments": {
-          "name": "Équipements",
-          "options": {
-            "roof_bars": "Barres de toit",
-            "arrow_chest": "Coffre de flèche",
-            "bike_rack": "Porte vélo",
-            "roof_tent": "Tente de toit"
-          }
-        },
-        "built-in": {
-          "name": "Aménagement",
-          "options": {
-            "front_and_rear_closets": "Placards avant et arrière",
-            "no_closets": "Pas de placards"
-          }
-        },
-        "opening": {
-          "name": "Ouverture",
-          "options": {
-            "two_side_doors": "Deux portes latérale et une arrière",
-            "one_side_door": "Une seule porte latérale",
-            "no_rear_door": "Pas de porte arrière"
-          }
+      "models": {
+        "teardrop": {
+          "name": "Teardrop"
         }
       },
       "specifications": {
@@ -351,14 +316,6 @@
     "bike-camper": {
       "name": "Caravane Vélo",
       "description": "Tout en légèreté, sans oublier la praticité !",
-      "options": {
-        "main_color": {
-          "name": "Couleur"
-        },
-        "shade_color": {
-          "name": "Teinte"
-        }
-      },
       "models": {
         "premium": {
           "name": "Premium",

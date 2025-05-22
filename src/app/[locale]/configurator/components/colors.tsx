@@ -21,7 +21,7 @@ export default function Colors({
   onChange: (category: string, value: string) => void;
 }) {
   const tColors = useTranslations('ralColors');
-  const tProduct = useTranslations(`products.${product.key}.options`);
+  const tOptions = useTranslations('pages.configurator.options');
 
   const shades = useMemo(
     () => ralColors.find((c) => c.color === mainColor)?.shades,
@@ -30,7 +30,7 @@ export default function Colors({
 
   return (
     <ConfiguratorCard>
-      <ConfiguratorCardTitle title={tProduct('main_color.name')} />
+      <ConfiguratorCardTitle title={tOptions('main_color')} />
       <div className='flex flex-wrap gap-2'>
         {ralColors.map((color, index) => (
           <Tooltip content={tColors(color.color)} position='top' key={index}>
@@ -56,7 +56,7 @@ export default function Colors({
           </Tooltip>
         ))}
       </div>
-      {shades && <ConfiguratorCardTitle title={tProduct('shade_color.name')} />}
+      {shades && <ConfiguratorCardTitle title={tOptions('shade_color')} />}
       {shades ? (
         <div className='flex h-[400px] flex-col gap-4 overflow-auto'>
           {shades.map((color, index) => (

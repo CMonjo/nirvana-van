@@ -10,8 +10,7 @@ import { Divider } from '@mui/material';
 import Button from '@/components/atoms/button';
 import { products } from '@/products/products';
 import { getPrice } from '@/utils/price';
-
-const product = products.find((product) => product.key === 'bike-camper');
+import { useRouter } from 'next/navigation';
 
 const SpecItem = ({
   title,
@@ -27,21 +26,34 @@ const SpecItem = ({
     </div>
   );
 };
-export default function ModelSpecifications() {
-  const tPage = useTranslations(`pages.${product?.key}.modelsSpecifications`);
-  const tProduct = useTranslations(`products.${product?.key}.models`);
+export default function ModelSpecifications({
+  productKey,
+  title,
+}: {
+  productKey: string;
+  title: string;
+}) {
+  const product = products.find((product) => product.key === productKey);
+  const tProduct = useTranslations(`products.${productKey}.models`);
   const tSpec = useTranslations(`products.specifications`);
   const tActions = useTranslations('actions');
+  const router = useRouter();
 
+  if (!product) return null;
   return (
     <Section className='bg-white' topoBackground>
       <Container className='flex-col'>
-        <SectionTitle title={tPage('title')} />
+        <SectionTitle title={title} />
         <div className='flex w-full flex-col gap-8 md:flex-row'>
           {product?.models?.map((model) => (
             <div
-              className='flex w-full flex-col rounded-xl bg-grey'
+              className='flex w-full cursor-pointer flex-col rounded-xl bg-grey'
               key={model.key}
+              onClick={() => {
+                router.push(
+                  `/configurator?product=${productKey}&model=${model.key}`
+                );
+              }}
             >
               <div className='relative h-[300px] w-full rounded-lg'>
                 <Image
@@ -78,7 +90,14 @@ export default function ModelSpecifications() {
                   ))}
                 </div>
                 <div className='flex items-end'>
-                  <Button color={product?.color}>
+                  <Button
+                    color={product?.color}
+                    onClick={() => {
+                      router.push(
+                        `/configurator?product=${productKey}&model=${model.key}`
+                      );
+                    }}
+                  >
                     {tActions('configure')}
                   </Button>
                 </div>

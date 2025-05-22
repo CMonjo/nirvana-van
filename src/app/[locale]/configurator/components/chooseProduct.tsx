@@ -8,6 +8,7 @@ import Button from '@/components/atoms/button';
 import { ProductType } from '@/products/types';
 import { useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
+import { products } from '@/products/products';
 
 export default function ChooseProduct() {
   const router = useRouter();
@@ -15,10 +16,16 @@ export default function ChooseProduct() {
   const tActions = useTranslations('actions');
 
   const handleClick = (productKey: ProductType) => {
-    router.push({
-      pathname: '/configurator',
-      query: { product: productKey },
-    });
+    const product = products.find((p) => p.key === productKey);
+    if (product?.models?.length === 1) {
+      router.push({
+        pathname: `/configurator?product=${productKey}&model=${product.models[0].key}`,
+      });
+    } else {
+      router.push({
+        pathname: `/configurator?product=${productKey}`,
+      });
+    }
   };
 
   return (

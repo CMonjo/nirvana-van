@@ -1,35 +1,50 @@
 'use client';
 
-import { IBasketConfig, IProduct, IProductConfig } from '@/products/types';
+import {
+  IBasketConfig,
+  IModel,
+  IProduct,
+  IProductConfig,
+} from '@/products/types';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { getPrice } from '@/utils/price';
 
 export default function useConfig(
   productConfiguration: IProductConfig | null,
-  product: IProduct | null
+  product: IProduct | null,
+  model: IModel | null
 ): IBasketConfig[] | null {
+  //State
   const [config, setConfig] = useState<IBasketConfig[] | null>(null);
 
+  //Translations
   const tProduct = useTranslations(product ? `products.${product?.key}` : '');
+  const tOptions = useTranslations('pages.configurator.options');
+  const tModel = useTranslations(
+    `products.${product?.key}.models.${model?.key}`
+  );
   const tPage = useTranslations('pages.configurator');
   const tColors = useTranslations('ralColors');
 
   const generateConfig = () => {
-    if (!productConfiguration || !product) return;
+    if (!productConfiguration || !product || !model) return;
     const data: IBasketConfig[] = [
       {
         name: null,
         options: [
           {
-            key: tProduct(`name`),
-            price: getPrice(product.basePrice),
+            key:
+              product?.key !== model?.key
+                ? `${tProduct('name')} (${tModel('name')})`
+                : tProduct('name'),
+            price: getPrice(model.basePrice),
           },
         ],
       },
     ];
     const selectedOpts = productConfiguration.selectedOptions;
-    for (const cat of product.configurator || []) {
+    for (const cat of model.configurator || []) {
       const isCategorySelected = selectedOpts.some(
         (o) => o.category === cat.name
       );
@@ -53,10 +68,10 @@ export default function useConfig(
         });
       } else {
         const newCat = {
-          name: tProduct(`options.${cat.name}.name`),
+          name: tOptions(`${cat.name}`),
           options: options?.length
             ? options.map((option) => ({
-                key: tProduct(`options.${cat.name}.options.${option.key}`),
+                key: tOptions(`${option.key}`),
                 price: option.included
                   ? tPage('include')
                   : getPrice(option.price || 0),
@@ -71,7 +86,7 @@ export default function useConfig(
 
   useEffect(() => {
     generateConfig();
-  }, [productConfiguration, product]);
+  }, [productConfiguration, product, model]);
 
   return config;
 }
