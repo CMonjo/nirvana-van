@@ -22,7 +22,7 @@ export default function useConfig(
   const tProduct = useTranslations(product ? `products.${product?.key}` : '');
   const tOptions = useTranslations('pages.configurator.options');
   const tModel = useTranslations(
-    `products.${product?.key}.models.${model?.key}`
+    model ? `products.${product?.key}.models.${model?.key}` : ''
   );
   const tPage = useTranslations('pages.configurator');
   const tColors = useTranslations('ralColors');
