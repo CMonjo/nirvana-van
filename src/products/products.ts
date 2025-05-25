@@ -24,40 +24,6 @@ export const products: IProduct[] = [
             required: true,
           },
           {
-            name: 'axle',
-            type: 'radio',
-            options: [
-              {
-                key: 'classic_axle_500kg',
-                included: true,
-                price: 0,
-              },
-              {
-                key: 'classic_axle_600_750kg',
-                price: 180,
-              },
-              {
-                key: 'braked_axle_750kg',
-                price: 980,
-              },
-            ],
-          },
-          {
-            name: 'chassis',
-            type: 'checkbox',
-            options: [
-              {
-                key: 'stabilizer_legs',
-                price: 0,
-                included: true,
-                disabled: true,
-                picture: 'stabilizer_legs.JPG',
-              },
-              { key: 'rounded_fenders', price: 140 },
-              { key: 'spare_wheel', price: 190, picture: 'spare_wheel.JPG' },
-            ],
-          },
-          {
             name: 'electricity',
             type: 'checkbox',
             options: [
@@ -72,7 +38,11 @@ export const products: IProduct[] = [
                 soldOut: false,
                 picture: 'solar_panel.JPG',
               },
-              { key: 'big_battery', price: 200, picture: 'big_battery.JPG' },
+              {
+                key: 'extended_autonomy',
+                price: 200,
+                picture: 'big_battery.JPG',
+              },
             ],
           },
           {
@@ -102,10 +72,49 @@ export const products: IProduct[] = [
             name: 'equipments',
             type: 'checkbox',
             options: [
-              { key: 'roof_bars', price: 490, picture: 'roof_bars.JPG' },
-              { key: 'arrow_chest', price: 100, picture: 'arrow_chest.jpeg' }, //TODO Sur demande
-              { key: 'bike_rack', price: 220, picture: 'bike_rack.JPG' },
-              { key: 'roof_tent', price: 2000, comingSoon: true }, //TODO Sur demande
+              { key: 'roof_bars', price: 800, picture: 'roof_bars.JPG' },
+              {
+                key: 'arrow_chest',
+                price: null,
+                picture: 'arrow_chest.jpeg',
+                onDemand: true,
+              },
+              { key: 'bike_rack', price: 200, picture: 'bike_rack.JPG' },
+              { key: 'roof_tent', price: null, onDemand: true },
+            ],
+          },
+          {
+            name: 'chassis',
+            type: 'checkbox',
+            options: [
+              {
+                key: 'stabilizer_legs',
+                price: 0,
+                included: true,
+                disabled: true,
+                picture: 'stabilizer_legs.JPG',
+              },
+              { key: 'rounded_fenders', price: 140 },
+              { key: 'spare_wheel', price: 190, picture: 'spare_wheel.JPG' },
+            ],
+          },
+          {
+            name: 'axle',
+            type: 'radio',
+            options: [
+              {
+                key: 'classic_axle_500kg',
+                included: true,
+                price: 0,
+              },
+              {
+                key: 'classic_axle_600_750kg',
+                price: 180,
+              },
+              {
+                key: 'braked_axle_750kg',
+                price: 980,
+              },
             ],
           },
           //   {
@@ -151,7 +160,7 @@ export const products: IProduct[] = [
     models: [
       {
         key: 'light',
-        image: '/bike-camper/light.jpeg',
+        image: '/bike-camper/light.png',
         basePrice: 3200,
         specifications: [
           'shellMaterials',
@@ -196,6 +205,27 @@ export const products: IProduct[] = [
             name: 'shade_color',
             type: 'radio',
             required: true,
+          },
+          {
+            name: 'options',
+            type: 'checkbox',
+            options: [
+              {
+                key: 'electric_installation',
+                price: 400,
+                // picture: 'electric_installation.JPG',
+              },
+              {
+                key: 'solar_panel',
+                price: 270,
+                picture: 'solar_panel.JPG',
+              },
+              {
+                key: 'dish_kit',
+                price: 140,
+                // picture: 'big_battery.JPG',
+              },
+            ],
           },
         ],
       },

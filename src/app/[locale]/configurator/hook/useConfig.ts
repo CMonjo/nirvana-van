@@ -74,7 +74,9 @@ export default function useConfig(
                 key: tOptions(`${option.key}`),
                 price: option.included
                   ? tPage('include')
-                  : getPrice(option.price || 0),
+                  : option.onDemand
+                    ? tPage('onDemand')
+                    : getPrice(option.price || 0),
               }))
             : [],
         };

@@ -25,7 +25,6 @@ export default function Basket({
   return (
     <ConfiguratorCard className='gap-2 p-4'>
       <Typography className='font-medium'>{t('yourConfiguration')}</Typography>
-
       {config?.map((cat, i) => {
         return (
           <div key={'cat-' + i}>
@@ -52,7 +51,6 @@ export default function Basket({
           </div>
         );
       })}
-
       <div className='flex flex-col items-end justify-between'>
         <div className='flex w-full justify-between'>
           <Typography className='font-medium'>{t('total')}</Typography>
@@ -71,7 +69,6 @@ export default function Basket({
           {t('vat')}{' '}
         </Typography>
       </div>
-
       <Button className='justify-center' color={product.color} onClick={onSend}>
         {t('receiveQuote')}
       </Button>

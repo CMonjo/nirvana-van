@@ -67,7 +67,7 @@ export default function Page() {
         />
         <Video
           source='/teardrop/video.mp4'
-          thumbnail='/bento-2.jpeg'
+          thumbnail='/home/hero.JPG'
           showSocials
         />
         {productDescriptions.map((el: string, index: number) => (

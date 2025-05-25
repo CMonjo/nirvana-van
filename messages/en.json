@@ -47,6 +47,7 @@
       "configure": "Configure",
       "include": "Included",
       "comingSoon": "Coming soon",
+      "onDemand": "On demand",
       "soldOut": "Sold out",
       "selected": "Selected",
       "subtitle": "Create the caravan of your dreams",
@@ -60,6 +61,45 @@
       "mail": {
         "subject": "Your configuration is ready!",
         "message": "Here is the configuration you created on our site. Feel free to contact us if you have any questions or would like to place an order. See you soon!"
+      },
+      "options": {
+        "main_color": "Color",
+        "shade_color": "Shade",
+        "axle": "Axle",
+        "classic_axle_500kg": "Classic axle 500 kg",
+        "classic_axle_600_750kg": "Classic axle 600/750 kg",
+        "braked_axle_750kg": "Braked axle 750 kg",
+        "chassis": "Chassis",
+        "stabilizer_legs": "Stabiliser legs",
+        "rounded_fenders": "Rounded mudguards",
+        "spare_wheel": "Spare wheel",
+        "electricity": "Electricity",
+        "electric_installation": "Electrical installation",
+        "solar_panel": "Solar panel",
+        "extended_autonomy": "Extended autonomy",
+        "kitchen": "Kitchen",
+        "water_point": "Water point",
+        "electric_cooler": "Electric cooler",
+        "stove": "Stove",
+        "shower": "Hand shower",
+        "exterior": "Exterior",
+        "rear_awning": "Rear awning",
+        "side_awning": "Side awning",
+        "cover": "Cover",
+        "equipments": "Equipment",
+        "roof_bars": "Roof bars",
+        "arrow_chest": "Drawbar box",
+        "bike_rack": "Bike rack",
+        "roof_tent": "Roof tent",
+        "built-in": "Built In",
+        "front_and_rear_closets": "Front and rear cupboards",
+        "no_closets": "No cupboards",
+        "opening": "Opening",
+        "two_side_doors": "Two side doors and one rear",
+        "one_side_door": "Single side door",
+        "no_rear_door": "No rear door",
+        "options": "Options",
+        "dish_kit": "Kitchen kit (stove, dishes, cutlery)"
       }
     },
     "contact": {
@@ -78,8 +118,8 @@
         "title": "Teardrop"
       },
       "story": {
-        "title": "Everything you need, towed behind your car",
-        "description": "Choose a Teardrop: the compact, easy-to-tow caravan that offers optimal comfort for your trips.<br/><br/>With its sleek design, minimal maintenance and no mechanical costs, you can enjoy every adventure with total peace of mind.<br/>Your cosy cocoon follows you everywhere, ready to go at any time."
+        "title": "All you need, right behind your car.",
+        "description": "Discover the Teardrop: a compact and lightweight caravan designed for easy travel and real comfort.<br/><br/>Its elegant design, low maintenance, and zero mechanical worries make every trip simple and enjoyable.<br/>Wherever life takes you, your cozy little nest is ready to go — whenever you are."
       },
       "video": {
         "title": "The Teardrop in action!",
@@ -87,26 +127,26 @@
         "right": "In action!"
       },
       "productAdvantages": {
-        "title": "Why choose a teardrop for travelling?",
+        "title": "Why choose a Teardrop for your travels?",
         "1": {
-          "title": "Personalisation",
-          "description": "Create a unique caravan tailored to your needs and style."
+          "title": "Tailor-made to fit you",
+          "description": "Create a caravan that reflects your needs and your style."
         },
         "2": {
-          "title": "Unique design",
-          "description": "A discreet format that turns heads and makes parking easy."
+          "title": "Smart, compact design",
+          "description": "A discreet shape that turns heads — and slips easily into any parking spot."
         },
         "3": {
-          "title": "Quick to use",
-          "description": "Ready in a flash: hitch it up and go, no assembly or bed to unfold."
+          "title": "Ready in seconds",
+          "description": "Hook it up and hit the road — no setup, no folding beds, just freedom."
         },
         "4": {
-          "title": "Lower costs",
-          "description": "No extra toll charges, no mechanical maintenance."
+          "title": "Low costs, no surprises",
+          "description": "No extra toll fees, no mechanical upkeep. Just you and the road."
         },
         "5": {
-          "title": "Comfort and autonomy",
-          "description": "Treat yourself to a comfortable trip, wherever you are."
+          "title": "Comfort and independence",
+          "description": "Enjoy the journey, wherever it takes you — with all the comfort you deserve."
         }
       },
       "productDescription": {
@@ -166,8 +206,8 @@
         "title": "Bike Camper"
       },
       "story": {
-        "title": "A new way to travel by bike",
-        "description": "Whether for a short getaway or a long journey, our bike camper goes with you everywhere.<br/>Easy to tow and designed for quick, hassle-free setup, it provides reliable, comfortable shelter at every stop.<br/><br/>Focus on what matters: pedal freely and live the adventure close to nature."
+        "title": "A New Way to Travel by Bike",
+        "description": "Whether you're planning a weekend getaway or a long-distance adventure, our bike caravan goes wherever you go.<br/>Easy to tow and quick to set up, it offers a reliable, comfortable shelter at every stop.<br/><br/>Focus on what matters: pedal freely and live the adventure close to nature."
       },
       "video": {
         "title": "The Bike Camper in action!",
@@ -187,23 +227,23 @@
         "title": "Why choose a bike camper?",
         "1": {
           "title": "Freedom",
-          "description": "Ready in a flash: hitch it up and go, no assembly or bed to make."
+          "description": "Ready in seconds - hitch it up and ride, no setup or unfolding beds."
         },
         "2": {
           "title": "Comfort",
-          "description": "A real bed, optimised space and protection from the elements."
+          "description": "A real bed, smart storage, and protection from the elements."
         },
         "3": {
           "title": "Safety",
-          "description": "With the lockable door, you and your belongings stay safe."
+          "description": "Lockable door keeps you and your belongings safe, wherever you are."
         },
         "4": {
-          "title": "Lightness",
-          "description": "Easy to tow, even with a non-electric bike."
+          "title": "Lightweight",
+          "description": "So easy to tow – even with a non-electric bike."
         },
         "5": {
-          "title": "Autonomy",
-          "description": "A design made for long-distance travel and roaming."
+          "title": "Self-sufficient",
+          "description": "Designed for long-distance cycling and true roaming freedom."
         }
       },
       "productSpecification": {
@@ -255,9 +295,9 @@
   },
   "actions": {
     "contactUs": "Contact us",
-    "configureMy": "Configure my",
-    "configureMyTrailer": "Configure my trailer",
-    "iWantRent": "I want to rent it",
+    "configureMy": "Build my",
+    "configureMyTrailer": "Build my trailer",
+    "iWantRent": "I want to try it!",
     "discover": "Discover",
     "configure": "Configure",
     "rent": "Rent"
@@ -266,77 +306,9 @@
     "teardrop": {
       "name": "Teardrop",
       "description": "Everything you need, including comfort!",
-      "options": {
-        "main_color": {
-          "name": "Color"
-        },
-        "shade_color": {
-          "name": "Shade"
-        },
-        "axle": {
-          "name": "Axle",
-          "options": {
-            "classic_axle_500kg": "Classic axle 500 kg",
-            "classic_axle_600_750kg": "Classic axle 600/750 kg",
-            "braked_axle_750kg": "Braked axle 750 kg"
-          }
-        },
-        "chassis": {
-          "name": "Chassis",
-          "options": {
-            "stabilizer_legs": "Stabiliser legs",
-            "rounded_fenders": "Rounded mudguards",
-            "spare_wheel": "Spare wheel"
-          }
-        },
-        "electricity": {
-          "name": "Electricity",
-          "options": {
-            "electric_installation": "Electrical installation",
-            "solar_panel": "Solar panel",
-            "big_battery": "Large battery"
-          }
-        },
-        "kitchen": {
-          "name": "Kitchen",
-          "options": {
-            "water_point": "Water point",
-            "electric_cooler": "Electric cooler",
-            "stove": "Stove",
-            "shower": "Hand shower"
-          }
-        },
-        "exterior": {
-          "name": "Exterior",
-          "options": {
-            "rear_awning": "Rear awning",
-            "side_awning": "Side awning",
-            "cover": "Cover"
-          }
-        },
-        "equipments": {
-          "name": "Equipment",
-          "options": {
-            "roof_bars": "Roof bars",
-            "arrow_chest": "Drawbar box",
-            "bike_rack": "Bike rack",
-            "roof_tent": "Roof tent"
-          }
-        },
-        "built-in": {
-          "name": "Furnishings",
-          "options": {
-            "front_and_rear_closets": "Front and rear cupboards",
-            "no_closets": "No cupboards"
-          }
-        },
-        "opening": {
-          "name": "Opening",
-          "options": {
-            "two_side_doors": "Two side doors and one rear",
-            "one_side_door": "Single side door",
-            "no_rear_door": "No rear door"
-          }
+      "models": {
+        "teardrop": {
+          "name": "Teardrop"
         }
       },
       "specifications": {
@@ -351,18 +323,10 @@
     "bike-camper": {
       "name": "Bike Camper",
       "description": "Ultra-light without giving up practicality!",
-      "options": {
-        "main_color": {
-          "name": "Color"
-        },
-        "shade_color": {
-          "name": "Shade"
-        }
-      },
       "models": {
         "premium": {
           "name": "Premium",
-          "description": "Designed for demanding travellers, this camper combines lightness, high-end materials and meticulous finishes. The ideal choice for those who want the very best.",
+          "description": "Made for demanding travelers, this caravan combines ultra-light materials with premium finishes. Perfect for those who want the very best on the road.",
           "specifications": {
             "shellMaterials": "Fibreglass",
             "chassisMaterials": "Aluminium",
@@ -374,7 +338,7 @@
         },
         "light": {
           "name": "Light",
-          "description": "A more affordable version that focuses on essentials without compromising quality.<br/>An excellent value for money to set off on an adventure with confidence.",
+          "description": "A streamlined, accessible version focused on the essentials — without compromising on quality.<br/>An ideal price-performance ratio for carefree adventures.",
           "specifications": {
             "shellMaterials": "Cellular polypropylene",
             "chassisMaterials": "Steel",
@@ -407,38 +371,38 @@
     "blackAndWhite": "Black / White"
   },
   "faq": {
-    "otherQuestions": "If you have any other questions, feel free to contact us, we'll be happy to help!",
+    "otherQuestions": "Have more questions? Don’t hesitate to contact us – we’ll be happy to help!",
     "teardrop": {
-      "question1": "Do I need a special licence to tow a Teardrop?",
-      "answer1": "No additional licence is required to tow a Teardrop with a GVWR between 500 and 750 kg. However, make sure the combined GVWR of the caravan and towing vehicle does not exceed 3,500 kg, otherwise a specific B96 training will be required.",
-      "question2": "Can the Teardrop be towed by any vehicle?",
-      "answer2": "Thanks to its low weight, the Teardrop can be towed by most cars. To be sure, refer to your vehicle manufacturer's data or check your registration certificate: subtract line F2 from line F3; the result must be greater than or equal to 500 kg.",
-      "question3": "Do you provide after-sales service?",
-      "answer3": "Yes, our caravans are guaranteed for 2 years. We also offer personalised support for any repairs, modifications or technical questions after purchase.",
-      "question4": "Can we visit your workshop?",
-      "answer4": "Of course! We'll be happy to welcome you. Book an appointment via our contact form to organise your visit.",
-      "question5": "What is the manufacturing lead time?",
-      "answer5": "The average lead time is two months, but it may be longer depending on current orders.",
-      "question6": "Are the mini-caravans suitable for all seasons?",
-      "answer6": "The Teardrop is designed to offer optimum comfort in all seasons. Although its outdoor kitchen is more pleasant to use in fine weather, its insulation guarantees comfortable nights.",
+      "question1": "Do I need a special license to tow a Teardrop?",
+      "answer1": "No additional license is required to tow a Teardrop with a gross vehicle weight (GVW) between 500 and 750 kg. Just make sure the combined GVW of the trailer and your car does not exceed 3,500 kg — otherwise, you’ll need a B96 endorsement.",
+      "question2": "Can a Teardrop be towed by any vehicle?",
+      "answer2": "Thanks to its light weight, the Teardrop can be towed by most cars. To be sure, check your car’s technical specifications or your registration certificate: subtract line F2 from F3 — the result should be 500 kg or more.",
+      "question3": "Do you offer after-sales service?",
+      "answer3": "Yes, our caravans come with a 2-year warranty. We also offer personalized support for any repairs, upgrades, or technical questions after purchase.",
+      "question4": "Can I visit your workshop?",
+      "answer4": "Absolutely! We’d be delighted to welcome you. Just book a visit using our contact form.",
+      "question5": "What is the production time?",
+      "answer5": "On average, it takes about two months to build your Teardrop, though this may vary depending on current orders.",
+      "question6": "Are Teardrops suitable for all seasons?",
+      "answer6": "Yes — our Teardrops are built for comfort year-round. While the outdoor kitchen is best enjoyed in good weather, the insulated cabin ensures cozy nights in any season.",
       "question7": "Is it possible to try a teardrop before buying?",
       "answer7": "Yes, we offer visits and test drives at our workshop in Montpellier. Contact us to arrange an appointment!"
     },
     "bike-camper": {
-      "question1": "Does the bike camper fit all bikes?",
-      "answer1": "Most of the time, yes. If your bike has specific features, we can design a custom hitch. Don't hesitate to contact us.",
-      "question2": "Can I have it delivered?",
-      "answer2": "Yes, delivery is possible. Contact us to find out the terms according to your location.",
-      "question3": "Where can I sleep with it?",
-      "answer3": "The camper can be used wherever bivouacking is allowed. Check local regulations: in general, you can set up in nature for one night as long as you respect the environment.",
-      "question4": "Do you provide after-sales service?",
-      "answer4": "Yes, all our campers are guaranteed for 2 years. We also provide follow-up if needed.",
-      "question5": "What is the manufacturing lead time?",
-      "answer5": "The timeframe varies depending on the season and the level of customisation desired. Generally count between 2 and 6 weeks. Contact us for a more precise estimate.",
-      "question6": "Is it possible to use this camper with a non-electric bike?",
-      "answer6": "Yes, it is designed to be towed by a standard bike. However, for long distances or hilly terrain, an electric bike can improve comfort.",
-      "question7": "Are bike campers suitable for all seasons?",
-      "answer7": "In winter they provide effective protection from the cold, but in extreme temperatures appropriate equipment (sleeping bag, duvet) may be necessary for optimal comfort. In summer, the openings allow good air circulation to keep you cool."
+      "question1": "Can I attach the caravan to any bike?",
+      "answer1": "Most of the time, yes! If your bike has a special frame or features, we can create a custom hitch. Don’t hesitate to contact us.",
+      "question2": "Can it be delivered to me?",
+      "answer2": "Yes, delivery is available. Just get in touch with us to check the options for your location.",
+      "question3": "Where am I allowed to sleep with it?",
+      "answer3": "You can use the caravan wherever wild camping is permitted. Always check local regulations – in many places, one-night stays in nature are allowed as long as you respect the environment.",
+      "question4": "Do you offer after-sales service?",
+      "answer4": "Absolutely! All our caravans come with a 2-year warranty, and we’re here to help if you need support or repairs.",
+      "question5": "How long does it take to build?",
+      "answer5": "Lead times vary depending on the season and customization level. On average, allow 2 to 6 weeks. Contact us for a more precise estimate.",
+      "question6": "Can I use the caravan with a non-electric bike?",
+      "answer6": "Yes! It’s light enough to tow with a regular bike. For hilly terrain or longer trips, an electric bike can add extra comfort.",
+      "question7": "Are the caravans suitable for all seasons?",
+      "answer7": "Yes – they offer great protection in the cold. For extreme weather, just bring the right gear (like a good sleeping bag or warm duvet). In summer, the design ensures good airflow to keep things cool."
     }
   },
   "forms": {

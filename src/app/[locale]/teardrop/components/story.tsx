@@ -57,7 +57,7 @@ export default function Story() {
 
           <div className='flex w-full justify-center md:w-2/5 md:justify-end'>
             <Image
-              src='/teardrop/story.png'
+              src='/teardrop/story2.png'
               alt='story'
               width={1155}
               height={600}

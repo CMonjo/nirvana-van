@@ -62,7 +62,11 @@ export default function Page() {
           color={product?.color}
           advantages={advantages}
         />
-        <Video source='/home/video.mp4' thumbnail='/bento-1.jpeg' showSocials />
+        <Video
+          source='/bike-camper/video.mov'
+          thumbnail='/bike-camper/hero.JPG'
+          showSocials
+        />
         <Bento />
         <ModelSpecifications
           productKey={product.key}

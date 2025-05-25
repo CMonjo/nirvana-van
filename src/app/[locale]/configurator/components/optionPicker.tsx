@@ -110,16 +110,20 @@ export default function OptionPicker({
                   </Tooltip>
                 )}
                 <div className='flex flex-col items-end'>
-                  <Typography
-                    variant='none'
-                    className={clsx('text-md font-light', {
-                      'line-through': option.comingSoon || option.soldOut,
-                    })}
-                  >
-                    {option.included
-                      ? tPage('include')
-                      : getPrice(option.price || 0)}
-                  </Typography>
+                  {(option.price || option.included || option.onDemand) && (
+                    <Typography
+                      variant='none'
+                      className={clsx('text-md font-light', {
+                        'line-through': option.comingSoon || option.soldOut,
+                      })}
+                    >
+                      {option.included
+                        ? tPage('include')
+                        : option.onDemand
+                          ? tPage('onDemand')
+                          : getPrice(option.price || 0)}
+                    </Typography>
+                  )}
                   {(option.comingSoon || option.soldOut) && (
                     <Typography
                       variant='caption'

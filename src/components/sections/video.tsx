@@ -83,14 +83,14 @@ export default function Video({
                 className='rounded-3xl'
               />
               <div
-                className='absolute inset-0 rounded-3xl bg-black opacity-70'
+                className='absolute inset-0 rounded-3xl bg-black opacity-40'
                 onClick={handlePlayClick}
               />
             </div>
           </>
         )}
         {showVideo ? (
-          <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-70'>
+          <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-40'>
             <video
               autoPlay
               controls

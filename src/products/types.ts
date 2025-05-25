@@ -14,6 +14,7 @@ export interface Option {
   description?: string;
   comingSoon?: boolean;
   soldOut?: boolean;
+  onDemand?: boolean;
   included?: boolean;
   disabled?: boolean;
 }

@@ -28,16 +28,16 @@ export default function Bento() {
             <BentoText title={t('1.title')} description={t('1.description')} />
           </BentoItem>
           <BentoItem className='col-span-2 row-span-1 bg-green'>
-            <BentoImage url='/home/bento/4.jpg' />
+            <BentoImage url='/home/bento/1.png' />
           </BentoItem>
           <BentoItem className='col-span-2 row-span-1 bg-green'>
             <BentoText title={t('2.title')} description={t('2.description')} />
           </BentoItem>
           <BentoItem className='col-span-1 row-span-1 bg-green'>
-            <BentoImage url='/home/bento/3.jpg' />
+            <BentoImage url='/home/bento/2.png' />
           </BentoItem>
           <BentoItem className='col-span-1 row-span-1 bg-green'>
-            <BentoImage url='/home/bento/1.JPG' />
+            <BentoImage url='/home/bento/4.jpeg' />
           </BentoItem>
         </motion.div>
 
@@ -60,10 +60,10 @@ export default function Bento() {
             <BentoImage url='/home/bento/4.jpeg' />
           </BentoItem>
           <BentoItem className='col-span-6 row-span-2 bg-green'>
-            <BentoImage url='/home/bento/2.jpeg' />
+            <BentoImage url='/home/bento/2.png' />
           </BentoItem>
           <BentoItem className='col-span-6 row-span-1 bg-green'>
-            <BentoImage url='/home/bento/1.JPG' />
+            <BentoImage url='/home/bento/1.png' />
           </BentoItem>
           <BentoItem className='col-span-6 row-span-1 bg-green'>
             <BentoText title={t('2.title')} description={t('2.description')} />

@@ -47,6 +47,7 @@
       "configure": "Configurez",
       "include": "Inclus",
       "comingSoon": "Prochainement",
+      "onDemand": "Sur demande",
       "soldOut": "En rupture",
       "selected": "Sélectionné",
       "subtitle": "Créer la caravane de vos rêves",
@@ -75,7 +76,7 @@
         "electricity": "Electricité",
         "electric_installation": "Installation électrique",
         "solar_panel": "Panneau solaire",
-        "big_battery": "Grosse batterie",
+        "extended_autonomy": "Autonomie étendue",
         "kitchen": "Cuisine",
         "water_point": "Point d'eau",
         "electric_cooler": "Glacière électrique",
@@ -92,7 +93,9 @@
         "opening": "Ouverture",
         "two_side_doors": "Deux portes latérale et une arrière",
         "one_side_door": "Une seule porte latérale",
-        "no_rear_door": "Pas de porte arrière"
+        "no_rear_door": "Pas de porte arrière",
+        "options": "Options",
+        "dish_kit": "Kit cuisine (réchaud, vaisselle, couverts)"
       }
     },
     "contact": {
@@ -319,7 +322,7 @@
       "models": {
         "premium": {
           "name": "Premium",
-          "description": "Conçue pour les voyageurs exigeants, cette caravane associe légèreté, matériaux haut de gamme et finitions soignées. Le choix idéal pour (celles et) ceux qui veulent ce qui se fait de mieux.",
+          "description": "Conçue pour les voyageurs exigeants, cette caravane associe légèreté, matériaux haut de gamme et finitions soignées. Le choix idéal pour celles et ceux qui veulent ce qui se fait de mieux.",
           "specifications": {
             "shellMaterials": "Fibre de verre",
             "chassisMaterials": "Aluminium",

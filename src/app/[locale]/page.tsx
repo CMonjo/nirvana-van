@@ -6,12 +6,9 @@ import Story from './components/story';
 import Bento from './components/bento';
 import Socials from './components/socials';
 import Models from './components/models';
-import { useTranslations } from 'next-intl';
 import Partners from './components/partners';
 
 export default function Home() {
-  const tPage = useTranslations('pages.home');
-
   return (
     <div className='bg-bg-2'>
       <Header />
