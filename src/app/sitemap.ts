@@ -1,4 +1,4 @@
-// // TODO https://next-intl-docs.vercel.app/docs/environments/actions-metadata-route-handlers
+//https://next-intl-docs.vercel.app/docs/environments/actions-metadata-route-handlers
 
 import { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
