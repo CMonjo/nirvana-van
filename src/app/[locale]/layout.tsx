@@ -46,7 +46,7 @@ export default async function RootLayout({
 
 export const metadata: Metadata = {
   title: 'Nirvana Van',
-  description: 'Explore the nirvana',
+  description: 'Des teardrops élégantes, robustes et bien pensées.',
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
