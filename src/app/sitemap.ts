@@ -19,6 +19,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 function getEntry(href: any) {
   return {
     url: `${host}/${routing.defaultLocale}${href}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 1,
     alternates: {
       languages: Object.fromEntries(
         routing.locales.map((locale) => [locale, `${host}/${locale}${href}`])
