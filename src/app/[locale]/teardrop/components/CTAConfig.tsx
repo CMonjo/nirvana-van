@@ -6,6 +6,7 @@ import Container from '@/components/atoms/container';
 import { products } from '@/products/products';
 import Button from '@/components/atoms/button';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function CTAConfig() {
   const product = products.find((product) => product.key === 'teardrop');
@@ -27,12 +28,25 @@ export default function CTAConfig() {
       >
         <SectionTitle title={tPage('title')} />
         <div className='flex gap-2'>
-          <Button size='large' color={product?.color}>
-            {tActions('rent')}
-          </Button>
-          <Button size='large' color={product?.color}>
-            {tActions('configureMyTrailer')}
-          </Button>
+          <Link
+            href={{
+              pathname: '/rental',
+            }}
+          >
+            <Button size='large' color={product?.color}>
+              {tActions('rent')}
+            </Button>
+          </Link>
+          <Link
+            href={{
+              pathname: '/configurator',
+              query: { product: 'teardrop', model: 'teardrop' },
+            }}
+          >
+            <Button size='large' color={product?.color}>
+              {tActions('configureMyTrailer')}
+            </Button>
+          </Link>
         </div>
       </Container>
     </Section>

@@ -19,6 +19,7 @@ export default function Home() {
         <Video
           source='/home/video.mp4'
           thumbnail='/home/video_thumbnail.jpeg'
+          showSocials
           //   title={tPage('video.title')}
           //   descriptionLeft={tPage('video.left')}
           //   descriptionRight={tPage('video.right')}

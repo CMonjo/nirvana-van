@@ -16,7 +16,7 @@ const Buttons = () => {
       <Link
         href={{
           pathname: '/configurator',
-          query: { product: 'teardrop' },
+          query: { product: 'teardrop', model: 'teardrop' },
         }}
       >
         <Button size='large' color='orange'>
@@ -25,7 +25,7 @@ const Buttons = () => {
       </Link>
       <Link
         href={{
-          pathname: '/contact',
+          pathname: '/rental',
           query: { product: 'teardrop' },
         }}
       >

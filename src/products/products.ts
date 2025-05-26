@@ -181,6 +181,29 @@ export const products: IProduct[] = [
             type: 'radio',
             required: true,
           },
+          {
+            name: 'options',
+            type: 'checkbox',
+            options: [
+              {
+                key: 'battery',
+                price: 350,
+              },
+              {
+                key: 'solar_panel',
+                price: 270,
+                picture: 'solar_panel.JPG',
+              },
+              {
+                key: 'awning',
+                price: 120,
+              },
+              {
+                key: 'dish_kit',
+                price: 90,
+              },
+            ],
+          },
         ],
       },
       {
@@ -211,9 +234,8 @@ export const products: IProduct[] = [
             type: 'checkbox',
             options: [
               {
-                key: 'electric_installation',
-                price: 400,
-                // picture: 'electric_installation.JPG',
+                key: 'battery',
+                price: 350,
               },
               {
                 key: 'solar_panel',
@@ -221,9 +243,12 @@ export const products: IProduct[] = [
                 picture: 'solar_panel.JPG',
               },
               {
+                key: 'awning',
+                price: 120,
+              },
+              {
                 key: 'dish_kit',
-                price: 140,
-                // picture: 'big_battery.JPG',
+                price: 90,
               },
             ],
           },
