@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 const host = 'https://nirvana-van.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  console.log(getEntry('/'));
   return [
     getEntry('/'),
     getEntry('/teardrop'),
