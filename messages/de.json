@@ -1,6 +1,8 @@
 {
   "manifest": {
-    "name": "Nirvana Van"
+    "name": "Nirvana Van",
+    "short_name": "Nirvana Van",
+    "description": "Handgefertigte Mini-Caravans"
   },
   "pages": {
     "home": {
