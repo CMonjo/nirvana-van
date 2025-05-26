@@ -8,7 +8,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google';
 
 export default async function RootLayout({
   children,
@@ -40,6 +40,7 @@ export default async function RootLayout({
         </NextIntlClientProvider>
       </body>
       <GoogleTagManager gtmId='GTM-MNNRXJVX' />
+      <GoogleAnalytics gaId='G-DJHX6GBB5L' />
     </html>
   );
 }
