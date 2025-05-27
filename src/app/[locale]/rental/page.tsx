@@ -1,5 +1,3 @@
-'use client';
-
 import Header from '@/components/navigation/header';
 import Footer from '@/components/navigation/footer';
 import RentalForm from './components/RentalForm';
@@ -9,10 +7,10 @@ import SectionTitle from '@/components/sections/title';
 import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
 
-// export const metadata: Metadata = {
-//   title: 'Nirvana Van - Rental',
-//   description: 'Nirvana Van - Rental',
-// };
+export const metadata: Metadata = {
+  title: 'Nirvana Van - Rental',
+  description: 'Nirvana Van - Rental',
+};
 
 export default function Teardrop() {
   const tPage = useTranslations('pages.rental');
