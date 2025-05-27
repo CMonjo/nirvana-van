@@ -7,10 +7,14 @@ import Bento from './components/bento';
 import Socials from './components/socials';
 import Models from './components/models';
 import Partners from './components/partners';
-
+import Head from 'next/head';
 export default function Home() {
   return (
     <div className='bg-bg-2'>
+      <Head>
+        <title>Nirvana Van</title>
+        <meta name='description' content='Nirvana Van' />
+      </Head>
       <Header />
       <main className='flex w-full flex-col items-center'>
         <Hero />

@@ -16,6 +16,7 @@ import BoltIcon from '@mui/icons-material/Bolt';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import BedtimeIcon from '@mui/icons-material/Bedtime';
 import CTAConfig from './components/CTAConfig';
+import Head from 'next/head';
 
 const product = products.find((product) => product.key === 'teardrop');
 export default function Page() {
@@ -56,6 +57,10 @@ export default function Page() {
 
   return (
     <div className='bg-bg-2'>
+      <Head>
+        <title>Nirvana Van - Teardrop</title>
+        <meta name='description' content='Nirvana Van - Teardrop' />
+      </Head>
       <Header />
       <main className='flex w-full flex-col items-center'>
         <Hero />

@@ -7,12 +7,17 @@ import Section from '@/components/atoms/section';
 import Container from '@/components/atoms/container';
 import SectionTitle from '@/components/sections/title';
 import { useTranslations } from 'next-intl';
+import Head from 'next/head';
 
 export default function Teardrop() {
   const tPage = useTranslations('pages.rental');
 
   return (
     <div className='bg-bg-2'>
+      <Head>
+        <title>Nirvana Van - Rental</title>
+        <meta name='description' content='Nirvana Van - Rental' />
+      </Head>
       <Header fixedMenu />
       <Section className='bg-white'>
         <Container className='flex-col'>

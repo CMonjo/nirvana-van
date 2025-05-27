@@ -15,6 +15,7 @@ import KeyIcon from '@mui/icons-material/Key';
 import PublicIcon from '@mui/icons-material/Public';
 import CottageIcon from '@mui/icons-material/Cottage';
 import { products } from '@/products/products';
+import Head from 'next/head';
 
 const product = products.find((product) => product.key === 'bike-camper');
 
@@ -53,6 +54,10 @@ export default function Page() {
 
   return (
     <div className='bg-bg-2'>
+      <Head>
+        <title>Nirvana Van - Bike Camper</title>
+        <meta name='description' content='Nirvana Van - Bike Camper' />
+      </Head>
       <Header />
       <main className='flex w-full flex-col items-center'>
         <Hero />
