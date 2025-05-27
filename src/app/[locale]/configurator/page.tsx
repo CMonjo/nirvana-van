@@ -27,7 +27,12 @@ import AnimatedPrice from './components/animatedPrice';
 import Button from '@/components/atoms/button';
 import ConfirmationModal from '@/components/ConfirmationModal';
 import ModelSpecifications from '../bike-camper/components/modelSpecifications';
-import Head from 'next/head';
+import type { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: 'Nirvana Van - Configurator',
+//   description: 'Nirvana Van - Configurator',
+// };
 
 export default function Configurator() {
   //State
@@ -104,10 +109,8 @@ export default function Configurator() {
 
   return (
     <div className='min-h-screen bg-bg-2'>
-      <Head>
-        <title>Nirvana Van - Configurator</title>
-        <meta name='description' content='Nirvana Van - Configurator' />
-      </Head>
+      <title>Nirvana Van - Configurator</title>
+      <meta name='description' content='Nirvana Van - Configurator' />
       <Header fixedMenu />
 
       {!product ? <ChooseProduct /> : null}

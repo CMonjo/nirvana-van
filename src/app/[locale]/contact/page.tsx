@@ -7,17 +7,18 @@ import SectionTitle from '@/components/sections/title';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Typography from '@/components/atoms/typography';
-import Head from 'next/head';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Nirvana Van - Contact',
+  description: 'Nirvana Van - Contact',
+};
 
 export default function Contact() {
   const tPage = useTranslations('pages.contact');
 
   return (
     <div className='bg-bg-2'>
-      <Head>
-        <title>Nirvana Van - Contact</title>
-        <meta name='description' content='Nirvana Van - Contact' />
-      </Head>
       <Header fixedMenu />
       <Section className='bg-white'>
         <Container className='flex-col'>

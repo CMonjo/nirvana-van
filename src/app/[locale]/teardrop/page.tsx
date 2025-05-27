@@ -16,9 +16,15 @@ import BoltIcon from '@mui/icons-material/Bolt';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import BedtimeIcon from '@mui/icons-material/Bedtime';
 import CTAConfig from './components/CTAConfig';
-import Head from 'next/head';
+import type { Metadata } from 'next';
 
 const product = products.find((product) => product.key === 'teardrop');
+
+export const metadata: Metadata = {
+  title: 'Nirvana Van - Teardrop',
+  description: 'Nirvana Van - Teardrop',
+};
+
 export default function Page() {
   const tPage = useTranslations('pages.teardrop');
 
@@ -57,10 +63,6 @@ export default function Page() {
 
   return (
     <div className='bg-bg-2'>
-      <Head>
-        <title>Nirvana Van - Teardrop</title>
-        <meta name='description' content='Nirvana Van - Teardrop' />
-      </Head>
       <Header />
       <main className='flex w-full flex-col items-center'>
         <Hero />
