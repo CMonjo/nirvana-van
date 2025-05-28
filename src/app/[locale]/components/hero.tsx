@@ -14,7 +14,7 @@ export default function Hero() {
         src={`/home/hero.jpg`}
         fill
         className='absolute inset-0 object-cover'
-        // sizes='100vw'
+        sizes='100vw'
         alt='hero'
         priority
       />
