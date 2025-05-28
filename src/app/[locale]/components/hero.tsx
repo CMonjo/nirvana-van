@@ -11,10 +11,10 @@ export default function Hero() {
   return (
     <HeroContainer>
       <Image
-        src={`/home/hero.JPG`}
+        src={`/home/hero.jpg`}
         fill
         className='absolute inset-0 object-cover'
-        sizes='100vw'
+        // sizes='100vw'
         alt='hero'
         priority
       />
