@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     getEntry('/'),
     getEntry('/teardrop'),
-    getEntry('/bike-camping'),
+    getEntry('/bike-camper'),
     getEntry('/configurator'),
     getEntry('/contact'),
     getEntry('/rental'),

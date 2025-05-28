@@ -14,7 +14,9 @@ export default function Hero() {
         src={`/home/hero.JPG`}
         fill
         className='absolute inset-0 object-cover'
+        sizes='100vw'
         alt='hero'
+        priority
       />
 
       <div className='absolute top-12 flex w-full flex-col items-center justify-center md:top-16 lg:top-[120px]'>

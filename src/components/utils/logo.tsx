@@ -15,6 +15,7 @@ export default function Logo({
       height={height}
       className='w-40'
       alt='Nirvana Van Logo'
+      priority
     />
   );
 }
