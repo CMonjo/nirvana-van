@@ -73,7 +73,7 @@ export default function Page() {
           color={product?.color}
         />
         <Video
-          source='/teardrop/video.mp4'
+          source='/teardrop/video.mov'
           thumbnail='/home/hero.JPG'
           showSocials
         />

@@ -23,7 +23,7 @@ export default function Home() {
         <Partners />
         <Models />
         <Video
-          source='/home/video.mp4'
+          source='/home/video.mov'
           thumbnail='/home/video_thumbnail.jpeg'
           showSocials
           //   title={tPage('video.title')}
