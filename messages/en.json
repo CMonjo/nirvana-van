@@ -340,8 +340,8 @@
             "unladenWeight": "54 kg"
           }
         },
-        "light": {
-          "name": "Light",
+        "classic": {
+          "name": "Classic",
           "description": "A streamlined, accessible version focused on the essentials — without compromising on quality.<br/>An ideal price-performance ratio for carefree adventures.",
           "specifications": {
             "shellMaterials": "Cellular polypropylene",

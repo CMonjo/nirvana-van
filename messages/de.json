@@ -348,8 +348,8 @@
             "unladenWeight": "54 kg"
           }
         },
-        "light": {
-          "name": "Light",
+        "classic": {
+          "name": "Classic",
           "description": "Eine reduzierte, preisgünstige Version mit allem, was Sie wirklich brauchen – ohne Qualitätsverlust. Das perfekte Preis-Leistungs-Verhältnis für sorgenfreie Abenteuer.",
           "specifications": {
             "shellMaterials": "Zellpolypropylen",

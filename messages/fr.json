@@ -340,8 +340,8 @@
             "unladenWeight": "54 kg"
           }
         },
-        "light": {
-          "name": "Light",
+        "classic": {
+          "name": "Classique",
           "description": "Une version plus accessible qui va à l'essentiel, sans compromis sur la qualité.<br/>Un excellent rapport qualité/prix pour partir à l'aventure en toute confiance.",
           "specifications": {
             "shellMaterials": "Polypropylène alvéolaire",

@@ -159,7 +159,7 @@ export const products: IProduct[] = [
     faqLength: 7,
     models: [
       {
-        key: 'light',
+        key: 'classic',
         image: '/bike-camper/light.png',
         basePrice: 3200,
         specifications: [
