@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
     sendSmtpEmail.htmlContent = `
         <p><strong>Contact:</strong> ${firstname} ${lastname?.toUpperCase()} (${email})</p>
         <p><strong>Téléphone :</strong> ${phone || 'Non renseigné'}</p>
-        <p><strong>Location du </strong> ${startDateFormatted} <strong>au</strong> ${endDateFormatted} (${days} jours)</p>
+        <p><strong>Location du </strong> ${startDateFormatted} <strong>au</strong> ${endDateFormatted} (${days + 1} jours)</p>
         <p><strong>Message :</strong> ${message || 'Aucun message'}</p>
         <p><strong>Langue utilisée:</strong> ${locale}</p>
       `;
@@ -53,9 +53,6 @@ export async function POST(request: NextRequest) {
       email: config.mailContact,
     };
     sendSmtpEmail.to = [{ email: config.mailContact, name: 'Nirvana Van' }];
-    sendSmtpEmail.bcc = [
-      { email: 'monjocamille@gmail.com', name: 'Camille MONJO' },
-    ];
     sendSmtpEmail.replyTo = {
       email: email,
       name: firstname + ' ' + lastname?.toUpperCase(),

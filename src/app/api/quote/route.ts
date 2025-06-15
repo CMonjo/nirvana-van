@@ -43,12 +43,12 @@ function generateCustomerHTML(
 ): string {
   return `
         ${style}
-        <p>Nouvelle configuration pour ${product} générée.</p>
+        <p>Nouvelle configuration pour ${product}.</p>
         <p><strong>Contact :</strong> ${firstname} ${lastname}</p>
         <p><strong>Téléphone :</strong> ${phone ? phone : 'Non renseigné'}</p>
         <p><strong>Email :</strong> ${email}</p>
         <p><strong>Message :</strong> ${message ? message : 'Aucun message renseigné'}</p>
-        <p><strong>Langue de l'utilisateur:</strong> ${locale}</p>
+        <p><strong>Langue utilisée:</strong> ${locale}</p>
       `;
 }
 
@@ -120,7 +120,10 @@ export async function POST(request: NextRequest) {
     //For us
     apiInstance.sendTransacEmail({
       to: [{ email: envConfig.mailContact, name: 'Nirvana Van' }],
-      bcc: [{ email: 'monjocamille@gmail.com', name: 'Camille MONJO' }],
+      replyTo: {
+        email: email,
+        name: firstname + ' ' + lastname,
+      },
       templateId: 2,
       params: {
         internal: true,

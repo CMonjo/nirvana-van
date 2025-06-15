@@ -30,9 +30,6 @@ export async function POST(request: NextRequest) {
       email: config.mailContact,
     };
     sendSmtpEmail.to = [{ email: config.mailContact, name: 'Nirvana Van' }];
-    sendSmtpEmail.bcc = [
-      { email: 'monjocamille@gmail.com', name: 'Camille MONJO' },
-    ];
     sendSmtpEmail.replyTo = {
       email: email,
       name: firstname + ' ' + lastname?.toUpperCase(),
