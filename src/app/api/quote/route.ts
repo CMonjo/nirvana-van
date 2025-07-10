@@ -108,6 +108,10 @@ export async function POST(request: NextRequest) {
     await apiInstance.sendTransacEmail({
       to: [{ email, firstname: `${firstname} ${lastname}` }],
       templateId: 2,
+      sender: {
+        name: 'Nirvana Van',
+        email: 'no-reply@nirvana-van.com',
+      },
       params: {
         subject: mailSubject,
         mailMessage,
@@ -119,6 +123,10 @@ export async function POST(request: NextRequest) {
 
     //For us
     apiInstance.sendTransacEmail({
+      sender: {
+        name: 'Nirvana Van',
+        email: 'no-reply@nirvana-van.com',
+      },
       to: [{ email: envConfig.mailContact, name: 'Nirvana Van' }],
       replyTo: {
         email: email,

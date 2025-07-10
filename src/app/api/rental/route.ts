@@ -49,8 +49,8 @@ export async function POST(request: NextRequest) {
         <p><strong>Langue utilisée:</strong> ${locale}</p>
       `;
     sendSmtpEmail.sender = {
-      name: 'Demande de location',
-      email: config.mailContact,
+      name: 'Nirvana Van - Demande de location',
+      email: 'no-reply@nirvana-van.com',
     };
     sendSmtpEmail.to = [{ email: config.mailContact, name: 'Nirvana Van' }];
     sendSmtpEmail.replyTo = {

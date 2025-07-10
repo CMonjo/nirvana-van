@@ -20,17 +20,23 @@ const partners = [
     width: 160,
   },
   {
+    name: 'NeoZone',
+    logo: '/partners/neozone_wide.jpg',
+    link: 'https://www.neozone.org/lifestyle/nirvana-van-devoile-une-mini-caravane-teardrop-de-seulement-67-kg-tractable-a-velo/',
+    width: 120,
+    height: 50,
+  },
+  {
     name: 'VanLife Expo',
     logo: '/partners/vanlife_expo.png',
     link: 'https://vanlife-expo.com/',
     width: 120,
   },
   {
-    name: 'NeoZone',
-    logo: '/partners/neozone.jpg',
-    link: 'https://www.neozone.org/lifestyle/karavel-une-mini-caravane-concue-pour-le-cyclotourisme-pour-dormir-sous-les-etoiles-sans-renoncer-au-confort/',
-    width: 120,
-    height: 50,
+    name: 'Hinterher',
+    logo: '/partners/hinterher.png',
+    link: 'https://www.hinterher.com/kundengalerie/fahrradwohnwagen',
+    width: 100,
   },
   {
     name: 'Camper Van Week End',

@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
 
     sendSmtpEmail.subject = `Nouveau message de ${firstname} ${lastname?.toUpperCase()} (${email})`;
     sendSmtpEmail.htmlContent = `
-        <p>Nouvelle demande de contac.</p>
+        <p>Nouvelle demande de contact.</p>
         <p><strong>Contact :</strong> ${firstname} ${lastname?.toUpperCase()} (${email})</p>
         <p><strong>Téléphone :</strong> ${phone || 'Non renseigné'}</p>
         <p><strong>Sujet :</strong> ${subject}</p>
@@ -26,8 +26,8 @@ export async function POST(request: NextRequest) {
         <p><strong>Langue utilisée:</strong> ${locale}</p>
       `;
     sendSmtpEmail.sender = {
-      name: 'Nouveau message de contact',
-      email: config.mailContact,
+      name: 'Nirvana Van - message de contact',
+      email: 'no-reply@nirvana-van.com',
     };
     sendSmtpEmail.to = [{ email: config.mailContact, name: 'Nirvana Van' }];
     sendSmtpEmail.replyTo = {
