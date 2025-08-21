@@ -1,4 +1,5 @@
 import Header from '@/components/navigation/header';
+import AnnouncementBanner from '@/components/navigation/AnnouncementBanner';
 import Footer from '@/components/navigation/footer';
 import Hero from '@/app/[locale]/components/hero';
 import Video from '@/components/sections/video';
@@ -17,7 +18,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className='bg-bg-2'>
-      <Header />
+      {/* <AnnouncementBanner
+        message='Nirvana Van est passé dans « 66 Minutes »'
+        imageUrl='/partners/m6.png'
+        closeable={true}
+      /> */}
+      <Header /*bannerHeight={40}*/ />
       <main className='flex w-full flex-col items-center'>
         <Hero />
         <Partners />

@@ -16,9 +16,11 @@ import { useTranslations } from 'next-intl';
 export default function Header({
   fixedMenu = false,
   fixedMenuBackground,
+  bannerHeight = 0,
 }: {
   fixedMenu?: boolean;
   fixedMenuBackground?: string;
+  bannerHeight?: number;
 }) {
   //State
   const [skipHero, setSkipHero] = useState(false);
@@ -52,9 +54,10 @@ export default function Header({
             : 'rgba(255, 255, 255, 0)',
         }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className={`fixed top-0 z-50 flex w-full items-center justify-center ${
+        className={`fixed z-50 flex w-full items-center justify-center ${
           headerFixed ? 'header-gradient' : 'bg-transparent'
         }`}
+        style={{ top: `${bannerHeight}px` }}
       >
         <div className='relative flex h-20 w-full max-w-7xl items-center justify-between px-6'>
           <div className='hidden lg:flex'>
@@ -141,7 +144,10 @@ export default function Header({
         </AnimatePresence>
       }
       {headerFixed ? (
-        <div className={`flex h-20 ${fixedMenuBackground || ''}`} />
+        <div
+          className={`flex h-20 ${fixedMenuBackground || ''}`}
+          style={{ marginTop: `${bannerHeight}px` }}
+        />
       ) : null}
     </>
   );

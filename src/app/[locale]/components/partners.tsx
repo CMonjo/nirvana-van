@@ -8,6 +8,13 @@ import Tooltip from '@/components/atoms/tooltip';
 
 const partners = [
   {
+    name: 'M6',
+    logo: '/partners/m6.png',
+    link: 'https://www.m6.fr/',
+    width: 74,
+    height: 74,
+  },
+  {
     name: 'VanLife Magazine',
     logo: '/partners/vanlife_magazine.jpg',
     link: 'https://www.vanlifemag.fr/presentationessais/nirvana-van-la-teardrop-et-la-caravane-velo-dun-jeune-artisan-de-montpellier/75421',
