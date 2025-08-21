@@ -243,7 +243,7 @@ export const products: IProduct[] = [
                 price: 500,
               },
               {
-                key: 'battery_1024wh',
+                key: 'battery_858Wh',
                 price: 680,
               },
             ],
@@ -375,8 +375,12 @@ export function getModelConfiguration(model: IModel): IProductConfig {
     selectedOptions = model.configurator
       .filter((category) => category.options)
       .flatMap((category) => {
-        const option = category.options?.find((opt) => opt.included);
-        return option ? { category: category.name, key: option.key } : [];
+        const includedOptions =
+          category.options?.filter((opt) => opt.included) || [];
+        return includedOptions.map((option) => ({
+          category: category.name,
+          key: option.key,
+        }));
       });
   }
 
