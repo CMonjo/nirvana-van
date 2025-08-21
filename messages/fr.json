@@ -103,7 +103,25 @@
         "one_side_door": "Une seule porte latérale",
         "no_rear_door": "Pas de porte arrière",
         "options": "Options",
-        "dish_kit": "Kit cuisine (réchaud, vaisselle, couverts)"
+        "dish_kit": "Kit cuisine (réchaud, vaisselle, couverts)",
+        "mattress": "Matelas",
+        "battery_250wh": "Batterie 250Wh",
+        "battery_572wh": "Batterie 572Wh",
+        "battery_1024wh": "Batterie 1024Wh",
+        "solar_panel_105w": "Panneau solaire 105W",
+        "solar_panel_190w": "Panneau solaire 190W",
+        "openings": "Ouvertures",
+        "ventilation": "Aérations",
+        "porthole": "Hublot",
+        "opening_window_500x300": "Fenêtre ouvrante 500 x 300",
+        "weber_hitch": "Attelage Weber",
+        "parking_brake": "Frein de stationnement",
+        "reflectors": "Catadioptres",
+        "storage_hooks": "Crochets stockage",
+        "storage_shelf": "Tablette rangement",
+        "felt_finish": "Finition feutrine",
+        "insulation": "Isolation",
+        "interior": "Intérieur"
       }
     },
     "contact": {

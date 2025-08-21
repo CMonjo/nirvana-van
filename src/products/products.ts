@@ -230,25 +230,136 @@ export const products: IProduct[] = [
             required: true,
           },
           {
-            name: 'options',
-            type: 'checkbox',
+            name: 'battery',
+            type: 'radio',
+            required: false,
             options: [
               {
-                key: 'battery',
-                price: 350,
+                key: 'battery_250wh',
+                price: 300,
               },
               {
-                key: 'solar_panel',
+                key: 'battery_572wh',
+                price: 500,
+              },
+              {
+                key: 'battery_1024wh',
+                price: 680,
+              },
+            ],
+          },
+          {
+            name: 'solar_panel',
+            type: 'radio',
+            required: false,
+            options: [
+              {
+                key: 'solar_panel_105w',
                 price: 270,
                 picture: 'solar_panel.JPG',
               },
               {
-                key: 'awning',
-                price: 120,
+                key: 'solar_panel_190w',
+                price: 350,
+                picture: 'solar_panel.JPG',
+              },
+            ],
+          },
+          {
+            name: 'openings',
+            type: 'checkbox',
+            options: [
+              {
+                key: 'ventilation',
+                price: 0,
+                included: true,
+              },
+              {
+                key: 'porthole',
+                price: 150,
+              },
+              {
+                key: 'opening_window_500x300',
+                price: 230,
+              },
+            ],
+          },
+          {
+            name: 'chassis',
+            type: 'checkbox',
+            options: [
+              {
+                key: 'stabilizer_legs',
+                price: 0,
+                included: true,
+                disabled: true,
+              },
+              {
+                key: 'parking_brake',
+                price: 0,
+                included: true,
+                disabled: true,
+              },
+              {
+                key: 'weber_hitch',
+                price: 0,
+                included: true,
+                disabled: true,
+              },
+              {
+                key: 'reflectors',
+                price: 0,
+                included: true,
+                disabled: true,
+              },
+            ],
+          },
+          {
+            name: 'equipments',
+            type: 'checkbox',
+            options: [
+              {
+                key: 'mattress',
+                price: 0,
+                onDemand: true,
               },
               {
                 key: 'dish_kit',
                 price: 90,
+              },
+              {
+                key: 'awning',
+                price: 130,
+              },
+            ],
+          },
+          {
+            name: 'interior',
+            type: 'checkbox',
+            options: [
+              {
+                key: 'storage_hooks',
+                price: 0,
+                disabled: true,
+                included: true,
+              },
+              {
+                key: 'storage_shelf',
+                price: 0,
+                disabled: true,
+                included: true,
+              },
+              {
+                key: 'felt_finish',
+                price: 0,
+                disabled: true,
+                included: true,
+              },
+              {
+                key: 'insulation',
+                price: 0,
+                disabled: true,
+                included: true,
               },
             ],
           },

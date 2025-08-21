@@ -103,7 +103,25 @@
         "one_side_door": "Single side door",
         "no_rear_door": "No rear door",
         "options": "Options",
-        "dish_kit": "Kitchen kit (stove, dishes, cutlery)"
+        "dish_kit": "Kitchen kit (stove, dishes, cutlery)",
+        "mattress": "Mattress",
+        "battery_250wh": "250Wh Battery",
+        "battery_572wh": "572Wh Battery",
+        "battery_1024wh": "1024Wh Battery",
+        "solar_panel_105w": "105W Solar panel",
+        "solar_panel_190w": "190W Solar panel",
+        "openings": "Openings",
+        "ventilation": "Ventilation",
+        "porthole": "Porthole",
+        "opening_window_500x300": "Opening window 500 x 300",
+        "weber_hitch": "Weber hitch",
+        "parking_brake": "Parking brake",
+        "reflectors": "Reflectors",
+        "storage_hooks": "Storage hooks",
+        "storage_shelf": "Storage shelf",
+        "felt_finish": "Felt finish",
+        "insulation": "Insulation",
+        "interior": "Interior"
       }
     },
     "contact": {

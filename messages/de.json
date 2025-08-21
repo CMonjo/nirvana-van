@@ -103,7 +103,25 @@
         "one_side_door": "Eine Seitentür",
         "no_rear_door": "Keine Hecktür",
         "options": "Optionen",
-        "dish_kit": "Küchenset (Kocher, Geschirr, Besteck)"
+        "dish_kit": "Küchenset (Kocher, Geschirr, Besteck)",
+        "mattress": "Matratze",
+        "battery_250wh": "250Wh Batterie",
+        "battery_572wh": "572Wh Batterie",
+        "battery_1024wh": "1024Wh Batterie",
+        "solar_panel_105w": "105W Solarmodul",
+        "solar_panel_190w": "190W Solarmodul",
+        "openings": "Öffnungen",
+        "ventilation": "Belüftung",
+        "porthole": "Bullauge",
+        "opening_window_500x300": "Öffnendes Fenster 500 x 300",
+        "weber_hitch": "Weber Anhängerkupplung",
+        "parking_brake": "Feststellbremse",
+        "reflectors": "Reflektoren",
+        "storage_hooks": "Aufbewahrungshaken",
+        "storage_shelf": "Aufbewahrungsregal",
+        "felt_finish": "Filzveredelung",
+        "insulation": "Isolierung",
+        "interior": "Innenraum"
       }
     },
     "contact": {
