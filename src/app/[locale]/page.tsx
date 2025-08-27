@@ -18,12 +18,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className='bg-bg-2'>
-      {/* <AnnouncementBanner
-        message='Nirvana Van est passé dans « 66 Minutes »'
+      <AnnouncementBanner
+        message="Nos caravanes à l'honneur dans « 66 Minutes » sur M6 le 31 août à 17h10"
         imageUrl='/partners/m6.png'
         closeable={true}
-      /> */}
-      <Header /*bannerHeight={40}*/ />
+      />
+      <Header bannerHeight={40} />
       <main className='flex w-full flex-col items-center'>
         <Hero />
         <Partners />
