@@ -267,13 +267,8 @@ export const products: IProduct[] = [
           },
           {
             name: 'openings',
-            type: 'checkbox',
+            type: 'radio',
             options: [
-              {
-                key: 'ventilation',
-                price: 0,
-                included: true,
-              },
               {
                 key: 'porthole',
                 price: 150,
@@ -331,6 +326,12 @@ export const products: IProduct[] = [
                 key: 'awning',
                 price: 130,
               },
+              {
+                key: 'storage_hooks',
+                price: 50,
+                disabled: false,
+                included: false,
+              },
             ],
           },
           {
@@ -338,10 +339,10 @@ export const products: IProduct[] = [
             type: 'checkbox',
             options: [
               {
-                key: 'storage_hooks',
+                key: 'ventilation',
                 price: 0,
-                disabled: true,
                 included: true,
+                disabled: true,
               },
               {
                 key: 'storage_shelf',

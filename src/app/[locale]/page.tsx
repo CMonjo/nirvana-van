@@ -23,7 +23,7 @@ export default function Home() {
         link='https://provence-van-week-end.fr/'
         closeable={true}
       />
-      <Header />
+      <Header showBanner={true} />
       <main className='flex w-full flex-col items-center'>
         <Hero />
         <Partners />
