@@ -12,15 +12,14 @@ import useIsDesktop from '@/hooks/useIsDesktop';
 import { Link } from '@/i18n/routing';
 import LocaleSwitcher from './localeSwitcher';
 import { useTranslations } from 'next-intl';
+import bannerMessage from '@/utils/bannerMessage';
 
 export default function Header({
   fixedMenu = false,
   fixedMenuBackground,
-  bannerHeight = 0,
 }: {
   fixedMenu?: boolean;
   fixedMenuBackground?: string;
-  bannerHeight?: number;
 }) {
   //State
   const [skipHero, setSkipHero] = useState(false);
@@ -30,6 +29,8 @@ export default function Header({
   const t = useTranslations('navigation');
   const isDesktop = useIsDesktop();
 
+  const isDismissed =
+    localStorage.getItem(`banner_dismissed_${bannerMessage}`) || !bannerMessage;
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY + 100 >= window.innerHeight) {
@@ -57,7 +58,7 @@ export default function Header({
         className={`fixed z-50 flex w-full items-center justify-center ${
           headerFixed ? 'header-gradient' : 'bg-transparent'
         }`}
-        style={{ top: `${bannerHeight}px` }}
+        style={{ top: `${isDismissed ? 0 : 40}px` }}
       >
         <div className='relative flex h-20 w-full max-w-7xl items-center justify-between px-6'>
           <div className='hidden lg:flex'>

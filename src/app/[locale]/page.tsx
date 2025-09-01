@@ -19,11 +19,11 @@ export default function Home() {
   return (
     <div className='bg-bg-2'>
       <AnnouncementBanner
-        message="Nos caravanes à l'honneur dans « 66 Minutes » sur M6 le 31 août à 17h10"
         imageUrl='/partners/m6.png'
+        link='https://provence-van-week-end.fr/'
         closeable={true}
       />
-      <Header bannerHeight={40} />
+      <Header />
       <main className='flex w-full flex-col items-center'>
         <Hero />
         <Partners />
