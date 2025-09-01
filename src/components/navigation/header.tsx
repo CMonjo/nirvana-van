@@ -147,7 +147,7 @@ export default function Header({
       {headerFixed ? (
         <div
           className={`flex h-20 ${fixedMenuBackground || ''}`}
-          style={{ marginTop: `${bannerHeight}px` }}
+          style={{ marginTop: `${isDismissed ? 0 : 40}px` }}
         />
       ) : null}
     </>
