@@ -20,7 +20,7 @@ export default function Home() {
     <div className='bg-bg-2'>
       <AnnouncementBanner
         imageUrl='/partners/m6.png'
-        link='https://provence-van-week-end.fr/'
+        link='https://www.m6.fr/66-minutes-p_825/emission-1-c_13137480'
         closeable={true}
       />
       <Header showBanner={true} />

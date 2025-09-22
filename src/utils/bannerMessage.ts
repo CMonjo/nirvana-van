@@ -1,4 +1,4 @@
 const message =
-  'Vu sur M6 — Retrouvez-nous à Aix-en-Provence pour le Provence Van Week-End. Toutes les infos ici.';
+  'Nirvana Van présenté sur M6 - Découvrez le reportage en cliquant ici';
 
 export default message;

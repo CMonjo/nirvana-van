@@ -155,7 +155,7 @@ export const products: IProduct[] = [
     key: 'bike-camper',
     image: '/models/bike-camper2.png',
     color: 'green',
-    basePrice: 3300,
+    basePrice: 3400,
     faqLength: 7,
     models: [
       {
@@ -432,13 +432,22 @@ export function updateModelConfiguration(
       const index = selectedOptions.findIndex(
         (opt) => opt.category === configuratorCategory
       );
-      if (index !== -1) {
+
+      if (
+        index !== -1 &&
+        selectedOptions[index].key === optionValue &&
+        category.required !== true
+      ) {
         selectedOptions.splice(index, 1);
+      } else {
+        if (index !== -1) {
+          selectedOptions.splice(index, 1);
+        }
+        selectedOptions.push({
+          category: configuratorCategory,
+          key: optionValue,
+        });
       }
-      selectedOptions.push({
-        category: configuratorCategory,
-        key: optionValue,
-      });
     } else if (category.type === 'checkbox') {
       const index = selectedOptions.findIndex(
         (opt) =>

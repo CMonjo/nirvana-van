@@ -10,7 +10,7 @@ const partners = [
   {
     name: 'M6',
     logo: '/partners/m6.png',
-    link: 'https://www.m6.fr/',
+    link: 'https://www.m6.fr/66-minutes-p_825/emission-1-c_13137480',
     width: 74,
     height: 74,
   },
