@@ -28,7 +28,7 @@ const AnnouncementBanner = ({
 
   useEffect(() => {
     const isDismissed =
-      localStorage.getItem(`banner_dismissed_${bannerMessage}`) ||
+      window?.localStorage?.getItem(`banner_dismissed_${bannerMessage}`) ||
       !bannerMessage;
     if (isDismissed) {
       setShow(false);
@@ -37,7 +37,7 @@ const AnnouncementBanner = ({
 
   const handleClose = () => {
     setShow(false);
-    localStorage.setItem(`banner_dismissed_${bannerMessage}`, 'true');
+    window?.localStorage.setItem(`banner_dismissed_${bannerMessage}`, 'true');
   };
 
   if (!show) return null;
