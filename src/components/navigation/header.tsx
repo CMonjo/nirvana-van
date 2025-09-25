@@ -33,7 +33,7 @@ export default function Header({
 
   const dismissBanner =
     !showBanner ||
-    localStorage.getItem(`banner_dismissed_${bannerMessage}`) ||
+    window?.localStorage.getItem(`banner_dismissed_${bannerMessage}`) ||
     !bannerMessage;
 
   useEffect(() => {
