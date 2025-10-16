@@ -155,13 +155,13 @@ export const products: IProduct[] = [
     key: 'bike-camper',
     image: '/models/bike-camper2.png',
     color: 'green',
-    basePrice: 3400,
+    basePrice: 3500,
     faqLength: 7,
     models: [
       {
         key: 'classic',
         image: '/bike-camper/light.png',
-        basePrice: 3400,
+        basePrice: 3500,
         specifications: [
           'shellMaterials',
           'chassisMaterials',
