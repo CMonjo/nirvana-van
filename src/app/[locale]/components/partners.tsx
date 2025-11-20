@@ -51,6 +51,31 @@ const partners = [
     link: 'https://www.camper-van-week-end.fr/',
     width: 120,
   },
+  {
+    name: 'Novo19',
+    logo: '/partners/novo.png',
+    link: 'https://novo19.ouest-france.fr/player/on-a-de-l-info-emission-du-12-11-25',
+    width: 100,
+    height: 40,
+  },
+  {
+    name: 'Gazette de Montpellier',
+    logo: '/partners/gazette.png',
+    link: 'https://www.lagazettedemontpellier.fr/economie/2025-10-24-raphael-dakiche-il-cree-une-caravane-pour-velo/',
+    width: 120,
+  },
+  {
+    name: 'CoCreate',
+    logo: '/partners/cocreate.png',
+    link: 'https://www.youtube.com/live/UO4hxzU6Di4?si=B62NBsSZy7HDG1eO&t=16409',
+    width: 100,
+  },
+  {
+    name: 'RTL',
+    logo: '/partners/rtl.png',
+    link: 'https://www.rtl.fr/',
+    width: 120,
+  },
 ];
 
 function Partners() {

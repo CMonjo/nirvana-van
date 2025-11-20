@@ -26,15 +26,20 @@ export default function Header({
   //State
   const [skipHero, setSkipHero] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [dismissBanner, setDismissBanner] = useState(true);
 
   //Hooks
   const t = useTranslations('navigation');
   const isDesktop = useIsDesktop();
 
-  const dismissBanner =
-    !showBanner ||
-    window?.localStorage.getItem(`banner_dismissed_${bannerMessage}`) ||
-    !bannerMessage;
+  useEffect(() => {
+    // Vérifier si la bannière doit être affichée (côté client uniquement)
+    const shouldDismissBanner =
+      !showBanner ||
+      window?.localStorage.getItem(`banner_dismissed_${bannerMessage}`) ||
+      !bannerMessage;
+    setDismissBanner(!!shouldDismissBanner);
+  }, [showBanner]);
 
   useEffect(() => {
     const toggleVisibility = () => {
