@@ -66,7 +66,7 @@ const partners = [
   },
   {
     name: 'CoCreate',
-    logo: '/partners/cocreate.png',
+    logo: '/partners/co_create.png',
     link: 'https://www.youtube.com/live/UO4hxzU6Di4?si=B62NBsSZy7HDG1eO&t=16409',
     width: 100,
   },
