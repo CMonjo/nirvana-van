@@ -12,7 +12,7 @@ export default function Bento() {
 
   const items = [
     {
-      image: '/bike-camper/bento/openings.png',
+      image: '/bike-camper/bento/felt_finish.jpeg',
       title: t('openings'),
     },
     {
@@ -40,7 +40,7 @@ export default function Bento() {
       title: t('light'),
     },
     {
-      image: '/bike-camper/bento/storage.JPG',
+      image: '/bike-camper/bento/storage_shelf.jpeg',
       title: t('storage'),
     },
   ];

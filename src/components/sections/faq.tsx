@@ -94,7 +94,9 @@ const FAQ = ({ productKey }: { productKey: ProductType }) => {
         </div>
         <Typography className='mt-2'>{tProduct('otherQuestions')}</Typography>
         <Link href='/contact'>
-          <Button color={product.color}>{tActions('contactUs')}</Button>
+          <Button color={product.color} size='large'>
+            {tActions('contactUs')}
+          </Button>
         </Link>
       </Container>
     </Section>

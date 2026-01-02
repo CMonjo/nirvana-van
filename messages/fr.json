@@ -353,6 +353,7 @@
             "shellMaterials": "Fibre de verre",
             "chassisMaterials": "Aluminium",
             "insulation": "Polyester extrudé 20 mm",
+            "interiorFinish": "Feutrine",
             "externalDimensions": "208 x 95 cm",
             "mattress": "200 x 73 cm",
             "unladenWeight": "54 kg"
@@ -362,12 +363,13 @@
           "name": "Classique",
           "description": "Une version plus accessible qui va à l'essentiel, sans compromis sur la qualité.<br/>Un excellent rapport qualité/prix pour partir à l'aventure en toute confiance.",
           "specifications": {
-            "shellMaterials": "Polypropylène alvéolaire",
-            "chassisMaterials": "Acier",
-            "insulation": "Armaflex 10 mm",
+            "shellMaterials": "Panneau sandwich",
+            "chassisMaterials": "Aluminium",
+            "insulation": "Polyester extrudé 20 mm",
+            "interiorFinish": "PVC Blanc",
             "externalDimensions": "208 x 95 cm",
             "mattress": "200 x 73 cm",
-            "unladenWeight": "67 kg"
+            "unladenWeight": "65 kg"
           }
         }
       }
@@ -376,6 +378,7 @@
       "shellMaterials": "Matériaux de la coque",
       "chassisMaterials": "Matériaux du châssis",
       "insulation": "Isolation",
+      "interiorFinish": "Finition intérieure",
       "externalDimensions": "Dimensions extérieures",
       "mattress": "Matelas",
       "unladenWeight": "Poids à vide"

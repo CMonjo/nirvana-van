@@ -89,9 +89,10 @@ export default function ModelSpecifications({
                     />
                   ))}
                 </div>
-                <div className='flex items-end'>
+                <div className='mt-4 flex justify-center'>
                   <Button
                     color={product?.color}
+                    size='large'
                     onClick={() => {
                       router.push(
                         `/configurator?product=${productKey}&model=${model.key}`
