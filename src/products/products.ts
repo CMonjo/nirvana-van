@@ -244,10 +244,6 @@ export const products: IProduct[] = [
                 key: 'opening_window_500x300',
                 price: 230,
               },
-              {
-                key: 'blackout_mosquito_net',
-                price: 90,
-              },
             ],
           },
           {
@@ -336,6 +332,10 @@ export const products: IProduct[] = [
                 disabled: true,
                 included: true,
               },
+              {
+                key: 'blackout_mosquito_net',
+                price: 90,
+              },
             ],
           },
         ],
@@ -416,10 +416,6 @@ export const products: IProduct[] = [
                 key: 'opening_window_500x300',
                 price: 230,
                 picture: 'opening_window.jpeg',
-              },
-              {
-                key: 'blackout_mosquito_net',
-                price: 90,
               },
             ],
           },
@@ -510,6 +506,10 @@ export const products: IProduct[] = [
                 disabled: true,
                 included: true,
                 picture: 'insulation.jpeg',
+              },
+              {
+                key: 'blackout_mosquito_net',
+                price: 90,
               },
             ],
           },
