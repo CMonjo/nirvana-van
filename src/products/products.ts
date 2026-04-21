@@ -5,7 +5,7 @@ export const products: IProduct[] = [
     key: 'teardrop',
     image: '/models/teardrop.png',
     color: 'orange',
-    basePrice: 11600,
+    basePrice: 12300,
     faqLength: 6,
     models: [
       {
@@ -29,12 +29,12 @@ export const products: IProduct[] = [
             options: [
               {
                 key: 'electric_installation',
-                price: 1600,
+                price: 1700,
                 picture: 'electric_installation.JPG',
               },
               {
                 key: 'solar_panel',
-                price: 270,
+                price: 310,
                 soldOut: false,
                 picture: 'solar_panel.JPG',
               },
@@ -57,6 +57,7 @@ export const products: IProduct[] = [
               },
               { key: 'stove', price: 40, picture: 'stove.JPG' },
               { key: 'shower', price: 200, picture: 'shower.JPG' },
+              { key: 'dishes', price: 80 },
             ],
           },
           //   {
@@ -85,6 +86,11 @@ export const products: IProduct[] = [
                 price: null,
                 onDemand: true,
                 picture: 'roof_tent.JPG',
+              },
+              {
+                key: 'convertible_interior',
+                price: 350,
+                // picture: 'convertible_interior.JPG',
               },
             ],
           },
@@ -160,13 +166,13 @@ export const products: IProduct[] = [
     key: 'bike-camper',
     image: '/models/bike-camper2.png',
     color: 'green',
-    basePrice: 3700,
+    basePrice: 3800,
     faqLength: 7,
     models: [
       {
         key: 'classic',
         image: '/bike-camper/light.jpg',
-        basePrice: 3700,
+        basePrice: 3800,
         specifications: [
           'shellMaterials',
           'chassisMaterials',
@@ -194,17 +200,17 @@ export const products: IProduct[] = [
             options: [
               {
                 key: 'battery_250wh',
-                price: 300,
+                price: 340,
                 picture: 'battery.jpeg',
               },
               {
                 key: 'battery_572wh',
-                price: 500,
+                price: 540,
                 picture: 'battery.jpeg',
               },
               {
                 key: 'battery_858Wh',
-                price: 680,
+                price: 670,
                 picture: 'battery.jpeg',
               },
             ],
@@ -216,12 +222,12 @@ export const products: IProduct[] = [
             options: [
               {
                 key: 'solar_panel_105w',
-                price: 270,
+                price: 310,
                 picture: 'solar_panel.JPG',
               },
               {
                 key: 'solar_panel_190w',
-                price: 350,
+                price: 400,
                 picture: 'solar_panel.JPG',
               },
             ],
@@ -237,6 +243,10 @@ export const products: IProduct[] = [
               {
                 key: 'opening_window_500x300',
                 price: 230,
+              },
+              {
+                key: 'blackout_mosquito_net',
+                price: 90,
               },
             ],
           },
@@ -292,7 +302,7 @@ export const products: IProduct[] = [
               },
               {
                 key: 'storage_hooks',
-                price: 70,
+                price: 80,
                 picture: 'storage_hooks.jpeg',
               },
             ],
@@ -333,7 +343,7 @@ export const products: IProduct[] = [
       {
         key: 'premium',
         image: '/bike-camper/premium_2.jpeg',
-        basePrice: 4200,
+        basePrice: 4300,
         specifications: [
           'shellMaterials',
           'chassisMaterials',
@@ -361,17 +371,17 @@ export const products: IProduct[] = [
             options: [
               {
                 key: 'battery_250wh',
-                price: 300,
+                price: 340,
                 picture: 'battery.jpeg',
               },
               {
                 key: 'battery_572wh',
-                price: 500,
+                price: 540,
                 picture: 'battery.jpeg',
               },
               {
                 key: 'battery_858Wh',
-                price: 680,
+                price: 670,
                 picture: 'battery.jpeg',
               },
             ],
@@ -383,12 +393,12 @@ export const products: IProduct[] = [
             options: [
               {
                 key: 'solar_panel_105w',
-                price: 270,
+                price: 310,
                 picture: 'solar_panel.JPG',
               },
               {
                 key: 'solar_panel_190w',
-                price: 350,
+                price: 400,
                 picture: 'solar_panel.JPG',
               },
             ],
@@ -406,6 +416,10 @@ export const products: IProduct[] = [
                 key: 'opening_window_500x300',
                 price: 230,
                 picture: 'opening_window.jpeg',
+              },
+              {
+                key: 'blackout_mosquito_net',
+                price: 90,
               },
             ],
           },
@@ -460,7 +474,7 @@ export const products: IProduct[] = [
               },
               {
                 key: 'storage_hooks',
-                price: 70,
+                price: 80,
                 picture: 'storage_hooks.jpeg',
               },
             ],
