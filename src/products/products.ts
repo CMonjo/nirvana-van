@@ -11,7 +11,7 @@ export const products: IProduct[] = [
       {
         key: 'teardrop',
         image: '/models/teardrop.png',
-        basePrice: 11600,
+        basePrice: 12300,
         configurator: [
           {
             name: 'main_color',
