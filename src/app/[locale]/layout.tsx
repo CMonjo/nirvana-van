@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { acorn, kobe11 } from '../../fonts';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -38,6 +39,11 @@ export default async function RootLayout({
             <SpeedInsights />
           </AppRouterCacheProvider>
         </NextIntlClientProvider>
+        {/* AutoHub trade-in widget. Universal script — no per-dealer config;
+            leads are matched to the dealer by page domain. Must load at the top
+            document level (not in an iframe) since it renders a full-page modal.
+            next/script with afterInteractive injects it into the body. */}
+        <Script src='https://www.autohub.io/widget-bundle.js' />
       </body>
       <GoogleTagManager gtmId='GTM-MNNRXJVX' />
       <GoogleAnalytics gaId='G-DJHX6GBB5L' />

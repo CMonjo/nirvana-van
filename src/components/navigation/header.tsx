@@ -81,6 +81,17 @@ export default function Header({
             <Logo color={headerFixed ? 'black' : 'white'} />
           </LinkWrapper>
           <div className='hidden gap-3 lg:flex'>
+            {/* AutoHub trade-in CTA — opens the widget modal in-context via the
+                #tradeIn hash. Plain <a> (not the locale-aware Link) so the hash
+                isn't prefixed with the locale segment. */}
+            {/* <a href='#tradeIn'>
+              <Button
+                color={headerFixed ? 'orange' : 'white'}
+                variant={headerFixed ? 'outlined' : 'filled'}
+              >
+                Value My Trade
+              </Button>
+            </a> */}
             <Link href='/rental'>
               <Button
                 color={headerFixed ? 'orange' : 'white'}
