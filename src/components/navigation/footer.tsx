@@ -30,7 +30,7 @@ export default function Footer() {
         >{`Nirvana Van © 2022 - ${new Date().getFullYear()}`}</Typography>
         <Navigation color='white' nav='footer' />
         <Typography variant='caption' className='mt-8'>
-          Aubagne -{' '}
+          Lyon -{' '}
           <a href='mailto:contact@nirvana-van.com'>contact@nirvana-van.com</a> -{' '}
           <a href='tel:+33664049695'>+33 6 64 04 96 95</a>
         </Typography>

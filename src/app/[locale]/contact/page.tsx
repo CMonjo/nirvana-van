@@ -28,12 +28,14 @@ export default function Contact() {
           </div>
           <div className='flex w-full max-w-3xl flex-col items-center gap-4 rounded-3xl bg-grey px-4 py-8 md:p-16'>
             <SectionTitle title={tPage('visitWorkshop')} />
-            <Image src='/map.png' alt='map' width={803 / 2} height={793 / 2} />
+            {/* <Image src='/map.png' alt='map' width={803 / 2} height={793 / 2} /> */}
             <div className='flex w-full flex-col justify-between gap-4 md:flex-row'>
               <div className='flex flex-col gap-0'>
                 <Typography variant='body3'>{tPage('address')}</Typography>
-                <Typography variant='body1'>Z.I des Paluds</Typography>
-                <Typography variant='body1'>13400 Aubagne</Typography>
+                <Typography variant='body1'>
+                  370 Boulevard de Balmont
+                </Typography>
+                <Typography variant='body1'>69009 Lyon</Typography>
               </div>
               <div className='flex flex-col gap-0'>
                 <Typography variant='body3'>{tPage('phone')}</Typography>
